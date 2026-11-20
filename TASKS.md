@@ -18,8 +18,8 @@ Work top to bottom. Each task has acceptance criteria (AC). Tick the box when th
 
 ## P1 · Script pipeline (target: 27 Nov)
 
-- [ ] **P1.1 `tools/new_episode.py`** (starter included): creates the episode folder from `templates/episode/` and fills `brief.yaml`.
-  AC: running it for the 16 Phase-1 episodes in `data/episodes.csv` creates 32 folders (EN + TH) without overwriting existing ones.
+- [x] **P1.1 `tools/new_episode.py`** (starter included): creates the episode folder from `templates/episode/` and fills `brief.yaml`.
+  AC: running it for the 16 Phase-1 episodes in `data/episodes.csv` creates 32 folders (EN + TH) without overwriting existing ones. (Done 20 Nov 2026: 31 created + Constantinople kept unchanged; a second run creates nothing.)
 - [ ] **P1.2 Fact sheet step.** Use the `history-doc-episode` skill to research and write `factsheet.md` (2 sources per fact, disputed items flagged).
   AC: Constantinople fact sheet covers every number in `episodes/2026-12-14-en-constantinople/script.md`; any fact that can't be sourced gets rewritten or removed in the script.
 - [ ] **P1.3 Script step.** Write `script.md` in the scorer format with the skill; target length = minutes × 150 words.
@@ -68,7 +68,7 @@ Work top to bottom. Each task has acceptance criteria (AC). Tick the box when th
 - [x] **P5.5 YouTube uploader** (starter included): `pipeline/youtube_upload.py`, `tools/upload.py`, `tools/auth_youtube.py`, `config/upload_policy.yaml`. Gates, dry run, resumable upload with retries, thumbnail, captions, playlist, scheduled publishAt, containsSyntheticMedia, channel check, daily cap, idempotent `upload.json`. Tested with a fake service.
 - [ ] **P5.6 Connect the channels** with the owner, following `docs/upload-setup.md` steps 1–6.
   AC: `auth_youtube.py` saved tokens and channel ids for EN and TH; a 10-second test video uploaded private with title, thumbnail, captions, playlist and AI label correct; test video deleted.
-  Status 20 Nov 2026: **paused by the owner.** Ready: test episodes `episodes/2026-11-20-{en,th}-upload-test` (10 s video, thumbnail, captions, AI flag; score gate passes; `preflight.json` is a marked test stub until P5.4). Waiting on the owner: `secrets/client_secret.json` (setup step 4), then sign-in per channel, a private "test" playlist id per channel for `playlist_by_cluster` "0", and an approval in chat for `approved.yaml`.
+  Status 20 Nov 2026: **paused by the owner until they have seen the first finished video** (Constantinople EN). Ready: test episodes `episodes/2026-11-20-{en,th}-upload-test` (10 s video, thumbnail, captions, AI flag; score gate passes; `preflight.json` is a marked test stub until P5.4). Waiting on the owner: `secrets/client_secret.json` (setup step 4), then sign-in per channel, a private "test" playlist id per channel for `playlist_by_cluster` "0", and an approval in chat for `approved.yaml`.
 - [ ] **P5.7 API audit** (owner submits the form; Claude Code drafts the answers and the screenshots list).
   AC: form submitted; date noted in `docs/decisions.md`. When approved, the owner sets `audit_passed: true` and picks the mode.
 - [ ] **P5.8 Scheduled job:** help the owner install the daily `tools/upload.py --queue --go` job (cron/launchd/Task Scheduler) and a log file; add a Thai summary of each run (uploaded / skipped + reasons).

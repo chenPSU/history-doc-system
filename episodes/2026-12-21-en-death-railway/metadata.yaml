@@ -1,0 +1,12 @@
+title: ""                 # <= 100 characters
+description: |
+  
+chapters: []              # [{time: "0:00", title: "..."}]  first must be 0:00, at least 3, each >= 10 s
+tags: []                  # total <= 500 characters
+sources: []               # from factsheet.md
+footage_credits: []       # from assets/manifest.csv
+altered_or_synthetic_disclosure: false   # true if any realistic AI imagery or voice -> status.containsSyntheticMedia
+made_for_kids: false
+video_file: render/final.mp4
+thumbnail_file: render/thumbnail.jpg
+captions_file: render/captions.srt

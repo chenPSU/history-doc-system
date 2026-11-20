@@ -1,0 +1,16 @@
+# Episode brief. Fill before writing the script.
+date: "2026-12-21"              # publish week (YYYY-MM-DD)
+language: "en"           # en | th
+slug: "mongol-empire"
+working_title: "The Mongol Empire: How a Nomad Army Took Half of Asia"
+cluster: 9           # 1-12, see docs/roadmap.md
+th_only: false
+target_minutes: 25           # words = minutes x 150 (EN)
+hook_paradox: "ชนเผ่าเร่ร่อนที่ไม่มีเมืองถาวร สร้างจักรวรรดิทางบกที่ต่อเนื่องใหญ่ที่สุดในประวัติศาสตร์"       # small/ignored thing -> huge outcome, said in the first 15 s
+key_visual: "แผนที่สีเดียวลามจากทุ่งหญ้าไปถึงยุโรป"   # used in the opening, the closing callback and the thumbnail
+title_formula: ""            # compressed time | countdown | rise and fall | forgotten secret | real footage | everyday life | dark mysteries
+title_options: []
+signoff: "Until next time, keep looking back."
+series: ""                   # playlist / series name
+next_episode_tease: ""       # specific question for the CLOSE
+status: brief                # brief -> factsheet -> script -> scored -> voiced -> assets -> rendered -> packaged -> approved -> uploaded

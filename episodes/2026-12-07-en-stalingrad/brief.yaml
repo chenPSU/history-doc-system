@@ -1,0 +1,16 @@
+# Episode brief. Fill before writing the script.
+date: "2026-12-07"              # publish week (YYYY-MM-DD)
+language: "en"           # en | th
+slug: "stalingrad"
+working_title: "Stalingrad: 200 Days That Broke Hitler's Army"
+cluster: 1           # 1-12, see docs/roadmap.md
+th_only: false
+target_minutes: 25           # words = minutes x 150 (EN)
+hook_paradox: "เมืองที่ตั้งชื่อตามผู้นำโซเวียต กลายเป็นที่ที่กองทัพเยอรมันทั้งกองทัพยอมจำนน"       # small/ignored thing -> huge outcome, said in the first 15 s
+key_visual: "ฟุตเทจซากเมืองในหิมะ + การ์ดนับวัน 1–200"   # used in the opening, the closing callback and the thumbnail
+title_formula: ""            # compressed time | countdown | rise and fall | forgotten secret | real footage | everyday life | dark mysteries
+title_options: []
+signoff: "Until next time, keep looking back."
+series: ""                   # playlist / series name
+next_episode_tease: ""       # specific question for the CLOSE
+status: brief                # brief -> factsheet -> script -> scored -> voiced -> assets -> rendered -> packaged -> approved -> uploaded
