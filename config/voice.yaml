@@ -3,7 +3,7 @@
 # API keys live in .env (GEMINI_API_KEY, ELEVENLABS_API_KEY), never here.
 
 sample_rate: 24000            # Hz, 16-bit mono PCM
-max_chars_per_request: 1400   # one request = one continuous paragraph group (~1.5 min of speech).
+max_chars_per_request: 700    # one request = one continuous paragraph group (~45 s of speech). Was 1400; smaller groups lose less when Gemini refuses one (SAFETY, 20 Nov 2026).
                               # Never one request per line: per-line takes sound disjointed (Lupas, 28 Oct 2026).
 max_requests_default: 30      # hard cap per run; raise with --max-requests N after checking --plan
 pause_between_blocks: 0.35    # seconds of silence between request blocks with no [PAUSE] cue
