@@ -14,7 +14,7 @@ languages:
     provider: gemini          # gemini | elevenlabs  (owner picks after the listening test)
     gemini:
       model: gemini-3.1-flash-tts-preview
-      voice: Charon           # candidates for the test: Charon, Orus, Iapetus
+      voice: Charon           # owner's pick after the listening test, 20 Nov 2026 (decisions D5)
       style: >-
         Read as a calm, deep male documentary narrator. Warm and steady, about 150 words a minute.
         Tell it like a story you know well. Give quiet weight to dates, names and numbers.
