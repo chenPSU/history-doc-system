@@ -1,0 +1,9 @@
+pytest>=8
+pyyaml>=6
+# YouTube upload (P5.5)
+google-api-python-client>=2.100
+google-auth-oauthlib>=1.2
+google-auth>=2.25
+# later phases (see TASKS.md):
+# pythainlp     # P1.5 Thai scorer
+# requests      # P3.2 asset fetchers

@@ -1,0 +1,17 @@
+.env
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+node_modules/
+episodes/*/audio/*
+!episodes/*/audio/.gitkeep
+episodes/*/render/*
+!episodes/*/render/.gitkeep
+episodes/*/assets/*
+!episodes/*/assets/manifest.csv
+*.mp4
+*.mov
+*.wav
+secrets/*
+!secrets/README.md

@@ -1,0 +1,31 @@
+# Upload policy. The OWNER controls this file.
+# Claude Code must not change it unless the owner asks for that change in chat.
+
+mode: private              # off | private | scheduled | public
+                           #   private:   upload, stay private (owner publishes in Studio)
+                           #   scheduled: upload private + publishAt at the next slot (auto-publish)
+                           #   public:    publish immediately (not recommended)
+audit_passed: false        # set true ONLY after Google approves the YouTube API compliance audit.
+                           # While false, YouTube locks API uploads to private, so scheduled/public
+                           # fall back to private and the CLI prints a warning.
+require_owner_approval: true   # true = needs episodes/<ep>/approved.yaml before upload
+review_window_hours: 24        # scheduled mode: publishAt is at least this long after the upload
+max_uploads_per_day: 4         # per channel; the API default is 100 videos.insert calls/day
+dry_run_default: true          # CLI uploads only with --go
+client_secrets: secrets/client_secret.json
+
+channels:
+  en:
+    channel_id: ""                       # filled/checked by tools/auth_youtube.py
+    token: secrets/youtube_token_en.json
+    default_language: en
+    category_id: "27"                    # Education
+    publish_slots_utc: ["Tue 22:00", "Fri 22:00"]    # ~5 pm US Eastern (winter)
+    playlist_by_cluster: {}              # e.g. {"9": "PLxxxx"}
+  th:
+    channel_id: ""
+    token: secrets/youtube_token_th.json
+    default_language: th
+    category_id: "27"
+    publish_slots_utc: ["Wed 12:00", "Sat 12:00"]    # 19:00 Bangkok
+    playlist_by_cluster: {}
