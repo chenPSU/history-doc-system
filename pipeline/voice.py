@@ -254,10 +254,16 @@ class GeminiProvider:
     name = "gemini"
     URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 
+    SAFETY_CATEGORIES = ["HARM_CATEGORY_HARASSMENT", "HARM_CATEGORY_HATE_SPEECH",
+                         "HARM_CATEGORY_SEXUALLY_EXPLICIT", "HARM_CATEGORY_DANGEROUS_CONTENT"]
+
     def __init__(self, api_key: str, model: str, voice: str, style: str = "", sample_rate: int = 24000,
-                 opener=urllib.request.urlopen, sleep=time.sleep):
+                 opener=urllib.request.urlopen, sleep=time.sleep, safety: str | None = None):
         self.key, self.model, self.voice, self.style, self.sr = api_key, model, voice, style, sample_rate
         self.opener, self.sleep = opener, sleep
+        # War history (sieges, executions) trips the default filters (finishReason SAFETY, 20 Nov 2026).
+        # Not part of identity(): it does not change the audio, so cached groups stay valid.
+        self.safety = safety
 
     def identity(self) -> list:
         return ["gemini", self.model, self.voice, self.style, self.sr]
@@ -269,6 +275,8 @@ class GeminiProvider:
         body = {"contents": [{"parts": [{"text": prompt}]}],
                 "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {
                     "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": self.voice}}}}}
+        if self.safety:
+            body["safetySettings"] = [{"category": c, "threshold": self.safety} for c in self.SAFETY_CATEGORIES]
         # One call per synth(): every call that reaches the model counts against the owner's quota, so the
         # caller decides about retrying (and counts it). Earlier code retried silently 3x (20 Nov 2026).
         raw = _with_retries(lambda: _post_json(self.URL.format(model=self.model), body,
@@ -279,7 +287,8 @@ class GeminiProvider:
         part = next((p for p in parts if "inlineData" in p), None)
         if not part:
             said = " ".join(p.get("text", "") for p in parts if "text" in p)[:200]
-            raise NoAudio(f"Gemini returned no audio (finishReason={cand.get('finishReason')!r}, "
+            flagged = [r for r in cand.get("safetyRatings") or [] if r.get("blocked") or r.get("probability") not in (None, "NEGLIGIBLE")]
+            raise NoAudio(f"Gemini returned no audio (finishReason={cand.get('finishReason')!r}, safetyRatings={flagged!r}, "
                           f"promptFeedback={data.get('promptFeedback')!r}, text={said!r}, "
                           f"usage={data.get('usageMetadata')!r}) for {len(text)} chars: {text[:80]}")
         mime = part["inlineData"].get("mimeType", "")
@@ -319,7 +328,8 @@ def make_provider(lang: str, cfg: dict, provider: str | None = None, voice: str 
         return FakeProvider(sr)
     if name == "gemini":
         g = lc["gemini"]
-        return GeminiProvider(os.environ.get("GEMINI_API_KEY", ""), g["model"], voice or g["voice"], g.get("style", ""), sr)
+        return GeminiProvider(os.environ.get("GEMINI_API_KEY", ""), g["model"], voice or g["voice"], g.get("style", ""), sr,
+                              safety=g.get("safety"))
     if name == "elevenlabs":
         e = lc.get("elevenlabs") or {}
         return ElevenLabsProvider(os.environ.get("ELEVENLABS_API_KEY", ""), voice or e.get("voice_id", ""),

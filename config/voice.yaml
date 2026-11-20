@@ -15,6 +15,7 @@ languages:
     gemini:
       model: gemini-3.1-flash-tts-preview
       voice: Charon           # owner's pick after the listening test, 20 Nov 2026 (decisions D5)
+      safety: BLOCK_ONLY_HIGH # default filters blocked a plain history paragraph (finishReason SAFETY, 20 Nov 2026)
       style: >-
         Read as a calm, deep male documentary narrator. Warm and steady, about 150 words a minute.
         Tell it like a story you know well. Give quiet weight to dates, names and numbers.
@@ -26,6 +27,7 @@ languages:
     provider: gemini
     gemini:
       model: gemini-3.1-flash-tts-preview
+      safety: BLOCK_ONLY_HIGH
       voice: Iapetus          # NOT Charon: Charon is the QURIO voice (D5: the channels must not sound alike)
       style: >-
         อ่านด้วยน้ำเสียงผู้ชาย สุขุม ลึก ช้ากว่าข่าว เล่าแบบสารคดีประวัติศาสตร์

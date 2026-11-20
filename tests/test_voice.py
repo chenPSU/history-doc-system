@@ -209,3 +209,20 @@ def test_no_audio_answer_costs_exactly_one_call_and_reports_why():
     with pytest.raises(voice.NoAudio) as e:
         g.synth("x")
     assert len(calls) == 1 and "OTHER" in str(e.value)
+
+
+def test_safety_threshold_is_sent_but_does_not_change_the_cache_key():
+    sent = []
+
+    def opener(req, timeout):
+        sent.append(json.loads(req.data))
+        return FakeResp(gemini_body(b"\x01\x00" * 10))
+
+    plain = voice.GeminiProvider("k", "m", "Charon", "calm", opener=opener)
+    relaxed = voice.GeminiProvider("k", "m", "Charon", "calm", opener=opener, safety="BLOCK_ONLY_HIGH")
+    plain.synth("a")
+    relaxed.synth("a")
+    assert "safetySettings" not in sent[0]
+    assert {s["threshold"] for s in sent[1]["safetySettings"]} == {"BLOCK_ONLY_HIGH"}
+    assert len(sent[1]["safetySettings"]) == 4
+    assert voice.cache_key(plain, "a") == voice.cache_key(relaxed, "a")
