@@ -1,0 +1,15 @@
+# Pronunciation lexicon (TASKS P2.2). Applied to the text sent to TTS only; script.md and captions keep
+# the real spelling. Whole-word, case-sensitive matches. Keep an entry only if the voice gets the name
+# wrong without it: check by ear in the listening test, then the owner approves (P2.2 AC).
+# status: draft = not yet heard; approved = owner listened and agreed.
+
+en:
+  Giustiniani: {say: "Joo-stee-NYAH-nee", status: draft}
+  Sphrantzes: {say: "SFRAN-tzes", status: draft}
+  Boghazkesen: {say: "Bo-AHZ-keh-sen", status: draft}
+  Zaganos: {say: "ZAH-gah-nos", status: draft}
+  Doukas: {say: "DOO-kas", status: draft}
+  Chios: {say: "KEE-os", status: draft}
+  Galata: {say: "GAH-lah-tah", status: draft}
+
+th: {}

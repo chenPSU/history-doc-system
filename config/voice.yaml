@@ -1,0 +1,32 @@
+# Narration voice settings (TASKS P2.1, decisions D5).
+# EN provider is decided by the owner's listening test (Gemini vs ElevenLabs). TH uses Gemini.
+# API keys live in .env (GEMINI_API_KEY, ELEVENLABS_API_KEY), never here.
+
+sample_rate: 24000            # Hz, 16-bit mono PCM
+max_chars_per_request: 1400   # one request = one continuous paragraph group (~1.5 min of speech).
+                              # Never one request per line: per-line takes sound disjointed (Lupas, 28 Oct 2026).
+max_requests_default: 30      # hard cap per run; raise with --max-requests N after checking --plan
+pause_between_blocks: 0.35    # seconds of silence between request blocks with no [PAUSE] cue
+pause_between_sections: 0.8   # seconds of silence at a section change (## HOOK -> ## PROMISE ...)
+
+languages:
+  en:
+    provider: gemini          # gemini | elevenlabs  (owner picks after the listening test)
+    gemini:
+      model: gemini-3.1-flash-tts-preview
+      voice: Charon           # candidates for the test: Charon, Orus, Iapetus
+      style: >-
+        Read as a calm, deep male documentary narrator. Warm and steady, about 150 words a minute.
+        Tell it like a story you know well. Give quiet weight to dates, names and numbers.
+        No excitement, no rush, never flat.
+    elevenlabs:
+      model: eleven_multilingual_v2
+      voice_id: ""            # filled after the owner picks a stock voice in the ElevenLabs library
+  th:
+    provider: gemini
+    gemini:
+      model: gemini-3.1-flash-tts-preview
+      voice: Iapetus          # NOT Charon: Charon is the QURIO voice (D5: the channels must not sound alike)
+      style: >-
+        อ่านด้วยน้ำเสียงผู้ชาย สุขุม ลึก ช้ากว่าข่าว เล่าแบบสารคดีประวัติศาสตร์
+        ลงน้ำหนักเบาๆ ที่ปี ชื่อ และตัวเลข ไม่ตื่นเต้น ไม่เร่ง แต่ไม่เรียบแบน
