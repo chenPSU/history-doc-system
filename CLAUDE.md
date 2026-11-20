@@ -57,7 +57,8 @@ TITLE: ...
 THUMB: ...
 SIGNOFF: Until next time, keep looking back.
 ## HOOK            sections: HOOK, PROMISE, CONTEXT, CHAPTER n, TURNING POINT, CLOSE
-[CUE: ...]         production cues, not narrated: MUSIC, SFX, VISUAL, PAUSE n, J-CUT, L-CUT, SOUND BRIDGE, MIX
+[CUE: ...]         production cues, not narrated: MUSIC, SFX, VISUAL, PAUSE n, J-CUT, L-CUT, SOUND BRIDGE, MIX,
+                   TONE: epic | intimate (narration tone until the next TONE cue or section; see config/voice.yaml)
 VOICE (who): "..." a real first-person quote read by a second voice (verified source only)
 plain lines        narration
 ```

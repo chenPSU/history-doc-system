@@ -16,22 +16,35 @@ languages:
       model: gemini-3.1-flash-tts-preview
       voice: Charon           # owner's pick after the listening test, 20 Nov 2026 (decisions D5)
       safety: BLOCK_ONLY_HIGH # default filters blocked a plain history paragraph (finishReason SAFETY, 20 Nov 2026)
-      # v1 (20 Nov 2026) "calm, deep ... steady ... No excitement, no rush": flat and slow (131 wpm).
-      # v2 "storyteller" + section moods: faster (146 wpm), more range, but the owner said "no power".
-      # v3 below: a full, resonant, commanding war-documentary voice; no "hushed" or "warm" words.
-      style: >-
-        You are the narrator of an epic war documentary. Speak with a powerful, resonant, full chest voice
-        that commands attention, like a trailer narrator telling a true story. Project your voice.
-        Keep a strong, driving pace, around 150 words a minute. Hit names, numbers and turning words
-        with real weight. Build intensity through each passage and land the key line hard.
-        Confident and gripping at every moment; never soft, never sleepy, never monotone.
-      section_styles:
-        HOOK: Intense and gripping from the first word. Low, strong and urgent, building to the question.
-        PROMISE: Bold and intriguing, a promise the listener cannot ignore.
-        CONTEXT: Grand and vivid, like describing an empire at its height. Strong and steady drive.
-        CHAPTER: Driving momentum. Punch the action, give weight to every obstacle, keep the energy up.
-        TURNING POINT: Maximum intensity and urgency through the assault. Then grave and heavy at the loss, still strong.
-        CLOSE: Grave and resonant, with authority. Slower, but full and powerful to the last line.
+      # History of the direction (20 Nov 2026, owner listening):
+      #   v1 "calm, steady, no excitement": flat and slow (131 wpm).
+      #   v2 storyteller: "like telling a secret", a little emotion. Kept as the main tone: intimate.
+      #   v3 epic war documentary: "like a big scene, a beach landing", too heavy for 20 minutes. Kept as: epic.
+      # The script picks the tone: [TONE: epic] ... [TONE: intimate]. Each section starts on its section_tones
+      # entry (or default_tone). Aim for epic on roughly a quarter of the runtime: the hook and the big set pieces.
+      default_tone: intimate
+      section_tones:
+        HOOK: epic
+      tones:
+        intimate: >-
+          You are a gripping history storyteller with a deep, warm male voice, telling a true story
+          to one listener who is hooked. Keep a brisk, natural pace, around 150 words a minute.
+          Let the drama move you: speed up when events rush forward, slow down and lower your voice
+          for the line that matters, and let questions hang for a beat. Sound human and involved,
+          never theatrical, never monotone.
+        epic: >-
+          You are the narrator of an epic war documentary. Speak with a powerful, resonant, full chest voice
+          that commands attention, like a trailer narrator telling a true story. Project your voice.
+          Keep a strong, driving pace, around 150 words a minute. Hit names, numbers and turning words
+          with real weight. Build intensity through each passage and land the key line hard.
+          Confident and gripping at every moment; never soft, never sleepy, never monotone.
+      section_styles:             # what each section is for; added after the tone text
+        HOOK: Build suspense toward the question at the end.
+        PROMISE: Lean in, as if sharing a secret.
+        CONTEXT: Paint the scene. Move briskly through background facts.
+        CHAPTER: Keep momentum. Slow down for surprises and small human details.
+        TURNING POINT: This is the climax of the story. Let the stakes show.
+        CLOSE: Reflective and slower, with quiet weight on the final lines.
     elevenlabs:
       model: eleven_multilingual_v2
       voice_id: ""            # filled after the owner picks a stock voice in the ElevenLabs library

@@ -124,12 +124,14 @@ How long could so few men hold so much wall?
 Constantine had to choose where to put them. So he sent his best troops to the weakest points.
 Giustiniani took the middle of the land walls, right across from Mehmed's tent. The Venetians guarded the palace at the northern end.
 And where would Mehmed strike first?
+[TONE: epic]
 [MUSIC: out for 2s]
 [SFX: first cannon shot, long echo]
 On 6 April 1453, the siege began.
 The guns fired every day, for weeks.
 Picture yourself on the wall when the great cannon fires. You feel the shot in your chest before you hear it.
 The ground shakes. Dust pours from the stones above you. In the streets behind you, people run to the churches to pray.
+[TONE: intimate]
 But the great cannon could only fire a few times a day. It needed hours to reload.
 Still, every hit tore open part of the outer wall.
 So every night, the defenders came out to repair it. They packed the gaps with timber, earth and barrels.
@@ -155,6 +157,7 @@ Galata said it was neutral. In truth, it traded with both sides.
 On 20 April, a small Christian convoy appeared to the south. Three ships were Genoese. The fourth carried grain for the emperor.
 Mehmed sent his whole navy against them. Dozens of smaller ships swarmed the four.
 Could four ships really fight off a whole navy?
+[TONE: epic]
 Picture the scene from the sea walls. The whole city is watching. People crowd every tower.
 The tall Christian ships ride high above the Ottoman galleys. Their sailors hurl stones and fire down at the attackers.
 Suddenly, the wind drops. The four ships drift toward the Ottoman shore.
@@ -162,17 +165,20 @@ On the beach, Mehmed rides his horse into the waves, shouting at his admiral.
 [PAUSE 1]
 But near sunset, the wind returns. The four ships break free and slip in behind the chain.
 Inside the city, people cheered and rang the bells.
+[TONE: intimate]
 Mehmed was furious. He had his admiral beaten, and took away his wealth.
 Now he knew he could not break the chain from outside. So what could he do?
 He chose a plan that sounded impossible.
 [MUSIC: drops to a single low note, instrumental]
 Behind Galata, there is a hill. On the far side of that hill lies the Golden Horn.
 His men laid a road of greased logs up the slope.
+[TONE: epic]
 On 22 April, they dragged their ships over the hill.
 [SFX: wood scraping on logs, drums]
 Oxen pulled. Men pushed. Some crews even raised their sails as they rolled over the top.
 Picture yourself on the sea wall that morning. You look down at water that was safe yesterday.
 Around seventy Ottoman ships are floating inside the harbour.
+[TONE: intimate]
 How had nobody stopped them? The Genoese of Galata lived right beside that road. Later, people in the city accused them of looking the other way.
 [PAUSE 1.5]
 Now the city had to guard its sea walls too. Its defenders were stretched even thinner.
@@ -194,9 +200,11 @@ He brought in miners from the silver mines of Serbia. They began to dig tunnels 
 Inside the city, one man stood in their way.
 Writers at the time called him a German, named Johannes Grant. Some historians think he was really a Scot.
 Either way, he knew mines. His men dug their own tunnels to meet the Ottoman ones.
+[TONE: epic]
 Imagine the fight down there. You crawl in the dark, in a tunnel barely wider than your shoulders.
 You hear picks on the other side of the earth. You hold your breath.
 Suddenly, the wall of earth gives way. Your enemy is right in front of you.
+[TONE: intimate]
 So Grant's men burned some tunnels with Greek fire. Others they collapsed on the diggers.
 On 23 May, the defenders captured a pair of Ottoman officers underground.
 Under torture, the officers gave away the location of every tunnel.
@@ -236,6 +244,7 @@ Greeks and Latins crowded into Hagia Sophia together. All winter, they had quarr
 The emperor prayed with them. Afterwards, he rode out to the walls.
 Picture yourself in that crowd. Candles flicker on the gold. Will any of you see another sunset?
 [MUSIC: drums only, instrumental]
+[TONE: epic]
 It began just after midnight, on 29 May.
 Mehmed sent his men in three waves.
 First came the irregulars. They were poorly armed, and many were not even Turks. Their job was to wear the defenders down.
@@ -260,6 +269,7 @@ Ottoman soldiers slipped through it and raised their flag on a tower.
 Many historians doubt the story. No trace of such a gate has ever turned up.
 But that morning, the defenders believed their eyes. They looked up and saw Ottoman flags on the walls.
 Ottoman soldiers broke through.
+[TONE: intimate]
 And what became of the emperor?
 [PAUSE 0.5]
 Constantine the Eleventh is said to have died in the fighting. His body was never identified for certain.

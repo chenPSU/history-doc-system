@@ -272,3 +272,49 @@ def test_section_directions_reach_the_prompt_and_the_cache_key(tmp_path):
     assert voice.section_direction(styles, "CHAPTER 3") == "momentum"
     assert voice.section_direction(styles, "TURNING POINT") == "urgent"
     assert voice.section_direction(styles, "CLOSE") == ""
+
+
+TONE_SCRIPT = """## HOOK
+[MUSIC: drone, instrumental]
+The drums start.
+## CHAPTER 1
+[J-CUT: x]
+[MUSIC: y, instrumental]
+Orban cast cannons.
+[TONE: epic]
+The first shot shakes the wall. Dust falls.
+[TONE: intimate]
+But the cannon was slow.
+## CHAPTER 2
+Next morning came.
+"""
+
+TONE_CFG = {**CFG, "languages": {"en": {"provider": "gemini", "gemini": {
+    "model": "m", "voice": "Charon", "default_tone": "intimate",
+    "tones": {"intimate": "Tell it like a secret.", "epic": "Big and powerful."},
+    "section_tones": {"HOOK": "epic"},
+    "section_styles": {"CHAPTER": "Keep momentum."}}}}}
+
+
+def test_tone_cues_split_groups_and_reset_at_each_section(tmp_path):
+    ep = make_ep(tmp_path, TONE_SCRIPT)
+    groups, _ = voice.prepare(ep, "en", TONE_CFG, use_lexicon=False)
+    got = [(g.section, g.tone, g.text) for g in groups]
+    assert got == [
+        ("HOOK", "epic", "The drums start."),
+        ("CHAPTER 1", "intimate", "Orban cast cannons."),
+        ("CHAPTER 1", "epic", "The first shot shakes the wall. Dust falls."),
+        ("CHAPTER 1", "intimate", "But the cannon was slow."),
+        ("CHAPTER 2", "intimate", "Next morning came."),   # the epic cue does not leak into the next section
+    ]
+    assert groups[2].direction == "Big and powerful. Keep momentum."
+    assert groups[1].direction == "Tell it like a secret. Keep momentum."
+    assert not any("TONE" in g.text for g in groups)
+
+
+def test_with_tones_the_provider_has_no_base_style_and_unknown_tones_fail(tmp_path):
+    prov = voice.make_provider("en", TONE_CFG)
+    assert prov.style == ""
+    ep = make_ep(tmp_path, "## HOOK\n[TONE: shouty]\nHello.\n")
+    with pytest.raises(voice.VoiceError):
+        voice.prepare(ep, "en", TONE_CFG, use_lexicon=False)

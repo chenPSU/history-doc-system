@@ -99,7 +99,8 @@ class Group:
     section: str
     sentences: list[str] = field(default_factory=list)
     pause_after: float = 0.0
-    direction: str = ""   # extra director's note for this section (config section_styles)
+    direction: str = ""   # director's note for this group: tone text + section note (see prepare)
+    tone: str | None = None  # from a [TONE: name] cue; None = the section's default tone
 
     @property
     def text(self) -> str:
@@ -107,7 +108,9 @@ class Group:
 
 
 def parse_events(script: Path) -> list[tuple[str, object]]:
-    """('section', name) | ('pause', seconds) | ('sentence', text), in script order."""
+    """('section', name) | ('pause', seconds) | ('tone', name) | ('sentence', text), in script order.
+
+    [TONE: epic] / [TONE: intimate] switches the narration tone until the next TONE cue or section."""
     ev = []
     started = False
     for raw in Path(script).read_text(encoding="utf-8").splitlines():
@@ -124,6 +127,9 @@ def parse_events(script: Path) -> list[tuple[str, object]]:
             m = re.match(r"^\[PAUSE\s*([\d.]+)", line, re.I)
             if m:
                 ev.append(("pause", float(m.group(1))))
+            t = re.match(r"^\[TONE:\s*([\w-]+)", line, re.I)
+            if t:
+                ev.append(("tone", t.group(1).lower()))
             continue  # other cues are production notes, not narration
         if line.startswith("VOICE"):
             raise VoiceError("VOICE lines need a second voice, which pipeline/voice.py does not support yet: " + line[:60])
@@ -138,6 +144,7 @@ def build_groups(events, max_chars: int, gap_block: float, gap_section: float,
     groups: list[Group] = []
     cur: Group | None = None
     section = ""
+    tone: str | None = None
 
     def close(pause: float):
         nonlocal cur
@@ -149,7 +156,7 @@ def build_groups(events, max_chars: int, gap_block: float, gap_section: float,
     for kind, val in events:
         if kind == "section":
             close(gap_section)
-            section = val
+            section, tone = val, None
             continue
         if sections and section not in sections:
             continue
@@ -159,11 +166,16 @@ def build_groups(events, max_chars: int, gap_block: float, gap_section: float,
             elif groups:
                 groups[-1].pause_after = max(groups[-1].pause_after, val)
             continue
+        if kind == "tone":
+            if cur and cur.sentences:
+                close(gap_block)  # one request = one tone
+            tone = val
+            continue
         if cur is None:
-            cur = Group(section)
+            cur = Group(section, tone=tone)
         if cur.sentences and len(cur.text) + 1 + len(val) > max_chars:
             close(gap_block)
-            cur = Group(section)
+            cur = Group(section, tone=tone)
         cur.sentences.append(val)
     close(0.0)
     if groups:
@@ -340,7 +352,8 @@ def make_provider(lang: str, cfg: dict, provider: str | None = None, voice: str 
         return FakeProvider(sr)
     if name == "gemini":
         g = lc["gemini"]
-        return GeminiProvider(os.environ.get("GEMINI_API_KEY", ""), g["model"], voice or g["voice"], g.get("style", ""), sr,
+        base = "" if g.get("tones") else g.get("style", "")  # with tones, the whole note travels per group
+        return GeminiProvider(os.environ.get("GEMINI_API_KEY", ""), g["model"], voice or g["voice"], base, sr,
                               safety=g.get("safety"))
     if name == "elevenlabs":
         e = lc.get("elevenlabs") or {}
@@ -367,10 +380,19 @@ def prepare(ep: Path, lang: str, cfg: dict, use_lexicon: bool = True, sections: 
     groups = build_groups(events, cfg["max_chars_per_request"], cfg["pause_between_blocks"],
                           cfg["pause_between_sections"], sections)
     lex = load_lexicon(lang) if use_lexicon else {}
-    lc = cfg["languages"][lang]
-    styles = (lc.get(lc["provider"]) or {}).get("section_styles") or {}
+    pc = (cfg["languages"][lang].get(cfg["languages"][lang]["provider"]) or {})
+    styles = pc.get("section_styles") or {}
+    tones = pc.get("tones") or {}
     for g in groups:
-        g.direction = section_direction(styles, g.section)
+        note = section_direction(styles, g.section)
+        if tones:
+            name = g.tone or section_direction(pc.get("section_tones") or {}, g.section) or pc.get("default_tone")
+            if name not in tones:
+                raise VoiceError(f"unknown tone {name!r} in {g.section}; config has {sorted(tones)}")
+            g.tone = name
+            g.direction = " ".join(x for x in (tones[name].strip(), note) if x)
+        else:
+            g.direction = note
     return groups, lex
 
 

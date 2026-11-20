@@ -37,6 +37,7 @@ Produce one episode package in the channel's fixed style: a calm, credible docum
 
 ## Sound
 - One consistent deep, calm narrator voice for the channel (human preferred for Thai names).
+- Two narration tones, chosen in the script with `[TONE: ...]` cues: `intimate` (default: a storyteller sharing a secret) and `epic` (powerful, for the hook and the big set pieces: the first shot, a battle, the final assault). Keep epic to roughly a fifth to a quarter of the runtime; a whole episode in epic is too heavy. Never put a TONE cue among the first two cues of a section (the J/L-cut check reads those).
 - Royalty-free orchestral/ambient music about -20 to -25 dB under the voice; swell at chapter breaks. No copyrighted music in Shorts.
 - Subtle ambience under stills (wind, crowd, distant artillery, projector). No whooshes or comedy sounds.
 
