@@ -161,7 +161,7 @@
      },
      {
       "metric": "planned pauses: >=1 per story section, each <=3s",
-      "value": "6/6 sections, 11 pauses, 0 over 3s",
+      "value": "6/6 sections, 12 pauses, 0 over 3s",
       "score": 1.0
      },
      {

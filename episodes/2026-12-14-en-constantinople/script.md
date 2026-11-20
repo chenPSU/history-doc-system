@@ -261,6 +261,7 @@ Many historians doubt the story. No trace of such a gate has ever turned up.
 But that morning, the defenders believed their eyes. They looked up and saw Ottoman flags on the walls.
 Ottoman soldiers broke through.
 And what became of the emperor?
+[PAUSE 0.5]
 Constantine the Eleventh is said to have died in the fighting. His body was never identified for certain.
 Legend says he threw off his imperial robes and charged the enemy like a common soldier.
 Across the city, the church bells rang the alarm.
