@@ -13,8 +13,8 @@ Work top to bottom. Each task has acceptance criteria (AC). Tick the box when th
   AC: each open decision is marked `DECIDED` with the date and the choice. (Done 20 Nov 2026: D4-D7, D10.)
 - [x] **P0.2 Environment.** Python 3.11+, `requirements.txt` installs, `ffmpeg` available, `.env` from `.env.example`.
   AC: `pytest -q` passes; `ffmpeg -version` works; Node 18+ for Remotion (D4). (Done 20 Nov 2026: Python 3.12.10 in `.venv`, ffmpeg 9.0.2, Node 24.19, 15 tests pass.)
-- [ ] **P0.3 Git repo.** Init, `.gitignore` covers `.env`, renders and large media.
-  AC: first commit pushed (if the owner wants a remote).
+- [x] **P0.3 Git repo.** Init, `.gitignore` covers `.env`, renders and large media.
+  AC: first commit pushed (if the owner wants a remote). (Done 20 Nov 2026: private repo github.com/chenPSU/history-doc-system.)
 
 ## P1 · Script pipeline (target: 27 Nov)
 
