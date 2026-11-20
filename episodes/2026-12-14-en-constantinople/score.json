@@ -1,0 +1,227 @@
+{
+ "rounds": {
+  "1": 93.0,
+  "2": 95.6,
+  "3": 98.3,
+  "4": 100.0,
+  "5": 100.0
+ },
+ "mean": 97.4,
+ "zero_metrics": [],
+ "gate_passed": true,
+ "waivers": [],
+ "detail": {
+  "file": "episodes\\2026-12-14-en-constantinople\\script.md",
+  "base": {
+   "words": 979,
+   "est_minutes": 6.7
+  },
+  "rounds": {
+   "1": {
+    "rows": [
+     {
+      "metric": "seconds to first open question",
+      "value": 19.2,
+      "score": 0.64
+     },
+     {
+      "metric": "hook + promise length (s)",
+      "value": 44.0,
+      "score": 0.87
+     },
+     {
+      "metric": "opening sentence: words (≤14) & concrete",
+      "value": "9 words, concrete=True",
+      "score": 1.0
+     },
+     {
+      "metric": "items listed in promise (spoiler TOC ≤2)",
+      "value": 2,
+      "score": 1.0
+     },
+     {
+      "metric": "banned openers (in this video / welcome / today)",
+      "value": 0,
+      "score": 1.0
+     },
+     {
+      "metric": "title/thumbnail words confirmed in first 30s",
+      "value": "5/5",
+      "score": 1.0
+     },
+     {
+      "metric": "hook question asks HOW/WHY (ending is known)",
+      "value": true,
+      "score": 1.0
+     }
+    ],
+    "score": 93.0
+   },
+   "2": {
+    "rows": [
+     {
+      "metric": "mean sentence length (8-16 words)",
+      "value": 8.7,
+      "score": 1.0
+     },
+     {
+      "metric": "% sentences over 20 words (<=10%)",
+      "value": 0.0,
+      "score": 1.0
+     },
+     {
+      "metric": "longest sentence (<=28 words)",
+      "value": 20,
+      "score": 1.0
+     },
+     {
+      "metric": "Flesch reading ease (>=65)",
+      "value": 78.2,
+      "score": 1.0
+     },
+     {
+      "metric": "passive constructions per 10 sentences (<=1)",
+      "value": 0.27,
+      "score": 1.0
+     },
+     {
+      "metric": "sentences with 2+ numbers (0)",
+      "value": 2,
+      "score": 0.6
+     },
+     {
+      "metric": "stacked clauses: which/who/whom per 100 words (<=0.5)",
+      "value": 0.0,
+      "score": 1.0
+     },
+     {
+      "metric": "long sentence followed by a short one (>=70%)",
+      "value": 100,
+      "score": 1.0
+     },
+     {
+      "metric": "rhythm: sentence-length variation CV (0.35-0.7)",
+      "value": 0.41,
+      "score": 1.0
+     }
+    ],
+    "score": 95.6
+   },
+   "3": {
+    "rows": [
+     {
+      "metric": "'and then' links between beats (0)",
+      "value": 0,
+      "score": 1.0
+     },
+     {
+      "metric": "but/therefore links per minute of story (>=2)",
+      "value": 3.24,
+      "score": 1.0
+     },
+     {
+      "metric": "story sections with an explicit obstacle (all)",
+      "value": "3/3",
+      "score": 1.0
+     },
+     {
+      "metric": "sections before the climax ending on an open loop",
+      "value": "4/4",
+      "score": 1.0
+     },
+     {
+      "metric": "longest stretch without a question or tease (<=90s)",
+      "value": 99,
+      "score": 0.9
+     },
+     {
+      "metric": "named people with a stated want (>=3)",
+      "value": "Constantine, Halil, Mehmed",
+      "score": 1.0
+     }
+    ],
+    "score": 98.3
+   },
+   "4": {
+    "rows": [
+     {
+      "metric": "story sections with their own music cue (all)",
+      "value": "5/5",
+      "score": 1.0
+     },
+     {
+      "metric": "music cues instrumental, no lyrics (all)",
+      "value": "8/8",
+      "score": 1.0
+     },
+     {
+      "metric": "section transitions with J/L-cut or sound bridge",
+      "value": "5/5",
+      "score": 1.0
+     },
+     {
+      "metric": "planned pauses: >=1 per story section, each <=3s",
+      "value": "3/3 sections, 6 pauses, 0 over 3s",
+      "score": 1.0
+     },
+     {
+      "metric": "mix spec: music 18-24 dB under voice, -14 LUFS",
+      "value": "duck=20, lufs=True",
+      "score": 1.0
+     },
+     {
+      "metric": "screen-off test: visual-only phrases (0)",
+      "value": 0,
+      "score": 1.0
+     },
+     {
+      "metric": "music drops out before the peak reveal",
+      "value": true,
+      "score": 1.0
+     }
+    ],
+    "score": 100.0
+   },
+   "5": {
+    "rows": [
+     {
+      "metric": "ending calls back to the hook (>=4 shared words + answer)",
+      "value": "15 shared, answered=True",
+      "score": 1.0
+     },
+     {
+      "metric": "peak (music-out reveal) at 60-85% of runtime",
+      "value": "69%",
+      "score": 1.0
+     },
+     {
+      "metric": "no generic CTA; last line is story or sign-off",
+      "value": "generic=0, signoff_last=True",
+      "score": 1.0
+     },
+     {
+      "metric": "direct address 'you' per minute (1-4)",
+      "value": 1.69,
+      "score": 1.0
+     },
+     {
+      "metric": "specific next-episode tease in CLOSE",
+      "value": true,
+      "score": 1.0
+     },
+     {
+      "metric": "setups paid off: names from first 40% reused in last 30% (>=4)",
+      "value": "Byzantine, Constantine, Constantinople, Eleventh, Empire, May, Ottoman",
+      "score": 1.0
+     },
+     {
+      "metric": "channel template sections all present",
+      "value": "6/6",
+      "score": 1.0
+     }
+    ],
+    "score": 100.0
+   }
+  }
+ }
+}

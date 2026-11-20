@@ -6,13 +6,13 @@ SIGNOFF: Until next time, keep looking back.
 [MUSIC: low instrumental drone, no vocals]
 [VISUAL: torchlight along the land walls at night; drone slowly descends]
 [SFX: distant drums, then sudden silence]
-It is half past one in the morning, on 29 May 1453.
-Seven thousand defenders stand on the walls of Constantinople, waiting in the dark.
+It is just after midnight, on 29 May 1453.
+About seven thousand defenders stand on the walls of Constantinople, waiting in the dark.
 By sunrise, walls that have stood for a thousand years will fall.
 [PAUSE 1.5]
 How did a young sultan break a thousand-year wall in just 53 days?
 If you stood beside the defenders tonight, you would hear drums out in the dark.
-No army had ever broken these walls by force. But below them waits an army many times larger.
+No army had ever broken through these land walls. But below them waits an army many times larger.
 
 ## PROMISE
 [J-CUT: creak of a ship's hull starts under the last hook shot]
@@ -25,13 +25,13 @@ Let's go back to the city at its height.
 Constantinople was a Roman city. The emperor Constantine the Great made it his new capital in 330 AD.
 In the centuries that followed, the western half of the Roman Empire collapsed. But the eastern half survived.
 Historians call it the Byzantine Empire. It lasted another thousand years.
-Water protected the city on three sides. On the fourth side stood the Theodosian Walls.
+Water protected the city on three sides. On the fourth side stood the land walls.
 They were not one wall, but three layers. First came a moat. Behind it, an outer wall. Behind that, a taller inner wall.
-Together, they ran for almost six kilometres, from the Sea of Marmara to the Golden Horn.
+Together, they ran for about six kilometres, from the Sea of Marmara to the Golden Horn.
 But by 1453, the empire had shrunk to little more than the city itself.
-The city was a shadow of its old self. Perhaps fifty thousand people still lived inside the walls.
+The city was a shadow of its old self. Fewer than fifty thousand people still lived inside the walls.
 Outside, the Ottoman Turks had spread across Anatolia and the Balkans. They now surrounded the city on almost every side.
-In 1451, a new sultan took the throne. His name was Mehmed. He was eighteen.
+In 1451, a young sultan took the throne for the second time. His name was Mehmed. He was eighteen.
 [PAUSE 1]
 Few in the West took him seriously. They would soon regret it.
 Mehmed wanted one prize above all others. Constantinople.
@@ -45,7 +45,7 @@ But Mehmed had a problem too. No cannon in his army could break walls like these
 So when a Hungarian engineer named Orban came looking for work, Mehmed listened.
 Orban cast cannons. Big ones, in bronze.
 He had gone to the Byzantine emperor first. But Constantine could not afford his price.
-So Orban went to Mehmed instead. Mehmed paid him far more than he asked, and gave him everything he needed.
+So Orban went to Mehmed instead. Mehmed paid him well, and gave him everything he needed.
 Orban built a monster. The cannon was around eight metres long.
 It could throw a stone ball weighing several hundred kilograms for more than a mile.
 Moving it took sixty oxen and hundreds of men.
@@ -87,7 +87,7 @@ It began early on 29 May.
 The Genoese commander, Giovanni Giustiniani, took a serious wound. His men carried him away from the walls.
 The defenders saw him go. Panic spread.
 Ottoman soldiers broke through.
-Constantine the Eleventh died in the fighting. No one ever identified his body.
+Constantine the Eleventh is said to have died in the fighting. His body was never identified for certain.
 [PAUSE 2]
 
 ## CLOSE
@@ -98,7 +98,7 @@ It did not fall to one cannon, or to one clever trick.
 The cannon cracked the walls. The ships over the hill stretched the defenders thin. And when Giustiniani left the wall, their hope left with him.
 Behind all of it stood a young sultan who would not give up.
 The fall of Constantinople ended the Byzantine Empire. The city became the new Ottoman capital. In time, the world would know it as Istanbul.
-Many Greek scholars fled west to Italy. They carried books and ideas that helped feed the Renaissance.
+Greek scholars had been moving to Italy for decades. After the fall, many more fled west. They carried books and ideas that helped feed the Renaissance.
 [PAUSE 1]
 You can still walk along those walls today. Long stretches of them still stand, scarred by centuries of war.
 Next time, we follow Mehmed into the broken city. How did Mehmed turn it into the capital of an empire?

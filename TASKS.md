@@ -20,8 +20,8 @@ Work top to bottom. Each task has acceptance criteria (AC). Tick the box when th
 
 - [x] **P1.1 `tools/new_episode.py`** (starter included): creates the episode folder from `templates/episode/` and fills `brief.yaml`.
   AC: running it for the 16 Phase-1 episodes in `data/episodes.csv` creates 32 folders (EN + TH) without overwriting existing ones. (Done 20 Nov 2026: 31 created + Constantinople kept unchanged; a second run creates nothing.)
-- [ ] **P1.2 Fact sheet step.** Use the `history-doc-episode` skill to research and write `factsheet.md` (2 sources per fact, disputed items flagged).
-  AC: Constantinople fact sheet covers every number in `episodes/2026-12-14-en-constantinople/script.md`; any fact that can't be sourced gets rewritten or removed in the script.
+- [x] **P1.2 Fact sheet step.** Use the `history-doc-episode` skill to research and write `factsheet.md` (2 sources per fact, disputed items flagged).
+  AC: Constantinople fact sheet covers every number in `episodes/2026-12-14-en-constantinople/script.md`; any fact that can't be sourced gets rewritten or removed in the script. (Done 20 Nov 2026 for the 6.6-min test cut: 40 facts, 10 script lines corrected, score still passes at mean 97.4. Open: page numbers for the `book` rows; new facts added in P1.3 go into the sheet first.)
 - [ ] **P1.3 Script step.** Write `script.md` in the scorer format with the skill; target length = minutes × 150 words.
   AC: the Constantinople script is expanded from the 6.6-minute test cut to the full episode (target ~25 min: 4–6 chapters) and passes the score gate.
 - [x] **P1.4 Score gate** (starter included). `tools/check_episode.py` runs the scorer and writes `score.json` (with `waivers`), exit code ≠ 0 if the gate fails.

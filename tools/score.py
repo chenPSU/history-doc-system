@@ -410,6 +410,8 @@ def run(path, rounds):
     return res
 
 if __name__ == "__main__":
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")  # Windows consoles default to cp1252; metric names contain ≤
     args = sys.argv[1:]
     rounds = [1]
     if "--rounds" in args:
