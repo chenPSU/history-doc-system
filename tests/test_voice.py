@@ -195,3 +195,17 @@ def test_rate_limit_is_retried():
 
     g = voice.GeminiProvider("k", "m", "Charon", opener=opener, sleep=lambda s: None)
     assert g.synth("x") == b"\x01\x00" * 10 and len(calls) == 3
+
+
+def test_no_audio_answer_costs_exactly_one_call_and_reports_why():
+    # Regression (20 Nov 2026): the provider used to retry a no-audio answer 3 times while the run counted 1 request.
+    calls = []
+
+    def opener(req, timeout):
+        calls.append(1)
+        return FakeResp(json.dumps({"candidates": [{"finishReason": "OTHER", "content": {"parts": []}}]}).encode())
+
+    g = voice.GeminiProvider("k", "m", "Charon", opener=opener, sleep=lambda s: None)
+    with pytest.raises(voice.NoAudio) as e:
+        g.synth("x")
+    assert len(calls) == 1 and "OTHER" in str(e.value)

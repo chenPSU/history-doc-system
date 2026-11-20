@@ -49,6 +49,10 @@ class QuotaExhausted(VoiceError):
     """Provider says the daily quota is used up. Stop; do not retry."""
 
 
+class NoAudio(VoiceError):
+    """The provider answered but sent no audio. The call still counted against quota."""
+
+
 # ---------------------------------------------------------------- config
 def load_env(path: Path = ROOT / ".env") -> None:
     """Minimal .env reader (KEY=VALUE). Existing environment variables win."""
@@ -265,20 +269,24 @@ class GeminiProvider:
         body = {"contents": [{"parts": [{"text": prompt}]}],
                 "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {
                     "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": self.voice}}}}}
-        for _ in range(3):  # the model sometimes answers without audio
-            raw = _with_retries(lambda: _post_json(self.URL.format(model=self.model), body,
-                                                   {"x-goog-api-key": self.key}, self.opener), self.sleep)
-            data = json.loads(raw)
-            parts = ((data.get("candidates") or [{}])[0].get("content") or {}).get("parts") or []
-            part = next((p for p in parts if "inlineData" in p), None)
-            if not part:
-                continue
-            mime = part["inlineData"].get("mimeType", "")
-            rate = re.search(r"rate=(\d+)", mime)
-            if rate and int(rate.group(1)) != self.sr:
-                raise VoiceError(f"Gemini returned {rate.group(1)} Hz, config says {self.sr}: fix sample_rate")
-            return wav_or_pcm(base64.b64decode(part["inlineData"]["data"]))
-        raise VoiceError("Gemini returned no audio three times for: " + text[:80])
+        # One call per synth(): every call that reaches the model counts against the owner's quota, so the
+        # caller decides about retrying (and counts it). Earlier code retried silently 3x (20 Nov 2026).
+        raw = _with_retries(lambda: _post_json(self.URL.format(model=self.model), body,
+                                               {"x-goog-api-key": self.key}, self.opener), self.sleep)
+        data = json.loads(raw)
+        cand = (data.get("candidates") or [{}])[0]
+        parts = (cand.get("content") or {}).get("parts") or []
+        part = next((p for p in parts if "inlineData" in p), None)
+        if not part:
+            said = " ".join(p.get("text", "") for p in parts if "text" in p)[:200]
+            raise NoAudio(f"Gemini returned no audio (finishReason={cand.get('finishReason')!r}, "
+                          f"promptFeedback={data.get('promptFeedback')!r}, text={said!r}, "
+                          f"usage={data.get('usageMetadata')!r}) for {len(text)} chars: {text[:80]}")
+        mime = part["inlineData"].get("mimeType", "")
+        rate = re.search(r"rate=(\d+)", mime)
+        if rate and int(rate.group(1)) != self.sr:
+            raise VoiceError(f"Gemini returned {rate.group(1)} Hz, config says {self.sr}: fix sample_rate")
+        return wav_or_pcm(base64.b64decode(part["inlineData"]["data"]))
 
 
 class ElevenLabsProvider:
