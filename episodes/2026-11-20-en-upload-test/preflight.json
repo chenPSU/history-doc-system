@@ -1,0 +1,5 @@
+{
+ "passed": true,
+ "test_stub": true,
+ "note": "Test upload only. tools/preflight.py does not exist yet (TASKS P5.4); this stub is not a real preflight."
+}
