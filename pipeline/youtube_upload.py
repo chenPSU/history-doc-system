@@ -202,7 +202,7 @@ def get_service(channel: dict):
     creds = Credentials.from_authorized_user_file(str(token), SCOPES)
     if not creds.valid:
         creds.refresh(Request())
-        token.write_text(creds.to_json())
+        token.write_text(creds.to_json(), encoding="utf-8")
     return build("youtube", "v3", credentials=creds, cache_discovery=False)
 
 
@@ -242,7 +242,7 @@ def resumable_insert(request, sleep=time.sleep, log=print) -> dict:
 def uploads_today(channel_lang: str, episodes_dir: Path, now: dt.datetime) -> int:
     n = 0
     for up in Path(episodes_dir).glob("*/upload.json"):
-        d = json.loads(up.read_text())
+        d = json.loads(up.read_text(encoding="utf-8"))
         if d.get("lang") == channel_lang and d.get("uploaded_at", "")[:10] == now.strftime("%Y-%m-%d"):
             n += 1
     return n
@@ -251,7 +251,7 @@ def uploads_today(channel_lang: str, episodes_dir: Path, now: dt.datetime) -> in
 def taken_slots(channel_lang: str, episodes_dir: Path) -> set[dt.datetime]:
     out = set()
     for up in Path(episodes_dir).glob("*/upload.json"):
-        d = json.loads(up.read_text())
+        d = json.loads(up.read_text(encoding="utf-8"))
         if d.get("lang") == channel_lang and d.get("publish_at"):
             out.add(dt.datetime.strptime(d["publish_at"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=dt.timezone.utc))
     return out
@@ -297,7 +297,7 @@ def upload_episode(ep: Path, policy: dict | None = None, go: bool = False, servi
     vid = resp["id"]
     result = {**plan, "video_id": vid, "uploaded_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
               "url": f"https://youtu.be/{vid}", "steps": {"insert": "ok"}}
-    (ep / "upload.json").write_text(json.dumps(result, ensure_ascii=False, indent=1))  # save before extras
+    (ep / "upload.json").write_text(json.dumps(result, ensure_ascii=False, indent=1), encoding="utf-8")  # save before extras
 
     def step(name, fn):
         try:
@@ -306,7 +306,7 @@ def upload_episode(ep: Path, policy: dict | None = None, go: bool = False, servi
         except Exception as e:  # keep going; the video is up, record what failed
             result["steps"][name] = f"failed: {e}"
             log(f"  {name} failed: {e}")
-        (ep / "upload.json").write_text(json.dumps(result, ensure_ascii=False, indent=1))
+        (ep / "upload.json").write_text(json.dumps(result, ensure_ascii=False, indent=1), encoding="utf-8")
 
     thumb = ep / (meta.get("thumbnail_file") or "")
     if meta.get("thumbnail_file") and thumb.is_file():

@@ -36,7 +36,7 @@ def make_episode(tmp: Path, name="2026-12-14-en-constantinople", **overrides) ->
             "made_for_kids": False, "video_file": "render/final.mp4", "thumbnail_file": "render/thumbnail.jpg",
             "captions_file": "render/captions.srt"}
     meta.update(overrides)
-    (ep / "metadata.yaml").write_text(yaml.safe_dump(meta, allow_unicode=True))
+    (ep / "metadata.yaml").write_text(yaml.safe_dump(meta, allow_unicode=True), encoding="utf-8")
     (ep / "render" / "final.mp4").write_bytes(b"0")
     (ep / "render" / "thumbnail.jpg").write_bytes(b"0")
     (ep / "render" / "captions.srt").write_text("1\n00:00:00,000 --> 00:00:01,000\nHi\n")
@@ -158,6 +158,16 @@ def test_upload_writes_result_and_never_uploads_twice(tmp_path):
     with pytest.raises(yu.GateError) as e:
         yu.upload_episode(ep, policy(), go=True, service=svc, make_media=fake_media, now=NOW, log=lambda *_: None)
     assert any("already uploaded" in x for x in e.value.failures)
+
+
+def test_thai_title_is_saved_as_utf8(tmp_path):
+    # Regression: on Windows the default file encoding is cp1252, so upload.json with a Thai title crashed
+    # right after videos.insert, leaving an uploaded video with no upload.json (a re-run would upload it twice).
+    ep = make_episode(tmp_path, title="กำแพงพันปีแตกใน 53 วัน")
+    res = yu.upload_episode(ep, policy(), go=True, service=FakeService(), make_media=fake_media, now=NOW,
+                            log=lambda *_: None)
+    saved = json.loads((ep / "upload.json").read_text(encoding="utf-8"))
+    assert saved["video_id"] == res["video_id"] and saved["body"]["snippet"]["title"] == "กำแพงพันปีแตกใน 53 วัน"
 
 
 def test_wrong_channel_token_is_refused(tmp_path):

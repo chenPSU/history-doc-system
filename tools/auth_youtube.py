@@ -34,7 +34,7 @@ def main():
     creds = flow.run_local_server(port=0, prompt="consent", access_type="offline")
     token = ROOT / ch["token"]
     token.parent.mkdir(parents=True, exist_ok=True)
-    token.write_text(creds.to_json())
+    token.write_text(creds.to_json(), encoding="utf-8")
     svc = build("youtube", "v3", credentials=creds, cache_discovery=False)
     item = svc.channels().list(part="id,snippet", mine=True).execute()["items"][0]
     print(f"Signed in as channel: {item['snippet']['title']}  id={item['id']}")

@@ -22,7 +22,7 @@ ROUND_MIN, MEAN_MIN = 85, 90
 def check(ep: Path) -> dict:
     ep = Path(ep)
     out_path = ep / "score.json"
-    old = json.loads(out_path.read_text()) if out_path.exists() else {}
+    old = json.loads(out_path.read_text(encoding="utf-8")) if out_path.exists() else {}
     waived = {w["metric"] for w in old.get("waivers", [])}
     r = score.run(str(ep / "script.md"), ROUNDS)
     rounds = {k: r["rounds"][k]["score"] for k in ROUNDS}
@@ -31,7 +31,7 @@ def check(ep: Path) -> dict:
     passed = all(v >= ROUND_MIN for v in rounds.values()) and mean >= MEAN_MIN and not zeros
     res = {"rounds": rounds, "mean": mean, "zero_metrics": zeros, "gate_passed": passed,
            "waivers": old.get("waivers", []), "detail": r}
-    out_path.write_text(json.dumps(res, ensure_ascii=False, indent=1))
+    out_path.write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
     return res
 
 
