@@ -43,8 +43,8 @@ Work top to bottom. Each task has acceptance criteria (AC). Tick the box when th
 
 ## P3 · Assets (target: 4 Dec)
 
-- [ ] **P3.1 Shot list.** Script → `shotlist.csv` (one row per sentence: visual_type, search_terms, motion).
-  AC: every narration sentence has a row; no planned still longer than 10 s.
+- [x] **P3.1 Shot list.** Script → `shotlist.csv` (one row per sentence: visual_type, search_terms, motion).
+  AC: every narration sentence has a row; no planned still longer than 10 s. (Done 21 Nov 2026: `tools/shotlist.py init|check`; Constantinople 410 rows pass. Mix: location 102, painting 89, map 63, card 47, engraving 44, manuscript 42, artefact 23, AI illustration 10 (old-print style, no real faces). Durations are estimates until the final narration timing exists: re-run `check` then.)
 - [ ] **P3.2 Fetchers** `pipeline/assets/`: Wikimedia Commons API, Library of Congress API, NARA catalog API, Internet Archive. Download only public-domain/CC0 (or CC-BY with the credit recorded).
   AC: each download writes a row to `assets/manifest.csv` with licence, source URL and credit. Unknown licence = not downloaded.
 - [ ] **P3.3 Map maker.** Animated maps (territory growth, routes, arrows, year counter) in the chosen render engine. Natural Earth data is public domain.
