@@ -16,10 +16,21 @@ languages:
       model: gemini-3.1-flash-tts-preview
       voice: Charon           # owner's pick after the listening test, 20 Nov 2026 (decisions D5)
       safety: BLOCK_ONLY_HIGH # default filters blocked a plain history paragraph (finishReason SAFETY, 20 Nov 2026)
+      # v1 (20 Nov 2026) "calm, deep ... steady ... No excitement, no rush" read flat and slow (131 wpm):
+      # the owner felt it lacked emotion. v2 below asks for a storyteller and gives each section a mood.
       style: >-
-        Read as a calm, deep male documentary narrator. Warm and steady, about 150 words a minute.
-        Tell it like a story you know well. Give quiet weight to dates, names and numbers.
-        No excitement, no rush, never flat.
+        You are a gripping history storyteller with a deep, warm male voice, telling a true story
+        to one listener who is hooked. Keep a brisk, natural pace, around 150 words a minute.
+        Let the drama move you: speed up when events rush forward, slow down and lower your voice
+        for the line that matters, and let questions hang for a beat. Sound human and involved,
+        never theatrical, never monotone.
+      section_styles:
+        HOOK: Hushed and tense, like the last hour before a battle. Build suspense toward the question.
+        PROMISE: Intriguing, leaning in, as if sharing a secret.
+        CONTEXT: Warm and vivid, painting the scene. Move briskly through background facts.
+        CHAPTER: Storytelling with momentum. Quicken in action, slow down for surprises and small human details.
+        TURNING POINT: Rising tension and urgency through the assault. Then heavy and quiet at the loss.
+        CLOSE: Reflective and slower, with quiet weight. Warm on the final lines.
     elevenlabs:
       model: eleven_multilingual_v2
       voice_id: ""            # filled after the owner picks a stock voice in the ElevenLabs library

@@ -32,6 +32,7 @@ def main(argv=None):
     ap.add_argument("--sections", help="only these sections, e.g. HOOK,PROMISE")
     ap.add_argument("--out", default="narration", help="output name inside audio/")
     ap.add_argument("--no-lexicon", action="store_true")
+    ap.add_argument("--first", type=int, help="only the first N groups (after --sections): short listening samples")
     ap.add_argument("--keep-going", action="store_true",
                     help="skip groups the provider refuses (e.g. safety), keep the rest, list the refused ones")
     a = ap.parse_args(argv)
@@ -44,6 +45,10 @@ def main(argv=None):
     sections = {s.strip().upper() for s in a.sections.split(",")} if a.sections else None
     try:
         groups, lex = voice.prepare(ep, lang, cfg, not a.no_lexicon, sections)
+        if a.first:
+            groups = groups[: a.first]
+            if groups:
+                groups[-1].pause_after = 0.0
         prov = voice.make_provider(lang, cfg, a.provider, a.voice)  # keys are checked only when sending
         p = voice.plan(ep, prov, groups, lex)
         cap = a.max_requests if a.max_requests is not None else cfg["max_requests_default"]

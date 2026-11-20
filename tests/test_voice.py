@@ -231,11 +231,11 @@ def test_safety_threshold_is_sent_but_does_not_change_the_cache_key():
 class PickyProvider(voice.FakeProvider):
     """Refuses any text containing 'attacker', like the Gemini safety filter on 20 Nov 2026."""
 
-    def synth(self, text):
+    def synth(self, text, extra=""):
         if "attacker" in text:
             self.calls.append(text)
             raise voice.NoAudio("Gemini returned no audio (finishReason='SAFETY') for x")
-        return super().synth(text)
+        return super().synth(text, extra)
 
 
 def test_keep_going_skips_refused_groups_keeps_the_rest_and_lists_them(tmp_path):
@@ -255,3 +255,20 @@ def test_without_keep_going_the_first_refusal_stops_the_run(tmp_path):
     ep = make_ep(tmp_path, SCRIPT.replace("Giustiniani waits on the wall.", "Picture yourself as an attacker."))
     with pytest.raises(voice.NoAudio):
         voice.synthesize(ep, PickyProvider(), groups_of(ep), {}, 24000, 10, log=lambda *_: None)
+
+
+def test_section_directions_reach_the_prompt_and_the_cache_key(tmp_path):
+    sent = []
+
+    def opener(req, timeout):
+        sent.append(json.loads(req.data)["contents"][0]["parts"][0]["text"])
+        return FakeResp(gemini_body(b"\x01\x00" * 10))
+
+    g = voice.GeminiProvider("k", "m", "Charon", "Base note.", opener=opener)
+    g.synth("Text.", "Tense.")
+    assert sent[0].startswith("### DIRECTOR'S NOTES\nBase note. Tense.")
+    assert voice.cache_key(g, "Text.") != voice.cache_key(g, "Text.", "Tense.")
+    styles = {"HOOK": "hushed", "CHAPTER": "momentum", "TURNING POINT": "urgent"}
+    assert voice.section_direction(styles, "CHAPTER 3") == "momentum"
+    assert voice.section_direction(styles, "TURNING POINT") == "urgent"
+    assert voice.section_direction(styles, "CLOSE") == ""

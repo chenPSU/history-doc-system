@@ -99,6 +99,7 @@ class Group:
     section: str
     sentences: list[str] = field(default_factory=list)
     pause_after: float = 0.0
+    direction: str = ""   # extra director's note for this section (config section_styles)
 
     @property
     def text(self) -> str:
@@ -253,7 +254,7 @@ class FakeProvider:
     def identity(self) -> list:
         return ["fake", self.wpm]
 
-    def synth(self, text: str) -> bytes:
+    def synth(self, text: str, extra: str = "") -> bytes:
         self.calls.append(text)
         secs = len(text.split()) / self.wpm * 60
         n = int(secs * self.sr)
@@ -278,10 +279,11 @@ class GeminiProvider:
     def identity(self) -> list:
         return ["gemini", self.model, self.voice, self.style, self.sr]
 
-    def synth(self, text: str) -> bytes:
+    def synth(self, text: str, extra: str = "") -> bytes:
         if not self.key:
             raise VoiceError("GEMINI_API_KEY is missing in .env")
-        prompt = f"### DIRECTOR'S NOTES\n{self.style}\n\n### TRANSCRIPT\n{text}" if self.style else text
+        notes = " ".join(x for x in (self.style, extra) if x)
+        prompt = f"### DIRECTOR'S NOTES\n{notes}\n\n### TRANSCRIPT\n{text}" if notes else text
         body = {"contents": [{"parts": [{"text": prompt}]}],
                 "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {
                     "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": self.voice}}}}}
@@ -320,7 +322,7 @@ class ElevenLabsProvider:
     def identity(self) -> list:
         return ["elevenlabs", self.model, self.voice, self.sr]
 
-    def synth(self, text: str) -> bytes:
+    def synth(self, text: str, extra: str = "") -> bytes:  # no prompt-level direction in this API
         if not self.key:
             raise VoiceError("ELEVENLABS_API_KEY is missing in .env")
         if not self.voice:
@@ -348,8 +350,16 @@ def make_provider(lang: str, cfg: dict, provider: str | None = None, voice: str 
 
 
 # ---------------------------------------------------------------- plan and run
-def cache_key(provider, spoken: str) -> str:
-    return hashlib.sha1(json.dumps([provider.identity(), spoken], ensure_ascii=False).encode("utf-8")).hexdigest()[:20]
+def cache_key(provider, spoken: str, extra: str = "") -> str:
+    parts = [provider.identity(), spoken] + ([extra] if extra else [])
+    return hashlib.sha1(json.dumps(parts, ensure_ascii=False).encode("utf-8")).hexdigest()[:20]
+
+
+def section_direction(styles: dict, section: str) -> str:
+    """'CHAPTER 3' uses the CHAPTER entry; exact names win."""
+    if section in styles:
+        return styles[section]
+    return styles.get(section.split()[0], "") if section else ""
 
 
 def prepare(ep: Path, lang: str, cfg: dict, use_lexicon: bool = True, sections: set[str] | None = None):
@@ -357,12 +367,16 @@ def prepare(ep: Path, lang: str, cfg: dict, use_lexicon: bool = True, sections: 
     groups = build_groups(events, cfg["max_chars_per_request"], cfg["pause_between_blocks"],
                           cfg["pause_between_sections"], sections)
     lex = load_lexicon(lang) if use_lexicon else {}
+    lc = cfg["languages"][lang]
+    styles = (lc.get(lc["provider"]) or {}).get("section_styles") or {}
+    for g in groups:
+        g.direction = section_direction(styles, g.section)
     return groups, lex
 
 
 def plan(ep: Path, provider, groups: list[Group], lex: dict) -> dict:
     cache = Path(ep) / "audio" / ".tts-cache"
-    todo = [g for g in groups if not (cache / f"{cache_key(provider, apply_lexicon(g.text, lex))}.wav").exists()]
+    todo = [g for g in groups if not (cache / f"{cache_key(provider, apply_lexicon(g.text, lex), g.direction)}.wav").exists()]
     words = sum(len(g.text.split()) for g in groups)
     return {"groups": len(groups), "requests_needed": len(todo), "cached": len(groups) - len(todo),
             "characters_to_send": sum(len(apply_lexicon(g.text, lex)) for g in todo),
@@ -377,7 +391,7 @@ def synthesize(ep: Path, provider, groups: list[Group], lex: dict, sr: int, max_
     pieces, requests, blocked = [], 0, []
     for i, g in enumerate(groups):
         spoken = apply_lexicon(g.text, lex)
-        f = cache / f"{cache_key(provider, spoken)}.wav"
+        f = cache / f"{cache_key(provider, spoken, g.direction)}.wav"
         if f.exists():
             pcm, _ = read_wav(f)
         else:
@@ -387,7 +401,7 @@ def synthesize(ep: Path, provider, groups: list[Group], lex: dict, sr: int, max_
             requests += 1
             log(f"  request {requests}: group {i + 1}/{len(groups)} [{g.section}] {len(spoken)} chars")
             try:
-                pcm = trim_silence(provider.synth(spoken))
+                pcm = trim_silence(provider.synth(spoken, g.direction))
             except NoAudio as e:
                 if not keep_going:
                     raise
