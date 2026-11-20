@@ -32,6 +32,8 @@ def main(argv=None):
     ap.add_argument("--sections", help="only these sections, e.g. HOOK,PROMISE")
     ap.add_argument("--out", default="narration", help="output name inside audio/")
     ap.add_argument("--no-lexicon", action="store_true")
+    ap.add_argument("--keep-going", action="store_true",
+                    help="skip groups the provider refuses (e.g. safety), keep the rest, list the refused ones")
     a = ap.parse_args(argv)
 
     ep = Path(a.episode)
@@ -51,7 +53,7 @@ def main(argv=None):
         if not a.go:
             print("PLAN ONLY. Add --go to call the provider.")
             return 0
-        t = voice.synthesize(ep, prov, groups, lex, cfg["sample_rate"], cap, a.out)
+        t = voice.synthesize(ep, prov, groups, lex, cfg["sample_rate"], cap, a.out, keep_going=a.keep_going)
         print(f"Done: {t['audio']}  {t['total_seconds'] / 60:.1f} min, {t['requests_sent']} requests sent, "
               f"ratio to scorer estimate {t['ratio_to_estimate']}")
         return 0

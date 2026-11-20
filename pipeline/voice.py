@@ -53,6 +53,16 @@ class NoAudio(VoiceError):
     """The provider answered but sent no audio. The call still counted against quota."""
 
 
+class GroupsBlocked(VoiceError):
+    """--keep-going run finished, but some groups got no audio. Everything else is cached."""
+
+    def __init__(self, blocked: list[dict], requests: int):
+        self.blocked, self.requests = blocked, requests
+        lines = "\n".join(f"  group {b['group'] + 1} [{b['section']}]: {b['first']}... ({b['reason']})" for b in blocked)
+        super().__init__(f"{len(blocked)} group(s) got no audio after {requests} requests "
+                         f"(all other groups are cached; no final file written):\n{lines}")
+
+
 # ---------------------------------------------------------------- config
 def load_env(path: Path = ROOT / ".env") -> None:
     """Minimal .env reader (KEY=VALUE). Existing environment variables win."""
@@ -360,11 +370,11 @@ def plan(ep: Path, provider, groups: list[Group], lex: dict) -> dict:
 
 
 def synthesize(ep: Path, provider, groups: list[Group], lex: dict, sr: int, max_requests: int,
-               out_name: str = "narration", log=print) -> dict:
+               out_name: str = "narration", log=print, keep_going: bool = False) -> dict:
     ep = Path(ep)
     cache = ep / "audio" / ".tts-cache"
     cache.mkdir(parents=True, exist_ok=True)
-    pieces, requests = [], 0
+    pieces, requests, blocked = [], 0, []
     for i, g in enumerate(groups):
         spoken = apply_lexicon(g.text, lex)
         f = cache / f"{cache_key(provider, spoken)}.wav"
@@ -376,9 +386,23 @@ def synthesize(ep: Path, provider, groups: list[Group], lex: dict, sr: int, max_
                                  "Run again with a higher --max-requests to continue.")
             requests += 1
             log(f"  request {requests}: group {i + 1}/{len(groups)} [{g.section}] {len(spoken)} chars")
-            pcm = trim_silence(provider.synth(spoken))
+            try:
+                pcm = trim_silence(provider.synth(spoken))
+            except NoAudio as e:
+                if not keep_going:
+                    raise
+                reason = str(e).split(" for ", 1)[0]
+                blocked.append({"group": i, "section": g.section, "first": g.text[:60], "reason": reason[:160]})
+                log(f"    no audio: {reason[:120]}")
+                pieces.append(None)
+                continue
             write_wav(f, pcm, sr)
         pieces.append(pcm)
+    if blocked:
+        report = ep / "audio" / f"{out_name}_blocked.json"
+        report.write_text(json.dumps([{**b, "text": groups[b["group"]].text} for b in blocked],
+                                     ensure_ascii=False, indent=1), encoding="utf-8")
+        raise GroupsBlocked(blocked, requests)
 
     audio, t, blocks, sents = [], 0.0, [], []
     for i, (g, pcm) in enumerate(zip(groups, pieces)):

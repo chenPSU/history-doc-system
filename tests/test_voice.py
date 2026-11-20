@@ -226,3 +226,32 @@ def test_safety_threshold_is_sent_but_does_not_change_the_cache_key():
     assert {s["threshold"] for s in sent[1]["safetySettings"]} == {"BLOCK_ONLY_HIGH"}
     assert len(sent[1]["safetySettings"]) == 4
     assert voice.cache_key(plain, "a") == voice.cache_key(relaxed, "a")
+
+
+class PickyProvider(voice.FakeProvider):
+    """Refuses any text containing 'attacker', like the Gemini safety filter on 20 Nov 2026."""
+
+    def synth(self, text):
+        if "attacker" in text:
+            self.calls.append(text)
+            raise voice.NoAudio("Gemini returned no audio (finishReason='SAFETY') for x")
+        return super().synth(text)
+
+
+def test_keep_going_skips_refused_groups_keeps_the_rest_and_lists_them(tmp_path):
+    ep = make_ep(tmp_path, SCRIPT.replace("Giustiniani waits on the wall.", "Picture yourself as an attacker."))
+    g = groups_of(ep)
+    prov = PickyProvider()
+    with pytest.raises(voice.GroupsBlocked) as e:
+        voice.synthesize(ep, prov, g, {}, 24000, 10, log=lambda *_: None, keep_going=True)
+    assert [b["group"] for b in e.value.blocked] == [0] and e.value.requests == 3
+    assert not (ep / "audio" / "narration.wav").exists()
+    report = json.loads((ep / "audio" / "narration_blocked.json").read_text(encoding="utf-8"))
+    assert "attacker" in report[0]["text"]
+    assert voice.plan(ep, prov, g, {})["requests_needed"] == 1      # only the refused group is left
+
+
+def test_without_keep_going_the_first_refusal_stops_the_run(tmp_path):
+    ep = make_ep(tmp_path, SCRIPT.replace("Giustiniani waits on the wall.", "Picture yourself as an attacker."))
+    with pytest.raises(voice.NoAudio):
+        voice.synthesize(ep, PickyProvider(), groups_of(ep), {}, 24000, 10, log=lambda *_: None)
