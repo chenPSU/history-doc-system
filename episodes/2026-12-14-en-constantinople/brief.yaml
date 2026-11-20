@@ -5,7 +5,7 @@ slug: "constantinople"
 working_title: "The Fall of Constantinople: The Last 53 Days of Byzantium"
 cluster: 9           # 1-12, see docs/roadmap.md
 th_only: false
-target_minutes: 25           # current script is a 6.6-min test cut
+target_minutes: 25           # full script (P1.3): 3,421 words, about 23 min
 hook_paradox: "กำแพงที่กันศัตรูได้ราวพันปี ถูกเจาะได้ใน 53 วัน"       # small/ignored thing -> huge outcome, said in the first 15 s
 key_visual: "แผนที่กำแพงเมืองแบบ 2.5D + ภาพวาดการลากเรือข้ามเขา"   # used in the opening, the closing callback and the thumbnail
 title_formula: "countdown"          # compressed time | countdown | rise and fall | forgotten secret | real footage | everyday life | dark mysteries
@@ -13,4 +13,4 @@ title_options: ["How 53 Days Broke a Thousand-Year Wall", "The Fall of Constanti
 signoff: "Until next time, keep looking back."
 series: ""                   # playlist / series name
 next_episode_tease: "How did Mehmed turn the broken city into the capital of an empire?"     # specific question for the CLOSE
-status: script               # test cut (6.6 min) passed the score gate; needs factsheet + expansion to full length (TASKS P1.2, P1.3)
+status: scored               # full script passes the score gate (mean 97.4); fact sheet rows 1-112. Next: voice (P2)

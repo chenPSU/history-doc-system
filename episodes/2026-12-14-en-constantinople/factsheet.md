@@ -2,7 +2,7 @@
 
 Every date, name and number used in the script. Two independent sources each. Mark disputed facts and say which version the script uses.
 
-Covers the 6.6-minute test cut (`script.md`, 20 Nov 2026). Extend this sheet before adding new facts in P1.3.
+Covers the full script (P1.3, 20 Nov 2026, about 23 min). Rows 1-40 came from the 6.6-minute test cut; rows 41+ were added for the full script.
 
 **Checked** column: `web` = the fact was confirmed online on 20 Nov 2026 (Britannica, World History Encyclopedia, a translated primary text, or Wikipedia pointing to the cited work); the printed book itself was not opened. `book` = standard statement in the cited works, not yet checked online or in print. Wikipedia is used only as a pointer to the work it cites, never as one of the two sources.
 
@@ -23,6 +23,9 @@ Covers the 6.6-minute test cut (`script.md`, 20 Nov 2026). Extend this sheet bef
 | SPH | George Sphrantzes, *Chronicon minus* (trans. M. Philippides, *The Fall of the Byzantine Empire*, 1980); census extract: https://www.deremilitari.org/RESOURCES/SOURCES/constantinople2.htm |
 | D | Doukas, *Decline and Fall of Byzantium to the Ottoman Turks* (trans. H. Magoulias, 1975) |
 | B | Nicolò Barbaro, *Diary of the Siege of Constantinople 1453* (trans. J. R. Jones, 1969) |
+| K | Kritoboulos, *History of Mehmed the Conqueror* (trans. C. T. Riggs, Princeton, 1954) |
+| BJ | Encyclopaedia Britannica, "Janissary"; "Hagia Sophia"; "Constantine XI Palaeologus"; "Murad II"; "Middle Ages" |
+| WK | Wikipedia articles, used only to locate the cited work: "Fall of Constantinople", "Orbán (ironmaster)", "Giovanni Giustiniani", "Johannes Grant", "Loukas Notaras", "Çandarlı Halil Pasha the Younger", "Rumelihisarı", "Walls of Constantinople", "Mehmed II" |
 | U | UNESCO World Heritage List, "Historic Areas of Istanbul" (1985), includes the land walls: https://whc.unesco.org/en/list/356/ |
 
 ## Facts
@@ -38,7 +41,7 @@ Covers the 6.6-minute test cut (`script.md`, 20 Nov 2026). Extend this sheet bef
 | 7 | No army had broken through the land walls before 1453 | — | T | R | book | **Partly:** in 1204 the Fourth Crusade took the city through the **sea** walls. Script changed to "these land walls". |
 | 8 | City much shrunk by 1453 | **fewer than fifty thousand** people | N | WH | web | **Yes:** estimates 40,000–50,000. Script changed from "perhaps fifty thousand" to "fewer than fifty thousand". |
 | 9 | Ottomans surround the city across Anatolia and the Balkans | — | R | BS | book | No |
-| 10 | Mehmed II takes the throne (second time) | 1451, aged 18 | BM | R | web | **Fixed:** he had already reigned 1444–1446 as a boy. Born 30 March 1432; accession 3 Feb 1451 → 18. Script changed from "a new sultan" to "took the throne for the second time". |
+| 10 | Mehmed II takes the throne (second time) | 1451, **"not yet twenty"** | BM | R | web | **Fixed:** he had already reigned 1444–1446 as a boy. Born 30 March 1432; accession 3 Feb 1451 → 18 by the dates, but Wikipedia's siege article says 19. Script says "not yet twenty" to avoid the clash, and "took the throne for the second time". |
 | 11 | West underestimated Mehmed (because his first reign failed) | — | R | C | book | Interpretation, widely held |
 | 12 | Fortress on the European shore of the Bosphorus (Rumeli Hisarı) | 1452 | BS | R | web | No. Built spring–August 1452. A Venetian ship that ignored it was sunk in Nov 1452. |
 | 13 | Constantine XI asks the West for help; little comes | — | R | NI | book | No. Pope sent ~200 archers; Venice and Genoa small contingents. |
@@ -70,9 +73,82 @@ Covers the 6.6-minute test cut (`script.md`, 20 Nov 2026). Extend this sheet bef
 | 39 | Long stretches of the land walls still stand | — | U | WH | web | No |
 | 40 | Mehmed's age at the siege | young (21) | BM | R | web | No (not stated as a number in the script) |
 
+| 41 | The "Byzantines" called themselves Romans | — | BF | R | book | No |
+| 42 | Murad II, Mehmed's father, besieged the city and failed | 1422 | BJ ("Murad II") | R | book | No |
+| 43 | Fields and orchards inside the walls by 1453 | — | R | C | book | No |
+| 44 | Emperors paid tribute to the Ottomans | — | R | NI | book | No |
+| 45 | Constantine XI becomes emperor | 1449 | BJ ("Constantine XI") | NI | book | No (January 1449; crowned at Mistra, not in the city) |
+| 46 | Constantine had fought the Turks in southern Greece (Despot of the Morea) | — | NI | BJ | book | No |
+| 47 | Mehmed's first reign as a boy ended when his father took the throne back | 1444–1446 | BM | R | web (WK "Mehmed II") | No |
+| 48 | Anadolu Hisarı on the Asian shore, built by Bayezid I, Mehmed's great-grandfather | — | R | C | book | No (Bayezid I → Mehmed I → Murad II → Mehmed II) |
+| 49 | Rumeli Hisarı begun spring 1452, finished within a few months by thousands of workers | 1452 | WK "Rumelihisarı" (15 April start; summer finish) | R | web (dates) / book (workforce) | No |
+| 50 | Name Boğazkesen = "strait-cutter" / "throat-cutter" (boğaz = strait and throat) | — | WK citing Nossov 2012 | C | web | No |
+| 51 | The city depended on grain shipped from the Black Sea | — | C | R | book | No |
+| 52 | Venetian ship refused to stop, sunk by one shot; crew beheaded; captain impaled | late 1452 (Nov) | WK citing Silburn 1912 | R | web | **Minor:** captain's name (Antonio Rizzo in Runciman) not confirmed online; script names nobody. |
+| 53 | Mehmed spent nights drawing plans of the walls | — | D | R | book | Chronicler's report |
+| 54 | Churches of Rome and Constantinople divided ~400 years | 1054 → 1452 | BF | R | book | No (rounded) |
+| 55 | Church union declared by the imperial court | 12 December 1452 | WK citing Norwich 1997, p. 373 | R | web | No |
+| 56 | "Rather the turban than the mitre" remark | — | D 37.10 (Magoulias 1975, p. 210) | Setton 1978, pp. 104–105 (doubts attribution to Notaras) | web | **Yes:** attribution doubted. Script says "a great lord" and "historians still argue about the speaker". |
+| 57 | Pope's envoy (Cardinal Isidore) brought ~200 archers | 200 | C (via WK) | R | web | No |
+| 58 | Giustiniani arrives with 700 men (400 Genoa + 300 Chios), given command of the land walls | January 1453, 700 | R pp. 83–84 (via WK) | C | web | No |
+| 59 | Mehmed asked Orban if his gun could break the walls; "the walls of Babylon" reply | — | D | C | book | Chronicler's report |
+| 60 | The great bombard built in about three months at Adrianople | 3 months | WK "Orbán" citing Runciman 1990, pp. 77–78 | D | web | No |
+| 61 | Test ball buried itself in the ground | — | D | C | book | No |
+| 62 | About seventy other cannon | ~70 | WK citing Lanning 2005, pp. 139–140 | N | web | No |
+| 63 | Ottoman army camps outside the walls; defenders shut gates and break the moat bridges | 2 April 1453 | WK | R | web (date) / book (bridges) | No |
+| 64 | Mehmed's red-and-gold tent opposite the Mesoteichion (middle of the land walls) | — | WK | R | web | No |
+| 65 | Mesoteichion (Lycus valley) the weakest stretch | — | R | T | book | No |
+| 66 | Janissaries: elite infantry levied as boys from Christian families (devşirme) | — | BJ ("Janissary") | N | book | No |
+| 67 | Sphrantzes counts fewer than five thousand Greek men fit to fight; emperor orders it kept secret | 4,773 (or 4,983) | SPH | R | web (count) / book (secret) | Count varies by edition; script says "fewer than five thousand". |
+| 68 | Deployment: Giustiniani at the Mesoteichion; Venetians at the Blachernae palace | — | R | C | book | No |
+| 69 | Great bombard took hours (about 3) to reload | — | WK (FoC) | C | web | No |
+| 70 | Earth-and-timber stockade absorbed shot better than stone | — | R | C | book | No |
+| 71 | 18 April night assault lasted about 4 hours; Ottomans lost far more | 4 hours | WK "Giustiniani" | B | web (duration) / book (losses) | Barbaro's casualty figures not used |
+| 72 | Chain floated on wooden logs | — | R | T | book | No |
+| 73 | Galata (Genoese) officially neutral, traded with both sides | — | R | C | book | No |
+| 74 | 20 April: 3 Genoese ships + 1 imperial grain transport; wind dropped, then returned; ships got in | — | R (fn. 7 via WK) | C | web (ships) / book (wind) | No |
+| 75 | Admiral Baltoğlu beaten (100 strokes) and stripped of his wealth | — | C (via WK) | R | web | No |
+| 76 | Some ships raised sails while hauled over the hill | — | K | R | book | No |
+| 77 | Galata accused of letting the haul pass | — | R | C | book | Accusation, not proven |
+| 78 | 28 April fire-ship attack fails; 40 sailors executed; defenders kill 260 prisoners | 28 April, 40, 260 | R p. 108 | C pp. 150–154 | web | No (betrayal by a Galata Genoese reported but not used) |
+| 79 | Serbian miners (Novo Brdo) dig tunnels | mid-May | WK citing Philippides 2007, p. 83 | C | web | No |
+| 80 | Johannes Grant leads the countermines; called German by contemporaries, possibly a Scot | — | R p. 84 | PH | web | **Yes:** origin. Script gives both. |
+| 81 | Tunnels destroyed with Greek fire or collapsed | 16–25 May | C pp. 168–171 | R | web | No |
+| 82 | Captured Ottoman officers reveal every tunnel | 23 May | C pp. 168–171 | R | web | No |
+| 83 | Mehmed's offer: leave the city, rule the Peloponnese; Constantine refuses, offers tribute, "decided to die" | 21 May | WK (FoC, note 9) | R | web | No |
+| 84 | Prophecy: the city would fall under a waning moon | — | R | C | book | No |
+| 85 | Partial lunar eclipse | 22 May 1453 | WK (FoC) | NASA Five Millennium Catalog of Lunar Eclipses | web (WK only) | **Check NASA table**; some books say 24 May. |
+| 86 | Thick fog; strange light around the dome of Hagia Sophia | a few days after 22 May | K p. 59 (via WK) | R | web | No |
+| 87 | Rumours of a Christian relief army | — | R | C | book | No |
+| 88 | Council: Halil urges peace, Zaganos urges attack; Mehmed chooses attack | late May | WK | R | web | No (day varies) |
+| 89 | Ottoman camp fires and music on the nights before the assault | — | R | C | book | No |
+| 90 | Joint Greek–Latin service in Hagia Sophia, emperor present | evening, 28 May | WK | R | web | No |
+| 91 | Three waves: irregulars (many Christian vassals), Anatolians, Janissaries | 29 May | WK "Giustiniani" | R | web | No |
+| 92 | Cannon breaches the stockade; second wave trapped and driven out | — | R | C | book | No |
+| 93 | Janissaries advance in order to the beat of drums | — | C | R | book | No |
+| 94 | Giustiniani hit just after dawn (bullet or crossbow bolt); many Genoese follow him | 29 May | WK "Giustiniani" | R | web | Barbaro says lightly wounded (see row 35) |
+| 95 | Kerkoporta postern left open | — | D | WK "Walls of Constantinople" (no inner-wall gate found) | web | **Yes:** only Doukas; script says "many historians doubt the story". |
+| 96 | Constantine threw off his regalia and charged (legend) | — | NI | WK | web | Legend, labelled as such |
+| 97 | Bells; crowd bars itself in Hagia Sophia; prophecy of an angel; doors broken | — | D | R | book | No |
+| 98 | City taken by midday; Mehmed rides in that afternoon and goes to Hagia Sophia | 29 May | R | BJ ("Hagia Sophia") | book | No |
+| 99 | Three days of plunder promised; some accounts say ended sooner | 3 days | WK | R | web | **Yes:** sources inconsistent; script says "some accounts". |
+| 100 | Mehmed said to have wept at the ruined city | — | R p. 152 | K | book | Reported |
+| 101 | Some Venetian and Genoese ships escaped past the chain with refugees | — | R | C | book | No |
+| 102 | Hagia Sophia, a church about 900 years (537 → 1453), becomes a mosque | ~900 years | BJ ("Hagia Sophia") | R | book | No |
+| 103 | 29 May 1453 was a Tuesday; Greek "unlucky Tuesday" tradition | Tuesday | WK (FoC: "Tuesday 29 May") | Greek Reporter / WK "Tuesday" | web (weekday) | **Weak:** the tradition is folklore; find a stronger second source or cut the line. |
+| 104 | Giustiniani dies of his wound at Chios | 1 June 1453 | WK "Giustiniani" | R | web | No |
+| 105 | Halil dismissed and imprisoned 1 June; executed 10 July (about 6 weeks) | 6 weeks | TDV İslâm Ansiklopedisi "Çandarlı Halil Paşa" (via WK) | R | web | No |
+| 106 | Orban said to have died when a cannon burst | 1453 | WK "Orbán" | D | web | **Yes:** uncertain; script says "one story says". |
+| 107 | Mehmed aged 21; takes the title Caesar of Rome (Kayser-i Rûm) | 21 | BM | C | book | No |
+| 108 | News reached Venice and Rome weeks later | (Venice 29 June) | R | C | book | No |
+| 109 | Pope calls a crusade; none comes | 1453 | R | BJ | book | No |
+| 110 | 1453 often marks the end of the Middle Ages | — | BF | BJ ("Middle Ages") | book | Convention, not fact |
+| 111 | "Marble emperor" legend: angel hides Constantine in a cave near the Golden Gate | — | NI | R | book | Legend, labelled as such |
+| 112 | Final fighting centred near the Gate of St Romanus | 29 May | WK "Giustiniani" | R | web | No |
+
 ## First-person quotes (VOICE lines)
 
-None in the test cut. Any VOICE line added in P1.3 needs a primary source and named translation here first.
+None in the full script. Reported speech (Orban's "walls of Babylon", the turban remark, Constantine's refusal) is narrated, not voiced, and attributed to the chronicler.
 
 | Speaker | Quote (as narrated) | Primary source | Translation used |
 |---|---|---|---|
@@ -95,3 +171,5 @@ None in the test cut. Any VOICE line added in P1.3 needs a primary source and na
 ## Still to do before the fact gate is final
 
 - Page numbers for the `book` rows (Runciman 1965 and Crowley 2005 cover nearly all of them). Needs a library or ebook copy.
+- Row 85: check the eclipse date in the NASA lunar eclipse catalogue.
+- Row 103: find a stronger second source for the "unlucky Tuesday" tradition, or cut that line.

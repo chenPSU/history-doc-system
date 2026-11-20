@@ -2,7 +2,7 @@
  "rounds": {
   "1": 93.0,
   "2": 95.6,
-  "3": 98.3,
+  "3": 98.2,
   "4": 100.0,
   "5": 100.0
  },
@@ -13,8 +13,8 @@
  "detail": {
   "file": "episodes\\2026-12-14-en-constantinople\\script.md",
   "base": {
-   "words": 979,
-   "est_minutes": 6.7
+   "words": 3421,
+   "est_minutes": 23.1
   },
   "rounds": {
    "1": {
@@ -61,27 +61,27 @@
     "rows": [
      {
       "metric": "mean sentence length (8-16 words)",
-      "value": 8.7,
+      "value": 8.3,
       "score": 1.0
      },
      {
       "metric": "% sentences over 20 words (<=10%)",
-      "value": 0.0,
+      "value": 0.2,
       "score": 1.0
      },
      {
       "metric": "longest sentence (<=28 words)",
-      "value": 20,
+      "value": 21,
       "score": 1.0
      },
      {
       "metric": "Flesch reading ease (>=65)",
-      "value": 78.2,
+      "value": 81.4,
       "score": 1.0
      },
      {
       "metric": "passive constructions per 10 sentences (<=1)",
-      "value": 0.27,
+      "value": 0.15,
       "score": 1.0
      },
      {
@@ -96,12 +96,12 @@
      },
      {
       "metric": "long sentence followed by a short one (>=70%)",
-      "value": 100,
+      "value": 83,
       "score": 1.0
      },
      {
       "metric": "rhythm: sentence-length variation CV (0.35-0.7)",
-      "value": 0.41,
+      "value": 0.39,
       "score": 1.0
      }
     ],
@@ -116,52 +116,52 @@
      },
      {
       "metric": "but/therefore links per minute of story (>=2)",
-      "value": 3.24,
+      "value": 2.4,
       "score": 1.0
      },
      {
       "metric": "story sections with an explicit obstacle (all)",
-      "value": "3/3",
+      "value": "6/6",
       "score": 1.0
      },
      {
       "metric": "sections before the climax ending on an open loop",
-      "value": "4/4",
+      "value": "7/7",
       "score": 1.0
      },
      {
       "metric": "longest stretch without a question or tease (<=90s)",
-      "value": 99,
-      "score": 0.9
+      "value": 100,
+      "score": 0.89
      },
      {
       "metric": "named people with a stated want (>=3)",
-      "value": "Constantine, Halil, Mehmed",
+      "value": "Black, Constantine, Giustiniani, Halil, Mehmed, Pope, Venetian, Venetians, Zaganos",
       "score": 1.0
      }
     ],
-    "score": 98.3
+    "score": 98.2
    },
    "4": {
     "rows": [
      {
       "metric": "story sections with their own music cue (all)",
-      "value": "5/5",
-      "score": 1.0
-     },
-     {
-      "metric": "music cues instrumental, no lyrics (all)",
       "value": "8/8",
       "score": 1.0
      },
      {
+      "metric": "music cues instrumental, no lyrics (all)",
+      "value": "12/12",
+      "score": 1.0
+     },
+     {
       "metric": "section transitions with J/L-cut or sound bridge",
-      "value": "5/5",
+      "value": "8/8",
       "score": 1.0
      },
      {
       "metric": "planned pauses: >=1 per story section, each <=3s",
-      "value": "3/3 sections, 6 pauses, 0 over 3s",
+      "value": "6/6 sections, 11 pauses, 0 over 3s",
       "score": 1.0
      },
      {
@@ -186,12 +186,12 @@
     "rows": [
      {
       "metric": "ending calls back to the hook (>=4 shared words + answer)",
-      "value": "15 shared, answered=True",
+      "value": "16 shared, answered=True",
       "score": 1.0
      },
      {
       "metric": "peak (music-out reveal) at 60-85% of runtime",
-      "value": "69%",
+      "value": "80%",
       "score": 1.0
      },
      {
@@ -201,7 +201,7 @@
      },
      {
       "metric": "direct address 'you' per minute (1-4)",
-      "value": 1.69,
+      "value": 1.18,
       "score": 1.0
      },
      {
@@ -211,7 +211,7 @@
      },
      {
       "metric": "setups paid off: names from first 40% reused in last 30% (>=4)",
-      "value": "Byzantine, Constantine, Constantinople, Eleventh, Empire, May, Ottoman",
+      "value": "A, After, Anatolia, At, Byzantine, Christian, Constantine, Constantinople, Doukas, Eleventh, Empire, For, From, Genoese, Giovanni, Giustiniani, Golden, Greek, Greeks, If, Janissaries, Many, May, Next, One, Orban's, Ottoman, Picture, Pope, Roman, Romans, Rome, That, Thousands, Turks, Venetian, What, Would",
       "score": 1.0
      },
      {
