@@ -27,7 +27,14 @@ class MapError(ValueError):
 
 
 def load_library(path: Path) -> dict:
-    return yaml.safe_load(Path(path).read_text(encoding="utf-8"))
+    """A library may `extends: <other>.yaml` (same folder): it inherits that file's land and features."""
+    path = Path(path)
+    lib = yaml.safe_load(path.read_text(encoding="utf-8"))
+    if lib.get("extends"):
+        base = load_library(path.parent / lib["extends"])
+        lib["features"] = {**base.get("features", {}), **lib.get("features", {})}
+        lib.setdefault("land", base.get("land"))
+    return lib
 
 
 def _round(obj, nd=5):
@@ -73,7 +80,7 @@ def build_props(library: dict, clip: str, width: int = 1920, height: int = 1080,
                 raise MapError(f"clip {clip}: {name}: {k} must be [start, end] with start < end")
         layers.append(layer)
     view = c["view"]
-    land, credit = land_for_view(library["land"], view)
+    land, credit = land_for_view(c.get("land", library["land"]), view)   # a clip may use other geography
     props = {"width": width, "height": height, "fps": fps, "durationSec": float(c["duration"]),
              "palette": c.get("palette", palette), "view": view, "land": land, "layers": layers}
     if c.get("camera"):
@@ -128,3 +135,101 @@ def log_to_manifest(out: Path, clip: str, credit: str) -> bool:
                  "credit": credit or "own work", "ai_generated": "n", "notes": "class=own; tools/map.py"})
     write_manifest(mpath, rows)
     return True
+
+
+# ---------------------------------------------------------------- episode binding (P4.4)
+def library_ref(library_path: Path, clip: str) -> str:
+    """How an inline map is named in an episode manifest: <library path from the repo root>#<clip>."""
+    return f"{Path(library_path).resolve().relative_to(ROOT).as_posix()}#{clip}"
+
+
+def bind(library_path: Path, ep: Path) -> dict:
+    """Clips with `shot: sNNN.k` (or a list) become the asset of those shots: `map-<clip>` in the shot list
+    cell and a manifest row with the map-data credit. The episode render draws them inline (no mp4)."""
+    import csv
+    library_path, ep = Path(library_path), Path(ep)
+    lib = load_library(library_path)
+    want: dict[tuple[int, int], str] = {}
+    for name, c in lib.get("clips", {}).items():
+        shots = c.get("shot") or []
+        for sid in [shots] if isinstance(shots, str) else shots:
+            no, _, k = sid.lstrip("s").partition(".")
+            key = (int(no), int(k or 1) - 1)
+            if key in want:
+                raise MapError(f"shot {sid} bound twice: {want[key]} and {name}")
+            want[key] = name
+    path = ep / "shotlist.csv"
+    with path.open(encoding="utf-8", newline="") as f:
+        reader = csv.DictReader(f)
+        cols, rows = reader.fieldnames, list(reader)
+    done, problems = [], []
+    for r in rows:
+        no = int(r["sentence_no"])
+        terms = [t.strip() for t in r["search_terms"].split("|") if t.strip()]
+        vts = [v.strip() for v in r["visual_type"].split("|")]
+        ids = [x.strip() for x in (r.get("asset_id") or "").split("|")]
+        ids += [""] * (len(terms) - len(ids))
+        for j in range(len(terms)):
+            name = want.pop((no, j), None)
+            if not name:
+                continue
+            vt = vts[j] if len(vts) > 1 else vts[0]
+            if vt != "map":
+                problems.append(f"s{no:03d}.{j + 1} is {vt}, not map (clip {name})")
+                continue
+            ids[j] = f"map-{name}"
+            done.append(f"s{no:03d}.{j + 1}")
+        r["asset_id"] = " | ".join(ids[:len(terms)]) if len(terms) > 1 else ids[0]
+    problems += [f"s{no:03d}.{j + 1}: no such shot (clip {n})" for (no, j), n in want.items()]
+    if problems:
+        raise MapError("; ".join(problems))
+    with path.open("w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=cols)
+        w.writeheader()
+        w.writerows(rows)
+    mpath = ep / "assets" / "manifest.csv"
+    keep = [m for m in read_manifest(mpath) if not m["asset_id"].startswith("map-") or "#" not in m["file"]]
+    for name, c in lib.get("clips", {}).items():
+        if not c.get("shot"):
+            continue
+        fc = json.loads((ROOT / "data" / "geo" / f"{c.get('land', lib['land'])}.geojson").read_text(encoding="utf-8"))
+        credit = fc.get("properties", {}).get("credit", "") or "own work"
+        keep.append({"asset_id": f"map-{name}", "file": library_ref(library_path, name), "source": "own map",
+                     "source_url": f"own:tools/map.py {name}", "licence": "own work; map data as credited",
+                     "credit": credit, "ai_generated": "n",
+                     "notes": "class=own; drawn inline by the episode render" + ("; borders approximate" if c.get("approximate") else "")})
+    write_manifest(mpath, keep)
+    return {"bound": done}
+
+
+def contact_sheet(library: dict, names: list[str], out: Path, at: float | None = None, cols: int = 3) -> Path:
+    """All clips side by side at 960x540 (end state, or `at` seconds): one bundle for every still."""
+    from PIL import Image, ImageDraw
+    if not REMOTION_CLI.exists():
+        raise MapError("Remotion is not installed: run `npm install` in video/")
+    tmp = VIDEO / "out" / "sheet"
+    tmp.mkdir(parents=True, exist_ok=True)
+    jobs = []
+    for name in names:
+        props = build_props(library, name, 960, 540, 30)
+        pf = tmp / f"{name}.json"
+        pf.write_text(json.dumps({k: v for k, v in props.items() if not k.startswith("_")}), encoding="utf-8")
+        sec = at if at is not None else props["durationSec"] - 0.05
+        jobs.append({"props": str(pf), "out": str(tmp / f"{name}.png"), "frame": max(0, int(sec * 30))})
+    jf = tmp / "jobs.json"
+    jf.write_text(json.dumps(jobs), encoding="utf-8")
+    r = subprocess.run(["node", "scripts/stills.mjs", str(jf)], cwd=VIDEO)
+    if r.returncode != 0:
+        raise MapError("stills failed")
+    rows = (len(names) + cols - 1) // cols
+    sheet = Image.new("RGB", (cols * 960, rows * 570), "white")
+    d = ImageDraw.Draw(sheet)
+    for i, name in enumerate(names):
+        x, y = (i % cols) * 960, (i // cols) * 570
+        with Image.open(tmp / f"{name}.png") as im:
+            sheet.paste(im.convert("RGB"), (x, y + 30))
+        d.text((x + 8, y + 6), name, fill="black")
+    out = Path(out)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    sheet.save(out)
+    return out

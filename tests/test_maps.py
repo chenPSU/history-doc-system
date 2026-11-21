@@ -72,3 +72,43 @@ def test_render_inside_an_episode_is_logged_to_its_manifest(tmp_path):
     rows = (ep / "assets" / "manifest.csv").read_text(encoding="utf-8").splitlines()
     assert len(rows) == 2 and rows[1].startswith("map-c,render/maps/c.mp4,own map")
     assert not R.log_to_manifest(tmp_path / "elsewhere.mp4", "c", "")
+
+
+def test_library_extends_its_base_and_a_clip_can_pick_other_land(tmp_path):
+    (tmp_path / "base.yaml").write_text("land: constantinople\nfeatures:\n  a: {type: marker, at: [28.95, 41.0]}\n", encoding="utf-8")
+    (tmp_path / "ep.yaml").write_text("extends: base.yaml\nfeatures:\n  b: {type: marker, at: [26.5, 41.6]}\n"
+                                      "clips:\n  c: {duration: 2, view: [24, 39, 32, 43], land: eastmed, show: [{use: a}, {use: b}]}\n",
+                                      encoding="utf-8")
+    lib = R.load_library(tmp_path / "ep.yaml")
+    assert set(lib["features"]) == {"a", "b"} and lib["land"] == "constantinople"
+    if (ROOT / "data" / "geo" / "eastmed.geojson").exists():
+        p = R.build_props(lib, "c")
+        assert "credit" not in p and "Natural Earth" in p["_credit_full"]     # NE land: no OSM credit on the frame
+
+
+def test_bind_sets_shot_cells_and_manifest_rows(tmp_path, monkeypatch):
+    import csv
+    ep = tmp_path / "episodes" / "2026-12-14-en-x"
+    (ep / "assets").mkdir(parents=True)
+    with (ep / "shotlist.csv").open("w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["sentence_no", "section", "sentence", "visual_type", "search_terms", "motion", "duration_s", "asset_id"])
+        w.writerow([1, "HOOK", "A.", "location | map", "walls | map: walls", "zoom_in | map_anim", 3, "wm-1 | "])
+        w.writerow([2, "HOOK", "B.", "painting", "x", "zoom_in", 3, "wm-2"])
+    lib = tmp_path / "lib.yaml"
+    lib.write_text("land: constantinople\nfeatures: {}\nclips:\n  walls: {shot: s001.2, duration: 2, view: [28.9, 41.0, 29.0, 41.05], show: []}\n",
+                   encoding="utf-8")
+    monkeypatch.setattr(R, "ROOT", tmp_path)
+    (tmp_path / "data" / "geo").mkdir(parents=True)
+    (tmp_path / "data" / "geo" / "constantinople.geojson").write_text('{"type": "FeatureCollection", "features": [], '
+                                                                       '"properties": {"credit": "Map data © OpenStreetMap contributors (ODbL)"}}', encoding="utf-8")
+    assert R.bind(lib, ep)["bound"] == ["s001.2"]
+    rows = list(csv.DictReader((ep / "shotlist.csv").open(encoding="utf-8")))
+    assert rows[0]["asset_id"] == "wm-1 | map-walls" and rows[1]["asset_id"] == "wm-2"
+    man = list(csv.DictReader((ep / "assets" / "manifest.csv").open(encoding="utf-8")))
+    assert man[0]["asset_id"] == "map-walls" and man[0]["file"] == "lib.yaml#walls" and "OpenStreetMap" in man[0]["credit"]
+    assert man[0]["source_url"] and man[0]["licence"]
+    lib.write_text("land: constantinople\nfeatures: {}\nclips:\n  walls: {shot: s002.1, duration: 2, view: [28.9, 41.0, 29.0, 41.05], show: []}\n",
+                   encoding="utf-8")
+    with pytest.raises(R.MapError, match="not map"):
+        R.bind(lib, ep)

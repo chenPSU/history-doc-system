@@ -1,5 +1,7 @@
 // One full episode from props built by pipeline/assemble.py (render/edl.json resolved to frames).
 import React from 'react';
+import {MapScene} from '../maps/MapScene';
+import type {MapProps} from '../maps/types';
 import {AbsoluteFill, Audio, Freeze, Img, interpolate, OffthreadVideo, Sequence, staticFile, useCurrentFrame} from 'remotion';
 
 export type Motion =
@@ -9,7 +11,8 @@ export type Motion =
 
 export type Shot = {
   id: string;
-  kind: 'image' | 'video' | 'card' | 'placeholder';
+  kind: 'image' | 'video' | 'map' | 'card' | 'placeholder';
+  map?: MapProps;
   from: number;
   dur: number;
   fadeIn: number;
@@ -153,6 +156,7 @@ const ShotView: React.FC<{shot: Shot; w: number; h: number}> = ({shot, w, h}) =>
   let inner: React.ReactNode;
   if (shot.kind === 'image') inner = <Still shot={shot} w={w} h={h} />;
   else if (shot.kind === 'video') inner = <Clip shot={shot} />;
+  else if (shot.kind === 'map') inner = <MapScene {...shot.map!} />;
   else if (shot.kind === 'card') inner = <Card shot={shot} h={h} />;
   else inner = <Placeholder shot={shot} h={h} />;
   return (

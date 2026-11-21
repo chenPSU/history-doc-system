@@ -30,8 +30,28 @@ def main(argv=None) -> int:
     ap.add_argument("--still", type=float, help="render one frame at this second (PNG)")
     ap.add_argument("--4k", dest="uhd", action="store_true")
     ap.add_argument("--palette", default="parchment")
+    ap.add_argument("--bind", metavar="EPISODE", help="make clips with `shot:` the assets of those shots")
+    ap.add_argument("--sheet", metavar="PNG", help="contact sheet: every clip (or CLIP) at its last frame")
+    ap.add_argument("--at", type=float, help="with --sheet: seconds into each clip instead of the end")
     a = ap.parse_args(argv)
     lib = R.load_library(Path(a.library))
+    if a.bind:
+        try:
+            res = R.bind(Path(a.library), Path(a.bind))
+        except R.MapError as e:
+            print("ERROR", e)
+            return 1
+        print(f"bound {len(res['bound'])} shot(s) in {a.bind}")
+        return 0
+    if a.sheet:
+        names = [a.clip] if a.clip else list(lib.get("clips", {}))
+        try:
+            out = R.contact_sheet(lib, names, Path(a.sheet), a.at)
+        except R.MapError as e:
+            print("ERROR", e)
+            return 1
+        print(f"wrote {out}")
+        return 0
     if not a.clip:
         for name, c in lib.get("clips", {}).items():
             print(f"{name}: {c['duration']} s, {len(c.get('show', []))} features")

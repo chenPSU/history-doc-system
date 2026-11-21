@@ -20,7 +20,8 @@ from pathlib import Path
 
 from PIL import Image, ImageEnhance, ImageFilter
 
-from pipeline.maps.render import REMOTION_CLI, VIDEO, MapError, remotion
+from pipeline.maps.render import REMOTION_CLI, ROOT, VIDEO, MapError, load_library, remotion
+from pipeline.maps.render import build_props as map_props
 
 MAX_SCALE = 1.10          # the largest Ken Burns scale: proxies keep enough pixels for it
 BG_SIZE = (640, 360)      # blurred backgrounds are tiny; the browser scales them up (they are a blur anyway)
@@ -106,7 +107,7 @@ def make_grain(dst: Path, size: int = 512, seed: int = 7) -> None:
 def build_props(edl: dict, ep: Path, stage: Path, width: int, height: int, log=print) -> dict:
     fps = int(edl["fps"])
     shots = edl["shots"]
-    items = []
+    items, libraries = [], {}
     for i, s in enumerate(shots):
         f0, f1 = frames(s["start"], fps), frames(s["end"], fps)
         nxt = shots[i + 1] if i + 1 < len(shots) else None
@@ -138,6 +139,10 @@ def build_props(edl: dict, ep: Path, stage: Path, width: int, height: int, log=p
             rel = f"v/{Path(s['file']).name}"
             _link(ep / s["file"], stage / rel)
             item.update(src=rel, clipFrames=frames(s["clip_s"], fps), holdLast=bool(s.get("hold_last")))
+        elif s["kind"] == "map":
+            lib = libraries.get(s["library"]) or libraries.setdefault(s["library"], load_library(ROOT / s["library"]))
+            mp = map_props(lib, s["clip"], width, height, fps)
+            item["map"] = {k: v for k, v in mp.items() if not k.startswith("_")} | {"uid": s["id"].replace(".", "_")}
         elif s["kind"] == "card":
             item["card"] = s["card"]
         else:

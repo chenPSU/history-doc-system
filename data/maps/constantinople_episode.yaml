@@ -1,0 +1,1757 @@
+# Map clips for the shots of episodes/2026-12-14-en-constantinople (TASKS P4.4).
+# Extends constantinople.yaml (walls, chain, Galata, labels). One clip per map shot; `shot:` binds it:
+#   python tools/map.py data/maps/constantinople_episode.yaml --bind episodes/2026-12-14-en-constantinople
+# Layers already on screen when a shot starts use appear: -1. Clips with `approximate: true` draw hand-made
+# borders (simplified from general historical atlases, not traced from one source); areas are clipped to the coast.
+# Coasts: OSM (city, Bosphorus; ODbL credit on frame), Natural Earth (regions; public domain).
+extends: constantinople.yaml
+features:
+  sea_walls_horn:
+    type: line
+    style: wall
+    side: byz
+    coords:
+    - [28.9439, 41.0406]
+    - [28.9467, 41.0366]
+    - [28.9489, 41.0352]
+    - [28.9494, 41.0322]
+    - [28.9523, 41.0307]
+    - [28.9531, 41.0289]
+    - [28.9571, 41.0282]
+    - [28.9593, 41.0261]
+    - [28.9602, 41.0243]
+    - [28.963, 41.0226]
+    - [28.9657, 41.0203]
+    - [28.9695, 41.0192]
+    - [28.9731, 41.0179]
+    - [28.9768, 41.0163]
+    - [28.9864, 41.0171]
+    - [28.9877, 41.0129]
+    - [28.9876, 41.011]
+  sea_walls_marmara:
+    type: line
+    style: wall
+    side: byz
+    coords:
+    - [28.9874, 41.0101]
+    - [28.9853, 41.0061]
+    - [28.9812, 41.0029]
+    - [28.9773, 41.0018]
+    - [28.973, 41.0014]
+    - [28.965, 41.0027]
+    - [28.96, 41.002]
+    - [28.954, 41.0]
+    - [28.9503, 40.9972]
+    - [28.9468, 40.9966]
+    - [28.9433, 40.9969]
+    - [28.9404, 40.9981]
+    - [28.937, 40.999]
+    - [28.9343, 40.998]
+    - [28.9328, 40.9964]
+    - [28.9294, 40.9938]
+    - [28.9257, 40.9894]
+  tri_inner:
+    type: line
+    style: wall
+    side: byz
+    coords:
+    - [28.9205, 41.016]
+    - [28.9215, 41.018]
+    - [28.925, 41.0212]
+    - [28.9285, 41.024]
+  tri_outer:
+    type: line
+    style: wall
+    side: neutral
+    coords:
+    - [28.9202, 41.01612]
+    - [28.9212, 41.01812]
+    - [28.9247, 41.02132]
+    - [28.9282, 41.02412]
+  tri_moat:
+    type: line
+    style: border
+    side: byz
+    coords:
+    - [28.91984, 41.01626]
+    - [28.92084, 41.01826]
+    - [28.92434, 41.02146]
+    - [28.92784, 41.02426]
+  lbl_inner:
+    type: label
+    kind: place
+    text: inner wall
+    at: [28.92488, 41.02128]
+    angle: -48
+  lbl_outer:
+    type: label
+    kind: place
+    text: outer wall
+    at: [28.92463, 41.02145]
+    angle: -48
+  lbl_moat:
+    type: label
+    kind: place
+    text: moat
+    at: [28.92432, 41.02165]
+    angle: -48
+  six_km:
+    type: line
+    style: border
+    side: ott
+    coords:
+    - [28.9395, 41.042]
+    - [28.915, 41.018]
+    - [28.918, 40.989]
+  lbl_six_km:
+    type: label
+    kind: place
+    text: about 6 km
+    at: [28.9105, 41.0165]
+    angle: -75
+  arrow_north:
+    type: line
+    style: route
+    side: ott
+    coords:
+    - [28.902, 41.036]
+    - [28.92, 41.033]
+    - [28.931, 41.031]
+    arrow: true
+  arrow_middle:
+    type: line
+    style: route
+    side: ott
+    coords:
+    - [28.899, 41.0205]
+    - [28.91, 41.0205]
+    - [28.9205, 41.0205]
+    arrow: true
+  arrow_south:
+    type: line
+    style: route
+    side: ott
+    coords:
+    - [28.9, 41.003]
+    - [28.91, 41.005]
+    - [28.917, 41.006]
+    arrow: true
+  wave_anatolian:
+    type: line
+    style: route
+    side: ott
+    coords:
+    - [28.901, 41.009]
+    - [28.912, 41.015]
+    - [28.9215, 41.019]
+    arrow: true
+  ottoman_lines:
+    type: area
+    side: ott
+    coords:
+    - [28.892, 41.042]
+    - [28.933, 41.042]
+    - [28.92, 41.017]
+    - [28.915, 40.992]
+    - [28.892, 40.988]
+  meso:
+    type: marker
+    at: [28.927, 41.0225]
+    side: byz
+    label: Mesoteichion
+  giustiniani:
+    type: marker
+    at: [28.9265, 41.0222]
+    side: byz
+    label: Giustiniani
+  blachernae:
+    type: marker
+    at: [28.942, 41.038]
+    side: byz
+    label: Blachernae
+  venetians:
+    type: marker
+    at: [28.942, 41.038]
+    side: byz
+    label: Venetians
+  kerkoporta:
+    type: marker
+    at: [28.9397, 41.035]
+    side: ott
+    label: Kerkoporta
+  def_0:
+    type: marker
+    at: [28.9432, 41.039]
+    side: byz
+  def_1:
+    type: marker
+    at: [28.9392, 41.033]
+    side: byz
+  def_2:
+    type: marker
+    at: [28.9332, 41.0285]
+    side: byz
+  def_3:
+    type: marker
+    at: [28.9277, 41.0222]
+    side: byz
+  def_4:
+    type: marker
+    at: [28.9217, 41.015]
+    side: byz
+  def_5:
+    type: marker
+    at: [28.9207, 41.006]
+    side: byz
+  def_6:
+    type: marker
+    at: [28.9202, 40.999]
+    side: byz
+  def_7:
+    type: marker
+    at: [28.9242, 40.9925]
+    side: byz
+  tent_link:
+    type: line
+    style: border
+    side: ott
+    coords:
+    - [28.911, 41.0198]
+    - [28.9255, 41.0222]
+  into_horn:
+    type: line
+    style: route
+    side: neutral
+    coords:
+    - [28.995, 41.004]
+    - [28.993, 41.015]
+    - [28.985, 41.0215]
+    - [28.97, 41.024]
+    - [28.96, 41.03]
+    arrow: true
+  ott_fleet_0:
+    type: marker
+    at: [28.986, 41.0225]
+    side: ott
+  ott_fleet_1:
+    type: marker
+    at: [28.9905, 41.0195]
+    side: ott
+  ott_fleet_2:
+    type: marker
+    at: [28.993, 41.023]
+    side: ott
+  ott_fleet_3:
+    type: marker
+    at: [28.9955, 41.017]
+    side: ott
+  ott_fleet_4:
+    type: marker
+    at: [28.9885, 41.016]
+    side: ott
+  four_0:
+    type: marker
+    at: [28.99, 40.999]
+    side: byz
+  four_1:
+    type: marker
+    at: [28.992, 40.998]
+    side: byz
+  four_2:
+    type: marker
+    at: [28.994, 40.9995]
+    side: byz
+  four_3:
+    type: marker
+    at: [28.992, 41.001]
+    side: byz
+  ring_0:
+    type: marker
+    at: [28.986, 40.9965]
+    side: ott
+  ring_1:
+    type: marker
+    at: [28.997, 40.997]
+    side: ott
+  ring_2:
+    type: marker
+    at: [28.998, 41.0015]
+    side: ott
+  ring_3:
+    type: marker
+    at: [28.9875, 41.0005]
+    side: ott
+  ring_4:
+    type: marker
+    at: [28.991, 40.9955]
+    side: ott
+  ring_5:
+    type: marker
+    at: [28.995, 41.003]
+    side: ott
+  four_drift:
+    type: line
+    style: route
+    side: byz
+    coords:
+    - [28.992, 40.999]
+    - [28.996, 41.005]
+    - [28.9965, 41.012]
+    arrow: true
+  four_in:
+    type: line
+    style: route
+    side: byz
+    coords:
+    - [28.9965, 41.0125]
+    - [28.99, 41.019]
+    - [28.982, 41.0212]
+    - [28.972, 41.0232]
+    arrow: true
+  horn_ship_0:
+    type: marker
+    at: [28.953, 41.0321]
+    side: ott
+  horn_ship_1:
+    type: marker
+    at: [28.956, 41.031]
+    side: ott
+  horn_ship_2:
+    type: marker
+    at: [28.959, 41.03]
+    side: ott
+  horn_ship_3:
+    type: marker
+    at: [28.962, 41.028]
+    side: ott
+  horn_ship_4:
+    type: marker
+    at: [28.965, 41.0256]
+    side: ott
+  horn_ship_5:
+    type: marker
+    at: [28.9575, 41.032]
+    side: ott
+  def_sea_0:
+    type: marker
+    at: [28.9489, 41.0352]
+    side: byz
+  def_sea_1:
+    type: marker
+    at: [28.9531, 41.0289]
+    side: byz
+  def_sea_2:
+    type: marker
+    at: [28.9602, 41.0243]
+    side: byz
+  def_sea_3:
+    type: marker
+    at: [28.9695, 41.0192]
+    side: byz
+  def_sea_4:
+    type: marker
+    at: [28.9768, 41.0163]
+    side: byz
+  lbl_galata_hill:
+    type: label
+    kind: place
+    text: the hill behind Galata
+    at: [28.986, 41.0395]
+  mine_1:
+    type: line
+    style: border
+    side: ott
+    coords:
+    - [28.93, 41.04]
+    - [28.937, 41.0395]
+    - [28.9415, 41.0388]
+  mine_2:
+    type: line
+    style: border
+    side: ott
+    coords:
+    - [28.929, 41.0355]
+    - [28.935, 41.035]
+    - [28.9395, 41.0352]
+  mine_3:
+    type: line
+    style: border
+    side: ott
+    coords:
+    - [28.927, 41.032]
+    - [28.933, 41.032]
+    - [28.9375, 41.0322]
+  counter_1:
+    type: line
+    style: border
+    side: byz
+    coords:
+    - [28.945, 41.0385]
+    - [28.942, 41.0388]
+  counter_2:
+    type: line
+    style: border
+    side: byz
+    coords:
+    - [28.943, 41.035]
+    - [28.9398, 41.0352]
+  counter_3:
+    type: line
+    style: border
+    side: byz
+    coords:
+    - [28.9415, 41.0318]
+    - [28.9378, 41.0322]
+  carried:
+    type: line
+    style: route
+    side: byz
+    coords:
+    - [28.927, 41.0225]
+    - [28.935, 41.027]
+    - [28.945, 41.031]
+    - [28.952, 41.0335]
+    arrow: true
+  lbl_harbour:
+    type: label
+    kind: water
+    text: harbour
+    at: [28.9605, 41.0315]
+    angle: -40
+  rumeli:
+    type: marker
+    at: [29.0563, 41.0846]
+    side: ott
+    label: Rumeli Hisarı (1452)
+  anadolu:
+    type: marker
+    at: [29.0667, 41.0822]
+    side: ott
+    label: Anadolu Hisarı
+  guns_across:
+    type: line
+    style: border
+    side: ott
+    coords:
+    - [29.0563, 41.0846]
+    - [29.0667, 41.0822]
+  lbl_black_sea:
+    type: label
+    kind: water
+    text: Black Sea
+    at: [29.19, 41.225]
+  lbl_bosphorus_n:
+    type: label
+    kind: water
+    text: Bosphorus
+    at: [29.085, 41.14]
+    angle: -62
+  city_dot:
+    type: marker
+    at: [28.975, 41.01]
+    side: byz
+    label: Constantinople
+  shipping:
+    type: line
+    style: route
+    side: neutral
+    coords:
+    - [29.135, 41.225]
+    - [29.104, 41.2]
+    - [29.082, 41.18]
+    - [29.06, 41.16]
+    - [29.067, 41.14]
+    - [29.083, 41.12]
+    - [29.06, 41.1]
+    - [29.059, 41.08]
+    - [29.045, 41.06]
+    - [29.02, 41.04]
+    - [28.998, 41.02]
+    arrow: true
+  rome_west:
+    type: area
+    side: neutral
+    coords:
+    - [-6.0, 50.0]
+    - [-5.6, 54.6]
+    - [-3.0, 55.1]
+    - [-1.5, 55.1]
+    - [1.8, 53.0]
+    - [2.2, 51.3]
+    - [4.5, 52.0]
+    - [6.2, 51.9]
+    - [7.0, 50.8]
+    - [7.6, 50.0]
+    - [8.4, 49.0]
+    - [8.5, 47.6]
+    - [10.5, 48.3]
+    - [12.1, 48.9]
+    - [13.5, 48.6]
+    - [16.4, 48.2]
+    - [18.9, 47.8]
+    - [19.0, 46.5]
+    - [19.3, 45.5]
+    - [20.5, 44.8]
+    - [19.4, 44.5]
+    - [19.3, 43.6]
+    - [19.2, 42.6]
+    - [19.6, 41.8]
+    - [19.0, 41.0]
+    - [18.4, 39.8]
+    - [18.0, 37.0]
+    - [19.0, 33.0]
+    - [18.8, 30.3]
+    - [15.0, 29.0]
+    - [10.0, 30.0]
+    - [5.0, 32.0]
+    - [0.0, 33.5]
+    - [-5.0, 33.0]
+    - [-9.8, 33.0]
+    - [-11.0, 36.0]
+    - [-10.5, 44.0]
+    - [-5.0, 48.0]
+  rome_east:
+    type: area
+    side: byz
+    coords:
+    - [20.5, 44.8]
+    - [22.5, 44.5]
+    - [25.0, 43.7]
+    - [28.0, 44.2]
+    - [28.7, 45.2]
+    - [29.8, 45.2]
+    - [31.0, 43.5]
+    - [35.0, 42.6]
+    - [41.6, 41.6]
+    - [41.5, 40.5]
+    - [40.5, 39.5]
+    - [40.0, 38.5]
+    - [39.6, 37.4]
+    - [40.5, 36.5]
+    - [39.5, 35.2]
+    - [38.5, 34.4]
+    - [37.4, 33.0]
+    - [36.4, 31.5]
+    - [35.0, 29.5]
+    - [34.0, 27.0]
+    - [33.4, 24.0]
+    - [29.0, 24.0]
+    - [29.0, 30.0]
+    - [25.0, 30.0]
+    - [20.0, 30.0]
+    - [18.8, 30.3]
+    - [19.0, 33.0]
+    - [18.0, 37.0]
+    - [18.4, 39.8]
+    - [19.0, 41.0]
+    - [19.6, 41.8]
+    - [19.2, 42.6]
+    - [19.3, 43.6]
+    - [19.4, 44.5]
+  lbl_west:
+    type: label
+    kind: region
+    text: West
+    at: [5.0, 44.0]
+  lbl_east:
+    type: label
+    kind: region
+    text: East
+    at: [31.5, 38.6]
+  lbl_byzantine:
+    type: label
+    kind: region
+    text: Byzantine Empire
+    at: [29.0, 38.9]
+  byz_1180:
+    type: area
+    side: byz
+    coords:
+    - [19.0, 44.9]
+    - [18.5, 43.5]
+    - [19.3, 42.0]
+    - [19.4, 41.0]
+    - [19.3, 40.0]
+    - [20.0, 38.0]
+    - [21.0, 36.2]
+    - [24.0, 34.6]
+    - [27.0, 35.5]
+    - [28.5, 36.3]
+    - [30.7, 36.3]
+    - [30.7, 36.9]
+    - [30.5, 38.0]
+    - [31.0, 39.0]
+    - [32.0, 40.0]
+    - [33.5, 41.0]
+    - [36.0, 41.5]
+    - [38.0, 41.0]
+    - [40.0, 40.9]
+    - [40.0, 42.0]
+    - [31.0, 43.5]
+    - [29.7, 45.2]
+    - [28.0, 44.2]
+    - [25.0, 43.7]
+    - [22.5, 44.5]
+    - [20.5, 44.8]
+  byz_1350_thrace:
+    type: area
+    side: byz
+    coords:
+    - [26.2, 40.6]
+    - [26.6, 41.3]
+    - [27.4, 42.1]
+    - [28.3, 42.2]
+    - [29.5, 41.3]
+    - [29.2, 40.9]
+    - [28.0, 40.8]
+    - [26.8, 40.3]
+  byz_1350_thess:
+    type: area
+    side: byz
+    coords:
+    - [22.5, 40.4]
+    - [23.4, 40.9]
+    - [24.2, 40.8]
+    - [23.8, 40.1]
+    - [22.7, 40.1]
+  byz_morea_part:
+    type: area
+    side: byz
+    coords:
+    - [22.0, 36.3]
+    - [22.1, 37.5]
+    - [23.3, 37.6]
+    - [23.4, 36.3]
+  byz_city:
+    type: area
+    side: byz
+    coords:
+    - [28.9245, 40.99]
+    - [28.944, 41.041]
+    - [28.977, 41.018]
+    - [28.988, 41.011]
+    - [28.98, 41.0]
+    - [28.94, 40.995]
+  byz_morea:
+    type: area
+    side: byz
+    coords:
+    - [21.0, 36.2]
+    - [21.0, 38.2]
+    - [21.6, 38.27]
+    - [22.9, 38.27]
+    - [22.98, 37.92]
+    - [23.1, 37.6]
+    - [23.6, 37.4]
+    - [23.6, 36.2]
+  ott_1451:
+    type: area
+    side: ott
+    coords:
+    - [19.6, 40.5]
+    - [20.5, 41.9]
+    - [21.5, 42.8]
+    - [22.5, 44.0]
+    - [22.7, 44.6]
+    - [25.0, 43.7]
+    - [28.0, 44.2]
+    - [29.6, 45.2]
+    - [31.0, 42.5]
+    - [36.3, 41.4]
+    - [36.5, 40.5]
+    - [35.5, 39.5]
+    - [33.5, 39.0]
+    - [32.0, 38.5]
+    - [31.0, 37.5]
+    - [30.0, 37.0]
+    - [29.0, 36.6]
+    - [28.0, 36.5]
+    - [26.0, 38.0]
+    - [26.0, 39.5]
+    - [24.0, 39.0]
+    - [22.0, 39.0]
+    - [21.0, 39.5]
+    - [20.0, 39.8]
+    origin: [30.0, 40.0]
+  lbl_ottoman:
+    type: label
+    kind: region
+    text: Ottoman Empire
+    at: [33.0, 39.4]
+  lbl_ottomans:
+    type: label
+    kind: region
+    text: Ottomans
+    at: [27.6, 41.55]
+  edirne:
+    type: marker
+    at: [26.555, 41.677]
+    side: ott
+    label: Edirne
+  adrianople:
+    type: marker
+    at: [26.555, 41.677]
+    side: ott
+    label: Adrianople
+  constantinople:
+    type: marker
+    at: [28.975, 41.01]
+    side: byz
+    label: Constantinople
+  constantinople_ott:
+    type: marker
+    at: [28.975, 41.01]
+    side: ott
+    label: Constantinople, the capital
+  sogut:
+    type: marker
+    at: [30.18, 40.02]
+    side: ott
+    label: Söğüt
+  venice:
+    type: marker
+    at: [12.33, 45.44]
+    side: neutral
+    label: Venice
+  rome:
+    type: marker
+    at: [12.49, 41.9]
+    side: neutral
+    label: Rome
+  genoa:
+    type: marker
+    at: [8.93, 44.41]
+    side: neutral
+    label: Genoa
+  chios:
+    type: marker
+    at: [26.05, 38.37]
+    side: neutral
+    label: Chios
+  florence:
+    type: marker
+    at: [11.25, 43.77]
+    side: neutral
+    label: Florence
+  buda:
+    type: marker
+    at: [19.04, 47.5]
+    side: neutral
+    label: Hungary
+  lbl_morea:
+    type: label
+    kind: place
+    text: Peloponnese
+    at: [22.3, 37.1]
+  to_venice:
+    type: line
+    style: route
+    side: byz
+    coords: &id001
+    - [28.975, 41.01]
+    - [27.5, 40.6]
+    - [26.4, 40.1]
+    - [25.0, 38.8]
+    - [23.4, 36.4]
+    - [21.3, 36.6]
+    - [19.8, 39.6]
+    - [18.6, 41.3]
+    - [15.8, 43.4]
+    - [12.8, 45.1]
+    - [12.4, 45.38]
+    arrow: true
+  to_rome:
+    type: line
+    style: route
+    side: byz
+    coords:
+    - [28.975, 41.01]
+    - [27.5, 40.6]
+    - [26.4, 40.1]
+    - [25.0, 38.8]
+    - [23.4, 36.4]
+    - [21.3, 36.6]
+    - [16.5, 38.0]
+    - [15.6, 38.2]
+    - [14.5, 40.2]
+    - [12.6, 41.6]
+    - [12.49, 41.85]
+    arrow: true
+  venice_fleet:
+    type: line
+    style: route
+    side: neutral
+    coords:
+    - [12.4, 45.38]
+    - [12.8, 45.1]
+    - [15.8, 43.4]
+    - [18.6, 41.3]
+    - [19.8, 39.6]
+    - [21.3, 36.6]
+    - [23.4, 36.4]
+    - [24.6, 37.6]
+    arrow: true
+  giustiniani_route:
+    type: line
+    style: route
+    side: byz
+    coords:
+    - [8.93, 44.3]
+    - [9.6, 43.0]
+    - [11.0, 41.5]
+    - [13.5, 39.5]
+    - [15.6, 38.2]
+    - [17.5, 37.0]
+    - [21.0, 36.4]
+    - [23.4, 36.3]
+    - [25.0, 37.4]
+    - [26.05, 38.3]
+    - [26.0, 39.5]
+    - [26.4, 40.1]
+    - [27.5, 40.6]
+    - [28.9, 40.98]
+    arrow: true
+  to_chios:
+    type: line
+    style: route
+    side: byz
+    coords:
+    - [28.97, 41.0]
+    - [27.5, 40.6]
+    - [26.4, 40.1]
+    - [26.0, 39.5]
+    - [26.08, 38.45]
+    arrow: true
+  church_line:
+    type: line
+    style: border
+    side: neutral
+    coords:
+    - [17.5, 47.5]
+    - [19.0, 44.5]
+    - [19.3, 42.0]
+    - [19.0, 39.5]
+    - [17.0, 35.0]
+    - [16.0, 31.0]
+  lbl_latin:
+    type: label
+    kind: place
+    text: Latin Church
+    at: [12.6, 43.3]
+  lbl_greek:
+    type: label
+    kind: place
+    text: Greek Church
+    at: [25.5, 43.0]
+  hungary_army:
+    type: line
+    style: route
+    side: neutral
+    coords:
+    - [19.04, 47.4]
+    - [19.6, 46.3]
+    - [20.4, 45.2]
+    arrow: true
+  orban_road:
+    type: line
+    style: route
+    side: neutral
+    coords:
+    - [28.95, 41.03]
+    - [28.25, 41.07]
+    - [27.8, 41.16]
+    - [27.1, 41.4]
+    - [26.6, 41.66]
+    arrow: true
+  army_road:
+    type: line
+    style: route
+    side: ott
+    coords:
+    - [26.6, 41.66]
+    - [27.1, 41.4]
+    - [27.8, 41.16]
+    - [28.25, 41.07]
+    - [28.9, 41.03]
+    arrow: true
+  test_shot:
+    type: line
+    style: route
+    side: ott
+    coords:
+    - [26.564, 41.6715]
+    - [26.573, 41.674]
+    - [26.5835, 41.6735]
+    arrow: true
+  lbl_test_mile:
+    type: label
+    kind: place
+    text: more than a mile (1.6 km)
+    at: [26.574, 41.67]
+  scholars_venice:
+    type: line
+    style: route
+    side: neutral
+    coords: *id001
+    arrow: true
+  scholars_florence:
+    type: line
+    style: route
+    side: neutral
+    coords:
+    - [28.975, 41.01]
+    - [27.5, 40.6]
+    - [26.4, 40.1]
+    - [25.0, 38.8]
+    - [23.4, 36.4]
+    - [21.3, 36.6]
+    - [18.6, 39.5]
+    - [16.6, 41.2]
+    - [13.6, 43.6]
+    - [11.3, 43.75]
+    arrow: true
+  capital_move:
+    type: line
+    style: route
+    side: ott
+    coords:
+    - [26.555, 41.677]
+    - [27.1, 41.4]
+    - [27.8, 41.16]
+    - [28.25, 41.07]
+    - [28.93, 41.02]
+    arrow: true
+  year_rome_split:
+    type: counter
+    from: 395
+    to: 476
+    run: [0.4, 3.6]
+  year_byz_shrinking:
+    type: counter
+    from: 1204
+    to: 1453
+    run: [0.3, 3.6]
+  year_ottoman_growth:
+    type: counter
+    from: 1300
+    to: 1451
+    run: [0.2, 4.0]
+clips:
+  night_walls:
+    shot: s001.2
+    duration: 2.8
+    view: &id002 [28.8685, 40.9869, 29.0055, 41.0451]
+    palette: slate
+    camera:
+    - t: 0
+      center: [28.937, 41.016]
+      zoom: 1.0
+    - t: 2.8
+      center: [28.937, 41.016]
+      zoom: 1.05
+    show:
+    - &id003 {use: land_walls, appear: -1}
+    - {use: lbl_city, appear: -1}
+  walls_drawn:
+    shot: s006.2
+    duration: 2.4
+    view: *id002
+    show:
+    - {use: lbl_city, appear: -1}
+    - use: land_walls
+      draw: [0.1, 1.8]
+  army_arrows:
+    shot: s007.2
+    duration: 2.6
+    view: *id002
+    show:
+    - *id003
+    - {use: lbl_city, appear: -1}
+    - use: arrow_north
+      draw: [0.1, 1.6]
+    - use: arrow_middle
+      draw: [0.3, 1.8]
+    - use: arrow_south
+      draw: [0.5, 2.0]
+  rome_split:
+    shot: s012.1
+    duration: 5.3
+    view: [-9.7875, 30.636, 41.7875, 52.364]
+    land: med
+    approximate: true
+    show:
+    - {use: rome_west, appear: 0.1, hide: 3.0}
+    - {use: rome_east, appear: 0.4}
+    - {use: lbl_west, appear: 0.3, hide: 3.0}
+    - {use: lbl_east, appear: 0.6}
+    - {use: year_rome_split}
+  east_rome:
+    shot: s013.1
+    duration: 2.3
+    view: &id004 [16.1325, 34.9943, 40.8675, 45.6057]
+    land: eastmed
+    approximate: true
+    camera:
+    - t: 0
+      center: [28.5, 40.3]
+      zoom: 1.0
+    - t: 2.3
+      center: [28.5, 40.3]
+      zoom: 1.06
+    show:
+    - {use: rome_east, appear: -1}
+    - {use: lbl_east, appear: 0.2}
+    - {use: constantinople, appear: 0.4}
+  byzantine_title:
+    shot: s014.1
+    duration: 2.9
+    view: *id004
+    land: eastmed
+    approximate: true
+    show:
+    - {use: rome_east, appear: -1}
+    - {use: constantinople, appear: -1}
+    - {use: lbl_byzantine, appear: 0.2}
+  peninsula:
+    shot: s019.1
+    duration: 2.9
+    view: &id005 [28.8727, 40.9816, 29.0393, 41.0524]
+    show:
+    - {use: lbl_city, appear: -1}
+    - {use: lbl_horn, appear: 0.1}
+    - {use: lbl_bosphorus, appear: 0.5}
+    - {use: lbl_marmara, appear: 0.9}
+  fourth_side:
+    shot: s020.1
+    duration: 2.9
+    view: *id005
+    show:
+    - {use: lbl_city, appear: -1}
+    - {use: lbl_horn, appear: -1}
+    - {use: lbl_marmara, appear: -1}
+    - {use: lbl_bosphorus, appear: -1}
+    - use: land_walls
+      draw: [0.1, 1.6]
+  triple_defence:
+    shot: s021.1
+    duration: 3.0
+    view: [28.9229, 41.0207, 28.9267, 41.0223]
+    show:
+    - use: tri_inner
+      draw: [0.0, 0.8]
+    - {use: lbl_inner, appear: 0.6}
+    - use: tri_outer
+      draw: [0.7, 1.5]
+    - {use: lbl_outer, appear: 1.3}
+    - use: tri_moat
+      draw: [1.4, 2.2]
+    - {use: lbl_moat, appear: 2.0}
+  six_km:
+    shot: s025.1
+    duration: 6.0
+    view: *id002
+    show:
+    - *id003
+    - {use: lbl_city, appear: -1}
+    - use: six_km
+      draw: [0.4, 3.0]
+    - {use: lbl_six_km, appear: 2.6}
+  siege_1422:
+    shot: s033.1
+    duration: 2.2
+    view: *id002
+    title: {text: '1422', sub: the siege fails, appear: 0.1, position: tr}
+    show:
+    - *id003
+    - use: arrow_middle
+      draw: [0.0, 0.9]
+      hide: 1.5
+    - use: arrow_north
+      draw: [0.1, 1.0]
+      hide: 1.5
+  byz_shrinking:
+    shot: s037.1
+    duration: 4.9
+    view: *id004
+    land: eastmed
+    approximate: true
+    show:
+    - {use: constantinople, appear: -1}
+    - {use: byz_1180, appear: -1, hide: 1.5}
+    - {use: byz_1350_thrace, appear: 1.5, hide: 3.3}
+    - {use: byz_1350_thess, appear: 1.5, hide: 3.3}
+    - {use: byz_morea_part, appear: 1.5, hide: 3.3}
+    - {use: byz_city, appear: 3.3}
+    - {use: byz_morea, appear: 3.3}
+    - {use: year_byz_shrinking}
+  ottoman_growth:
+    shot: s041.1
+    duration: 5.4
+    view: *id004
+    land: eastmed
+    approximate: true
+    show:
+    - {use: constantinople, appear: -1}
+    - {use: sogut, appear: -1}
+    - use: ott_1451
+      grow: [0.2, 4.0]
+    - {use: year_ottoman_growth}
+  ottoman_closing:
+    shot: s042.1
+    duration: 4.0
+    view: [24.3316, 39.3578, 32.0684, 42.6422]
+    land: eastmed
+    approximate: true
+    camera:
+    - t: 0
+      center: [28.2, 41.0]
+      zoom: 1.0
+    - t: 4.0
+      center: [28.8, 41.0]
+      zoom: 1.5
+    show:
+    - {use: ott_1451, appear: -1}
+    - {use: byz_city, appear: -1}
+    - {use: constantinople, appear: -1}
+    - {use: lbl_ottomans, appear: 0.2}
+  city_alone:
+    shot: s043.1
+    duration: 3.6
+    view: [26.439, 40.0663, 30.361, 41.7337]
+    land: eastmed
+    approximate: true
+    camera:
+    - t: 0
+      center: [28.3, 41.0]
+      zoom: 1.0
+    - t: 3.6
+      center: [28.9, 41.0]
+      zoom: 1.8
+    show:
+    - {use: ott_1451, appear: -1}
+    - {use: byz_city, appear: -1}
+    - {use: constantinople, appear: -1}
+  edirne_capital:
+    shot: s054.1
+    duration: 2.9
+    view: &id009 [25.9858, 40.6178, 29.2142, 41.9822]
+    land: eastmed
+    show:
+    - {use: edirne, appear: 0.1}
+    - {use: constantinople, appear: -1}
+  bosphorus_narrow:
+    shot: s065.1
+    duration: 3.5
+    view: &id007 [28.7658, 40.9988, 29.3142, 41.2312]
+    land: bosphorus
+    camera:
+    - t: 0
+      center: [29.04, 41.115]
+      zoom: 1.0
+    - t: 3.5
+      center: [29.04, 41.115]
+      zoom: 1.06
+    show:
+    - {use: city_dot, appear: -1}
+    - {use: lbl_black_sea, appear: 0.2}
+    - {use: lbl_bosphorus_n, appear: 0.4}
+  two_fortresses:
+    shot: s067.1
+    duration: 7.5
+    view: &id006 [29.0395, 41.0749, 29.0825, 41.0931]
+    land: bosphorus
+    camera:
+    - t: 0
+      center: [29.061, 41.084]
+      zoom: 1.0
+    - t: 7.5
+      center: [29.061, 41.084]
+      zoom: 1.08
+    show:
+    - {use: anadolu, appear: 0.3}
+    - {use: rumeli, appear: 2.0}
+  strait_cut:
+    shot: s074.1
+    duration: 2.4
+    view: *id006
+    land: bosphorus
+    show:
+    - {use: anadolu, appear: -1}
+    - {use: rumeli, appear: -1}
+    - use: guns_across
+      draw: [0.1, 1.0]
+  shipping_lane:
+    shot: s076.1
+    duration: 5.7
+    view: *id007
+    land: bosphorus
+    show:
+    - {use: city_dot, appear: -1}
+    - {use: lbl_black_sea, appear: -1}
+    - use: shipping
+      draw: [0.3, 3.8]
+    - {use: rumeli, appear: 3.0}
+  envoys_west:
+    shot: s090.1
+    duration: 2.4
+    view: &id008 [5.9144, 34.689, 33.0856, 46.311]
+    land: med
+    show:
+    - {use: constantinople, appear: -1}
+    - use: to_venice
+      draw: [0.1, 1.9]
+    - use: to_rome
+      draw: [0.2, 2.0]
+    - {use: venice, appear: 1.6}
+    - {use: rome, appear: 1.7}
+  church_split:
+    shot: s092.1
+    duration: 6.0
+    view: *id008
+    land: med
+    title: {text: '1054', appear: 0.2, position: tr}
+    show:
+    - {use: rome, appear: 0.1}
+    - {use: constantinople, appear: 0.3}
+    - use: church_line
+      draw: [0.8, 2.6]
+    - {use: lbl_latin, appear: 2.4}
+    - {use: lbl_greek, appear: 2.8}
+  giustiniani_route:
+    shot: s106.1
+    duration: 6.5
+    view: *id008
+    land: med
+    show:
+    - {use: genoa, appear: 0.1}
+    - use: giustiniani_route
+      draw: [0.4, 5.2]
+    - {use: chios, appear: 3.0}
+    - {use: constantinople, appear: -1}
+  giustiniani_walls:
+    shot: s109.1
+    duration: 3.8
+    view: &id010 [28.9001, 41.0134, 28.9359, 41.0286]
+    show:
+    - *id003
+    - {use: giustiniani, appear: 0.3}
+  orban_road:
+    shot: s120.1
+    duration: 2.8
+    view: *id009
+    land: eastmed
+    show:
+    - {use: constantinople, appear: -1}
+    - use: orban_road
+      draw: [0.1, 2.0]
+    - {use: adrianople, appear: 1.8}
+  test_shot:
+    shot: s130.1
+    duration: 3.6
+    view: [26.554, 41.6654, 26.59, 41.6806]
+    land: eastmed
+    show:
+    - {use: adrianople, appear: -1}
+    - use: test_shot
+      draw: [0.2, 1.6]
+    - {use: lbl_test_mile, appear: 1.4}
+  road_to_city:
+    shot: s135.1
+    duration: 2.9
+    view: *id009
+    land: eastmed
+    show:
+    - {use: adrianople, appear: -1}
+    - {use: constantinople, appear: -1}
+    - use: army_road
+      draw: [0.1, 2.2]
+  mehmed_tent:
+    shot: s142.1
+    duration: 4.9
+    view: *id010
+    camera:
+    - t: 0
+      center: [28.918, 41.021]
+      zoom: 1.0
+    - t: 4.9
+      center: [28.918, 41.021]
+      zoom: 1.06
+    show:
+    - *id003
+    - {use: ottoman_camp, appear: 0.3}
+    - {use: lbl_romanus, appear: 1.0}
+  defenders_spread:
+    shot: s156.1
+    duration: 3.2
+    view: *id002
+    show:
+    - *id003
+    - {use: def_0, appear: 0.1}
+    - {use: def_1, appear: 0.25}
+    - {use: def_2, appear: 0.4}
+    - {use: def_3, appear: 0.5499999999999999}
+    - {use: def_4, appear: 0.7}
+    - {use: def_5, appear: 0.85}
+    - {use: def_6, appear: 0.9999999999999999}
+    - {use: def_7, appear: 1.1500000000000001}
+  best_troops:
+    shot: s157.1
+    duration: 3.5
+    view: *id002
+    show:
+    - *id003
+    - {use: def_0, appear: -1}
+    - {use: def_1, appear: -1}
+    - {use: def_2, appear: -1}
+    - {use: def_3, appear: -1}
+    - {use: def_4, appear: -1}
+    - {use: def_5, appear: -1}
+    - {use: def_6, appear: -1}
+    - {use: def_7, appear: -1}
+    - {use: meso, appear: 0.3}
+    - {use: blachernae, appear: 0.8}
+  giustiniani_vs_tent:
+    shot: s158.1
+    duration: 5.5
+    view: *id010
+    show:
+    - *id003
+    - {use: giustiniani, appear: 0.2}
+    - {use: ottoman_camp, appear: 0.9}
+    - use: tent_link
+      draw: [1.6, 2.8]
+  venetians_blachernae:
+    shot: s159.1
+    duration: 3.8
+    view: &id015 [28.9179, 41.0269, 28.9561, 41.0431]
+    show:
+    - *id003
+    - {use: venetians, appear: 0.3}
+    - {use: lbl_horn, appear: -1}
+  army_facing:
+    shot: s160.1
+    duration: 3.1
+    view: *id002
+    show:
+    - *id003
+    - {use: ottoman_lines, appear: 0.1}
+    - {use: ottoman_camp, appear: 0.5}
+  harbour_open:
+    shot: s182.1
+    duration: 5.3
+    view: &id014 [28.9253, 41.0106, 29.0027, 41.0434]
+    show:
+    - {use: sea_walls_horn, appear: -1}
+    - {use: lbl_horn, appear: -1}
+    - use: into_horn
+      draw: [0.4, 3.0]
+  chain:
+    shot: s188.1
+    duration: 4.7
+    view: &id011 [28.958, 41.0044, 29.008, 41.0256]
+    camera:
+    - t: 0
+      center: [28.983, 41.015]
+      zoom: 1.0
+    - t: 4.7
+      center: [28.983, 41.015]
+      zoom: 1.06
+    show:
+    - {use: sea_walls_horn, appear: -1}
+    - {use: lbl_horn, appear: -1}
+    - use: chain
+      draw: [0.3, 2.0]
+  fleet_stopped:
+    shot: s190.1
+    duration: 2.6
+    view: *id011
+    show:
+    - {use: sea_walls_horn, appear: -1}
+    - {use: chain, appear: -1}
+    - {use: ott_fleet_0, appear: 0.1}
+    - {use: ott_fleet_1, appear: 0.2}
+    - {use: ott_fleet_2, appear: 0.30000000000000004}
+    - {use: ott_fleet_3, appear: 0.4}
+    - {use: ott_fleet_4, appear: 0.5}
+  four_ships:
+    shot: s197.1
+    duration: 3.3
+    view: &id012 [28.9616, 40.9949, 29.0044, 41.0131]
+    show:
+    - {use: sea_walls_marmara, appear: -1}
+    - {use: four_0, appear: 0.1}
+    - {use: four_1, appear: 0.1}
+    - {use: four_2, appear: 0.1}
+    - {use: four_3, appear: 0.1}
+    - {use: ring_0, appear: 0.6}
+    - {use: ring_1, appear: 0.72}
+    - {use: ring_2, appear: 0.84}
+    - {use: ring_3, appear: 0.96}
+    - {use: ring_4, appear: 1.08}
+    - {use: ring_5, appear: 1.2}
+  four_surrounded:
+    shot: s199.1
+    duration: 4.1
+    view: *id012
+    camera:
+    - t: 0
+      center: [28.983, 41.004]
+      zoom: 1.0
+    - t: 4.1
+      center: [28.983, 41.004]
+      zoom: 1.15
+    show:
+    - {use: sea_walls_marmara, appear: -1}
+    - {use: four_0, appear: -1}
+    - {use: four_1, appear: -1}
+    - {use: four_2, appear: -1}
+    - {use: four_3, appear: -1}
+    - {use: ring_0, appear: -1}
+    - {use: ring_1, appear: -1}
+    - {use: ring_2, appear: -1}
+    - {use: ring_3, appear: -1}
+    - {use: ring_4, appear: -1}
+    - {use: ring_5, appear: -1}
+  ships_drift:
+    shot: s206.1
+    duration: 3.6
+    view: [28.9638, 40.9959, 29.0162, 41.0181]
+    show:
+    - {use: sea_walls_marmara, appear: -1}
+    - {use: four_0, appear: -1}
+    - {use: four_1, appear: -1}
+    - {use: four_2, appear: -1}
+    - {use: four_3, appear: -1}
+    - use: four_drift
+      draw: [0.2, 2.6]
+  behind_chain:
+    shot: s209.1
+    duration: 4.9
+    view: *id011
+    show:
+    - {use: sea_walls_horn, appear: -1}
+    - {use: chain, appear: -1}
+    - {use: lbl_horn, appear: -1}
+    - use: four_in
+      draw: [0.3, 3.2]
+  chain_holds:
+    shot: s213.1
+    duration: 4.5
+    view: *id011
+    title: {text: The chain holds, appear: 0.2, position: tl}
+    show:
+    - {use: sea_walls_horn, appear: -1}
+    - {use: chain, appear: -1}
+    - {use: lbl_horn, appear: -1}
+    - {use: ott_fleet_0, appear: -1}
+    - {use: ott_fleet_1, appear: -1}
+    - {use: ott_fleet_2, appear: -1}
+    - {use: ott_fleet_3, appear: -1}
+    - {use: ott_fleet_4, appear: -1}
+  over_the_hill:
+    shot: s215.1
+    duration: 3.4
+    view: &id013 [28.9552, 41.0204, 29.0148, 41.0456]
+    show:
+    - {use: lbl_horn, appear: -1}
+    - {use: galata, appear: -1}
+    - use: galata_road
+      draw: [0.1, 2.6]
+  hill_behind_galata:
+    shot: s216.1
+    duration: 2.7
+    view: *id013
+    camera:
+    - t: 0
+      center: [28.985, 41.033]
+      zoom: 1.0
+    - t: 2.7
+      center: [28.985, 41.033]
+      zoom: 1.08
+    show:
+    - {use: lbl_horn, appear: -1}
+    - {use: galata, appear: -1}
+    - {use: lbl_galata_hill, appear: 0.2}
+  route_over_hill:
+    shot: s217.1
+    duration: 4.2
+    view: *id013
+    show:
+    - {use: lbl_horn, appear: -1}
+    - {use: galata, appear: -1}
+    - use: galata_road
+      draw: [0.2, 3.2]
+  route_22_april:
+    shot: s219.1
+    duration: 4.7
+    view: *id013
+    title: {text: 22 April 1453, appear: 0.2, position: tl}
+    show:
+    - {use: lbl_horn, appear: -1}
+    - {use: galata, appear: -1}
+    - {use: galata_road, appear: -1}
+  seventy_ships:
+    shot: s225.1
+    duration: 5.3
+    view: *id014
+    title: {text: About 70 ships, sub: inside the Golden Horn, appear: 1.0, position: tr}
+    show:
+    - {use: sea_walls_horn, appear: -1}
+    - {use: chain, appear: -1}
+    - {use: horn_ship_0, appear: 0.2}
+    - {use: horn_ship_1, appear: 0.35}
+    - {use: horn_ship_2, appear: 0.5}
+    - {use: horn_ship_3, appear: 0.6499999999999999}
+    - {use: horn_ship_4, appear: 0.8}
+    - {use: horn_ship_5, appear: 0.95}
+  sea_walls_danger:
+    shot: s229.1
+    duration: 3.3
+    view: *id014
+    show:
+    - use: sea_walls_horn
+      draw: [0.0, 1.6]
+    - {use: horn_ship_0, appear: -1}
+    - {use: horn_ship_1, appear: -1}
+    - {use: horn_ship_2, appear: -1}
+    - {use: horn_ship_3, appear: -1}
+    - {use: horn_ship_4, appear: -1}
+    - {use: horn_ship_5, appear: -1}
+  city_boxed:
+    shot: s239.1
+    duration: 2.6
+    view: *id005
+    show:
+    - *id003
+    - {use: sea_walls_horn, appear: -1}
+    - {use: sea_walls_marmara, appear: -1}
+    - {use: ottoman_lines, appear: 0.1}
+    - {use: horn_ship_0, appear: 0.3}
+    - {use: horn_ship_1, appear: 0.3}
+    - {use: horn_ship_2, appear: 0.3}
+    - {use: horn_ship_3, appear: 0.3}
+    - {use: horn_ship_4, appear: 0.3}
+    - {use: horn_ship_5, appear: 0.3}
+    - {use: ott_fleet_0, appear: 0.4}
+    - {use: ott_fleet_1, appear: 0.4}
+    - {use: ott_fleet_2, appear: 0.4}
+    - {use: ott_fleet_3, appear: 0.4}
+    - {use: ott_fleet_4, appear: 0.4}
+  land_walls_again:
+    shot: s240.1
+    duration: 3.4
+    view: *id005
+    camera:
+    - t: 0
+      center: [28.956, 41.017]
+      zoom: 1.0
+    - t: 3.4
+      center: [28.937, 41.016]
+      zoom: 1.6
+    show:
+    - {use: lbl_city, appear: -1}
+    - use: land_walls
+      draw: [0.0, 1.4]
+  way_under:
+    shot: s243.1
+    duration: 2.6
+    view: *id015
+    show:
+    - *id003
+    - use: mine_2
+      draw: [0.2, 1.8]
+  tunnels_plan:
+    shot: s244.1
+    duration: 4.9
+    view: *id015
+    show:
+    - *id003
+    - use: mine_1
+      draw: [0.1, 2.0]
+    - use: mine_2
+      draw: [0.6, 2.6]
+    - use: mine_3
+      draw: [1.1, 3.2]
+  countermines:
+    shot: s251.1
+    duration: 4.8
+    view: *id015
+    show:
+    - *id003
+    - {use: mine_1, appear: -1}
+    - {use: mine_2, appear: -1}
+    - {use: mine_3, appear: -1}
+    - use: counter_1
+      draw: [0.3, 1.4]
+    - use: counter_2
+      draw: [0.9, 2.0]
+    - use: counter_3
+      draw: [1.5, 2.6]
+  tunnels_destroyed:
+    shot: s262.1
+    duration: 4.6
+    view: *id015
+    title: {text: Every tunnel found, appear: 0.4, position: tr}
+    show:
+    - *id003
+    - {use: mine_1, appear: -1, hide: 0.6}
+    - {use: mine_2, appear: -1, hide: 1.4}
+    - {use: mine_3, appear: -1, hide: 2.2}
+  peloponnese:
+    shot: s268.1
+    duration: 4.5
+    view: &id016 [19.4448, 36.1735, 30.9552, 41.2265]
+    land: eastmed
+    approximate: true
+    show:
+    - {use: constantinople, appear: -1}
+    - {use: byz_morea, appear: 0.3}
+    - {use: lbl_morea, appear: 0.6}
+  relief_fleet:
+    shot: s287.1
+    duration: 4.2
+    view: *id008
+    land: med
+    title: {text: 'A Venetian fleet?', appear: 0.5, position: tr}
+    show:
+    - {use: venice, appear: -1}
+    - {use: constantinople, appear: -1}
+    - use: venice_fleet
+      draw: [0.2, 3.4]
+  western_army:
+    shot: s295.1
+    duration: 3.8
+    view: [11.9735, 39.2049, 33.0265, 47.7951]
+    land: eastmed
+    show:
+    - {use: buda, appear: 0.1}
+    - {use: constantinople, appear: -1}
+    - use: hungary_army
+      draw: [0.5, 2.6]
+  three_waves:
+    shot: s315.1
+    duration: 2.8
+    view: *id010
+    show:
+    - *id003
+    - {use: ottoman_camp, appear: -1}
+    - use: arrow_middle
+      draw: [0.1, 0.9]
+    - use: wave_anatolian
+      draw: [0.8, 1.6]
+    - use: arrow_north
+      draw: [1.5, 2.3]
+  first_wave_back:
+    shot: s321.1
+    duration: 2.7
+    view: *id010
+    show:
+    - *id003
+    - {use: ottoman_camp, appear: -1}
+    - {use: arrow_middle, appear: -1, hide: 0.8}
+  second_wave:
+    shot: s322.1
+    duration: 2.8
+    view: *id010
+    show:
+    - *id003
+    - {use: ottoman_camp, appear: -1}
+    - use: wave_anatolian
+      draw: [0.2, 1.6]
+  giustiniani_carried:
+    shot: s337.1
+    duration: 5.3
+    view: *id002
+    show:
+    - *id003
+    - {use: sea_walls_horn, appear: -1}
+    - {use: lbl_horn, appear: -1}
+    - {use: giustiniani, appear: -1}
+    - use: carried
+      draw: [0.3, 3.2]
+  kerkoporta:
+    shot: s343.1
+    duration: 3.6
+    view: *id015
+    camera:
+    - t: 0
+      center: [28.937, 41.035]
+      zoom: 1.0
+    - t: 3.6
+      center: [28.937, 41.035]
+      zoom: 1.08
+    show:
+    - *id003
+    - {use: kerkoporta, appear: 0.3}
+  horn_stretch:
+    shot: s374.1
+    duration: 4.4
+    view: *id014
+    show:
+    - {use: sea_walls_horn, appear: -1}
+    - {use: horn_ship_0, appear: -1}
+    - {use: horn_ship_1, appear: -1}
+    - {use: horn_ship_2, appear: -1}
+    - {use: horn_ship_3, appear: -1}
+    - {use: horn_ship_4, appear: -1}
+    - {use: horn_ship_5, appear: -1}
+    - {use: def_sea_0, appear: 0.3}
+    - {use: def_sea_1, appear: 0.42}
+    - {use: def_sea_2, appear: 0.54}
+    - {use: def_sea_3, appear: 0.6599999999999999}
+    - {use: def_sea_4, appear: 0.78}
+  chios:
+    shot: s378.1
+    duration: 3.4
+    view: *id016
+    land: eastmed
+    show:
+    - {use: constantinople, appear: -1}
+    - use: to_chios
+      draw: [0.1, 1.8]
+    - {use: chios, appear: 1.5}
+  ottoman_capital:
+    shot: s387.1
+    duration: 3.7
+    view: *id004
+    land: eastmed
+    approximate: true
+    show:
+    - {use: ott_1451, appear: -1}
+    - {use: byz_city, appear: -1, hide: 0.3}
+    - {use: constantinople_ott, appear: 0.5}
+    - {use: lbl_ottoman, appear: 0.9}
+  byzantium_gone:
+    shot: s389.1
+    duration: 4.1
+    view: *id016
+    land: eastmed
+    approximate: true
+    title: {text: '1453', appear: 0.2, position: br}
+    show:
+    - {use: byz_city, appear: -1, hide: 1.0}
+    - {use: byz_morea, appear: -1, hide: 1.4}
+    - {use: constantinople, appear: -1}
+  capital_moves:
+    shot: s390.1
+    duration: 3.1
+    view: *id009
+    land: eastmed
+    show:
+    - {use: edirne, appear: -1}
+    - {use: constantinople_ott, appear: 0.4}
+    - use: capital_move
+      draw: [0.2, 2.2]
+  scholars_west:
+    shot: s393.1
+    duration: 2.8
+    view: *id008
+    land: med
+    show:
+    - {use: constantinople, appear: -1}
+    - use: scholars_venice
+      draw: [0.1, 2.0]
+    - use: scholars_florence
+      draw: [0.2, 2.2]
+    - {use: venice, appear: 1.6}
+    - {use: florence, appear: 1.8}

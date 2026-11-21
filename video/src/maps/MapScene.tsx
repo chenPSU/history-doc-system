@@ -69,6 +69,7 @@ export const MapScene: React.FC<MapProps> = (props) => {
   const {fps, width, height} = useVideoConfig();
   const t = frame / fps;
   const pal = getPalette(props.palette);
+  const uid = props.uid ?? 'map'; // unique per scene: two maps can be on screen during a dissolve
   const u = height / 1080; // size unit: 1 px at 1080p
   const base = useMemo(() => fitProjection(props.view, width, height), [props.view, width, height]);
 
@@ -86,40 +87,40 @@ export const MapScene: React.FC<MapProps> = (props) => {
     })
     .join('');
 
-  const layers = props.layers.map((l, i) => <LayerView key={i} l={l} t={t} P={P} u={u} pal={pal} P0={{w: width, h: height}} />);
+  const layers = props.layers.map((l, i) => <LayerView key={i} l={l} t={t} P={P} u={u} pal={pal} P0={{w: width, h: height}} uid={uid} />);
   const titleOpacity = props.title ? interpolate(t, [props.title.appear ?? 0.2, (props.title.appear ?? 0.2) + 0.8], [0, 1], clamp) : 0;
 
   return (
     <AbsoluteFill style={{backgroundColor: pal.water}}>
       <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
         <defs>
-          <radialGradient id="sea" cx="50%" cy="50%" r="75%">
+          <radialGradient id={`${uid}-sea`} cx="50%" cy="50%" r="75%">
             <stop offset="0%" stopColor={pal.water} />
             <stop offset="100%" stopColor={pal.waterDeep} />
           </radialGradient>
-          <radialGradient id="vignette" cx="50%" cy="50%" r="72%">
+          <radialGradient id={`${uid}-vignette`} cx="50%" cy="50%" r="72%">
             <stop offset="60%" stopColor="#000" stopOpacity={0} />
             <stop offset="100%" stopColor="#000" stopOpacity={0.45} />
           </radialGradient>
-          <filter id="paper" x="0" y="0" width="100%" height="100%">
+          <filter id={`${uid}-paper`} x="0" y="0" width="100%" height="100%">
             <feTurbulence type="fractalNoise" baseFrequency={0.9 / u} numOctaves={2} seed={7} />
             <feColorMatrix type="matrix" values="0 0 0 0 0.25  0 0 0 0 0.18  0 0 0 0 0.1  0 0 0 0.9 -0.25" />
           </filter>
-          <filter id="blur6">
+          <filter id={`${uid}-blur6`}>
             <feGaussianBlur stdDeviation={6 * u} />
           </filter>
-          <clipPath id="landclip">
+          <clipPath id={`${uid}-landclip`}>
             <path d={land} fillRule="evenodd" />
           </clipPath>
         </defs>
-        <rect width={width} height={height} fill="url(#sea)" />
+        <rect width={width} height={height} fill={`url(#${uid}-sea)`} />
         {/* soft shadow of the coast on the water */}
-        <path d={land} fill="none" stroke={pal.waterDeep} strokeWidth={14 * u} strokeOpacity={0.55} filter="url(#blur6)" />
+        <path d={land} fill="none" stroke={pal.waterDeep} strokeWidth={14 * u} strokeOpacity={0.55} filter={`url(#${uid}-blur6)`} />
         <path d={land} fill={pal.land} fillRule="evenodd" />
-        <rect width={width} height={height} filter="url(#paper)" opacity={pal.paperGrain} clipPath="url(#landclip)" />
+        <rect width={width} height={height} filter={`url(#${uid}-paper)`} opacity={pal.paperGrain} clipPath={`url(#${uid}-landclip)`} />
         <path d={land} fill="none" stroke={pal.landEdge} strokeWidth={1.6 * u} fillRule="evenodd" />
         {layers}
-        <rect width={width} height={height} fill="url(#vignette)" />
+        <rect width={width} height={height} fill={`url(#${uid}-vignette)`} />
       </svg>
       {props.title ? (
         <div
@@ -142,7 +143,7 @@ export const MapScene: React.FC<MapProps> = (props) => {
   );
 };
 
-const LayerView: React.FC<{l: Layer; t: number; P: (p: LonLat) => XY; u: number; pal: ReturnType<typeof getPalette>; P0: {w: number; h: number}}> = ({l, t, P, u, pal, P0}) => {
+const LayerView: React.FC<{l: Layer; t: number; P: (p: LonLat) => XY; u: number; pal: ReturnType<typeof getPalette>; P0: {w: number; h: number}; uid: string}> = ({l, t, P, u, pal, P0, uid}) => {
   const vis = visibility(t, l);
   if (vis <= 0) return null;
   const side = 'side' in l && l.side ? SIDES[l.side] : SIDES.neutral;
@@ -187,7 +188,7 @@ const LayerView: React.FC<{l: Layer; t: number; P: (p: LonLat) => XY; u: number;
       ] as XY[];
       return (
         <g opacity={vis}>
-          <path d={d} fill="none" stroke={pal.ink} strokeOpacity={0.5} strokeWidth={10 * u} strokeLinecap="round" strokeLinejoin="round" />
+          <path d={d} fill="none" stroke={pal.land} strokeOpacity={0.85} strokeWidth={11 * u} strokeLinecap="round" strokeLinejoin="round" />
           <path d={d} fill="none" stroke={side} strokeWidth={6 * u} strokeLinecap="round" strokeLinejoin="round" />
           {l.arrow ? <path d={pathD(head, true)} fill={side} stroke={pal.ink} strokeWidth={1.5 * u} /> : null}
         </g>
@@ -207,7 +208,7 @@ const LayerView: React.FC<{l: Layer; t: number; P: (p: LonLat) => XY; u: number;
       const [ox, oy] = l.origin ? P(l.origin) : [cx, cy];
       const reach = Math.max(...pts.map(([x, y]) => Math.hypot(x - ox, y - oy))) * 1.05;
       const r = interpolate(t, l.grow, [0, reach], {...clamp, easing: ease});
-      const id = `grow-${Math.round(ox)}-${Math.round(oy)}-${pts.length}`;
+      const id = `${uid}-grow-${Math.round(ox)}-${Math.round(oy)}-${pts.length}`;
       clip = `url(#${id})`;
       reveal = (
         <clipPath id={id}>
@@ -219,7 +220,7 @@ const LayerView: React.FC<{l: Layer; t: number; P: (p: LonLat) => XY; u: number;
       <g opacity={vis}>
         {reveal}
         {/* territories stop at the coast */}
-        <g clipPath="url(#landclip)">
+        <g clipPath={`url(#${uid}-landclip)`}>
           <path d={pathD(pts, true)} clipPath={clip} fill={side} fillOpacity={0.42} stroke={side} strokeWidth={3 * u} strokeDasharray={`${8 * u} ${5 * u}`} />
         </g>
         {l.label ? (
@@ -249,7 +250,8 @@ const LayerView: React.FC<{l: Layer; t: number; P: (p: LonLat) => XY; u: number;
     const [x, y] = P(l.at);
     return (
       <g opacity={vis}>
-        <circle cx={x} cy={y} r={11 * u} fill={side} stroke={pal.ink} strokeWidth={2.5 * u} />
+        <circle cx={x} cy={y} r={12 * u} fill={pal.land} fillOpacity={0.85} />
+        <circle cx={x} cy={y} r={9 * u} fill={side} stroke={pal.ink} strokeWidth={2 * u} />
         {l.label ? (
           <text x={x + 18 * u} y={y + 8 * u} fontFamily={FONT} fontSize={24 * u} fill={pal.labelLand} {...halo}>
             {l.label}

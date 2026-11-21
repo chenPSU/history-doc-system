@@ -4,7 +4,7 @@ The edit decision list (EDL) is what the renderer (P4.2) draws, second by second
 - shots: one item per sub-shot (a sentence's " | " cells split its time evenly). Shots touch end to end
   from 0 to the end of the narration plus a short tail, so the picture never goes black by accident.
   A shot runs from its sentence start to the next sentence start, so pauses keep the last picture.
-- kind: image | video | card | placeholder (map clips not rendered yet, or a missing file).
+- kind: image | video | map (a clip of a data/maps library, drawn inline) | card | placeholder (no clip yet, or a missing file).
 - fit: "cover" for wide images; "contain_blur" for 4:3 and portrait (centred on a dark blurred copy).
 - motion: Ken Burns 5-10% (bigger for longer shots), pans with the same slack; cards are static.
 - transition_in: fade_black at chapter starts, dissolve after a scripted pause, otherwise cut.
@@ -200,6 +200,9 @@ def build(ep: Path, probe=None) -> dict:
                 item["transition_in"], item["transition_s"] = "dissolve", DISSOLVE
             if sub.vt == "card":
                 item.update(kind="card", card=card_of(sub.term), motion={"type": "static"})
+            elif sub.asset_id and sub.asset_id in manifest and "#" in manifest[sub.asset_id]["file"]:
+                lib, _, clip = manifest[sub.asset_id]["file"].partition("#")      # drawn inline by Remotion
+                item.update(kind="map", asset_id=sub.asset_id, library=lib, clip=clip, motion={"type": "static"})
             elif sub.asset_id and sub.asset_id in manifest:
                 m = manifest[sub.asset_id]
                 path = ep / m["file"]

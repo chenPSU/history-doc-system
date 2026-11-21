@@ -94,6 +94,8 @@ python tools/fetch_assets.py episodes/<ep> --go     # licence-checked images -> 
 python tools/fetch_assets.py review episodes/<ep>   # contact sheet assets/review.html
 python tools/map.py data/maps/constantinople.yaml overview_10s --out episodes/<ep>/render/maps/x.mp4   # animated map (Remotion, video/)
 python tools/images.py episodes/<ep>                 # AI illustrations: dry run (count, cost); --go only with owner yes
+python tools/map.py data/maps/<lib>.yaml --sheet x.png        # every map clip on one contact sheet
+python tools/map.py data/maps/<lib>.yaml --bind episodes/<ep>  # map clips with `shot:` become those shots' assets
 python tools/timeline.py episodes/<ep>               # edit decision list -> render/edl.json (+ pacing stats)
 python tools/assemble.py episodes/<ep> --1080 --from 0 --to 60   # preview render; no flags = full 4K (hours)
 python tools/upload.py episodes/<ep>                 # dry run: shows the YouTube request

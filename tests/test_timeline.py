@@ -145,3 +145,18 @@ def test_average_pace_after_the_hook_is_checked(tmp_path):
     a = e["stats"]["after_30s"]
     assert a["shots"] == 2 and a["mean"] == pytest.approx((40 - 33.8 + 6.0) / 2, abs=0.01)
     assert any("average shot after the first 30 s" in w for w in e["warnings"])     # 6.1 s: slower than 3-4 s
+
+
+def test_inline_map_assets_become_map_shots(tmp_path):
+    ep = make_ep(tmp_path)
+    with (ep / "assets" / "manifest.csv").open("a", encoding="utf-8", newline="") as f:
+        csv.writer(f).writerow(["map-walls", "data/maps/x.yaml#walls", "own map", "own", "own", "c", "n", ""])
+    p = ep / "shotlist.csv"
+    rows = list(csv.DictReader(p.open(encoding="utf-8")))
+    rows[2]["asset_id"] = "wm-1 | map-walls"
+    with p.open("w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=COLS)
+        w.writeheader()
+        w.writerows(rows)
+    s = {x["id"]: x for x in T.build(ep, probe)["shots"]}
+    assert s["s003.2"]["kind"] == "map" and (s["s003.2"]["library"], s["s003.2"]["clip"]) == ("data/maps/x.yaml", "walls")
