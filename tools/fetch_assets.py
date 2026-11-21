@@ -35,7 +35,7 @@ def parse_rows(spec: str | None) -> set[int] | None:
 
 
 def cmd_search(args, cfg) -> int:
-    http = Http(ep_mod.user_agent(cfg) if cfg.get("contact") else f"{cfg.get('bot_name', 'HistoryDocBot/0.1')} (search only)")
+    http = Http(ep_mod.user_agent(cfg) if ep_mod.contact_of(cfg) else f"{cfg.get('bot_name', 'HistoryDocBot/0.1')} (search only)")
     s = ep_mod.Searcher(http, cfg)
     try:
         cands = s.run(args.source, args.query)
@@ -72,8 +72,8 @@ def main(argv=None) -> int:
     if not (ep / "shotlist.csv").exists():
         print(f"{ep}: no shotlist.csv (run tools/shotlist.py init first)")
         return 2
-    if a.go and not (cfg.get("contact") or "").strip():
-        print("config/assets.yaml: 'contact' is empty. Wikimedia requires contact information in the "
+    if a.go and not ep_mod.contact_of(cfg):
+        print("ASSETS_CONTACT is not set in .env. Wikimedia requires contact information in the "
               "User-Agent of download scripts; ask the owner what to put there.")
         return 2
     s = ep_mod.fetch_episode(ep, cfg, go=a.go, only=parse_rows(a.rows), limit=a.limit)

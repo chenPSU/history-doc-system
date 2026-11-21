@@ -160,7 +160,9 @@ def test_long_retry_after_stops_the_run_instead_of_waiting(tmp_path):
     assert read(ep, "shotlist.csv")[0]["asset_id"] == ""
 
 
-def test_user_agent_needs_contact_information():
+def test_user_agent_needs_contact_information(monkeypatch):
     assert E.user_agent(CFG).startswith("TestBot/0 (test@example.org) Python-urllib/")
-    with pytest.raises(ValueError, match="contact"):
+    monkeypatch.delenv("ASSETS_CONTACT", raising=False)
+    monkeypatch.setattr(E, "load_env", lambda: None)   # no .env in this test
+    with pytest.raises(ValueError, match="ASSETS_CONTACT"):
         E.user_agent({**CFG, "contact": ""})

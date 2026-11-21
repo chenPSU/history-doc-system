@@ -4,7 +4,8 @@
 
 # Wikimedia's User-Agent policy: automated clients must name themselves and give contact information
 # (an email, a website or a wiki user "User:<name>"); generic agents get blocked or rate-limited (HTTP 429).
-# The owner chooses the contact. Downloads (--go) refuse to run while it is empty.
+# The owner chooses the contact; it lives in .env as ASSETS_CONTACT (kept out of git). `contact` here
+# overrides it. Downloads (--go) refuse to run while both are empty.
 bot_name: HistoryDocBot/0.1
 contact: ""
 

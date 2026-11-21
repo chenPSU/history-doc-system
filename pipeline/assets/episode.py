@@ -10,6 +10,7 @@ The shot list and manifest are saved after each row, so an interrupted run can s
 from __future__ import annotations
 
 import csv
+import os
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -19,6 +20,7 @@ import yaml
 from . import archive_org, commons
 from .common import Candidate, FetchError, Http, RateLimited, download, manifest_row, read_manifest, write_manifest
 from .licence import allowed
+from ..voice import load_env
 
 ROOT = Path(__file__).resolve().parents[2]
 NOISE = {"drone", "aerial", "close-up", "closeup", "detail", "dawn", "dusk", "night", "sunset", "sunrise",
@@ -29,11 +31,19 @@ def load_config(path: Path | None = None) -> dict:
     return yaml.safe_load(Path(path or ROOT / "config" / "assets.yaml").read_text(encoding="utf-8"))
 
 
+def contact_of(cfg: dict) -> str:
+    """config `contact`, else ASSETS_CONTACT from the environment / .env."""
+    if (cfg.get("contact") or "").strip():
+        return cfg["contact"].strip()
+    load_env()
+    return os.environ.get("ASSETS_CONTACT", "").strip()
+
+
 def user_agent(cfg: dict) -> str:
     """Wikimedia User-Agent policy format: <name>/<version> (<contact>) <library>/<version>."""
-    contact = (cfg.get("contact") or "").strip()
+    contact = contact_of(cfg)
     if not contact:
-        raise ValueError("config/assets.yaml: set 'contact' (email, website or wiki user) before downloading; "
+        raise ValueError("set ASSETS_CONTACT in .env (email, website or wiki user) before downloading; "
                          "Wikimedia blocks clients without contact information")
     return f"{cfg.get('bot_name', 'HistoryDocBot/0.1')} ({contact}) Python-urllib/{sys.version_info[0]}.{sys.version_info[1]}"
 
