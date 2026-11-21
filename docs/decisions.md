@@ -37,6 +37,7 @@ Rules unchanged: only where no real image exists; painterly/old-print style; on-
 Public domain first: Library of Congress, NARA, Wikimedia Commons (PD/CC0/CC BY/CC BY-SA with credit), Internet Archive/Prelinger. Every asset logged in `assets/manifest.csv`.
 - Image licences (21 Nov 2026, owner): download public domain, CC0, CC BY and **CC BY-SA** (most present-day location photos on Commons are BY-SA). Never NC, ND or unknown. Every CC BY / BY-SA file is credited in the description (author, licence, link), from `assets/manifest.csv`. Internet Archive: PD/CC0 only (uploader-declared licences). Set in `config/assets.yaml`.
 - Library of Congress (bot check on loc.gov) and NARA (catalog API needs a key) are searched through their copies on Wikimedia Commons.
+- Map data (21 Nov 2026): Natural Earth (public domain) for regional maps; OpenStreetMap coastline (ODbL) for city maps, because Natural Earth has no city-scale coast. ODbL needs the credit "© OpenStreetMap contributors" wherever the map is shown; `tools/map.py` puts it on the frame and in the manifest.
 
 ## D9 · Publishing — DECIDED (20 Nov 2026, owner): automatic upload
 The system uploads by itself with the YouTube Data API (`pipeline/youtube_upload.py`), under `config/upload_policy.yaml`.

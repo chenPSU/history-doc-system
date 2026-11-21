@@ -1,0 +1,30 @@
+# NOT HISTORICAL. A test card for the map mechanics (territory growth, counter, route, labels) on the
+# regional base map. Real episode maps get their borders from sourced data; never reuse these shapes.
+land: eastmed
+features:
+  demo_area:
+    type: area
+    side: ott
+    label: demo territory
+    origin: [29.0, 40.0]
+    coords: [[26.5, 41.8], [31.5, 41.2], [33.5, 39.0], [30.5, 37.2], [27.0, 37.8], [26.0, 39.6]]
+  demo_route:
+    type: line
+    style: route
+    side: ott
+    arrow: true
+    coords: [[30.0, 39.5], [28.9, 40.6], [28.95, 41.0]]
+  demo_counter: {type: counter, from: 1300, to: 1451, run: [0.5, 3.5], suffix: ""}
+  lbl_city: {type: label, kind: place, text: Constantinople, at: [28.95, 41.25]}
+  lbl_sea: {type: label, kind: water, text: Black Sea, at: [33.0, 42.6]}
+clips:
+  demo_5s:
+    duration: 5
+    view: [20.0, 35.0, 38.0, 45.0]
+    title: {text: Map test card, sub: not historical, position: bl}
+    show:
+      - {use: lbl_sea, appear: 0.2}
+      - {use: demo_counter}
+      - {use: demo_area, grow: [0.5, 3.5]}
+      - {use: lbl_city, appear: 1.0}
+      - {use: demo_route, draw: [3.0, 4.5]}

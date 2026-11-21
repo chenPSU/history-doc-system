@@ -4,5 +4,7 @@ pyyaml>=6
 google-api-python-client>=2.100
 google-auth-oauthlib>=1.2
 google-auth>=2.25
+# Maps (P3.3): land polygons from coastlines
+shapely>=2.0
 # later phases (see TASKS.md):
 # pythainlp     # P1.5 Thai scorer
