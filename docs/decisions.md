@@ -34,7 +34,9 @@ Same Google account as TTS, called by API inside the pipeline (P3.4). Rough cost
 Rules unchanged: only where no real image exists; painterly/old-print style; on-screen label "Illustration"; `ai_generated=y` in the manifest; disclosure on upload if realistic; no realistic AI image of a real person.
 
 ## D8 · Footage sources — DECIDED
-Public domain first: Library of Congress, NARA, Wikimedia Commons (PD/CC0/CC-BY with credit), Internet Archive/Prelinger. Every asset logged in `assets/manifest.csv`.
+Public domain first: Library of Congress, NARA, Wikimedia Commons (PD/CC0/CC BY/CC BY-SA with credit), Internet Archive/Prelinger. Every asset logged in `assets/manifest.csv`.
+- Image licences (21 Nov 2026, owner): download public domain, CC0, CC BY and **CC BY-SA** (most present-day location photos on Commons are BY-SA). Never NC, ND or unknown. Every CC BY / BY-SA file is credited in the description (author, licence, link), from `assets/manifest.csv`. Internet Archive: PD/CC0 only (uploader-declared licences). Set in `config/assets.yaml`.
+- Library of Congress (bot check on loc.gov) and NARA (catalog API needs a key) are searched through their copies on Wikimedia Commons.
 
 ## D9 · Publishing — DECIDED (20 Nov 2026, owner): automatic upload
 The system uploads by itself with the YouTube Data API (`pipeline/youtube_upload.py`), under `config/upload_policy.yaml`.

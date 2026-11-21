@@ -9,9 +9,10 @@
 bot_name: HistoryDocBot/0.1
 contact: ""
 
-# Downloaded from Wikimedia Commons. cc-by-sa is NOT on by default: most present-day location photos on
-# Commons are CC BY-SA, and adding it is the owner's call (ShareAlike terms on an adapted work).
-allowed_licences: [pd, cc0, cc-by]
+# Downloaded from Wikimedia Commons. cc-by-sa allowed by the owner on 21 Nov 2026 (docs/decisions.md D8):
+# most present-day location photos on Commons are CC BY-SA. Every CC BY / BY-SA file must be credited
+# (author, licence, link) in the video description; the manifest holds the credit.
+allowed_licences: [pd, cc0, cc-by, cc-by-sa]
 
 # Internet Archive licences are declared by the uploader, so only PD/CC0 by default.
 ia_allowed_licences: [pd, cc0]
