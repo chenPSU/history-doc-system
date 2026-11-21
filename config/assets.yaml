@@ -1,0 +1,36 @@
+# Asset fetchers (TASKS P3.2). Read by pipeline/assets and tools/fetch_assets.py.
+# Licence classes: pd, cc0, cc-by, cc-by-sa, nc, nd, unknown (see pipeline/assets/licence.py).
+# nc, nd and unknown are never downloaded, whatever this file says.
+
+# Wikimedia's User-Agent policy: automated clients must name themselves and give contact information
+# (an email, a website or a wiki user "User:<name>"); generic agents get blocked or rate-limited (HTTP 429).
+# The owner chooses the contact. Downloads (--go) refuse to run while it is empty.
+bot_name: HistoryDocBot/0.1
+contact: ""
+
+# Downloaded from Wikimedia Commons. cc-by-sa is NOT on by default: most present-day location photos on
+# Commons are CC BY-SA, and adding it is the owner's call (ShareAlike terms on an adapted work).
+allowed_licences: [pd, cc0, cc-by]
+
+# Internet Archive licences are declared by the uploader, so only PD/CC0 by default.
+ia_allowed_licences: [pd, cc0]
+
+width: 3840          # 4K export: Commons gives a 3840 px wide rendition, or the original when smaller
+search_limit: 20     # results looked at per search
+min_width: 1200      # smaller images look soft in a 4K frame; skipped
+
+# Shot types we never fetch: our own maps (P3.3), text cards (render), AI images (P3.4).
+skip_visual_types: [map, card, illustration_ai]
+
+# Where to look, in order, for each visual_type. The first source with an allowed, unused file wins.
+# Sources: commons, commons_loc, commons_nara, commons_video, ia, ia_movies.
+# The Library of Congress site sits behind a bot check and NARA's catalog API needs a key, so their
+# scans are found through the copies on Commons (commons_loc, commons_nara).
+routes:
+  painting: [commons]
+  engraving: [commons]
+  manuscript: [commons]
+  artefact: [commons]
+  location: [commons]
+  archive_photo: [commons, commons_loc, commons_nara, ia]
+  footage: [ia_movies, commons_video]
