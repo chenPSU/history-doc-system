@@ -124,7 +124,7 @@ def log_to_manifest(out: Path, clip: str, credit: str) -> bool:
     mpath = ep / "assets" / "manifest.csv"
     rows = [r for r in read_manifest(mpath) if r["asset_id"] != f"map-{clip}"]
     rows.append({"asset_id": f"map-{clip}", "file": out.relative_to(ep).as_posix(), "source": "own map",
-                 "source_url": "", "licence": "own work; map data as credited",
+                 "source_url": f"own:tools/map.py {clip}",   # the upload preflight needs a source on every row "licence": "own work; map data as credited",
                  "credit": credit or "own work", "ai_generated": "n", "notes": "class=own; tools/map.py"})
     write_manifest(mpath, rows)
     return True

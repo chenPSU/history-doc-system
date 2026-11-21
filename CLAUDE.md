@@ -93,6 +93,7 @@ python tools/check_episode.py episodes/<ep>          # score gate -> score.json
 python tools/fetch_assets.py episodes/<ep> --go     # licence-checked images -> assets/, manifest, shot asset_id
 python tools/fetch_assets.py review episodes/<ep>   # contact sheet assets/review.html
 python tools/map.py data/maps/constantinople.yaml overview_10s --out episodes/<ep>/render/maps/x.mp4   # animated map (Remotion, video/)
+python tools/images.py episodes/<ep>                 # AI illustrations: dry run (count, cost); --go only with owner yes
 python tools/upload.py episodes/<ep>                 # dry run: shows the YouTube request
 python tools/upload.py --queue --go                  # what the owner's cron job runs
 pytest -q

@@ -1,0 +1,37 @@
+# AI illustrations (TASKS P3.4, decision D7). Only for shots with visual_type illustration_ai,
+# i.e. scenes no real image shows. Edited by us; the owner approves every paid run (request count first).
+provider: gemini
+model: gemini-2.5-flash-image      # "Nano Banana": the D7 estimate (~$0.04/image) is for this model
+aspect_ratio: "16:9"
+cost_per_image_usd: 0.04           # for the plan printout only; check the Gemini price page before big runs
+safety: BLOCK_ONLY_HIGH            # war scenes trip the default filters (same as narration)
+
+# Drawn on screen by the assembler (P4) for every manifest row with ai_generated=y.
+label: Illustration
+
+# Picked per episode in assets/ai_prompts.yaml (`style:`). Rotate between consecutive videos (policy gate).
+styles:
+  engraving: >-
+    A 15th-century style copperplate engraving printed in dark brown ink on aged cream paper,
+    fine cross-hatching, visible plate texture and foxing, muted, like a plate from an old history book.
+  woodcut: >-
+    A late-medieval woodcut print, bold black carved lines on yellowed rag paper, simple shapes,
+    hand-coloured with faded washes of red ochre and blue, slightly uneven ink.
+  etching_sepia: >-
+    A 19th-century book etching with a soft sepia wash, delicate line work, atmospheric depth,
+    paper grain and light age stains, like an illustration in a Victorian history of the world.
+
+# Added to every prompt. The AC of P3.4: no realistic AI image of a real person, anywhere.
+rules: >-
+  It must look like a historical print, never a photograph, never photorealistic, never a 3D render.
+  All people are anonymous figures: small in the frame, seen from a distance, from behind or in silhouette,
+  no close-up faces and no portraits, and no recognisable historical person.
+  No text, letters, captions, signatures, borders or watermarks. No modern objects.
+  Wide landscape composition with the main subject in the centre third (the video crops the edges slightly).
+
+# A prompt that contains any of these is refused before a request is sent.
+banned_words: [photo, photograph, photographic, photorealistic, realistic, hyperrealistic, portrait, close-up,
+               closeup, selfie, cinematic, "3d", render, "8k", "4k", headshot, likeness]
+# A single named ruler is a real person even without the name. Crowds of soldiers are fine.
+banned_roles: [sultan, emperor, empress, pope, king, queen, tsar, caliph, patriarch, vizier, doge, khan]
+# The episode file adds its own `real_people:` (names from the fact sheet); those are refused too.

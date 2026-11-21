@@ -39,14 +39,15 @@ def build(ep: Path, skip_types=("map", "card", "illustration_ai")) -> Path:
             aid = ids[j] if j < len(ids) else ""
             head = (f'<div class="n">#{r["sentence_no"]}.{j + 1} · {html.escape(vt)}</div>'
                     f'<div class="s">{html.escape(r["sentence"])}</div><div class="t">{html.escape(term)}</div>')
-            if vt in skip_types:
+            if vt in skip_types and not (aid in man and man[aid].get("ai_generated") == "y"):
                 n_own += 1
                 body = '<div class="own">made by us (map / card / illustration)</div>'
             elif aid and aid in man:
                 n_ok += 1
                 m = man[aid]
+                ai = ' · <b>AI: label "Illustration"</b>' if m.get("ai_generated") == "y" else ""
                 body = (f'<img loading="lazy" src="{html.escape(Path(m["file"]).name)}" alt="">'
-                        f'<div class="lic">{html.escape(m["licence"])} · {html.escape(aid)}</div>'
+                        f'<div class="lic">{html.escape(m["licence"])} · {html.escape(aid)}{ai}</div>'
                         f'<div class="t">{html.escape(m["credit"])} · <a href="{html.escape(m["source_url"])}">source</a></div>')
             else:
                 n_miss += 1
