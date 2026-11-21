@@ -66,7 +66,8 @@ def build_graph(ep: Path, plan: dict, start: float, end: float, voice_lufs: floa
     """ffmpeg inputs + filter_complex for the window [start, end) of the episode timeline."""
     dur = end - start
     inputs = ["-ss", f"{start}", "-t", f"{dur}", "-i", str(Path(ep) / "audio" / "narration.wav")]
-    chains = [f"[0:a]aresample={SR},aformat=channel_layouts=stereo,asplit=2[voice][key]"]
+    # pad the voice to the window: the picture runs ~2 s past the last word and the music tail must too
+    chains = [f"[0:a]aresample={SR},aformat=channel_layouts=stereo,apad=whole_dur={dur:.3f},asplit=2[voice][key]"]
     music_labels, sfx_labels, n = [], [], 1
     for k, m in enumerate(plan.get("music") or []):
         a, b = max(start, float(m["from"])), min(end, float(m["to"]))
