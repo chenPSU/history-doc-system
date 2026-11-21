@@ -3,11 +3,21 @@
 # fit: `contain` keeps the whole picture small on a blurred copy (use only when cropping would lose the point).
 # captions: a short on-picture label per shot id (sNNN.k). Facts must be in factsheet.md or the asset's own record.
 focus:
-  wm-2727659: [0.45, 0.55]     # Zonaro: Mehmed on the white horse
-  wm-147845: [0.40, 0.33]      # Bellini: the sultan's face
-  wm-146012287: [0.30, 0.45]   # Dardanelles Gun: the muzzle
-  wm-148609: [0.45, 0.30]      # Constantine mosaic: the face
-  wm-98641878: [0.50, 0.42]    # Buondelmonti: the city on its peninsula
+  wm-2727659:
+  - 0.45
+  - 0.55
+  wm-147845:
+  - 0.4
+  - 0.33
+  wm-146012287:
+  - 0.3
+  - 0.45
+  wm-148609:
+  - 0.45
+  - 0.3
+  wm-98641878:
+  - 0.5
+  - 0.42
 fit: {}
 captions:
   s001.1: 29 May 1453
@@ -18,3 +28,52 @@ captions:
   s008.1: A later Ottoman bombard (1464)
   s009.1: Constantinople, drawn c. 1420
   s011.1: Constantine the Great · mosaic, Hagia Sophia
+  s015.1: 330 → 1453
+  s039.1: Fewer than 50,000 people
+  s046.1: '1449'
+  s051.1: '1451'
+  s095.1: 12 December 1452
+  s098.1: Doukas, Byzantine chronicler
+  s107.1: Giovanni Giustiniani's 700 men
+  s112.1: 700 men
+  s115.1: Orban, a Hungarian gun-founder
+  s128.1: About 8 metres long
+  s132.1: 60 oxen, hundreds of men
+  s134.1: About 70 more guns
+  s138.1: 2 April 1453
+  s145.1: Up to 80,000 men
+  s151.1: George Sphrantzes, the emperor's friend
+  s152.1: Fewer than 5,000
+  s161.1: 6 April 1453 · Day 1
+  s169.1: Hours to reload
+  s177.1: 18 April
+  s194.1: 20 April
+  s232.1: 28 April
+  s248.1: Johannes Grant, mining engineer
+  s260.1: 23 May
+  s266.1: 21 May
+  s277.1: 22 May
+  s359.1: Midday, 29 May
+  s150.1: About 7,000 defenders
+  s314.1: 29 May 1453, after midnight
+  s342.1: Doukas, Byzantine chronicler
+  s032.1: Sultan Murad II, Mehmed's father
+  s034.1: Crusaders in Constantinople, 1204
+  s047.1: Constantine XI Palaiologos
+  s048.1: Mystras, southern Greece
+  s052.1: Sultan Mehmed II
+  s072.1: Boğazkesen
+  s091.1: Pope Nicholas V
+  s103.1: 200 archers
+  s129.1: Several hundred kilograms
+  s147.1: Janissaries
+  s167.1: Chora Church
+  s189.1: Links of the real chain
+  s191.1: Galata, a Genoese town
+  s245.1: Novo Brdo, Serbia
+  s280.1: A lunar eclipse
+  s358.1: The Imperial Gate, Hagia Sophia
+  s379.1: Chios
+  s385.1: An imperial decree (ferman)
+  s392.1: Cardinal Bessarion
+  s395.1: Venice

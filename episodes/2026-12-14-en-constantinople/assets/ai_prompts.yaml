@@ -117,3 +117,524 @@ shots:
       the harbour full of sailing ships, the sea on three sides'
     context: 'The Byzantine city of Constantinople before 1453: Christian domed churches; there are no minarets
       and no mosques anywhere. Medieval Mediterranean ships.'
+  15:
+    sentence: It lasted another thousand years.
+    subject: A grand imperial procession through a wide city street, crowds and banners, a great domed church rising
+      behind
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  18:
+    sentence: So what made their city so hard to take?
+    subject: An attacker's view across an empty plain toward immense triple walls with square towers, tiny figures
+      before them
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  26:
+    sentence: Picture yourself as an attacker, standing in front of them.
+    subject: A lone soldier seen from behind, standing on open ground before the immense triple walls, which tower
+      over him
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  27:
+    sentence: First you must cross the moat under fire.
+    subject: Attackers with ladders wading through a moat under a rain of arrows and stones from the walls above
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  38:
+    sentence: The city was a shadow of its old self.
+    subject: 'A half-empty city quarter: ruined churches, broken columns, empty squares, a few people walking'
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  39:
+    sentence: Fewer than fifty thousand people still lived inside the walls.
+    subject: A quiet street with many houses shut and empty, a handful of townspeople
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  40:
+    sentence: Where crowded streets had once stood, there were now fields and orchards.
+    subject: Fields, vegetable gardens and orchards growing inside the city walls among ruined buildings
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  46:
+    sentence: In 1449, a new emperor took the throne.
+    subject: A coronation ceremony in a great domed church, crowds of nobles and clergy seen from far away, candles
+      and mosaics
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  51:
+    sentence: In 1451, a young sultan took the throne for the second time.
+    subject: 'A palace courtyard in Adrianople: rows of janissaries and officials standing in ranks for a ceremony,
+      seen from above'
+    context: 'The Ottoman army in 1453: tents, banners, soldiers in turbans and helmets, on a plain; no sea in the
+      picture.'
+  59:
+    sentence: Constantinople.
+    subject: 'Constantinople seen from across the water at sunset: walls along the shore, domed churches on the
+      hills'
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  64:
+    sentence: It was a building.
+    subject: Masons and workers building a stone fortress with round towers on a steep wooded shore of a narrow
+      strait
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  66:
+    sentence: On the Asian shore, his great-grandfather had already built a fort.
+    subject: A small stone fortress with a square keep on the green Asian shore of a narrow strait, seen from the
+      water
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  71:
+    sentence: One chronicler says he spent his nights drawing plans of the city walls, asking where the guns should
+      go.
+    subject: 'A candle-lit tent at night, a low table covered with drawings of walls and towers, an inkwell and
+      quills, no people A dark night scene printed with heavy dark ink: the sky and shadows almost black; only moonlight,
+      torches and fires are pale.'
+    context: 'The Ottoman army in 1453: tents, banners, soldiers in turbans and helmets, on a plain; no sea in the
+      picture.'
+  77:
+    sentence: And the city lived on the grain those ships carried.
+    subject: Merchant sailing ships heavy with sacks of grain sailing down a narrow strait toward a walled city
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  78:
+    sentence: What would happen if those ships stopped coming?
+    subject: Empty harbour quays, idle porters sitting on bare sacks, a single ship far out on the water
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  85:
+    sentence: The message was clear.
+    subject: 'Dusk on a narrow strait: the dark towers of a new fortress against the sky, one ship passing slowly
+      below its guns'
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  86:
+    sentence: If you sailed past without permission, you died.
+    subject: A merchant ship lowering its sails in front of a shore fortress, a puff of cannon smoke from the walls
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  94:
+    sentence: Only then would Catholic Europe send soldiers.
+    subject: European knights and soldiers mustering under banners in a castle courtyard
+    context: '15th-century Western Europe (Italy): castles, churches, ships in a Venetian-style port.'
+  95:
+    sentence: So on 12 December 1452, the emperor's court declared the churches united.
+    subject: 'A solemn church service in a great domed church: candles, clergy in robes, nobles standing, seen from
+      the back of the nave'
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  96:
+    sentence: Many Greeks were furious.
+    subject: An angry crowd of townspeople and monks shouting in a city square, fists raised, seen from a distance
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  97:
+    sentence: To them, it felt like selling their faith.
+    subject: 'Monks praying by candlelight before icons in a dim Orthodox church A dark night scene printed with
+      heavy dark ink: the sky and shadows almost black; only moonlight, torches and fires are pale.'
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  98:
+    sentence: A chronicler named Doukas reports a famous remark from those days.
+    subject: 'A scribe writing a chronicle by candlelight, seen from behind, books and parchment on the desk A dark
+      night scene printed with heavy dark ink: the sky and shadows almost black; only moonlight, torches and fires
+      are pale.'
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  105:
+    sentence: Still, one gift did arrive that winter.
+    subject: 'A winter harbour: a single large sailing ship gliding in to the quay, snow on the roofs and the walls'
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  107:
+    sentence: His name was Giovanni Giustiniani.
+    subject: Soldiers in Genoese armour disembarking from a ship onto a stone quay, carrying shields and crossbows
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  112:
+    sentence: Seven hundred men were not an army.
+    subject: A small company of soldiers spread thinly along a very long wall, far apart from each other
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  115:
+    sentence: Before the siege began, a Hungarian engineer named Orban came looking for work.
+    subject: A cannon foundry yard with furnaces and clay moulds, smoke, small workers
+    context: 'A 15th-century Ottoman cannon foundry and workshop near Adrianople, inland: furnaces, clay moulds,
+      bronze.'
+  126:
+    sentence: So Mehmed told him to build it.
+    subject: Workers building a giant clay mould for a cannon in a deep pit, wooden scaffolding and cranes
+    context: 'A 15th-century Ottoman cannon foundry and workshop near Adrianople, inland: furnaces, clay moulds,
+      bronze.'
+  128:
+    sentence: The cannon was around eight metres long.
+    subject: A giant bronze cannon lying on a wooden sledge in a foundry yard, tiny workers beside it for scale
+    context: 'A 15th-century Ottoman cannon foundry and workshop near Adrianople, inland: furnaces, clay moulds,
+      bronze.'
+  132:
+    sentence: Moving it took sixty oxen and hundreds of men.
+    subject: A long team of oxen dragging a giant cannon on a sledge along a dirt road, hundreds of men pulling
+      on ropes beside them
+    context: 'The Ottoman army in 1453: tents, banners, soldiers in turbans and helmets, on a plain; no sea in the
+      picture.'
+  134:
+    sentence: Mehmed brought around seventy smaller guns as well.
+    subject: Rows of bronze cannons on wooden carriages lined up in an army camp
+    context: 'The Ottoman army in 1453: tents, banners, soldiers in turbans and helmets, on a plain; no sea in the
+      picture.'
+  136:
+    sentence: For weeks, this bronze giant crawled along it.
+    subject: A giant cannon crawling along a winding road through low hills, a long column of oxen and men, seen
+      from far above
+    context: 'The Ottoman army in 1453: tents, banners, soldiers in turbans and helmets, on a plain; no sea in the
+      picture.'
+  138:
+    sentence: On 2 April 1453, the first Ottoman soldiers made camp outside the walls.
+    subject: The first tents of an army being pitched on a plain before distant city walls at dawn
+    context: 'The Ottoman army in 1453: tents, banners, soldiers in turbans and helmets, on a plain; no sea in the
+      picture.'
+  140:
+    sentence: They broke down the bridges over the moat.
+    subject: 'Defenders tearing down a wooden bridge over a moat by torchlight A dark night scene printed with heavy
+      dark ink: the sky and shadows almost black; only moonlight, torches and fires are pale.'
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  145:
+    sentence: Modern historians suggest up to eighty thousand.
+    subject: A sea of tents, banners and soldiers stretching to the horizon before city walls
+    context: 'The Ottoman army in 1453: tents, banners, soldiers in turbans and helmets, on a plain; no sea in the
+      picture.'
+  151:
+    sentence: The emperor's friend, George Sphrantzes, counted the Greek men fit to fight.
+    subject: 'A clerk''s table: a long roll of names, a quill, an inkwell and a candle, no people A dark night scene
+      printed with heavy dark ink: the sky and shadows almost black; only moonlight, torches and fires are pale.'
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  152:
+    sentence: He found fewer than five thousand.
+    subject: Men lining up in a palace courtyard to be counted, a clerk with a list, seen from above
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  161:
+    sentence: On 6 April 1453, the siege began.
+    subject: Cannon smoke rising along the land walls at dawn, the first shots striking the towers
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  162:
+    sentence: The guns fired every day, for weeks.
+    subject: A battery of huge cannons firing at city walls, clouds of smoke, gunners in turbans
+    context: 'The Ottoman army in 1453: tents, banners, soldiers in turbans and helmets, on a plain; no sea in the
+      picture.'
+  164:
+    sentence: You feel the shot in your chest before you hear it.
+    subject: A huge stone ball smashing into a tower of the walls, stones and dust flying, defenders bracing behind
+      the parapet
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  166:
+    sentence: Dust pours from the stones above you.
+    subject: Dust and pebbles pouring from the stone vault of a tower passage onto a crouching soldier
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  169:
+    sentence: It needed hours to reload.
+    subject: Gunners cleaning and loading a giant cannon, a team lifting a stone ball with a wooden crane
+    context: 'The Ottoman army in 1453: tents, banners, soldiers in turbans and helmets, on a plain; no sea in the
+      picture.'
+  170:
+    sentence: Still, every hit tore open part of the outer wall.
+    subject: 'A breach in an outer wall: broken stones tumbling into the moat, a tower half collapsed'
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  177:
+    sentence: On 18 April, Mehmed sent his men against the broken wall at night.
+    subject: 'A night assault on a broken wall: torches, ladders, attackers swarming up a breach A dark night scene
+      printed with heavy dark ink: the sky and shadows almost black; only moonlight, torches and fires are pale.'
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  178:
+    sentence: For four hours, the fighting raged in the dark.
+    subject: 'Hand-to-hand fighting by torchlight on a rubble rampart, spears and shields A dark night scene printed
+      with heavy dark ink: the sky and shadows almost black; only moonlight, torches and fires are pale.'
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  183:
+    sentence: Which leaves the real question of this siege.
+    subject: The Golden Horn harbour crowded with ships behind a floating chain, the city on its hills above
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  187:
+    sentence: The city's harbour was the Golden Horn.
+    subject: A long, narrow natural harbour with many ships at anchor, city walls along its southern shore
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  192:
+    sentence: Galata said it was neutral.
+    subject: Genoese merchants trading on the quay of a small walled harbour town, bales and barrels, scales
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  194:
+    sentence: On 20 April, a small Christian convoy appeared to the south.
+    subject: Four tall sailing ships appearing on the horizon of a calm sea, seen from the top of city walls
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  200:
+    sentence: Picture the scene from the sea walls.
+    subject: Soldiers seen from behind on top of the sea walls, looking out at a sea battle in the distance
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  201:
+    sentence: The whole city is watching.
+    subject: Townspeople crowding every rooftop and balcony, pointing toward the sea
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  202:
+    sentence: People crowd every tower.
+    subject: People packed on the top of a city tower, waving and shouting toward the sea
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  205:
+    sentence: Suddenly, the wind drops.
+    subject: Tall sailing ships with slack, empty sails on a glassy still sea, flags hanging limp
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  210:
+    sentence: Inside the city, people cheered and rang the bells.
+    subject: People cheering in a city square at sunset while bells ring in a church tower
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  212:
+    sentence: He had his admiral beaten, and took away his wealth.
+    subject: Guards carrying away chests of gold coins and fine robes from a commander's tent
+    context: 'The Ottoman army in 1453: tents, banners, soldiers in turbans and helmets, on a plain; no sea in the
+      picture.'
+  214:
+    sentence: So what could he do?
+    subject: The floating chain across the mouth of a harbour at dusk, warships waiting beyond it
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  223:
+    sentence: Picture yourself on the sea wall that morning.
+    subject: 'Dawn over the sea walls: a soldier seen from behind looking down at the harbour'
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  224:
+    sentence: You look down at water that was safe yesterday.
+    subject: Dozens of oared galleys floating inside a harbour below city walls in the morning light
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  226:
+    sentence: How had nobody stopped them?
+    subject: A wooded hill above a harbour with a trail of crushed logs and ruts running down its slope
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  227:
+    sentence: The Genoese of Galata lived right beside that road.
+    subject: A walled harbour town on a hillside with its gates shut, a road of logs passing just outside its walls
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  230:
+    sentence: Its defenders were stretched even thinner.
+    subject: A few defenders spread far apart along a very long sea wall, seen from a tower
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  231:
+    sentence: The Venetians in the harbour wanted to strike back.
+    subject: 'Sailors in a harbour at night loading small boats with brushwood, barrels of pitch and oil A dark
+      night scene printed with heavy dark ink: the sky and shadows almost black; only moonlight, torches and fires
+      are pale.'
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  232:
+    sentence: On the night of 28 April, they tried to burn the Ottoman ships with fire boats.
+    subject: 'Small boats loaded with fire slipping across a dark harbour toward anchored ships A dark night scene
+      printed with heavy dark ink: the sky and shadows almost black; only moonlight, torches and fires are pale.'
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  235:
+    sentence: Forty sailors swam to the Ottoman shore.
+    subject: 'Sailors swimming toward a dark shore where soldiers wait with torches A dark night scene printed with
+      heavy dark ink: the sky and shadows almost black; only moonlight, torches and fires are pale.'
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  237:
+    sentence: In reply, the defenders put two hundred and sixty Turkish prisoners to death on the walls.
+    subject: The land walls at dusk under a heavy dark sky, crows circling above the towers
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  248:
+    sentence: Writers at the time called him a German, named Johannes Grant.
+    subject: 'A countermine shaft being dug inside the city walls: workers with picks and baskets, a lamp'
+    context: Underground mining tunnels below city walls in 1453, timber props, oil lamps.
+  260:
+    sentence: On 23 May, the defenders captured a pair of Ottoman officers underground.
+    subject: Soldiers with torches leading two prisoners out of a tunnel entrance
+    context: Underground mining tunnels below city walls in 1453, timber props, oil lamps.
+  266:
+    sentence: On 21 May, he sent the emperor an offer.
+    subject: An envoy on horseback with a small escort approaching a closed city gate under a white flag
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  267:
+    sentence: Give up the city, and you may go in peace.
+    subject: An envoy unrolling a letter before officials in a palace hall with columns, seen from a distance
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  269:
+    sentence: His people could leave with their goods.
+    subject: Families leaving through a city gate with carts of belongings, mules and bundles
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  274:
+    sentence: Yet the people of the city were losing hope.
+    subject: Worried townspeople in a narrow street at dusk, looking up at the sky
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  277:
+    sentence: On 22 May, the full moon rose over the walls.
+    subject: 'A full moon rising over the walls and towers at night A dark night scene printed with heavy dark ink:
+      the sky and shadows almost black; only moonlight, torches and fires are pale.'
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  279:
+    sentence: For hours, part of it stayed dark.
+    subject: 'The moon partly dark over the city towers, small figures on the walls pointing at it A dark night
+      scene printed with heavy dark ink: the sky and shadows almost black; only moonlight, torches and fires are
+      pale.'
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  281:
+    sentence: To the frightened people inside, it looked like the end.
+    subject: 'A dark city at night, small lamps in windows, people kneeling in prayer in a street A dark night scene
+      printed with heavy dark ink: the sky and shadows almost black; only moonlight, torches and fires are pale.'
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  282:
+    sentence: A few days later, thick fog covered the city.
+    subject: Thick fog covering the domes, roofs and walls of the city, shapes barely visible
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  283:
+    sentence: Some said a strange light glowed around the dome of the great church, Hagia Sophia.
+    subject: 'A strange pale light glowing around a great dome in the fog at night A dark night scene printed with
+      heavy dark ink: the sky and shadows almost black; only moonlight, torches and fires are pale.'
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  284:
+    sentence: To them, it was the spirit of God, leaving the city.
+    subject: 'A faint beam of light rising from a great dome into the night sky, small figures watching from the
+      street A dark night scene printed with heavy dark ink: the sky and shadows almost black; only moonlight, torches
+      and fires are pale.'
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  306:
+    sentence: Greeks and Latins crowded into Hagia Sophia together.
+    subject: A vast candle-lit domed church packed with people praying, Greek and Latin clergy side by side
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  307:
+    sentence: All winter, they had quarrelled.
+    subject: Two groups of clergy in different robes arguing in a church courtyard, seen from a distance
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  310:
+    sentence: Afterwards, he rode out to the walls.
+    subject: 'A small group of riders with torches riding along the inside of the dark land walls A dark night scene
+      printed with heavy dark ink: the sky and shadows almost black; only moonlight, torches and fires are pale.'
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  311:
+    sentence: Picture yourself in that crowd.
+    subject: 'Inside a praying crowd: the backs of heads and shoulders, candles, gold mosaics glimmering above'
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  313:
+    sentence: Will any of you see another sunset?
+    subject: A red sunset over a great dome and the city walls, seen from the harbour
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  324:
+    sentence: A great cannon blasted a hole in the stockade, and they rushed in.
+    subject: A cannon blast tearing a hole in a wooden stockade, soldiers rushing through the smoke
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  326:
+    sentence: Dawn was close.
+    subject: The first grey light of dawn over smoking, broken walls
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  333:
+    sentence: Just after dawn, a shot struck Giovanni Giustiniani.
+    subject: A crossbow bolt and a dented helmet lying on the bloody stones of a parapet, smoke drifting
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  334:
+    sentence: Some say it was a bullet.
+    subject: A small lead bullet beside a powder flask and a hand-gun lying on a stone ledge
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  336:
+    sentence: Either way, the wound was serious.
+    subject: Soldiers carrying a wounded man on a stretcher down the stone steps of the wall, seen from behind
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  338:
+    sentence: Many of his Genoese soldiers followed him.
+    subject: Soldiers in Genoese armour leaving the walls through a small gate toward the harbour, looking back
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  344:
+    sentence: Ottoman soldiers slipped through it and raised their flag on a tower.
+    subject: A red flag with a crescent being raised on top of a tower, soldiers climbing over the battlements
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  356:
+    sentence: An old prophecy said an angel would come down there and save the city.
+    subject: People crowded inside a great church, all looking up at the dome, waiting
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  359:
+    sentence: By midday, the city belonged to Mehmed.
+    subject: Smoke over the conquered city at midday, red banners flying on the walls and towers
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
+  365:
+    sentence: Not everyone was caught.
+    subject: Small boats and ships crowded with refugees pulling away from a harbour quay
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  366:
+    sentence: In the harbour, some Venetian and Genoese ships broke out past the chain, packed with refugees.
+    subject: Sailing ships forcing their way out of a harbour past a broken floating chain, decks packed with people
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  375:
+    sentence: And when Giustiniani left the wall, their hope left with him.
+    subject: An empty stretch of battlements at dawn, an abandoned helmet and shield on the stones
+    context: 'The land walls of Constantinople in 1453, on dry land far from the sea: no water and no ships in the
+      picture. Soldiers in 15th-century helmets and cloaks.'
+  381:
+    sentence: Six weeks later, Mehmed had him executed.
+    subject: A palace courtyard at dusk, guards standing at a closed door
+    context: 'The Ottoman army in 1453: tents, banners, soldiers in turbans and helmets, on a plain; no sea in the
+      picture.'
+  382:
+    sentence: Orban's fate is less clear.
+    subject: A burst bronze cannon split open on its wooden carriage, smoke still rising
+    context: 'A 15th-century Ottoman cannon foundry and workshop near Adrianople, inland: furnaces, clay moulds,
+      bronze.'
+  398:
+    sentence: It never came.
+    subject: An empty sea seen from a harbour wall, no ships anywhere on the horizon
+    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
+      galleys, sea walls along the shore.'
+  150:
+    sentence: Behind the walls stood about seven thousand defenders.
+    reuse: ai-002-1
+  314:
+    sentence: It began just after midnight, on 29 May.
+    reuse: ai-001
+  342:
+    sentence: One chronicler, Doukas, adds a strange detail.
+    reuse: ai-098

@@ -2,7 +2,7 @@
 
 Plan: audio/mix_plan.yaml (times in seconds on the episode timeline)
 
-    music:   [{asset: wm-1, from: 0, to: 48.6, offset: 0, fade_in: 1.5, fade_out: 2.5, level_db: 0}]
+    music:   [{asset: wm-1, from: 0, to: 48.6, offset: 0, fade_in: 1.5, fade_out: 2.5, level_db: 0, loop: false}]
     sfx:     [{asset: wm-2, at: 23.6, dur: 7, level_db: -20, fade_in: 0.3, fade_out: 1.5, lowpass: 900}]
 
 - Music is set to sit `MUSIC_BED_DB` below the narration's loudness, then a sidechain compressor keyed by the
@@ -73,7 +73,7 @@ def build_graph(ep: Path, plan: dict, start: float, end: float, voice_lufs: floa
         if b <= a:
             continue
         offset = float(m.get("offset", 0)) + (a - float(m["from"]))
-        inputs += ["-ss", f"{offset}", "-t", f"{b - a}", "-i", str(files[m["asset"]])]
+        inputs += (["-stream_loop", "-1"] if m.get("loop") else []) + ["-ss", f"{offset}", "-t", f"{b - a}", "-i", str(files[m["asset"]])]
         gain = voice_lufs + MUSIC_BED_DB + float(m.get("level_db", 0)) - music_lufs[m["asset"]]
         fi = float(m.get("fade_in", 1.5)) if a == float(m["from"]) else 0.0
         fo = float(m.get("fade_out", 2.0)) if b == float(m["to"]) else 0.0
@@ -92,7 +92,8 @@ def build_graph(ep: Path, plan: dict, start: float, end: float, voice_lufs: floa
         if b <= start or a >= end:
             continue
         cut_in = max(0.0, start - a)
-        inputs += ["-ss", f"{float(s.get('offset', 0)) + cut_in}", "-t", f"{min(b, end) - max(a, start)}", "-i", str(files[s["asset"]])]
+        inputs += (["-stream_loop", "-1"] if s.get("loop") else []) + ["-ss", f"{float(s.get('offset', 0)) + cut_in}",
+                                                                     "-t", f"{min(b, end) - max(a, start)}", "-i", str(files[s["asset"]])]
         f = f"[{n}:a]aresample={SR},aformat=channel_layouts=stereo"
         if s.get("lowpass"):
             f += f",lowpass=f={s['lowpass']}"

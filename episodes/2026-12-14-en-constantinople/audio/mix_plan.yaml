@@ -1,10 +1,49 @@
-# Mix plan (pipeline/mix.py). Times are seconds on the episode timeline. v2 test covers 0:00-1:00 only.
-# Assets are in assets/manifest.csv (licence + credit). Music for the full episode: YouTube Audio Library (D6).
+# Mix plan (pipeline/mix.py). Times are seconds on the episode timeline (audio/narration_timing.json).
+# Music: Kevin MacLeod via Wikimedia Commons, CC BY 3.0 (credit in the description). One bed per section,
+# following the script's [MUSIC] cues; beds are ducked under the voice and swell in the pauses.
+# Assets and licences: assets/manifest.csv (kind=audio).
 music:
-  # HOOK + PROMISE: dark ambient bed; swells in the pauses (ducked under the voice)
-  - {asset: wm-64741168, from: 0.0, to: 49.5, offset: 4.0, fade_in: 2.0, fade_out: 3.0}       # Lightless Dawn (Kevin MacLeod, CC BY 3.0)
+  - {asset: wm-64741168, from: 0.0,    to: 49.5,   offset: 4.0, fade_in: 2.0, fade_out: 3.0}          # HOOK/PROMISE: Lightless Dawn, dark drone
+  - {asset: wm-64743987, from: 47.6,   to: 208.6,  loop: true, fade_in: 2.5, fade_out: 3.0, level_db: -2}  # CONTEXT: Desert City, warm, eastern
+  - {asset: wm-64732233, from: 206.6,  to: 379.4,  fade_in: 2.5, fade_out: 3.0}                         # CHAPTER 1: Hidden Past, steady pulse
+  - {asset: wm-64746556, from: 377.4,  to: 541.9,  fade_in: 2.0, fade_out: 1.0}                         # CHAPTER 2: Ritual, percussive build; out for the first shot
+  - {asset: wm-64747786, from: 544.0,  to: 625.4,  loop: true, fade_in: 1.5, fade_out: 3.0}             # siege begins: Epic Unease
+  - {asset: wm-64752603, from: 623.4,  to: 722.5,  fade_in: 2.0, fade_out: 2.5}                         # CHAPTER 3: Distant Tension
+  - {asset: wm-64744044, from: 721.0,  to: 806.9,  loop: true, fade_in: 2.0, fade_out: 3.0, level_db: -2}  # ships over the hill: Ominous, low
+  - {asset: wm-64746934, from: 804.9,  to: 975.4,  loop: true, fade_in: 2.5, fade_out: 3.0}             # CHAPTER 4: Night Cave, dark drone
+  - {asset: wm-8093020,  from: 973.4,  to: 1038.8, fade_in: 2.0, fade_out: 2.0}                         # TURNING POINT: Interloper, tense
+  - {asset: wm-64735439, from: 1037.8, to: 1095.7, fade_in: 1.0, fade_out: 0.8, level_db: 1}           # the assault: Drums of the Deep; out at the shot
+  - {asset: wm-64733014, from: 1147.0, to: 1223.8, fade_in: 4.0, fade_out: 3.0, level_db: -1}          # the fall: Heavy Heart
+  - {asset: wm-64741168, from: 1221.8, to: 1373.1, offset: 30.0, fade_in: 3.0, fade_out: 4.0}           # CLOSE: Lightless Dawn returns (callback), long tail
 sfx:
-  - {asset: wm-16918997, at: 0.0, dur: 37.5, level_db: -24, fade_in: 1.5, fade_out: 3.0}      # night wind on the walls (CC0)
-  - {asset: wm-3184777, at: 0.3, dur: 3.2, level_db: -17, lowpass: 700, fade_in: 0.4, fade_out: 0.6}   # distant drums, then silence (script cue)
-  - {asset: wm-3184777, at: 23.6, dur: 7.0, level_db: -14, lowpass: 900, fade_in: 1.0, fade_out: 1.5}  # "you would hear drums out in the dark"
-  - {asset: wm-90733962, at: 46.9, dur: 5.5, level_db: -15, fade_out: 2.5}                   # sound bridge: city bell before the CONTEXT cut
+  # HOOK (as in the approved v2 test)
+  - {asset: wm-16918997, at: 0.0, dur: 37.5, level_db: -24, fade_in: 1.5, fade_out: 3.0}               # night wind on the walls
+  - {asset: wm-3184777, at: 0.3, dur: 3.2, level_db: -17, lowpass: 700, fade_in: 0.4, fade_out: 0.6}   # distant drums, then silence
+  - {asset: wm-3184777, at: 23.6, dur: 7.0, level_db: -14, lowpass: 900, fade_in: 1.0, fade_out: 1.5}  # drums out in the dark
+  - {asset: wm-90733962, at: 46.9, dur: 5.5, level_db: -15, fade_out: 2.5}                             # bell, sound bridge to CONTEXT
+  # CONTEXT / CHAPTER 1
+  - {asset: wm-24003923, at: 47.6, dur: 9.0, level_db: -24, fade_in: 1.0, fade_out: 3.0}               # harbour gulls (sound bridge)
+  - {asset: wm-17365297, at: 211.0, dur: 12.0, level_db: -26, fade_in: 2.0, fade_out: 3.0}             # the Bosphorus
+  - {asset: wm-3031702, at: 269.9, dur: 2.7, level_db: -12, lowpass: 1200}                             # one stone ball sinks the Venetian ship
+  - {asset: wm-17365297, at: 269.9, dur: 8.0, level_db: -24, fade_in: 0.5, fade_out: 3.0}
+  # CHAPTER 2
+  - {asset: wm-3031702, at: 541.9, dur: 2.7, level_db: -9, lowpass: 900}                               # first shot of the great cannon, long echo
+  - {asset: wm-3031702, at: 551.7, dur: 2.7, level_db: -11, lowpass: 700}                              # "you feel the shot in your chest"
+  - {asset: wm-85710170, at: 596.0, dur: 1.1, level_db: -20}                                           # night assault, 18 April
+  - {asset: wm-85710170, at: 598.5, dur: 1.1, level_db: -22}
+  # CHAPTER 3: the sea
+  - {asset: wm-17365297, at: 624.4, dur: 30.0, level_db: -26, fade_in: 2.0, fade_out: 4.0}             # harbour (L-cut)
+  - {asset: wm-17365297, at: 670.5, dur: 34.0, level_db: -25, fade_in: 2.0, fade_out: 3.0}             # the sea fight
+  - {asset: wm-32736613, at: 703.5, dur: 9.0, level_db: -18, fade_in: 0.3, fade_out: 3.0}              # city rings the bells
+  - {asset: wm-3031702, at: 780.0, dur: 2.7, level_db: -13, lowpass: 1000}                             # Ottoman guns sink the fire ship
+  # CHAPTER 4 / TURNING POINT
+  - {asset: wm-3184777, at: 1007.2, dur: 8.0, level_db: -16, lowpass: 1200, fade_in: 1.0, fade_out: 2.0}  # drums and pipes until dawn
+  - {asset: wm-85710170, at: 1052.5, dur: 1.1, level_db: -21}                                          # the irregulars at the stockade
+  - {asset: wm-3031702, at: 1063.2, dur: 2.7, level_db: -10, lowpass: 1000}                            # cannon blasts the stockade
+  - {asset: wm-3184777, at: 1084.0, dur: 10.0, level_db: -15, lowpass: 1500, fade_in: 0.5, fade_out: 1.0}  # Janissaries march to the drums
+  - {asset: wm-85710170, at: 1147.5, dur: 1.1, level_db: -20}                                          # they broke through
+  - {asset: wm-32736613, at: 1164.0, dur: 10.0, level_db: -17, fade_in: 0.3, fade_out: 3.0}            # church bells ring the alarm
+  - {asset: wm-193576717, at: 1183.0, dur: 9.0, level_db: -22, fade_in: 1.0, fade_out: 3.0}            # the sultan rides through the gates
+  - {asset: wm-17365297, at: 1200.6, dur: 12.0, level_db: -25, fade_in: 1.0, fade_out: 3.0}            # ships break out of the harbour
+  # CLOSE
+  - {asset: wm-16918997, at: 1334.1, dur: 30.0, level_db: -27, fade_in: 3.0, fade_out: 5.0}            # wind along the walls today
