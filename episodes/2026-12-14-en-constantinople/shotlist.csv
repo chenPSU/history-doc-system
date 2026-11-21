@@ -1,22 +1,22 @@
 sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
-1,HOOK,"It is just after midnight, on 29 May 1453.",location | map,Theodosian Walls Istanbul at night | map: Constantinople 1453 land walls at night,zoom_in | map_anim,5.46,
-2,HOOK,"About seven thousand defenders stand on the walls of Constantinople, waiting in the dark.",painting | location | card,"Theophilos Hatzimichail Fall of Constantinople painting defenders on the walls | Theodosian Walls Istanbul towers | card: about 7,000 defenders",zoom_out | pan_right | static,8.1,
-3,HOOK,"By sunrise, walls that have stood for a thousand years will fall.",painting | card,Fausto Zonaro Mehmed II conquering Constantinople painting | card: 1453,zoom_in | static,5.91,
-4,HOOK,How did a young sultan break a thousand-year wall in just 53 days?,painting | location | card,Gentile Bellini portrait of Mehmed II National Gallery | Theodosian Walls Istanbul at night | card: 53 DAYS,zoom_out | pan_left | static,6.12,
-5,HOOK,"If you stood beside the defenders tonight, you would hear drums out in the dark.",manuscript | location | painting,Le Voyage d'Outremer Bertrandon de la Broquiere siege of Constantinople miniature | Theodosian Walls Istanbul moat at dusk | Fausto Zonaro Ottoman army before Constantinople painting drums,zoom_in | pan_right | zoom_out,6.8,
+1,HOOK,"It is just after midnight, on 29 May 1453.",location | map,Theodosian Walls Istanbul at night | map: Constantinople 1453 land walls at night,zoom_in | map_anim,5.46,wm-57204983 | 
+2,HOOK,"About seven thousand defenders stand on the walls of Constantinople, waiting in the dark.",painting | location | card,"Theophilos Hatzimihail Fall of Constantinople painting defenders on the walls | Theodosian Walls Istanbul towers | card: about 7,000 defenders",zoom_out | pan_right | static,8.1,wm-15745931 |  | 
+3,HOOK,"By sunrise, walls that have stood for a thousand years will fall.",painting | card,Fausto Zonaro Mehmed II conquering Constantinople painting | card: 1453,zoom_in | static,5.91,wm-2727659 | 
+4,HOOK,How did a young sultan break a thousand-year wall in just 53 days?,painting | location | card,Gentile Bellini portrait of Mehmed II National Gallery | Theodosian Walls Istanbul at night | card: 53 DAYS,zoom_out | pan_left | static,6.12,wm-147845 | wm-57204983 | 
+5,HOOK,"If you stood beside the defenders tonight, you would hear drums out in the dark.",manuscript | location | painting,Le siège de Constantinople 1453 Jean Le Tavernier miniature | Theodosian Walls Istanbul moat at dusk | Fausto Zonaro Ottoman army before Constantinople painting drums,zoom_in | pan_right | zoom_out,6.8,wm-87115344 |  | 
 6,HOOK,No army had ever broken through these land walls.,location | map,Theodosian Walls Istanbul Edirnekapi section | map: land walls outline drawn on,zoom_in | map_anim,4.16,
 7,HOOK,But below them waits an army many times larger.,painting | map,Fausto Zonaro Ottoman army before Constantinople painting | map: Ottoman army arrows toward the walls,zoom_out | map_anim,3.99,
 8,PROMISE,"It came down to a cannon that nobody else would pay for, and a fleet that sailed over a hill.",painting,Fausto Zonaro Ottoman fleet transported overland Golden Horn painting,zoom_in,8.22,
-9,PROMISE,Let's go back to the city at its height.,engraving,Antoine Ignace Melling Voyage pittoresque de Constantinople engraving panorama of the city,zoom_out,3.54,
+9,PROMISE,Let's go back to the city at its height.,engraving,Antoine Ignace Melling Voyage pittoresque de Constantinople engraving panorama of the city,zoom_out,3.54,wm-66885458
 10,CONTEXT,Constantinople was a Roman city.,card,card: 330 AD · Constantinople,static,2.8,
-11,CONTEXT,The emperor Constantine the Great made it his new capital in 330 AD.,artefact,Constantine the Great mosaic Hagia Sophia southwestern entrance,zoom_in,6.75,
+11,CONTEXT,The emperor Constantine the Great made it his new capital in 330 AD.,artefact,Constantine the Great mosaic Hagia Sophia southwestern entrance,zoom_in,6.75,wm-148609
 12,CONTEXT,"In the centuries that followed, the western half of the Roman Empire collapsed.",map,"map: Roman Empire split east and west, the west fades (395-476)",map_anim,6.92,
 13,CONTEXT,But the eastern half survived.,map,map: Eastern Roman Empire highlighted,map_anim,2.63,
 14,CONTEXT,Historians call it the Byzantine Empire.,map,map: Byzantine Empire title over the eastern empire,map_anim,3.5,
 15,CONTEXT,It lasted another thousand years.,card,card: 330 → 1453,static,2.89,
-16,CONTEXT,Its people never called themselves Byzantines.,artefact,Byzantine gold solidus coin,zoom_out,4.03,
-17,CONTEXT,"To the very end, they called themselves Romans.",manuscript,Madrid Skylitzes Byzantine emperor miniature,zoom_in,4.12,
-18,CONTEXT,So what made their city so hard to take?,engraving,Antoine Ignace Melling Voyage pittoresque de Constantinople engraving view from the Sea of Marmara,zoom_out,3.51,
+16,CONTEXT,Its people never called themselves Byzantines.,artefact,Byzantine gold solidus coin,zoom_out,4.03,wm-60892826
+17,CONTEXT,"To the very end, they called themselves Romans.",manuscript,Madrid Skylitzes Byzantine emperor miniature,zoom_in,4.12,wm-11200449
+18,CONTEXT,So what made their city so hard to take?,engraving,Antoine Ignace Melling Voyage pittoresque de Constantinople engraving view from the Sea of Marmara,zoom_out,3.51,wm-66885439
 19,CONTEXT,Water protected the city on three sides.,map,"map: the city's peninsula, water on three sides",map_anim,3.5,
 20,CONTEXT,On the fourth side stood the land walls.,map,map: land walls highlighted on the fourth side,map_anim,3.5,
 21,CONTEXT,"They were not one wall, but three layers.",map,"map: cross-section diagram, moat + outer wall + inner wall",map_anim,3.59,
@@ -28,110 +28,110 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 27,CONTEXT,First you must cross the moat under fire.,engraving,medieval siege crossing a moat engraving,zoom_out,3.34,
 28,CONTEXT,Next comes the outer wall.,location,Theodosian Walls Istanbul outer wall close-up,zoom_in,2.12,
 29,CONTEXT,"And behind it, the inner wall still towers over you.",location,Theodosian Walls Istanbul inner tower low angle,pan_up,4.24,
-30,CONTEXT,"For a thousand years, armies came to these walls.",manuscript,medieval miniature siege of Constantinople,zoom_out,3.99,
-31,CONTEXT,"For a thousand years, they went home again.",painting,Moldovita monastery fresco siege of Constantinople,zoom_in,3.5,
-32,CONTEXT,"Even Mehmed's own father had tried, in 1422.",painting,Murad II Ottoman sultan portrait,zoom_out,4.56,
+30,CONTEXT,"For a thousand years, armies came to these walls.",manuscript,medieval miniature siege of Constantinople,zoom_out,3.99,wm-1277120
+31,CONTEXT,"For a thousand years, they went home again.",painting,Moldovita monastery fresco siege of Constantinople,zoom_in,3.5,wm-140075738
+32,CONTEXT,"Even Mehmed's own father had tried, in 1422.",painting,Murad II Ottoman sultan portrait,zoom_out,4.56,wm-89327074
 33,CONTEXT,"He failed, and marched away.",map,"map: 1422 Ottoman siege, the army withdraws",map_anim,2.28,
-34,CONTEXT,Even the crusaders of 1204 did not break through here.,painting,Eugene Delacroix Entry of the Crusaders into Constantinople 1840,zoom_in,5.38,
+34,CONTEXT,Even the crusaders of 1204 did not break through here.,painting,Eugene Delacroix Entry of the Crusaders into Constantinople 1840,zoom_in,5.38,wm-150159
 35,CONTEXT,"They took the city from the sea, over the harbour walls.",painting,Palma il Giovane conquest of Constantinople 1204 painting,zoom_out,4.56,
-36,CONTEXT,But the crusaders left the empire broken.,painting,Delacroix Entry of the Crusaders detail,zoom_in,3.34,
+36,CONTEXT,But the crusaders left the empire broken.,painting,Delacroix Entry of the Crusaders detail,zoom_in,3.34,wm-113899323
 37,CONTEXT,"By 1453, it had shrunk to little more than the city itself.",map,map: Byzantine territory shrinking 1204 → 1453,map_anim,5.78,
-38,CONTEXT,The city was a shadow of its old self.,engraving,Constantinople ruins old engraving,zoom_out,3.1,
+38,CONTEXT,The city was a shadow of its old self.,engraving,Constantinople ruins old engraving,zoom_out,3.1,wm-89387827
 39,CONTEXT,Fewer than fifty thousand people still lived inside the walls.,card,"card: fewer than 50,000 people",static,4.94,
-40,CONTEXT,"Where crowded streets had once stood, there were now fields and orchards.",engraving,Antoine Ignace Melling Voyage pittoresque de Constantinople engraving gardens inside the city walls,zoom_in,5.82,
+40,CONTEXT,"Where crowded streets had once stood, there were now fields and orchards.",engraving,Antoine Ignace Melling Voyage pittoresque de Constantinople engraving gardens inside the city walls,zoom_in,5.82,wm-66885458
 41,CONTEXT,"Outside, the Ottoman Turks had spread across Anatolia and the Balkans.",map,map: Ottoman expansion across Anatolia and the Balkans,map_anim,5.58,
 42,CONTEXT,They now surrounded the city on almost every side.,map,map: Ottoman lands closing around the city,map_anim,3.99,
 43,CONTEXT,So how long could a city this small survive?,map,"map: the city alone, surrounded",map_anim,3.51,
-44,CONTEXT,So the emperors paid tribute and played for time.,artefact,Ottoman akce silver coin 15th century,zoom_out,3.91,
+44,CONTEXT,So the emperors paid tribute and played for time.,artefact,Ottoman akce silver coin 15th century,zoom_out,3.91,wm-97191984
 45,CONTEXT,"It worked, but only for a while.",manuscript,Byzantine envoys at the Ottoman court miniature,zoom_in,2.55,
 46,CONTEXT,"In 1449, a new emperor took the throne.",card,card: 1449,static,4.07,
 47,CONTEXT,His name was Constantine the Eleventh.,manuscript,Constantine XI Palaiologos portrait Mutinensis gr. 122 manuscript,zoom_out,3.03,
-48,CONTEXT,He had spent years fighting the Turks in southern Greece.,location,Mystras Byzantine palace Peloponnese,zoom_in,4.55,
-49,CONTEXT,He was brave and steady.,location,Constantine XI Palaiologos statue Athens,zoom_out,1.91,
+48,CONTEXT,He had spent years fighting the Turks in southern Greece.,location,Mystras Byzantine palace Peloponnese,zoom_in,4.55,wm-174822565
+49,CONTEXT,He was brave and steady.,location,Constantine XI Palaiologos statue Athens,zoom_out,1.91,wm-203151540
 50,CONTEXT,He would need to be.,manuscript,Constantine XI Palaiologos portrait Mutinensis gr. 122 manuscript detail,zoom_in,1.59,
 51,CONTEXT,"In 1451, a young sultan took the throne for the second time.",card,card: 1451,static,5.74,
-52,CONTEXT,His name was Mehmed.,painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,1.59,
+52,CONTEXT,His name was Mehmed.,painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,1.59,wm-99605243
 53,CONTEXT,He was not yet twenty.,painting,Nakkas Sinan Bey Mehmed II smelling a rose miniature,zoom_in,1.75,
 54,CONTEXT,"As a boy, he had ruled once before.",map,"map: Edirne, the Ottoman capital",map_anim,2.83,
-55,CONTEXT,"It went badly, and his father took the crown back.",painting,Murad II Ottoman sultan portrait detail,zoom_out,4.03,
-56,CONTEXT,So few in the West took him seriously.,painting,Gentile Bellini Venice procession in Piazza San Marco,zoom_in,3.32,
-57,CONTEXT,They would soon regret it.,painting,Gentile Bellini portrait of Mehmed II National Gallery close-up,zoom_out,2.27,
-58,CONTEXT,Mehmed wanted one prize above all others.,painting,Fausto Zonaro Mehmed II conquering Constantinople painting,zoom_in,3.59,
-59,CONTEXT,Constantinople.,engraving,Antoine Ignace Melling Voyage pittoresque de Constantinople engraving panorama of the city,zoom_out,1.31,
+55,CONTEXT,"It went badly, and his father took the crown back.",painting,Murad II Ottoman sultan portrait detail,zoom_out,4.03,wm-54388974
+56,CONTEXT,So few in the West took him seriously.,painting,Gentile Bellini Venice procession in Piazza San Marco,zoom_in,3.32,wm-60483961
+57,CONTEXT,They would soon regret it.,painting,Gentile Bellini portrait of Mehmed II National Gallery close-up,zoom_out,2.27,wm-99605243
+58,CONTEXT,Mehmed wanted one prize above all others.,painting,Fausto Zonaro Mehmed II conquering Constantinople painting,zoom_in,3.59,wm-2727659
+59,CONTEXT,Constantinople.,engraving,Antoine Ignace Melling Voyage pittoresque de Constantinople engraving panorama of the city,zoom_out,1.31,wm-66885458
 60,CONTEXT,But Mehmed had a problem.,location,Theodosian Walls Istanbul long stretch,pan_left,2.19,
 61,CONTEXT,No army had ever broken through those land walls.,location,Theodosian Walls Istanbul towers at dusk,zoom_in,4.28,
-62,CONTEXT,Why should his army be any different?,painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,3.23,
+62,CONTEXT,Why should his army be any different?,painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,3.23,wm-185184989
 63,CHAPTER 1,Mehmed's first move was not an attack.,card,card: 1452 · The Bosphorus,static,3.18,
-64,CHAPTER 1,It was a building.,location,Rumelihisari fortress Bosphorus,zoom_in,1.5,
+64,CHAPTER 1,It was a building.,location,Rumelihisari fortress Bosphorus,zoom_in,1.5,wm-141545989
 65,CHAPTER 1,"North of the city, the Bosphorus grows narrow.",map,map: the Bosphorus narrowing north of the city,map_anim,3.84,
-66,CHAPTER 1,"On the Asian shore, his great-grandfather had already built a fort.",location,Anadoluhisari fortress Bosphorus,zoom_out,5.6,
+66,CHAPTER 1,"On the Asian shore, his great-grandfather had already built a fort.",location,Anadoluhisari fortress Bosphorus,zoom_out,5.6,wm-31948587
 67,CHAPTER 1,"In the spring of 1452, Mehmed began a second fort on the European side, right across the water.",map,map: Anadoluhisari and Rumelihisari across the strait,map_anim,8.94,
 68,CHAPTER 1,Thousands of workers hauled stone day and night.,manuscript,medieval masons building a castle miniature,zoom_in,4.01,
-69,CHAPTER 1,"In just a few months, the walls were up.",location,Rumelihisari fortress Bosphorus aerial,zoom_out,3.34,
+69,CHAPTER 1,"In just a few months, the walls were up.",location,Rumelihisari fortress Bosphorus aerial,zoom_out,3.34,wm-141545989
 70,CHAPTER 1,"Meanwhile, Mehmed hardly slept.",painting,Nakkas Sinan Bey Mehmed II smelling a rose miniature,zoom_in,2.59,
 71,CHAPTER 1,"One chronicler says he spent his nights drawing plans of the city walls, asking where the guns should go.",engraving,15th century fortification plan drawing,zoom_out,8.78,
 72,CHAPTER 1,The Turks called it Boghazkesen.,card,card: Boğazkesen,static,2.67,
-73,CHAPTER 1,The name has two meanings.,location,Rumelihisari fortress Bosphorus towers,zoom_in,2.17,
+73,CHAPTER 1,The name has two meanings.,location,Rumelihisari fortress Bosphorus towers,zoom_in,2.17,wm-45185831
 74,CHAPTER 1,It means cutter of the strait.,map,map: the strait cut by the fortress guns,map_anim,2.51,
 75,CHAPTER 1,It also means throat-cutter.,location,Rumelihisari fortress Bosphorus walls from the water,zoom_out,2.34,
 76,CHAPTER 1,Now every ship sailing to or from the Black Sea had to pass under its guns.,map,map: Black Sea shipping lane through the Bosphorus,map_anim,6.27,
 77,CHAPTER 1,And the city lived on the grain those ships carried.,engraving,medieval grain ship cog engraving,zoom_in,4.95,
-78,CHAPTER 1,What would happen if those ships stopped coming?,location,Bosphorus strait ships,zoom_out,4.57,
-79,CHAPTER 1,Mehmed set a simple rule.,painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_in,2.38,
-80,CHAPTER 1,Every ship must stop and pay.,artefact,stone cannonballs Rumelihisari,zoom_out,2.76,
+78,CHAPTER 1,What would happen if those ships stopped coming?,location,Bosphorus strait ships,zoom_out,4.57,wm-31538559
+79,CHAPTER 1,Mehmed set a simple rule.,painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_in,2.38,wm-2457044
+80,CHAPTER 1,Every ship must stop and pay.,artefact,stone cannonballs Rumelihisari,zoom_out,2.76,wm-109017364
 81,CHAPTER 1,"Late in 1452, a Venetian captain refused to stop.",painting,Vittore Carpaccio Venetian galley painting,zoom_in,5.81,
 82,CHAPTER 1,One stone ball sank his ship.,illustration_ai,"Illustration: a Venetian ship hit by a stone ball below a fortress, old-print style",zoom_out,2.76,
-83,CHAPTER 1,Most of his crew lost their heads.,engraving,15th century Ottoman soldiers woodcut,zoom_in,3.24,
+83,CHAPTER 1,Most of his crew lost their heads.,engraving,15th century Ottoman soldiers woodcut,zoom_in,3.24,wm-155082014
 84,CHAPTER 1,"The captain was impaled beside the road, where every passing sailor could see him.",location,Rumelihisari fortress Bosphorus from the water at dusk,zoom_out,7.81,
-85,CHAPTER 1,The message was clear.,location,Bosphorus at dusk,zoom_in,1.85,
-86,CHAPTER 1,"If you sailed past without permission, you died.",location,Rumelihisari fortress Bosphorus walls,zoom_out,4.03,
+85,CHAPTER 1,The message was clear.,location,Bosphorus at dusk,zoom_in,1.85,wm-56113107
+86,CHAPTER 1,"If you sailed past without permission, you died.",location,Rumelihisari fortress Bosphorus walls,zoom_out,4.03,wm-141545989
 87,CHAPTER 1,"Inside the city, Constantine understood what the fortress meant.",manuscript,Constantine XI Palaiologos portrait Mutinensis gr. 122 manuscript,zoom_in,5.37,
 88,CHAPTER 1,"The siege had already begun, in all but name.",location,Tekfur Sarayi Blachernae palace Istanbul,zoom_out,3.78,
-89,CHAPTER 1,So he did the only thing he could.,manuscript,Byzantine envoys miniature,zoom_in,2.85,
+89,CHAPTER 1,So he did the only thing he could.,manuscript,Byzantine envoys miniature,zoom_in,2.85,wm-1581211
 90,CHAPTER 1,He begged the West for help.,map,map: envoys to Venice and Rome,map_anim,2.35,
-91,CHAPTER 1,But help from the West came with a price.,painting,Pope Nicholas V portrait,zoom_out,3.44,
+91,CHAPTER 1,But help from the West came with a price.,painting,Pope Nicholas V portrait,zoom_out,3.44,wm-14998856
 92,CHAPTER 1,"For four hundred years, the churches of Rome and Constantinople had been split.",map,map: the split between the Roman and Greek churches (1054),map_anim,6.63,
-93,CHAPTER 1,The Pope wanted the Greek church to accept his authority.,painting,Pope Nicholas V portrait detail,zoom_in,4.78,
-94,CHAPTER 1,Only then would Catholic Europe send soldiers.,engraving,15th century knights woodcut,zoom_out,3.86,
+93,CHAPTER 1,The Pope wanted the Greek church to accept his authority.,painting,Pope Nicholas V portrait detail,zoom_in,4.78,wm-195382718
+94,CHAPTER 1,Only then would Catholic Europe send soldiers.,engraving,15th century knights woodcut,zoom_out,3.86,wm-20843520
 95,CHAPTER 1,"So on 12 December 1452, the emperor's court declared the churches united.",card,card: 12 December 1452,static,7.64,
-96,CHAPTER 1,Many Greeks were furious.,location,Hagia Sophia interior nave Istanbul,zoom_in,2.1,
-97,CHAPTER 1,"To them, it felt like selling their faith.",manuscript,Byzantine Orthodox liturgy miniature,zoom_out,3.53,
+96,CHAPTER 1,Many Greeks were furious.,location,Hagia Sophia interior nave Istanbul,zoom_in,2.1,wm-33429556
+97,CHAPTER 1,"To them, it felt like selling their faith.",manuscript,Byzantine Orthodox liturgy miniature,zoom_out,3.53,wm-55980132
 98,CHAPTER 1,A chronicler named Doukas reports a famous remark from those days.,manuscript,Doukas chronicle manuscript page,zoom_in,5.54,
 99,CHAPTER 1,A great lord said he would rather see the Turkish turban in the city than the Latin mitre.,card,"quote card: ""Better the Turkish turban than the Latin mitre."" (reported by Doukas)",static,7.71,
-100,CHAPTER 1,Historians still argue about the speaker.,location,Hagia Sophia interior nave Istanbul galleries,zoom_out,3.51,
-101,CHAPTER 1,But the anger behind those words was real.,location,Hagia Sophia dome,zoom_in,3.6,
+100,CHAPTER 1,Historians still argue about the speaker.,location,Hagia Sophia interior nave Istanbul galleries,zoom_out,3.51,wm-28468635
+101,CHAPTER 1,But the anger behind those words was real.,location,Hagia Sophia dome,zoom_in,3.6,wm-22948840
 102,CHAPTER 1,And what did all that anger buy?,painting,Cardinal Isidore of Kiev portrait,zoom_out,2.74,
 103,CHAPTER 1,"Two hundred archers, sent with the Pope's envoy.",engraving,15th century crossbowmen archers woodcut,zoom_in,4.11,
 104,CHAPTER 1,Barely more.,painting,Cardinal Isidore of Kiev portrait detail,zoom_out,1.03,
 105,CHAPTER 1,"Still, one gift did arrive that winter.",painting,15th century Genoese galley painting,zoom_in,3.34,
 106,CHAPTER 1,"That January, a Genoese captain sailed into the harbour with seven hundred soldiers.",map,map: Giustiniani's ships Genoa → Chios → Constantinople,map_anim,7.2,
-107,CHAPTER 1,His name was Giovanni Giustiniani.,engraving,Giovanni Giustiniani Longo engraving,zoom_out,2.91,
-108,CHAPTER 1,He was an expert in defending walls.,location,Theodosian Walls Istanbul,zoom_in,3.09,
+107,CHAPTER 1,His name was Giovanni Giustiniani.,engraving,Giovanni Giustiniani Longo engraving,zoom_out,2.91,wm-57947050
+108,CHAPTER 1,He was an expert in defending walls.,location,Theodosian Walls Istanbul,zoom_in,3.09,wm-1323439
 109,CHAPTER 1,Constantine gave him command of the land walls.,map,map: Giustiniani's command on the land walls,map_anim,4.03,
 110,CHAPTER 1,Giustiniani planned to hold them at any cost.,location,Theodosian Walls Istanbul Mesoteichion section,zoom_out,3.86,
-111,CHAPTER 1,Would it be enough?,location,Theodosian Walls Istanbul at dusk,zoom_in,1.63,
+111,CHAPTER 1,Would it be enough?,location,Theodosian Walls Istanbul at dusk,zoom_in,1.63,wm-57204983
 112,CHAPTER 1,Seven hundred men were not an army.,card,card: 700 men,static,3.0,
 113,CHAPTER 1,But Mehmed was about to bring one.,painting,Fausto Zonaro Ottoman army before Constantinople painting,zoom_out,2.91,
 114,CHAPTER 2,"To understand how Mehmed planned to break the walls, you need to meet one man.",card,card: 1452 · Adrianople,static,6.64,
 115,CHAPTER 2,"Before the siege began, a Hungarian engineer named Orban came looking for work.",engraving,medieval cannon founder engraving,zoom_in,6.73,
-116,CHAPTER 2,Orban cast cannons.,engraving,medieval bronze casting foundry engraving,zoom_out,1.62,
-117,CHAPTER 2,"Big ones, in bronze.",artefact,Great Turkish Bombard Dardanelles Gun Royal Armouries,zoom_in,1.7,
+116,CHAPTER 2,Orban cast cannons.,engraving,medieval bronze casting foundry engraving,zoom_out,1.62,wm-76843103
+117,CHAPTER 2,"Big ones, in bronze.",artefact,Great Turkish Bombard Dardanelles Gun Royal Armouries,zoom_in,1.7,wm-737015
 118,CHAPTER 2,He went to the Byzantine emperor first.,manuscript,Constantine XI Palaiologos portrait Mutinensis gr. 122 manuscript,zoom_out,3.32,
 119,CHAPTER 2,But Constantine could not afford his price.,location,Tekfur Sarayi Blachernae palace Istanbul,zoom_in,3.66,
 120,CHAPTER 2,So Orban went to Mehmed instead.,map,map: Orban's road to Adrianople,map_anim,2.72,
-121,CHAPTER 2,"Mehmed paid him well, and gave him everything he needed.",painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,4.77,
+121,CHAPTER 2,"Mehmed paid him well, and gave him everything he needed.",painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,4.77,wm-22948146
 122,CHAPTER 2,Mehmed asked him one question.,painting,Nakkas Sinan Bey Mehmed II smelling a rose miniature,zoom_in,2.55,
-123,CHAPTER 2,Could his gun break the walls of Constantinople?,location,Theodosian Walls Istanbul,zoom_out,4.09,
-124,CHAPTER 2,Orban's answer became famous.,artefact,Great Turkish Bombard Dardanelles Gun Royal Armouries muzzle,zoom_in,2.47,
+123,CHAPTER 2,Could his gun break the walls of Constantinople?,location,Theodosian Walls Istanbul,zoom_out,4.09,wm-1323439
+124,CHAPTER 2,Orban's answer became famous.,artefact,Great Turkish Bombard Dardanelles Gun Royal Armouries muzzle,zoom_in,2.47,wm-737015
 125,CHAPTER 2,"His gun, he said, could smash the walls of Babylon itself.",card,quote card: the walls of Babylon itself (Doukas),static,4.94,
-126,CHAPTER 2,So Mehmed told him to build it.,artefact,Great Turkish Bombard Dardanelles Gun Royal Armouries side view,pan_right,2.64,
+126,CHAPTER 2,So Mehmed told him to build it.,artefact,Great Turkish Bombard Dardanelles Gun Royal Armouries side view,pan_right,2.64,wm-737015
 127,CHAPTER 2,"In three months, Orban built a monster.",artefact,Great Turkish Bombard Dardanelles Gun Royal Armouries,zoom_out,3.32,
 128,CHAPTER 2,The cannon was around eight metres long.,card,card: about 8 metres,static,3.4,
 129,CHAPTER 2,It could throw a stone ball weighing several hundred kilograms.,artefact,stone cannonballs Istanbul Military Museum,zoom_in,5.27,
 130,CHAPTER 2,"In a test, the ball flew for more than a mile.",map,"map: test shot, more than a mile",map_anim,3.85,
 131,CHAPTER 2,It buried itself deep in the ground.,artefact,stone cannonball half-buried,zoom_out,3.01,
 132,CHAPTER 2,Moving it took sixty oxen and hundreds of men.,engraving,oxen hauling a cannon engraving,zoom_in,3.85,
-133,CHAPTER 2,And Orban's monster was not alone.,artefact,Ottoman bronze cannons Istanbul Military Museum,zoom_out,2.85,
+133,CHAPTER 2,And Orban's monster was not alone.,artefact,Ottoman bronze cannons Istanbul Military Museum,zoom_out,2.85,wm-53621987
 134,CHAPTER 2,Mehmed brought around seventy smaller guns as well.,card,card: about 70 more guns,static,4.27,
 135,CHAPTER 2,Imagine the road to Constantinople.,map,map: the road from Adrianople to Constantinople,map_anim,2.93,
 136,CHAPTER 2,"For weeks, this bronze giant crawled along it.",engraving,oxen hauling a cannon engraving detail,zoom_in,3.85,
@@ -142,12 +142,12 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 141,CHAPTER 2,Mehmed pitched his red and gold tent across from the middle of the land walls.,painting,Fausto Zonaro Ottoman army before Constantinople painting sultan's tent,zoom_in,6.53,
 142,CHAPTER 2,"From there, he could watch the weakest stretch of the defences.",map,map: Mehmed's tent facing the middle of the land walls,map_anim,5.25,
 143,CHAPTER 2,How many men did he bring?,painting,Fausto Zonaro Ottoman army before Constantinople painting,zoom_out,2.17,
-144,CHAPTER 2,Nobody counted them for certain.,manuscript,Ottoman army on the march miniature,zoom_in,2.67,
+144,CHAPTER 2,Nobody counted them for certain.,manuscript,Ottoman army on the march miniature,zoom_in,2.67,wm-23695599
 145,CHAPTER 2,Modern historians suggest up to eighty thousand.,card,"card: up to 80,000",static,4.0,
 146,CHAPTER 2,Witnesses inside the city claimed far more.,manuscript,Ottoman army camp miniature Suleymanname,zoom_out,3.58,
 147,CHAPTER 2,"At the heart of the army stood the Janissaries, the sultan's elite infantry.",painting,Gentile Bellini Seated Janissary drawing,zoom_in,6.34,
 148,CHAPTER 2,Most had been taken from Christian families in the Balkans as boys.,manuscript,devshirme levy of Christian boys miniature Suleymanname 1558,zoom_out,5.58,
-149,CHAPTER 2,"They grew up as Muslims, trained for nothing but war.",painting,Jean Baptiste Vanmour Janissary painting,zoom_in,4.42,
+149,CHAPTER 2,"They grew up as Muslims, trained for nothing but war.",painting,Jean Baptiste Vanmour Janissary painting,zoom_in,4.42,wm-34255856
 150,CHAPTER 2,Behind the walls stood about seven thousand defenders.,card,"card: about 7,000",static,4.5,
 151,CHAPTER 2,"The emperor's friend, George Sphrantzes, counted the Greek men fit to fight.",manuscript,George Sphrantzes chronicle manuscript page,zoom_out,6.34,
 152,CHAPTER 2,He found fewer than five thousand.,card,"card: fewer than 5,000",static,2.83,
@@ -160,8 +160,8 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 159,CHAPTER 2,The Venetians guarded the palace at the northern end.,map,map: Venetians at the Blachernae palace,map_anim,4.19,
 160,CHAPTER 2,And where would Mehmed strike first?,map,map: the Ottoman army facing the walls,map_anim,2.85,
 161,CHAPTER 2,"On 6 April 1453, the siege began.",card,card: 6 April 1453 · Day 1,static,3.8,
-162,CHAPTER 2,"The guns fired every day, for weeks.",painting,Fausto Zonaro Mehmed II conquering Constantinople painting cannon smoke,zoom_in,2.85,
-163,CHAPTER 2,Picture yourself on the wall when the great cannon fires.,painting,Theophilos Hatzimichail Fall of Constantinople painting cannons,zoom_out,4.51,
+162,CHAPTER 2,"The guns fired every day, for weeks.",painting,Fausto Zonaro Mehmed II conquering Constantinople painting cannon smoke,zoom_in,2.85,wm-2727659
+163,CHAPTER 2,Picture yourself on the wall when the great cannon fires.,painting,Theophilos Hatzimihail Fall of Constantinople painting cannons,zoom_out,4.51,wm-15745931
 164,CHAPTER 2,You feel the shot in your chest before you hear it.,location,Theodosian Walls Istanbul damaged section,zoom_in,4.03,
 165,CHAPTER 2,The ground shakes.,location,Theodosian Walls Istanbul rubble,zoom_out,1.42,
 166,CHAPTER 2,Dust pours from the stones above you.,location,Theodosian Walls Istanbul crumbling stones close-up,zoom_in,2.93,
@@ -176,43 +176,43 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 175,CHAPTER 2,The soft earth often worked better than stone.,location,Theodosian Walls Istanbul earth and stone,zoom_in,3.93,
 176,CHAPTER 2,It swallowed the cannon balls.,artefact,stone cannonballs Istanbul Military Museum,zoom_out,2.57,
 177,CHAPTER 2,"On 18 April, Mehmed sent his men against the broken wall at night.",card,card: 18 April,static,6.16,
-178,CHAPTER 2,"For four hours, the fighting raged in the dark.",manuscript,night assault siege miniature,zoom_in,4.02,
-179,CHAPTER 2,"The defenders threw them back, and the Ottoman side lost far more men.",painting,Theophilos Hatzimichail Fall of Constantinople painting,zoom_out,5.84,
+178,CHAPTER 2,"For four hours, the fighting raged in the dark.",manuscript,night assault siege miniature,zoom_in,4.02,wm-88751296
+179,CHAPTER 2,"The defenders threw them back, and the Ottoman side lost far more men.",painting,Theophilos Hatzimihail Fall of Constantinople painting,zoom_out,5.84,wm-15745931
 180,CHAPTER 2,The walls were cracking.,location,Theodosian Walls Istanbul cracked tower,zoom_in,2.0,
 181,CHAPTER 2,But they had not fallen.,location,Theodosian Walls Istanbul standing tower,zoom_out,2.0,
 182,CHAPTER 2,"And as long as the harbour stayed open, ships could still bring help.",map,map: the harbour open to the sea,map_anim,5.76,
-183,CHAPTER 2,Which leaves the real question of this siege.,location,Golden Horn Istanbul view,zoom_in,3.76,
+183,CHAPTER 2,Which leaves the real question of this siege.,location,Golden Horn Istanbul view,zoom_in,3.76,wm-15568529
 184,CHAPTER 2,How do you beat a city you cannot cut off?,painting,Fausto Zonaro Ottoman fleet transported overland Golden Horn painting,zoom_out,3.51,
 185,CHAPTER 3,"Two weeks into the siege, the land walls still held.",card,card: April 1453 · The Golden Horn,static,4.04,
-186,CHAPTER 3,So Mehmed looked to the sea.,location,Golden Horn Istanbul view,pan_left,2.17,
-187,CHAPTER 3,The city's harbour was the Golden Horn.,engraving,Antoine Ignace Melling Voyage pittoresque de Constantinople engraving Golden Horn,zoom_in,3.03,
+186,CHAPTER 3,So Mehmed looked to the sea.,location,Golden Horn Istanbul view,pan_left,2.17,wm-166672395
+187,CHAPTER 3,The city's harbour was the Golden Horn.,engraving,Antoine Ignace Melling Voyage pittoresque de Constantinople engraving Golden Horn,zoom_in,3.03,wm-66885439
 188,CHAPTER 3,"Across its mouth, the Byzantines had stretched a huge chain.",map,map: the chain across the mouth of the Golden Horn,map_anim,4.66,
 189,CHAPTER 3,It floated on wooden logs.,artefact,Golden Horn chain links Istanbul Military Museum,zoom_out,2.02,
 190,CHAPTER 3,It kept the Ottoman fleet out.,map,map: Ottoman fleet stopped at the chain,map_anim,2.33,
-191,CHAPTER 3,"On the far side of the harbour stood Galata, a town run by merchants from Genoa.",location,Galata Tower Istanbul,zoom_in,6.21,
-192,CHAPTER 3,Galata said it was neutral.,engraving,Galata and Pera old engraving,zoom_out,2.1,
+191,CHAPTER 3,"On the far side of the harbour stood Galata, a town run by merchants from Genoa.",location,Galata Tower Istanbul,zoom_in,6.21,wm-176677211
+192,CHAPTER 3,Galata said it was neutral.,engraving,Galata and Pera old engraving,zoom_out,2.1,wm-36405071
 193,CHAPTER 3,"In truth, it traded with both sides.",artefact,Genoese genovino coin,zoom_in,2.8,
 194,CHAPTER 3,"On 20 April, a small Christian convoy appeared to the south.",card,card: 20 April,static,5.13,
-195,CHAPTER 3,Three ships were Genoese.,painting,15th century carrack painting,zoom_out,1.94,
-196,CHAPTER 3,The fourth carried grain for the emperor.,painting,Vittore Carpaccio ship painting,zoom_in,3.18,
+195,CHAPTER 3,Three ships were Genoese.,painting,15th century carrack painting,zoom_out,1.94,wm-15934945
+196,CHAPTER 3,The fourth carried grain for the emperor.,painting,Vittore Carpaccio ship painting,zoom_in,3.18,wm-148866
 197,CHAPTER 3,Mehmed sent his whole navy against them.,map,map: Ottoman fleet against the four ships,map_anim,3.11,
-198,CHAPTER 3,Dozens of smaller ships swarmed the four.,manuscript,medieval naval battle miniature,zoom_out,3.19,
+198,CHAPTER 3,Dozens of smaller ships swarmed the four.,manuscript,medieval naval battle miniature,zoom_out,3.19,wm-31451991
 199,CHAPTER 3,Could four ships really fight off a whole navy?,map,map: four ships surrounded,map_anim,3.65,
-200,CHAPTER 3,Picture the scene from the sea walls.,location,Istanbul sea walls Marmara,zoom_in,2.87,
-201,CHAPTER 3,The whole city is watching.,engraving,Antoine Ignace Melling Voyage pittoresque de Constantinople engraving crowd on the city walls,zoom_out,2.46,
-202,CHAPTER 3,People crowd every tower.,location,Istanbul sea wall tower,zoom_in,2.28,
+200,CHAPTER 3,Picture the scene from the sea walls.,location,Istanbul sea walls Marmara,zoom_in,2.87,wm-11093805
+201,CHAPTER 3,The whole city is watching.,engraving,Antoine Ignace Melling Voyage pittoresque de Constantinople engraving crowd on the city walls,zoom_out,2.46,wm-66885439
+202,CHAPTER 3,People crowd every tower.,location,Istanbul sea wall tower,zoom_in,2.28,wm-31948519
 203,CHAPTER 3,The tall Christian ships ride high above the Ottoman galleys.,illustration_ai,"Illustration: four tall sailing ships surrounded by galleys, old-print style",zoom_out,5.56,
 204,CHAPTER 3,Their sailors hurl stones and fire down at the attackers.,manuscript,medieval naval battle miniature archers on ships,zoom_in,5.2,
 205,CHAPTER 3,"Suddenly, the wind drops.",location,calm sea at the Bosphorus mouth,zoom_out,2.28,
 206,CHAPTER 3,The four ships drift toward the Ottoman shore.,map,map: the four ships drift toward the Ottoman shore,map_anim,4.2,
 207,CHAPTER 3,"On the beach, Mehmed rides his horse into the waves, shouting at his admiral.",painting,Fausto Zonaro Mehmed II on horseback painting,zoom_in,7.02,
-208,CHAPTER 3,"But near sunset, the wind returns.",location,sunset over the Sea of Marmara,zoom_out,2.93,
+208,CHAPTER 3,"But near sunset, the wind returns.",location,sunset over the Sea of Marmara,zoom_out,2.93,wm-194413516
 209,CHAPTER 3,The four ships break free and slip in behind the chain.,map,map: the four ships slip behind the chain,map_anim,4.74,
-210,CHAPTER 3,"Inside the city, people cheered and rang the bells.",location,Byzantine church bell tower,zoom_in,4.4,
-211,CHAPTER 3,Mehmed was furious.,painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,1.64,
-212,CHAPTER 3,"He had his admiral beaten, and took away his wealth.",manuscript,Ottoman court punishment miniature,zoom_in,4.49,
+210,CHAPTER 3,"Inside the city, people cheered and rang the bells.",location,Byzantine church bell tower,zoom_in,4.4,wm-85813162
+211,CHAPTER 3,Mehmed was furious.,painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,1.64,wm-150447925
+212,CHAPTER 3,"He had his admiral beaten, and took away his wealth.",manuscript,Ottoman court punishment miniature,zoom_in,4.49,wm-60928249
 213,CHAPTER 3,Now he knew he could not break the chain from outside.,map,map: the chain still holds,map_anim,4.66,
-214,CHAPTER 3,So what could he do?,location,Galata hill Istanbul,zoom_out,1.72,
+214,CHAPTER 3,So what could he do?,location,Galata hill Istanbul,zoom_out,1.72,wm-36271389
 215,CHAPTER 3,He chose a plan that sounded impossible.,painting,Fausto Zonaro Ottoman fleet transported overland Golden Horn painting,zoom_in,3.45,
 216,CHAPTER 3,"Behind Galata, there is a hill.",map,map: the hill behind Galata,map_anim,2.67,
 217,CHAPTER 3,On the far side of that hill lies the Golden Horn.,map,map: route over the hill into the Golden Horn,map_anim,4.31,
@@ -221,21 +221,21 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 220,CHAPTER 3,Oxen pulled.,painting,Fausto Zonaro Ottoman fleet transported overland Golden Horn painting oxen detail,zoom_out,1.03,
 221,CHAPTER 3,Men pushed.,painting,Fausto Zonaro Ottoman fleet transported overland Golden Horn painting men pushing detail,zoom_in,0.95,
 222,CHAPTER 3,Some crews even raised their sails as they rolled over the top.,painting,Fausto Zonaro Ottoman fleet transported overland Golden Horn painting sails detail,zoom_out,5.43,
-223,CHAPTER 3,Picture yourself on the sea wall that morning.,location,Istanbul sea walls Golden Horn,zoom_in,3.97,
-224,CHAPTER 3,You look down at water that was safe yesterday.,location,Golden Horn Istanbul view water,zoom_out,3.94,
+223,CHAPTER 3,Picture yourself on the sea wall that morning.,location,Istanbul sea walls Golden Horn,zoom_in,3.97,wm-2946327
+224,CHAPTER 3,You look down at water that was safe yesterday.,location,Golden Horn Istanbul view water,zoom_out,3.94,wm-104669888
 225,CHAPTER 3,Around seventy Ottoman ships are floating inside the harbour.,map,map: about 70 Ottoman ships inside the Golden Horn,map_anim,5.11,
-226,CHAPTER 3,How had nobody stopped them?,location,Galata Tower Istanbul,zoom_in,2.34,
-227,CHAPTER 3,The Genoese of Galata lived right beside that road.,engraving,Galata and Pera old engraving,zoom_out,4.27,
+226,CHAPTER 3,How had nobody stopped them?,location,Galata Tower Istanbul,zoom_in,2.34,wm-93293999
+227,CHAPTER 3,The Genoese of Galata lived right beside that road.,engraving,Galata and Pera old engraving,zoom_out,4.27,wm-36405071
 228,CHAPTER 3,"Later, people in the city accused them of looking the other way.",engraving,Antoine Ignace Melling Voyage pittoresque de Constantinople engraving Galata,zoom_in,5.36,
 229,CHAPTER 3,Now the city had to guard its sea walls too.,map,map: the sea walls now in danger,map_anim,3.45,
-230,CHAPTER 3,Its defenders were stretched even thinner.,location,Istanbul sea walls Golden Horn,zoom_out,3.3,
-231,CHAPTER 3,The Venetians in the harbour wanted to strike back.,painting,15th century Venetian galleys painting,zoom_in,4.0,
+230,CHAPTER 3,Its defenders were stretched even thinner.,location,Istanbul sea walls Golden Horn,zoom_out,3.3,wm-31948553
+231,CHAPTER 3,The Venetians in the harbour wanted to strike back.,painting,15th century Venetian galleys painting,zoom_in,4.0,wm-80667033
 232,CHAPTER 3,"On the night of 28 April, they tried to burn the Ottoman ships with fire boats.",card,card: 28 April,static,6.67,
 233,CHAPTER 3,But the Ottomans were ready.,illustration_ai,"Illustration: fire boats in the night harbour, old-print style",zoom_out,2.2,
 234,CHAPTER 3,Their guns sank the leading ship before it got close.,engraving,naval cannon fire engraving,zoom_in,4.16,
-235,CHAPTER 3,Forty sailors swam to the Ottoman shore.,location,Golden Horn Istanbul view shore,zoom_out,3.14,
+235,CHAPTER 3,Forty sailors swam to the Ottoman shore.,location,Golden Horn Istanbul view shore,zoom_out,3.14,wm-24865171
 236,CHAPTER 3,Mehmed had every one of them killed in sight of the walls.,location,Theodosian Walls Istanbul at dusk,zoom_in,4.55,
-237,CHAPTER 3,"In reply, the defenders put two hundred and sixty Turkish prisoners to death on the walls.",location,Istanbul sea walls Golden Horn,zoom_out,7.06,
+237,CHAPTER 3,"In reply, the defenders put two hundred and sixty Turkish prisoners to death on the walls.",location,Istanbul sea walls Golden Horn,zoom_out,7.06,wm-31948529
 238,CHAPTER 3,The siege had turned into something darker.,location,Theodosian Walls Istanbul dark sky,zoom_in,3.38,
 239,CHAPTER 3,And the city still had no way out.,map,"map: the city boxed in, land and sea",map_anim,2.67,
 240,CHAPTER 3,So where would the next blow fall?,map,map: the land walls again,map_anim,2.67,
@@ -243,159 +243,159 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 242,CHAPTER 4,"The city was hungry, and the defenders were worn out.",engraving,starving besieged city engraving,zoom_out,4.26,
 243,CHAPTER 4,Mehmed now tried a new way in.,map,"map: a new way in, under the walls",map_anim,2.41,
 244,CHAPTER 4,"If he could not go through the walls, he would go under them.",map,"map: cross-section, tunnel under the walls",map_anim,4.9,
-245,CHAPTER 4,He brought in miners from the silver mines of Serbia.,location,Novo Brdo fortress Serbia,zoom_in,4.26,
-246,CHAPTER 4,They began to dig tunnels toward the walls.,engraving,Agricola De re metallica mine tunnel woodcut 1556,zoom_out,3.45,
+245,CHAPTER 4,He brought in miners from the silver mines of Serbia.,location,Novo Brdo fortress Serbia,zoom_in,4.26,wm-79770433
+246,CHAPTER 4,They began to dig tunnels toward the walls.,engraving,Agricola De re metallica mine tunnel woodcut 1556,zoom_out,3.45,wm-196814331
 247,CHAPTER 4,"Inside the city, one man stood in their way.",location,Theodosian Walls Istanbul from inside,zoom_in,3.53,
 248,CHAPTER 4,"Writers at the time called him a German, named Johannes Grant.",card,card: Johannes Grant,static,4.98,
 249,CHAPTER 4,Some historians think he was really a Scot.,card,card: German or Scot?,static,3.45,
-250,CHAPTER 4,"Either way, he knew mines.",engraving,Agricola De re metallica mine tunnel woodcut 1556 miners,zoom_out,2.09,
+250,CHAPTER 4,"Either way, he knew mines.",engraving,Agricola De re metallica mine tunnel woodcut 1556 miners,zoom_out,2.09,wm-104395405
 251,CHAPTER 4,His men dug their own tunnels to meet the Ottoman ones.,map,map: countermine tunnels meet the Ottoman tunnels,map_anim,4.42,
-252,CHAPTER 4,Imagine the fight down there.,engraving,Agricola De re metallica mine tunnel woodcut 1556 tunnel,zoom_in,2.33,
+252,CHAPTER 4,Imagine the fight down there.,engraving,Agricola De re metallica mine tunnel woodcut 1556 tunnel,zoom_in,2.33,wm-26854605
 253,CHAPTER 4,"You crawl in the dark, in a tunnel barely wider than your shoulders.",illustration_ai,"Illustration: a narrow tunnel lit by one torch, old-print style",zoom_out,5.46,
-254,CHAPTER 4,You hear picks on the other side of the earth.,engraving,Agricola De re metallica mine tunnel woodcut 1556 picks,zoom_in,3.69,
+254,CHAPTER 4,You hear picks on the other side of the earth.,engraving,Agricola De re metallica mine tunnel woodcut 1556 picks,zoom_in,3.69,wm-67573258
 255,CHAPTER 4,You hold your breath.,illustration_ai,"Illustration: a miner listening at a tunnel wall, old-print style",zoom_out,1.69,
-256,CHAPTER 4,"Suddenly, the wall of earth gives way.",engraving,Agricola De re metallica mine tunnel woodcut 1556 collapsing earth,zoom_in,3.21,
+256,CHAPTER 4,"Suddenly, the wall of earth gives way.",engraving,Agricola De re metallica mine tunnel woodcut 1556 collapsing earth,zoom_in,3.21,wm-196814331
 257,CHAPTER 4,Your enemy is right in front of you.,illustration_ai,"Illustration: two miners face to face in a tunnel, old-print style",zoom_out,3.04,
-258,CHAPTER 4,So Grant's men burned some tunnels with Greek fire.,manuscript,Madrid Skylitzes Greek fire miniature,zoom_in,4.31,
-259,CHAPTER 4,Others they collapsed on the diggers.,engraving,Agricola De re metallica mine tunnel woodcut 1556 timbering,zoom_out,3.13,
+258,CHAPTER 4,So Grant's men burned some tunnels with Greek fire.,manuscript,Madrid Skylitzes Greek fire miniature,zoom_in,4.31,wm-15268427
+259,CHAPTER 4,Others they collapsed on the diggers.,engraving,Agricola De re metallica mine tunnel woodcut 1556 timbering,zoom_out,3.13,wm-196814331
 260,CHAPTER 4,"On 23 May, the defenders captured a pair of Ottoman officers underground.",card,card: 23 May,static,6.68,
-261,CHAPTER 4,"Under torture, the officers gave away the location of every tunnel.",manuscript,Byzantine prisoners miniature,zoom_in,5.67,
+261,CHAPTER 4,"Under torture, the officers gave away the location of every tunnel.",manuscript,Byzantine prisoners miniature,zoom_in,5.67,wm-15190703
 262,CHAPTER 4,"Within days, Grant's men had wrecked them all.",map,map: every tunnel destroyed,map_anim,3.89,
 263,CHAPTER 4,The miners had failed.,location,Theodosian Walls Istanbul still standing,zoom_out,1.83,
 264,CHAPTER 4,But what came next would hurt the city more than any tunnel.,painting,Fausto Zonaro Ottoman army before Constantinople painting,zoom_in,5.0,
-265,CHAPTER 4,"While his miners dug, Mehmed had also tried words.",painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,4.17,
+265,CHAPTER 4,"While his miners dug, Mehmed had also tried words.",painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,4.17,wm-148822992
 266,CHAPTER 4,"On 21 May, he sent the emperor an offer.",card,card: 21 May,static,3.84,
-267,CHAPTER 4,"Give up the city, and you may go in peace.",manuscript,Ottoman envoy miniature,zoom_in,3.5,
+267,CHAPTER 4,"Give up the city, and you may go in peace.",manuscript,Ottoman envoy miniature,zoom_in,3.5,wm-194932842
 268,CHAPTER 4,Constantine could rule in the south of Greece instead.,map,"map: the Peloponnese, offered to Constantine",map_anim,4.5,
-269,CHAPTER 4,His people could leave with their goods.,engraving,refugees leaving a city engraving,zoom_out,3.33,
+269,CHAPTER 4,His people could leave with their goods.,engraving,refugees leaving a city engraving,zoom_out,3.33,wm-61749459
 270,CHAPTER 4,Constantine refused.,manuscript,Constantine XI Palaiologos portrait Mutinensis gr. 122 manuscript,zoom_in,1.67,
-271,CHAPTER 4,"He would pay more tribute, he answered.",artefact,Byzantine gold coin,zoom_out,3.25,
-272,CHAPTER 4,But the city was not his to give.,location,Hagia Sophia exterior,zoom_in,2.75,
+271,CHAPTER 4,"He would pay more tribute, he answered.",artefact,Byzantine gold coin,zoom_out,3.25,wm-183174599
+272,CHAPTER 4,But the city was not his to give.,location,Hagia Sophia exterior,zoom_in,2.75,wm-387533
 273,CHAPTER 4,"Everyone inside, he said, had chosen to die rather than surrender.",card,quote card: we have all decided to die (Constantine's reply),static,5.5,
-274,CHAPTER 4,Yet the people of the city were losing hope.,location,Istanbul old city streets,zoom_out,3.67,
+274,CHAPTER 4,Yet the people of the city were losing hope.,location,Istanbul old city streets,zoom_out,3.67,wm-119579601
 275,CHAPTER 4,Constantinople was full of old prophecies.,manuscript,Byzantine prophecy manuscript Leo the Wise oracles,zoom_in,3.5,
-276,CHAPTER 4,One said the city would fall under a waning moon.,engraving,waning moon old astronomy engraving,zoom_out,4.09,
+276,CHAPTER 4,One said the city would fall under a waning moon.,engraving,waning moon old astronomy engraving,zoom_out,4.09,wm-17404834
 277,CHAPTER 4,"On 22 May, the full moon rose over the walls.",card,card: 22 May,static,4.25,
-278,CHAPTER 4,But it did not rise whole.,location,partial lunar eclipse photograph NASA,zoom_in,2.17,
-279,CHAPTER 4,"For hours, part of it stayed dark.",location,partial lunar eclipse close-up NASA,zoom_out,3.27,
-280,CHAPTER 4,It was an eclipse.,engraving,lunar eclipse old astronomy engraving,zoom_in,1.63,
-281,CHAPTER 4,"To the frightened people inside, it looked like the end.",location,Istanbul old city at night,zoom_out,5.07,
+278,CHAPTER 4,But it did not rise whole.,location,partial lunar eclipse photograph NASA,zoom_in,2.17,wm-162060093
+279,CHAPTER 4,"For hours, part of it stayed dark.",location,partial lunar eclipse close-up NASA,zoom_out,3.27,wm-188332343
+280,CHAPTER 4,It was an eclipse.,engraving,lunar eclipse old astronomy engraving,zoom_in,1.63,wm-14634159
+281,CHAPTER 4,"To the frightened people inside, it looked like the end.",location,Istanbul old city at night,zoom_out,5.07,wm-21246023
 282,CHAPTER 4,"A few days later, thick fog covered the city.",location,fog over Istanbul Hagia Sophia,zoom_in,4.07,
-283,CHAPTER 4,"Some said a strange light glowed around the dome of the great church, Hagia Sophia.",location,Hagia Sophia dome in fog,zoom_out,7.52,
-284,CHAPTER 4,"To them, it was the spirit of God, leaving the city.",engraving,Gaspare Fossati Hagia Sophia lithograph 1852 dome,zoom_in,4.71,
+283,CHAPTER 4,"Some said a strange light glowed around the dome of the great church, Hagia Sophia.",location,Hagia Sophia dome in fog,zoom_out,7.52,wm-113186661
+284,CHAPTER 4,"To them, it was the spirit of God, leaving the city.",engraving,Gaspare Fossati Hagia Sophia lithograph 1852 dome,zoom_in,4.71,wm-33429637
 285,CHAPTER 4,"Still, Mehmed had worries of his own.",painting,Fausto Zonaro Ottoman army before Constantinople painting,zoom_out,3.35,
 286,CHAPTER 4,His men were tired too.,manuscript,Ottoman army camp miniature,zoom_in,2.08,
 287,CHAPTER 4,And rumours spoke of a Christian army on the way.,map,map: rumoured relief fleet from Venice,map_anim,4.44,
 288,CHAPTER 4,Constantine had said no.,manuscript,Constantine XI Palaiologos portrait Mutinensis gr. 122 manuscript,zoom_out,2.17,
 289,CHAPTER 4,Now Mehmed had to decide.,painting,Nakkas Sinan Bey Mehmed II smelling a rose miniature,zoom_in,2.26,
-290,CHAPTER 4,Should he risk everything on one final attack?,painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,4.16,
+290,CHAPTER 4,Should he risk everything on one final attack?,painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,4.16,wm-150416311
 291,TURNING POINT,So Mehmed called his commanders to his tent.,card,card: Late May 1453 · The Ottoman camp,static,3.9,
-292,TURNING POINT,"His grand vizier, Halil, spoke first.",manuscript,Ottoman divan council miniature,zoom_in,3.28,
-293,TURNING POINT,Halil had never wanted this war.,manuscript,Ottoman vizier miniature,zoom_out,2.83,
-294,TURNING POINT,He urged the sultan to give up.,manuscript,Ottoman divan council miniature detail,zoom_in,2.75,
+292,TURNING POINT,"His grand vizier, Halil, spoke first.",manuscript,Ottoman divan council miniature,zoom_in,3.28,wm-23254290
+293,TURNING POINT,Halil had never wanted this war.,manuscript,Ottoman vizier miniature,zoom_out,2.83,wm-198042215
+294,TURNING POINT,He urged the sultan to give up.,manuscript,Ottoman divan council miniature detail,zoom_in,2.75,wm-23254290
 295,TURNING POINT,"A Western army might come any day, he warned.",map,map: a Western army that might come,map_anim,3.99,
-296,TURNING POINT,Better to make peace now.,manuscript,Ottoman vizier miniature detail,zoom_out,2.21,
-297,TURNING POINT,"But a younger general, Zaganos, disagreed.",manuscript,Ottoman commander miniature,zoom_in,3.72,
+296,TURNING POINT,Better to make peace now.,manuscript,Ottoman vizier miniature detail,zoom_out,2.21,wm-198042217
+297,TURNING POINT,"But a younger general, Zaganos, disagreed.",manuscript,Ottoman commander miniature,zoom_in,3.72,wm-169012969
 298,TURNING POINT,"The defenders were few and exhausted, he said.",location,Theodosian Walls Istanbul damaged,zoom_out,4.08,
 299,TURNING POINT,Attack now.,painting,Fausto Zonaro Ottoman army before Constantinople painting,zoom_in,0.97,
-300,TURNING POINT,So Mehmed chose Zaganos.,painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,2.13,
+300,TURNING POINT,So Mehmed chose Zaganos.,painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,2.13,wm-147845
 301,TURNING POINT,He ordered one final assault.,painting,Fausto Zonaro Mehmed II conquering Constantinople painting,zoom_in,2.57,
 302,TURNING POINT,"For two days, his army prepared.",painting,Fausto Zonaro Ottoman army before Constantinople painting camp,zoom_out,2.84,
 303,TURNING POINT,"At night, the camp blazed with fires.",illustration_ai,"Illustration: campfires of an army below city walls at night, old-print style",zoom_in,3.28,
-304,TURNING POINT,Drums and pipes played until dawn.,manuscript,Ottoman mehter military band miniature,zoom_out,3.01,
+304,TURNING POINT,Drums and pipes played until dawn.,manuscript,Ottoman mehter military band miniature,zoom_out,3.01,wm-52951957
 305,TURNING POINT,"Yet inside the city, on the evening of 28 May, something rare happened.",card,card: 28 May 1453 · Hagia Sophia,static,6.82,
-306,TURNING POINT,Greeks and Latins crowded into Hagia Sophia together.,engraving,Gaspare Fossati Hagia Sophia lithograph 1852 interior,zoom_in,4.7,
-307,TURNING POINT,"All winter, they had quarrelled.",location,Hagia Sophia interior nave Istanbul,zoom_out,2.84,
-308,TURNING POINT,"Tonight, they prayed side by side.",location,Hagia Sophia candles,zoom_in,3.01,
+306,TURNING POINT,Greeks and Latins crowded into Hagia Sophia together.,engraving,Gaspare Fossati Hagia Sophia lithograph 1852 interior,zoom_in,4.7,wm-82123411
+307,TURNING POINT,"All winter, they had quarrelled.",location,Hagia Sophia interior nave Istanbul,zoom_out,2.84,wm-31948517
+308,TURNING POINT,"Tonight, they prayed side by side.",location,Hagia Sophia candles,zoom_in,3.01,wm-18845841
 309,TURNING POINT,The emperor prayed with them.,manuscript,Constantine XI Palaiologos portrait Mutinensis gr. 122 manuscript,zoom_out,2.62,
 310,TURNING POINT,"Afterwards, he rode out to the walls.",location,Theodosian Walls Istanbul at dusk,pan_left,3.35,
-311,TURNING POINT,Picture yourself in that crowd.,engraving,Gaspare Fossati Hagia Sophia lithograph 1852 interior crowd,zoom_in,2.81,
-312,TURNING POINT,Candles flicker on the gold.,location,Hagia Sophia gold mosaics,zoom_out,2.53,
-313,TURNING POINT,Will any of you see another sunset?,location,Hagia Sophia windows light,zoom_in,3.17,
+311,TURNING POINT,Picture yourself in that crowd.,engraving,Gaspare Fossati Hagia Sophia lithograph 1852 interior crowd,zoom_in,2.81,wm-33429556
+312,TURNING POINT,Candles flicker on the gold.,location,Hagia Sophia gold mosaics,zoom_out,2.53,wm-31948537
+313,TURNING POINT,Will any of you see another sunset?,location,Hagia Sophia windows light,zoom_in,3.17,wm-25831623
 314,TURNING POINT,"It began just after midnight, on 29 May.",card,card: 29 May 1453,static,4.16,
 315,TURNING POINT,Mehmed sent his men in three waves.,map,map: three waves of attack,map_anim,3.17,
 316,TURNING POINT,First came the irregulars.,painting,Fausto Zonaro Mehmed II conquering Constantinople painting,zoom_out,2.35,
-317,TURNING POINT,"They were poorly armed, and many were not even Turks.",painting,Theophilos Hatzimichail Fall of Constantinople painting,zoom_in,4.79,
-318,TURNING POINT,Their job was to wear the defenders down.,manuscript,Le Voyage d'Outremer Bertrandon de la Broquiere siege of Constantinople miniature,zoom_out,3.71,
+317,TURNING POINT,"They were poorly armed, and many were not even Turks.",painting,Theophilos Hatzimihail Fall of Constantinople painting,zoom_in,4.79,
+318,TURNING POINT,Their job was to wear the defenders down.,manuscript,Le siège de Constantinople 1453 Jean Le Tavernier miniature,zoom_out,3.71,wm-87115344
 319,TURNING POINT,"For hours, they threw themselves at the stockade.",painting,Fausto Zonaro Mehmed II conquering Constantinople painting detail,zoom_in,4.43,
 320,TURNING POINT,"Still, the line held.",location,Theodosian Walls Istanbul towers,zoom_out,1.9,
 321,TURNING POINT,"At last, Mehmed pulled them back.",map,map: the first wave pulls back,map_anim,2.99,
 322,TURNING POINT,The second wave came from Anatolia.,map,map: the second wave from Anatolia,map_anim,3.17,
-323,TURNING POINT,They were better soldiers.,painting,Theophilos Hatzimichail Fall of Constantinople painting detail,zoom_in,2.35,
-324,TURNING POINT,"A great cannon blasted a hole in the stockade, and they rushed in.",painting,Benjamin-Constant Entry of Mahomet II into Constantinople 1876 detail cannon smoke,zoom_out,5.97,
-325,TURNING POINT,But the defenders trapped them inside and drove them out again.,manuscript,Le Voyage d'Outremer Bertrandon de la Broquiere siege of Constantinople miniature detail,zoom_in,5.7,
+323,TURNING POINT,They were better soldiers.,painting,Theophilos Hatzimihail Fall of Constantinople painting detail,zoom_in,2.35,
+324,TURNING POINT,"A great cannon blasted a hole in the stockade, and they rushed in.",painting,Benjamin-Constant Entry of Mahomet II into Constantinople 1876 detail cannon smoke,zoom_out,5.97,wm-1818511
+325,TURNING POINT,But the defenders trapped them inside and drove them out again.,manuscript,Le siège de Constantinople 1453 Jean Le Tavernier miniature detail,zoom_in,5.7,wm-87115344
 326,TURNING POINT,Dawn was close.,location,Theodosian Walls Istanbul at dawn,zoom_out,1.36,
-327,TURNING POINT,Giustiniani's men had fought all night without rest.,painting,Theophilos Hatzimichail Fall of Constantinople painting defenders,zoom_in,4.18,
-328,TURNING POINT,"Now Mehmed sent his best troops, the Janissaries.",painting,Jean Baptiste Vanmour Janissary painting,zoom_out,3.94,
+327,TURNING POINT,Giustiniani's men had fought all night without rest.,painting,Theophilos Hatzimihail Fall of Constantinople painting defenders,zoom_in,4.18,
+328,TURNING POINT,"Now Mehmed sent his best troops, the Janissaries.",painting,Jean Baptiste Vanmour Janissary painting,zoom_out,3.94,wm-34251726
 329,TURNING POINT,They had trained for this moment all their lives.,painting,Gentile Bellini Seated Janissary drawing,zoom_in,3.94,
-330,TURNING POINT,"They marched forward in order, to the beat of drums.",manuscript,Ottoman mehter military band miniature,zoom_out,4.18,
+330,TURNING POINT,"They marched forward in order, to the beat of drums.",manuscript,Ottoman mehter military band miniature,zoom_out,4.18,wm-157230942
 331,TURNING POINT,"At first, even they could not break through.",location,Topkapi Gate Saint Romanus Gate Theodosian walls Istanbul,zoom_in,3.54,
 332,TURNING POINT,Would the walls hold one more time?,location,Theodosian Walls Istanbul at dawn,pan_right,2.82,
-333,TURNING POINT,"Just after dawn, a shot struck Giovanni Giustiniani.",engraving,Giovanni Giustiniani Longo engraving,zoom_out,4.17,
-334,TURNING POINT,Some say it was a bullet.,artefact,15th century hand cannon,zoom_in,2.0,
-335,TURNING POINT,Others say a crossbow bolt.,artefact,medieval crossbow bolt,zoom_out,2.16,
-336,TURNING POINT,"Either way, the wound was serious.",engraving,Giovanni Giustiniani Longo engraving detail,zoom_in,2.72,
+333,TURNING POINT,"Just after dawn, a shot struck Giovanni Giustiniani.",engraving,Giovanni Giustiniani Longo engraving,zoom_out,4.17,wm-16284074
+334,TURNING POINT,Some say it was a bullet.,artefact,15th century hand cannon,zoom_in,2.0,wm-84147135
+335,TURNING POINT,Others say a crossbow bolt.,artefact,medieval crossbow bolt,zoom_out,2.16,wm-77636249
+336,TURNING POINT,"Either way, the wound was serious.",engraving,Giovanni Giustiniani Longo engraving detail,zoom_in,2.72,wm-16283999
 337,TURNING POINT,"His men carried him off the walls, toward the ships in the harbour.",map,map: Giustiniani carried toward the harbour,map_anim,5.37,
-338,TURNING POINT,Many of his Genoese soldiers followed him.,painting,Theophilos Hatzimichail Fall of Constantinople painting retreat,zoom_out,3.37,
+338,TURNING POINT,Many of his Genoese soldiers followed him.,painting,Theophilos Hatzimihail Fall of Constantinople painting retreat,zoom_out,3.37,
 339,TURNING POINT,The defenders saw their commander go.,painting,Fausto Zonaro Mehmed II conquering Constantinople painting walls,zoom_in,2.96,
-340,TURNING POINT,Panic spread along the walls.,painting,Theophilos Hatzimichail Fall of Constantinople painting,zoom_out,2.32,
+340,TURNING POINT,Panic spread along the walls.,painting,Theophilos Hatzimihail Fall of Constantinople painting,zoom_out,2.32,
 341,TURNING POINT,So how did the Ottomans get onto the walls so fast?,painting,Fausto Zonaro Mehmed II conquering Constantinople painting,zoom_in,4.09,
 342,TURNING POINT,"One chronicler, Doukas, adds a strange detail.",manuscript,Doukas chronicle manuscript page,zoom_out,3.69,
 343,TURNING POINT,A small gate in the wall had been left open.,location,Kerkoporta postern Theodosian walls Istanbul,zoom_in,3.53,
 344,TURNING POINT,Ottoman soldiers slipped through it and raised their flag on a tower.,painting,Fausto Zonaro Mehmed II conquering Constantinople painting flag on the tower,zoom_out,5.53,
 345,TURNING POINT,Many historians doubt the story.,card,card: a legend? (Doukas only),static,2.56,
-346,TURNING POINT,No trace of such a gate has ever turned up.,location,Blachernae walls Istanbul,zoom_in,3.45,
-347,TURNING POINT,"But that morning, the defenders believed their eyes.",painting,Theophilos Hatzimichail Fall of Constantinople painting defenders,zoom_out,4.17,
+346,TURNING POINT,No trace of such a gate has ever turned up.,location,Blachernae walls Istanbul,zoom_in,3.45,wm-2441357
+347,TURNING POINT,"But that morning, the defenders believed their eyes.",painting,Theophilos Hatzimihail Fall of Constantinople painting defenders,zoom_out,4.17,
 348,TURNING POINT,They looked up and saw Ottoman flags on the walls.,painting,Fausto Zonaro Mehmed II conquering Constantinople painting flags,zoom_in,4.21,
-349,TURNING POINT,Ottoman soldiers broke through.,painting,Benjamin-Constant Entry of Mahomet II into Constantinople 1876,zoom_out,2.61,
+349,TURNING POINT,Ottoman soldiers broke through.,painting,Benjamin-Constant Entry of Mahomet II into Constantinople 1876,zoom_out,2.61,wm-1818511
 350,TURNING POINT,And what became of the emperor?,manuscript,Constantine XI Palaiologos portrait Mutinensis gr. 122 manuscript,zoom_in,2.61,
-351,TURNING POINT,Constantine the Eleventh is said to have died in the fighting.,painting,Theophilos Hatzimichail last stand of Constantine XI,zoom_out,4.78,
+351,TURNING POINT,Constantine the Eleventh is said to have died in the fighting.,painting,Theophilos Hatzimihail last stand of Constantine XI,zoom_out,4.78,
 352,TURNING POINT,His body was never identified for certain.,card,card: body never identified,static,3.24,
-353,TURNING POINT,Legend says he threw off his imperial robes and charged the enemy like a common soldier.,painting,Theophilos Hatzimichail Constantine XI charging,zoom_in,6.79,
-354,TURNING POINT,"Across the city, the church bells rang the alarm.",location,Istanbul church bell,zoom_out,3.78,
-355,TURNING POINT,Thousands ran to Hagia Sophia and barred the great doors.,location,Hagia Sophia Imperial Gate doors,zoom_in,4.4,
-356,TURNING POINT,An old prophecy said an angel would come down there and save the city.,engraving,Gaspare Fossati Hagia Sophia lithograph 1852 dome,zoom_out,5.4,
-357,TURNING POINT,But no angel came.,location,Hagia Sophia dome,zoom_in,1.39,
-358,TURNING POINT,The soldiers broke down the doors.,location,Hagia Sophia Imperial Gate doors close-up,zoom_out,2.62,
+353,TURNING POINT,Legend says he threw off his imperial robes and charged the enemy like a common soldier.,painting,Theophilos Hatzimihail Constantine XI charging,zoom_in,6.79,wm-113848694
+354,TURNING POINT,"Across the city, the church bells rang the alarm.",location,Istanbul church bell,zoom_out,3.78,wm-6024770
+355,TURNING POINT,Thousands ran to Hagia Sophia and barred the great doors.,location,Hagia Sophia Imperial Gate doors,zoom_in,4.4,wm-123120554
+356,TURNING POINT,An old prophecy said an angel would come down there and save the city.,engraving,Gaspare Fossati Hagia Sophia lithograph 1852 dome,zoom_out,5.4,wm-33429643
+357,TURNING POINT,But no angel came.,location,Hagia Sophia dome,zoom_in,1.39,wm-11863004
+358,TURNING POINT,The soldiers broke down the doors.,location,Hagia Sophia Imperial Gate doors close-up,zoom_out,2.62,wm-2964577
 359,TURNING POINT,"By midday, the city belonged to Mehmed.",card,"card: midday, 29 May",static,3.27,
-360,TURNING POINT,"That afternoon, the young sultan rode through the gates.",painting,Benjamin-Constant Entry of Mahomet II into Constantinople 1876,zoom_in,4.69,
+360,TURNING POINT,"That afternoon, the young sultan rode through the gates.",painting,Benjamin-Constant Entry of Mahomet II into Constantinople 1876,zoom_in,4.69,wm-1818511
 361,TURNING POINT,He went straight to Hagia Sophia.,painting,Benjamin-Constant Entry of Mahomet II into Constantinople 1876 detail,zoom_out,2.76,
 362,TURNING POINT,He had promised his soldiers three days of plunder.,painting,Fausto Zonaro Mehmed II conquering Constantinople painting,zoom_in,4.27,
 363,TURNING POINT,Some accounts say he stopped it after one day.,card,card: three days? or one?,static,3.85,
-364,TURNING POINT,"Looking at the ruined streets, he is said to have wept.",painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,4.6,
-365,TURNING POINT,Not everyone was caught.,location,Golden Horn Istanbul view mouth,zoom_in,2.01,
-366,TURNING POINT,"In the harbour, some Venetian and Genoese ships broke out past the chain, packed with refugees.",painting,15th century Venetian galleys painting,zoom_out,7.95,
-367,TURNING POINT,Hagia Sophia had been the great church of the Romans for nine hundred years.,engraving,Gaspare Fossati Hagia Sophia lithograph 1852 interior,zoom_in,6.36,
-368,TURNING POINT,Now it became a mosque.,location,Hagia Sophia minarets exterior,zoom_out,1.92,
+364,TURNING POINT,"Looking at the ruined streets, he is said to have wept.",painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,4.6,wm-147845
+365,TURNING POINT,Not everyone was caught.,location,Golden Horn Istanbul view mouth,zoom_in,2.01,wm-31948560
+366,TURNING POINT,"In the harbour, some Venetian and Genoese ships broke out past the chain, packed with refugees.",painting,15th century Venetian galleys painting,zoom_out,7.95,wm-80666984
+367,TURNING POINT,Hagia Sophia had been the great church of the Romans for nine hundred years.,engraving,Gaspare Fossati Hagia Sophia lithograph 1852 interior,zoom_in,6.36,wm-82124598
+368,TURNING POINT,Now it became a mosque.,location,Hagia Sophia minarets exterior,zoom_out,1.92,wm-203279771
 369,TURNING POINT,The city fell on a Tuesday.,card,"card: Tuesday, 29 May 1453",static,2.26,
-370,TURNING POINT,Many Greeks still call Tuesday an unlucky day.,location,Greek Orthodox church Athens,zoom_in,3.85,
-371,CLOSE,So that is how a thousand-year wall fell in 53 days.,location,Theodosian Walls Istanbul,pan_left,4.93,
+370,TURNING POINT,Many Greeks still call Tuesday an unlucky day.,location,Greek Orthodox church Athens,zoom_in,3.85,wm-127000985
+371,CLOSE,So that is how a thousand-year wall fell in 53 days.,location,Theodosian Walls Istanbul,pan_left,4.93,wm-1323439
 372,CLOSE,"It did not fall to one cannon, or to one clever trick.",artefact,Great Turkish Bombard Dardanelles Gun Royal Armouries,zoom_out,4.59,
 373,CLOSE,The cannon cracked the walls.,artefact,Great Turkish Bombard Dardanelles Gun Royal Armouries muzzle,zoom_in,2.46,
 374,CLOSE,The ships over the hill stretched the defenders thin.,painting,Fausto Zonaro Ottoman fleet transported overland Golden Horn painting,zoom_out,4.51,
-375,CLOSE,"And when Giustiniani left the wall, their hope left with him.",engraving,Giovanni Giustiniani Longo engraving,zoom_in,5.19,
-376,CLOSE,Behind all of it stood a young sultan who would not give up.,painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,5.1,
+375,CLOSE,"And when Giustiniani left the wall, their hope left with him.",engraving,Giovanni Giustiniani Longo engraving,zoom_in,5.19,wm-57947050
+376,CLOSE,Behind all of it stood a young sultan who would not give up.,painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,5.1,wm-99605243
 377,CLOSE,What happened to the men in this story?,painting,Fausto Zonaro Mehmed II conquering Constantinople painting,zoom_in,3.32,
 378,CLOSE,Giustiniani reached the island of Chios.,map,map: Chios,map_anim,3.4,
 379,CLOSE,He died of his wound on 1 June.,location,Chios castle,zoom_out,2.89,
-380,CLOSE,"Halil, the man who had urged peace, lost his post within days.",manuscript,Ottoman vizier miniature,zoom_in,5.27,
+380,CLOSE,"Halil, the man who had urged peace, lost his post within days.",manuscript,Ottoman vizier miniature,zoom_in,5.27,wm-198042213
 381,CLOSE,"Six weeks later, Mehmed had him executed.",location,Iznik old town,zoom_out,3.48,
 382,CLOSE,Orban's fate is less clear.,artefact,Great Turkish Bombard Dardanelles Gun Royal Armouries,zoom_in,2.3,
-383,CLOSE,One story says he died when one of his own cannons burst.,engraving,cannon explosion engraving,zoom_out,4.85,
+383,CLOSE,One story says he died when one of his own cannons burst.,engraving,cannon explosion engraving,zoom_out,4.85,wm-32174470
 384,CLOSE,And Mehmed was only twenty-one.,painting,Nakkas Sinan Bey Mehmed II smelling a rose miniature,zoom_in,2.63,
-385,CLOSE,"From now on, he called himself Caesar of Rome.",artefact,Mehmed II tughra,zoom_out,3.91,
-386,CLOSE,"In his eyes, the Roman Empire had not ended.",painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_in,4.19,
+385,CLOSE,"From now on, he called himself Caesar of Rome.",artefact,Mehmed II tughra,zoom_out,3.91,wm-22883769
+386,CLOSE,"In his eyes, the Roman Empire had not ended.",painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_in,4.19,wm-185184989
 387,CLOSE,It simply had a new ruler.,map,"map: the Ottoman Empire, Constantinople its capital",map_anim,2.48,
-388,CLOSE,So what did the fall really change?,location,Istanbul skyline Hagia Sophia,zoom_out,2.65,
+388,CLOSE,So what did the fall really change?,location,Istanbul skyline Hagia Sophia,zoom_out,2.65,wm-146259277
 389,CLOSE,The fall of Constantinople ended the Byzantine Empire.,map,map: the Byzantine Empire disappears,map_anim,4.09,
 390,CLOSE,The city became the new Ottoman capital.,map,map: Ottoman capital moves to Constantinople,map_anim,3.03,
-391,CLOSE,"In time, the world would know it as Istanbul.",location,Istanbul skyline at sunset,pan_right,3.41,
-392,CLOSE,Greek scholars had been moving to Italy for decades.,painting,Cardinal Bessarion portrait,zoom_in,3.94,
+391,CLOSE,"In time, the world would know it as Istanbul.",location,Istanbul skyline at sunset,pan_right,3.41,wm-2266046
+392,CLOSE,Greek scholars had been moving to Italy for decades.,painting,Cardinal Bessarion portrait,zoom_in,3.94,wm-83827407
 393,CLOSE,"After the fall, many more fled west.",map,map: scholars move from Constantinople to Italy,map_anim,2.73,
-394,CLOSE,They carried books and ideas that helped feed the Renaissance.,painting,Florence 15th century view painting,zoom_out,4.7,
-395,CLOSE,The news reached Venice and Rome weeks later.,engraving,Jacopo de' Barbari view of Venice 1500,zoom_in,3.41,
-396,CLOSE,People could hardly believe it.,painting,Gentile Bellini Venice procession in Piazza San Marco,zoom_out,2.35,
-397,CLOSE,The Pope called for a new crusade to take the city back.,painting,Pope Nicholas V portrait,zoom_in,4.24,
+394,CLOSE,They carried books and ideas that helped feed the Renaissance.,painting,Florence 15th century view painting,zoom_out,4.7,wm-70978631
+395,CLOSE,The news reached Venice and Rome weeks later.,engraving,Jacopo de' Barbari view of Venice 1500,zoom_in,3.41,wm-138314495
+396,CLOSE,People could hardly believe it.,painting,Gentile Bellini Venice procession in Piazza San Marco,zoom_out,2.35,wm-141956642
+397,CLOSE,The Pope called for a new crusade to take the city back.,painting,Pope Nicholas V portrait,zoom_in,4.24,wm-78282795
 398,CLOSE,It never came.,card,card: no crusade came,static,1.06,
 399,CLOSE,Some historians even mark that day as the end of the Middle Ages.,card,"card: 1453, the end of the Middle Ages?",static,4.92,
 400,CLOSE,And the Greeks never forgot their last emperor.,manuscript,Constantine XI Palaiologos portrait Mutinensis gr. 122 manuscript,zoom_out,3.56,

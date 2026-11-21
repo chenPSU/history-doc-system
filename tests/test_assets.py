@@ -194,3 +194,16 @@ def test_review_sheet_lists_assets_misses_and_own_shots(tmp_path):
     E.fetch_episode(ep, CFG, http=Http("t", fetch=web, sleep=lambda s: None), go=True, log=lambda *a: None)
     page = review.build(ep).read_text(encoding="utf-8")
     assert 'src="wm-3.jpg"' in page and "1 shots with an asset · 1 without · 1 made by us" in page
+
+
+def test_broken_download_is_retried():
+    import http.client
+    calls = []
+
+    def flaky(url, headers):
+        calls.append(url)
+        if len(calls) == 1:
+            raise http.client.IncompleteRead(b"x" * 10, 100)
+        return JPEG
+
+    assert Http("t", fetch=flaky, sleep=lambda s: None).get("https://upload.wikimedia.org/a.jpg") == JPEG

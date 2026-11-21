@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import csv
 import html
+import http.client
 import json
 import re
 import time
@@ -66,9 +67,9 @@ class Http:
                     wait *= 2
                     continue
                 raise FetchError(f"HTTP {e.code}: {url}") from e
-            except urllib.error.URLError as e:
+            except (urllib.error.URLError, http.client.HTTPException, ConnectionError, TimeoutError) as e:
                 if attempt == self.tries:
-                    raise FetchError(f"network error: {e.reason}: {url}") from e
+                    raise FetchError(f"network error: {getattr(e, 'reason', e)!s:.120}: {url}") from e
                 self.sleep(wait)
                 wait *= 2
         raise FetchError(f"gave up: {url}")
