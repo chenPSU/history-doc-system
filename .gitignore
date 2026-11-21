@@ -6,11 +6,15 @@ __pycache__/
 node_modules/
 episodes/*/audio/*
 !episodes/*/audio/.gitkeep
+!episodes/*/audio/mix_plan.yaml
+!episodes/*/audio/mix_report.json
+!episodes/*/audio/narration_timing.json
 episodes/*/render/*
 !episodes/*/render/.gitkeep
 episodes/*/assets/*
 !episodes/*/assets/manifest.csv
 !episodes/*/assets/ai_prompts.yaml
+!episodes/*/assets/framing.yaml
 *.mp4
 *.mov
 *.wav

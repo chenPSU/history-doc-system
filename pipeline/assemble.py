@@ -59,13 +59,45 @@ def grade(im: Image.Image) -> Image.Image:
     return ImageEnhance.Contrast(ImageEnhance.Brightness(im).enhance(0.93)).enhance(0.94)
 
 
-def make_proxy(src: Path, dst: Path, fit: str, width: int, height: int, graded: bool = False) -> tuple[int, int]:
+def trim_print(im: Image.Image, inset: float = 0.015) -> Image.Image:
+    """Cut the blank paper margin and the plate line off an old-print style picture, so it fills the frame.
+    A margin row/column is bright and nearly uniform; the picture starts where that stops."""
+    from PIL import ImageStat
+    g = im.convert("L")
+    small = g.resize((200, max(1, round(200 * g.height / g.width))))
+    W, H = small.size
+    def paper(box):                   # blank paper: bright and nearly uniform (a dark night sky is not paper)
+        st = ImageStat.Stat(small.crop(box))
+        return st.mean[0] > 150 and st.stddev[0] <= 18
+    def first(n, box_of):
+        for i in range(n // 3):
+            if not any(paper(box_of(i + k)) for k in range(3)):
+                return i
+        return 0
+    top = first(H, lambda y: (0, y, W, y + 1))
+    bottom = first(H, lambda y: (0, H - 1 - y, W, H - y))
+    left = first(W, lambda x: (x, 0, x + 1, H))
+    right = first(W, lambda x: (W - 1 - x, 0, W - x, H))
+    if not (top or bottom or left or right):
+        return im                     # no paper margin at all: keep every pixel
+    fx, fy = im.width / W, im.height / H
+    dx, dy = im.width * inset, im.height * inset
+    box = (round(left * fx + dx), round(top * fy + dy), round(im.width - right * fx - dx), round(im.height - bottom * fy - dy))
+    if box[2] - box[0] < im.width * 0.5 or box[3] - box[1] < im.height * 0.5:
+        return im                     # found no clear margin: leave the picture alone
+    return im.crop(box)
+
+
+def make_proxy(src: Path, dst: Path, fit: str, width: int, height: int, graded: bool = False,
+               trim: bool = False) -> tuple[int, int]:
     """Resize so the image fills (cover) or fits (contain) the frame at MAX_SCALE; never upscale."""
     if dst.exists() and dst.stat().st_mtime >= src.stat().st_mtime:
         with Image.open(dst) as im:
             return im.size
     with Image.open(src) as im:
         im = im.convert("RGB")
+        if trim:
+            im = trim_print(im)
         w, h = im.size
         s = (max if fit == "cover" else min)(width / w, height / h) * MAX_SCALE
         if s < 1:
@@ -130,8 +162,10 @@ def build_props(edl: dict, ep: Path, stage: Path, width: int, height: int, log=p
             aid = s["asset_id"]
             graded = s.get("visual_type") in GRADED_TYPES
             name = f"{aid}{'_g' if graded else ''}.jpg"
-            make_proxy(src, stage / "p" / name, s["fit"], width, height, graded)
-            item.update(src=f"p/{name}", fit=s["fit"])
+            trim = bool(s.get("label"))       # AI prints come with a paper margin and a plate line
+            name = name.replace(".jpg", "_t.jpg") if trim else name
+            make_proxy(src, stage / "p" / name, s["fit"], width, height, graded, trim)
+            item.update(src=f"p/{name}", fit=s["fit"], focus=s.get("focus", [0.5, 0.5]))
             if s["fit"] == "contain_blur":
                 make_background(src, stage / "bg" / f"{aid}.jpg")
                 item["bg"] = f"bg/{aid}.jpg"
@@ -148,6 +182,8 @@ def build_props(edl: dict, ep: Path, stage: Path, width: int, height: int, log=p
         else:
             item["text"] = s.get("text", "")
             item["reason"] = s.get("reason", "")
+        if s.get("caption"):
+            item["caption"] = s["caption"]
         if s.get("label"):
             item["label"] = s["label"]
         items.append(item)

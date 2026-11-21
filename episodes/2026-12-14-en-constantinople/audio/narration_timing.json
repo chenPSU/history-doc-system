@@ -1,0 +1,3613 @@
+{
+ "audio": "audio/narration.wav",
+ "provider": [
+  "gemini",
+  "gemini-3.1-flash-tts-preview",
+  "Charon"
+ ],
+ "sample_rate": 24000,
+ "total_seconds": 1369.07,
+ "scorer_estimate_seconds": 1368.4,
+ "ratio_to_estimate": 1.0,
+ "timing_method": "proportional within each request group",
+ "requests_sent": 6,
+ "groups": [
+  {
+   "group": 0,
+   "section": "HOOK",
+   "start": 0.0,
+   "end": 16.702,
+   "pause_after": 1.5
+  },
+  {
+   "group": 1,
+   "section": "HOOK",
+   "start": 18.202,
+   "end": 37.378,
+   "pause_after": 0.8
+  },
+  {
+   "group": 2,
+   "section": "PROMISE",
+   "start": 38.178,
+   "end": 47.848,
+   "pause_after": 0.8
+  },
+  {
+   "group": 3,
+   "section": "CONTEXT",
+   "start": 48.648,
+   "end": 87.444,
+   "pause_after": 0.35
+  },
+  {
+   "group": 4,
+   "section": "CONTEXT",
+   "start": 87.794,
+   "end": 133.34,
+   "pause_after": 0.35
+  },
+  {
+   "group": 5,
+   "section": "CONTEXT",
+   "start": 133.69,
+   "end": 182.995,
+   "pause_after": 0.35
+  },
+  {
+   "group": 6,
+   "section": "CONTEXT",
+   "start": 183.345,
+   "end": 189.304,
+   "pause_after": 1.0
+  },
+  {
+   "group": 7,
+   "section": "CONTEXT",
+   "start": 190.304,
+   "end": 206.829,
+   "pause_after": 0.8
+  },
+  {
+   "group": 8,
+   "section": "CHAPTER 1",
+   "start": 207.629,
+   "end": 253.677,
+   "pause_after": 0.35
+  },
+  {
+   "group": 9,
+   "section": "CHAPTER 1",
+   "start": 254.027,
+   "end": 280.558,
+   "pause_after": 1.5
+  },
+  {
+   "group": 10,
+   "section": "CHAPTER 1",
+   "start": 282.058,
+   "end": 330.905,
+   "pause_after": 0.35
+  },
+  {
+   "group": 11,
+   "section": "CHAPTER 1",
+   "start": 331.255,
+   "end": 377.618,
+   "pause_after": 0.8
+  },
+  {
+   "group": 12,
+   "section": "CHAPTER 2",
+   "start": 378.418,
+   "end": 426.664,
+   "pause_after": 0.35
+  },
+  {
+   "group": 13,
+   "section": "CHAPTER 2",
+   "start": 427.014,
+   "end": 473.03,
+   "pause_after": 0.35
+  },
+  {
+   "group": 14,
+   "section": "CHAPTER 2",
+   "start": 473.38,
+   "end": 521.592,
+   "pause_after": 0.35
+  },
+  {
+   "group": 15,
+   "section": "CHAPTER 2",
+   "start": 521.942,
+   "end": 541.54,
+   "pause_after": 0.35
+  },
+  {
+   "group": 16,
+   "section": "CHAPTER 2",
+   "start": 541.89,
+   "end": 563.385,
+   "pause_after": 0.35
+  },
+  {
+   "group": 17,
+   "section": "CHAPTER 2",
+   "start": 563.735,
+   "end": 603.033,
+   "pause_after": 1.0
+  },
+  {
+   "group": 18,
+   "section": "CHAPTER 2",
+   "start": 604.033,
+   "end": 623.553,
+   "pause_after": 0.8
+  },
+  {
+   "group": 19,
+   "section": "CHAPTER 3",
+   "start": 624.352,
+   "end": 670.146,
+   "pause_after": 0.35
+  },
+  {
+   "group": 20,
+   "section": "CHAPTER 3",
+   "start": 670.496,
+   "end": 695.164,
+   "pause_after": 1.0
+  },
+  {
+   "group": 21,
+   "section": "CHAPTER 3",
+   "start": 696.164,
+   "end": 707.64,
+   "pause_after": 0.35
+  },
+  {
+   "group": 22,
+   "section": "CHAPTER 3",
+   "start": 707.99,
+   "end": 731.774,
+   "pause_after": 0.35
+  },
+  {
+   "group": 23,
+   "section": "CHAPTER 3",
+   "start": 732.124,
+   "end": 754.254,
+   "pause_after": 0.35
+  },
+  {
+   "group": 24,
+   "section": "CHAPTER 3",
+   "start": 754.604,
+   "end": 763.895,
+   "pause_after": 1.5
+  },
+  {
+   "group": 25,
+   "section": "CHAPTER 3",
+   "start": 765.395,
+   "end": 805.106,
+   "pause_after": 0.8
+  },
+  {
+   "group": 26,
+   "section": "CHAPTER 4",
+   "start": 805.906,
+   "end": 843.446,
+   "pause_after": 0.35
+  },
+  {
+   "group": 27,
+   "section": "CHAPTER 4",
+   "start": 843.796,
+   "end": 861.279,
+   "pause_after": 0.35
+  },
+  {
+   "group": 28,
+   "section": "CHAPTER 4",
+   "start": 861.629,
+   "end": 881.327,
+   "pause_after": 1.0
+  },
+  {
+   "group": 29,
+   "section": "CHAPTER 4",
+   "start": 882.327,
+   "end": 933.951,
+   "pause_after": 0.35
+  },
+  {
+   "group": 30,
+   "section": "CHAPTER 4",
+   "start": 934.301,
+   "end": 936.639,
+   "pause_after": 1.5
+  },
+  {
+   "group": 31,
+   "section": "CHAPTER 4",
+   "start": 938.139,
+   "end": 973.593,
+   "pause_after": 0.8
+  },
+  {
+   "group": 32,
+   "section": "TURNING POINT",
+   "start": 974.393,
+   "end": 1024.559,
+   "pause_after": 0.35
+  },
+  {
+   "group": 33,
+   "section": "TURNING POINT",
+   "start": 1024.909,
+   "end": 1037.425,
+   "pause_after": 0.35
+  },
+  {
+   "group": 34,
+   "section": "TURNING POINT",
+   "start": 1037.775,
+   "end": 1083.686,
+   "pause_after": 0.35
+  },
+  {
+   "group": 35,
+   "section": "TURNING POINT",
+   "start": 1084.036,
+   "end": 1093.74,
+   "pause_after": 2.0
+  },
+  {
+   "group": 36,
+   "section": "TURNING POINT",
+   "start": 1095.74,
+   "end": 1143.231,
+   "pause_after": 0.35
+  },
+  {
+   "group": 37,
+   "section": "TURNING POINT",
+   "start": 1143.581,
+   "end": 1149.748,
+   "pause_after": 0.35
+  },
+  {
+   "group": 38,
+   "section": "TURNING POINT",
+   "start": 1150.098,
+   "end": 1151.624,
+   "pause_after": 0.5
+  },
+  {
+   "group": 39,
+   "section": "TURNING POINT",
+   "start": 1152.124,
+   "end": 1178.143,
+   "pause_after": 2.0
+  },
+  {
+   "group": 40,
+   "section": "TURNING POINT",
+   "start": 1180.143,
+   "end": 1221.96,
+   "pause_after": 0.8
+  },
+  {
+   "group": 41,
+   "section": "CLOSE",
+   "start": 1222.76,
+   "end": 1274.659,
+   "pause_after": 0.35
+  },
+  {
+   "group": 42,
+   "section": "CLOSE",
+   "start": 1275.009,
+   "end": 1281.27,
+   "pause_after": 1.0
+  },
+  {
+   "group": 43,
+   "section": "CLOSE",
+   "start": 1282.27,
+   "end": 1328.661,
+   "pause_after": 0.35
+  },
+  {
+   "group": 44,
+   "section": "CLOSE",
+   "start": 1329.011,
+   "end": 1369.074,
+   "pause_after": 0.0
+  }
+ ],
+ "sentences": [
+  {
+   "i": 0,
+   "section": "HOOK",
+   "group": 0,
+   "text": "It is just after midnight, on 29 May 1453.",
+   "start": 0.0,
+   "end": 4.683
+  },
+  {
+   "i": 1,
+   "section": "HOOK",
+   "group": 0,
+   "text": "About seven thousand defenders stand on the walls of Constantinople, waiting in the dark.",
+   "start": 4.683,
+   "end": 11.629
+  },
+  {
+   "i": 2,
+   "section": "HOOK",
+   "group": 0,
+   "text": "By sunrise, walls that have stood for a thousand years will fall.",
+   "start": 11.629,
+   "end": 16.702
+  },
+  {
+   "i": 3,
+   "section": "HOOK",
+   "group": 1,
+   "text": "How did a young sultan break a thousand-year wall in just 53 days?",
+   "start": 18.202,
+   "end": 23.769
+  },
+  {
+   "i": 4,
+   "section": "HOOK",
+   "group": 1,
+   "text": "If you stood beside the defenders tonight, you would hear drums out in the dark.",
+   "start": 23.769,
+   "end": 29.955
+  },
+  {
+   "i": 5,
+   "section": "HOOK",
+   "group": 1,
+   "text": "No army had ever broken through these land walls.",
+   "start": 29.955,
+   "end": 33.744
+  },
+  {
+   "i": 6,
+   "section": "HOOK",
+   "group": 1,
+   "text": "But below them waits an army many times larger.",
+   "start": 33.744,
+   "end": 37.378
+  },
+  {
+   "i": 7,
+   "section": "PROMISE",
+   "group": 2,
+   "text": "It came down to a cannon that nobody else would pay for, and a fleet that sailed over a hill.",
+   "start": 38.178,
+   "end": 44.939
+  },
+  {
+   "i": 8,
+   "section": "PROMISE",
+   "group": 2,
+   "text": "Let's go back to the city at its height.",
+   "start": 44.939,
+   "end": 47.848
+  },
+  {
+   "i": 9,
+   "section": "CONTEXT",
+   "group": 3,
+   "text": "Constantinople was a Roman city.",
+   "start": 48.648,
+   "end": 50.647
+  },
+  {
+   "i": 10,
+   "section": "CONTEXT",
+   "group": 3,
+   "text": "The emperor Constantine the Great made it his new capital in 330 AD.",
+   "start": 50.647,
+   "end": 55.457
+  },
+  {
+   "i": 11,
+   "section": "CONTEXT",
+   "group": 3,
+   "text": "In the centuries that followed, the western half of the Roman Empire collapsed.",
+   "start": 55.457,
+   "end": 60.393
+  },
+  {
+   "i": 12,
+   "section": "CONTEXT",
+   "group": 3,
+   "text": "But the eastern half survived.",
+   "start": 60.393,
+   "end": 62.267
+  },
+  {
+   "i": 13,
+   "section": "CONTEXT",
+   "group": 3,
+   "text": "Historians call it the Byzantine Empire.",
+   "start": 62.267,
+   "end": 64.766
+  },
+  {
+   "i": 14,
+   "section": "CONTEXT",
+   "group": 3,
+   "text": "It lasted another thousand years.",
+   "start": 64.766,
+   "end": 66.828
+  },
+  {
+   "i": 15,
+   "section": "CONTEXT",
+   "group": 3,
+   "text": "Its people never called themselves Byzantines.",
+   "start": 66.828,
+   "end": 69.701
+  },
+  {
+   "i": 16,
+   "section": "CONTEXT",
+   "group": 3,
+   "text": "To the very end, they called themselves Romans.",
+   "start": 69.701,
+   "end": 72.638
+  },
+  {
+   "i": 17,
+   "section": "CONTEXT",
+   "group": 3,
+   "text": "So what made their city so hard to take?",
+   "start": 72.638,
+   "end": 75.137
+  },
+  {
+   "i": 18,
+   "section": "CONTEXT",
+   "group": 3,
+   "text": "Water protected the city on three sides.",
+   "start": 75.137,
+   "end": 77.636
+  },
+  {
+   "i": 19,
+   "section": "CONTEXT",
+   "group": 3,
+   "text": "On the fourth side stood the land walls.",
+   "start": 77.636,
+   "end": 80.134
+  },
+  {
+   "i": 20,
+   "section": "CONTEXT",
+   "group": 3,
+   "text": "They were not one wall, but three layers.",
+   "start": 80.134,
+   "end": 82.696
+  },
+  {
+   "i": 21,
+   "section": "CONTEXT",
+   "group": 3,
+   "text": "First came a moat.",
+   "start": 82.696,
+   "end": 83.82
+  },
+  {
+   "i": 22,
+   "section": "CONTEXT",
+   "group": 3,
+   "text": "Behind it, an outer wall.",
+   "start": 83.82,
+   "end": 85.382
+  },
+  {
+   "i": 23,
+   "section": "CONTEXT",
+   "group": 3,
+   "text": "Behind that, a taller inner wall.",
+   "start": 85.382,
+   "end": 87.444
+  },
+  {
+   "i": 24,
+   "section": "CONTEXT",
+   "group": 4,
+   "text": "Together, they ran for about six kilometres, from the Sea of Marmara to the Golden Horn.",
+   "start": 87.794,
+   "end": 93.407
+  },
+  {
+   "i": 25,
+   "section": "CONTEXT",
+   "group": 4,
+   "text": "Picture yourself as an attacker, standing in front of them.",
+   "start": 93.407,
+   "end": 97.171
+  },
+  {
+   "i": 26,
+   "section": "CONTEXT",
+   "group": 4,
+   "text": "First you must cross the moat under fire.",
+   "start": 97.171,
+   "end": 99.786
+  },
+  {
+   "i": 27,
+   "section": "CONTEXT",
+   "group": 4,
+   "text": "Next comes the outer wall.",
+   "start": 99.786,
+   "end": 101.445
+  },
+  {
+   "i": 28,
+   "section": "CONTEXT",
+   "group": 4,
+   "text": "And behind it, the inner wall still towers over you.",
+   "start": 101.445,
+   "end": 104.762
+  },
+  {
+   "i": 29,
+   "section": "CONTEXT",
+   "group": 4,
+   "text": "For a thousand years, armies came to these walls.",
+   "start": 104.762,
+   "end": 107.888
+  },
+  {
+   "i": 30,
+   "section": "CONTEXT",
+   "group": 4,
+   "text": "For a thousand years, they went home again.",
+   "start": 107.888,
+   "end": 110.631
+  },
+  {
+   "i": 31,
+   "section": "CONTEXT",
+   "group": 4,
+   "text": "Even Mehmed's own father had tried, in 1422.",
+   "start": 110.631,
+   "end": 114.203
+  },
+  {
+   "i": 32,
+   "section": "CONTEXT",
+   "group": 4,
+   "text": "He failed, and marched away.",
+   "start": 114.203,
+   "end": 115.989
+  },
+  {
+   "i": 33,
+   "section": "CONTEXT",
+   "group": 4,
+   "text": "Even the crusaders of 1204 did not break through here.",
+   "start": 115.989,
+   "end": 120.199
+  },
+  {
+   "i": 34,
+   "section": "CONTEXT",
+   "group": 4,
+   "text": "They took the city from the sea, over the harbour walls.",
+   "start": 120.199,
+   "end": 123.771
+  },
+  {
+   "i": 35,
+   "section": "CONTEXT",
+   "group": 4,
+   "text": "But the crusaders left the empire broken.",
+   "start": 123.771,
+   "end": 126.387
+  },
+  {
+   "i": 36,
+   "section": "CONTEXT",
+   "group": 4,
+   "text": "By 1453, it had shrunk to little more than the city itself.",
+   "start": 126.387,
+   "end": 130.916
+  },
+  {
+   "i": 37,
+   "section": "CONTEXT",
+   "group": 4,
+   "text": "The city was a shadow of its old self.",
+   "start": 130.916,
+   "end": 133.34
+  },
+  {
+   "i": 38,
+   "section": "CONTEXT",
+   "group": 5,
+   "text": "Fewer than fifty thousand people still lived inside the walls.",
+   "start": 133.69,
+   "end": 138.159
+  },
+  {
+   "i": 39,
+   "section": "CONTEXT",
+   "group": 5,
+   "text": "Where crowded streets had once stood, there were now fields and orchards.",
+   "start": 138.159,
+   "end": 143.421
+  },
+  {
+   "i": 40,
+   "section": "CONTEXT",
+   "group": 5,
+   "text": "Outside, the Ottoman Turks had spread across Anatolia and the Balkans.",
+   "start": 143.421,
+   "end": 148.467
+  },
+  {
+   "i": 41,
+   "section": "CONTEXT",
+   "group": 5,
+   "text": "They now surrounded the city on almost every side.",
+   "start": 148.467,
+   "end": 152.071
+  },
+  {
+   "i": 42,
+   "section": "CONTEXT",
+   "group": 5,
+   "text": "So how long could a city this small survive?",
+   "start": 152.071,
+   "end": 155.243
+  },
+  {
+   "i": 43,
+   "section": "CONTEXT",
+   "group": 5,
+   "text": "So the emperors paid tribute and played for time.",
+   "start": 155.243,
+   "end": 158.775
+  },
+  {
+   "i": 44,
+   "section": "CONTEXT",
+   "group": 5,
+   "text": "It worked, but only for a while.",
+   "start": 158.775,
+   "end": 161.081
+  },
+  {
+   "i": 45,
+   "section": "CONTEXT",
+   "group": 5,
+   "text": "In 1449, a new emperor took the throne.",
+   "start": 161.081,
+   "end": 164.758
+  },
+  {
+   "i": 46,
+   "section": "CONTEXT",
+   "group": 5,
+   "text": "His name was Constantine the Eleventh.",
+   "start": 164.758,
+   "end": 167.497
+  },
+  {
+   "i": 47,
+   "section": "CONTEXT",
+   "group": 5,
+   "text": "He had spent years fighting the Turks in southern Greece.",
+   "start": 167.497,
+   "end": 171.606
+  },
+  {
+   "i": 48,
+   "section": "CONTEXT",
+   "group": 5,
+   "text": "He was brave and steady.",
+   "start": 171.606,
+   "end": 173.336
+  },
+  {
+   "i": 49,
+   "section": "CONTEXT",
+   "group": 5,
+   "text": "He would need to be.",
+   "start": 173.336,
+   "end": 174.777
+  },
+  {
+   "i": 50,
+   "section": "CONTEXT",
+   "group": 5,
+   "text": "In 1451, a young sultan took the throne for the second time.",
+   "start": 174.777,
+   "end": 179.967
+  },
+  {
+   "i": 51,
+   "section": "CONTEXT",
+   "group": 5,
+   "text": "His name was Mehmed.",
+   "start": 179.967,
+   "end": 181.409
+  },
+  {
+   "i": 52,
+   "section": "CONTEXT",
+   "group": 5,
+   "text": "He was not yet twenty.",
+   "start": 181.409,
+   "end": 182.995
+  },
+  {
+   "i": 53,
+   "section": "CONTEXT",
+   "group": 6,
+   "text": "As a boy, he had ruled once before.",
+   "start": 183.345,
+   "end": 185.799
+  },
+  {
+   "i": 54,
+   "section": "CONTEXT",
+   "group": 6,
+   "text": "It went badly, and his father took the crown back.",
+   "start": 185.799,
+   "end": 189.304
+  },
+  {
+   "i": 55,
+   "section": "CONTEXT",
+   "group": 7,
+   "text": "So few in the West took him seriously.",
+   "start": 190.304,
+   "end": 193.022
+  },
+  {
+   "i": 56,
+   "section": "CONTEXT",
+   "group": 7,
+   "text": "They would soon regret it.",
+   "start": 193.022,
+   "end": 194.882
+  },
+  {
+   "i": 57,
+   "section": "CONTEXT",
+   "group": 7,
+   "text": "Mehmed wanted one prize above all others.",
+   "start": 194.882,
+   "end": 197.815
+  },
+  {
+   "i": 58,
+   "section": "CONTEXT",
+   "group": 7,
+   "text": "Constantinople.",
+   "start": 197.815,
+   "end": 198.888
+  },
+  {
+   "i": 59,
+   "section": "CONTEXT",
+   "group": 7,
+   "text": "But Mehmed had a problem.",
+   "start": 198.888,
+   "end": 200.677
+  },
+  {
+   "i": 60,
+   "section": "CONTEXT",
+   "group": 7,
+   "text": "No army had ever broken through those land walls.",
+   "start": 200.677,
+   "end": 204.182
+  },
+  {
+   "i": 61,
+   "section": "CONTEXT",
+   "group": 7,
+   "text": "Why should his army be any different?",
+   "start": 204.182,
+   "end": 206.829
+  },
+  {
+   "i": 62,
+   "section": "CHAPTER 1",
+   "group": 8,
+   "text": "Mehmed's first move was not an attack.",
+   "start": 207.629,
+   "end": 210.161
+  },
+  {
+   "i": 63,
+   "section": "CHAPTER 1",
+   "group": 8,
+   "text": "It was a building.",
+   "start": 210.161,
+   "end": 211.361
+  },
+  {
+   "i": 64,
+   "section": "CHAPTER 1",
+   "group": 8,
+   "text": "North of the city, the Bosphorus grows narrow.",
+   "start": 211.361,
+   "end": 214.426
+  },
+  {
+   "i": 65,
+   "section": "CHAPTER 1",
+   "group": 8,
+   "text": "On the Asian shore, his great-grandfather had already built a fort.",
+   "start": 214.426,
+   "end": 218.891
+  },
+  {
+   "i": 66,
+   "section": "CHAPTER 1",
+   "group": 8,
+   "text": "In the spring of 1452, Mehmed began a second fort on the European side, right across the water.",
+   "start": 218.891,
+   "end": 226.022
+  },
+  {
+   "i": 67,
+   "section": "CHAPTER 1",
+   "group": 8,
+   "text": "Thousands of workers hauled stone day and night.",
+   "start": 226.022,
+   "end": 229.22
+  },
+  {
+   "i": 68,
+   "section": "CHAPTER 1",
+   "group": 8,
+   "text": "In just a few months, the walls were up.",
+   "start": 229.22,
+   "end": 231.886
+  },
+  {
+   "i": 69,
+   "section": "CHAPTER 1",
+   "group": 8,
+   "text": "Meanwhile, Mehmed hardly slept.",
+   "start": 231.886,
+   "end": 233.952
+  },
+  {
+   "i": 70,
+   "section": "CHAPTER 1",
+   "group": 8,
+   "text": "One chronicler says he spent his nights drawing plans of the city walls, asking where the guns should go.",
+   "start": 233.952,
+   "end": 240.949
+  },
+  {
+   "i": 71,
+   "section": "CHAPTER 1",
+   "group": 8,
+   "text": "The Turks called it Boghazkesen.",
+   "start": 240.949,
+   "end": 243.082
+  },
+  {
+   "i": 72,
+   "section": "CHAPTER 1",
+   "group": 8,
+   "text": "The name has two meanings.",
+   "start": 243.082,
+   "end": 244.814
+  },
+  {
+   "i": 73,
+   "section": "CHAPTER 1",
+   "group": 8,
+   "text": "It means cutter of the strait.",
+   "start": 244.814,
+   "end": 246.813
+  },
+  {
+   "i": 74,
+   "section": "CHAPTER 1",
+   "group": 8,
+   "text": "It also means throat-cutter.",
+   "start": 246.813,
+   "end": 248.679
+  },
+  {
+   "i": 75,
+   "section": "CHAPTER 1",
+   "group": 8,
+   "text": "Now every ship sailing to or from the Black Sea had to pass under its guns.",
+   "start": 248.679,
+   "end": 253.677
+  },
+  {
+   "i": 76,
+   "section": "CHAPTER 1",
+   "group": 9,
+   "text": "And the city lived on the grain those ships carried.",
+   "start": 254.027,
+   "end": 257.86
+  },
+  {
+   "i": 77,
+   "section": "CHAPTER 1",
+   "group": 9,
+   "text": "What would happen if those ships stopped coming?",
+   "start": 257.86,
+   "end": 261.397
+  },
+  {
+   "i": 78,
+   "section": "CHAPTER 1",
+   "group": 9,
+   "text": "Mehmed set a simple rule.",
+   "start": 261.397,
+   "end": 263.239
+  },
+  {
+   "i": 79,
+   "section": "CHAPTER 1",
+   "group": 9,
+   "text": "Every ship must stop and pay.",
+   "start": 263.239,
+   "end": 265.376
+  },
+  {
+   "i": 80,
+   "section": "CHAPTER 1",
+   "group": 9,
+   "text": "Late in 1452, a Venetian captain refused to stop.",
+   "start": 265.376,
+   "end": 269.872
+  },
+  {
+   "i": 81,
+   "section": "CHAPTER 1",
+   "group": 9,
+   "text": "One stone ball sank his ship.",
+   "start": 269.872,
+   "end": 272.009
+  },
+  {
+   "i": 82,
+   "section": "CHAPTER 1",
+   "group": 9,
+   "text": "Most of his crew lost their heads.",
+   "start": 272.009,
+   "end": 274.515
+  },
+  {
+   "i": 83,
+   "section": "CHAPTER 1",
+   "group": 9,
+   "text": "The captain was impaled beside the road, where every passing sailor could see him.",
+   "start": 274.515,
+   "end": 280.558
+  },
+  {
+   "i": 84,
+   "section": "CHAPTER 1",
+   "group": 10,
+   "text": "The message was clear.",
+   "start": 282.058,
+   "end": 283.62
+  },
+  {
+   "i": 85,
+   "section": "CHAPTER 1",
+   "group": 10,
+   "text": "If you sailed past without permission, you died.",
+   "start": 283.62,
+   "end": 287.028
+  },
+  {
+   "i": 86,
+   "section": "CHAPTER 1",
+   "group": 10,
+   "text": "Inside the city, Constantine understood what the fortress meant.",
+   "start": 287.028,
+   "end": 291.572
+  },
+  {
+   "i": 87,
+   "section": "CHAPTER 1",
+   "group": 10,
+   "text": "The siege had already begun, in all but name.",
+   "start": 291.572,
+   "end": 294.766
+  },
+  {
+   "i": 88,
+   "section": "CHAPTER 1",
+   "group": 10,
+   "text": "So he did the only thing he could.",
+   "start": 294.766,
+   "end": 297.18
+  },
+  {
+   "i": 89,
+   "section": "CHAPTER 1",
+   "group": 10,
+   "text": "He begged the West for help.",
+   "start": 297.18,
+   "end": 299.168
+  },
+  {
+   "i": 90,
+   "section": "CHAPTER 1",
+   "group": 10,
+   "text": "But help from the West came with a price.",
+   "start": 299.168,
+   "end": 302.079
+  },
+  {
+   "i": 91,
+   "section": "CHAPTER 1",
+   "group": 10,
+   "text": "For four hundred years, the churches of Rome and Constantinople had been split.",
+   "start": 302.079,
+   "end": 307.688
+  },
+  {
+   "i": 92,
+   "section": "CHAPTER 1",
+   "group": 10,
+   "text": "The Pope wanted the Greek church to accept his authority.",
+   "start": 307.688,
+   "end": 311.735
+  },
+  {
+   "i": 93,
+   "section": "CHAPTER 1",
+   "group": 10,
+   "text": "Only then would Catholic Europe send soldiers.",
+   "start": 311.735,
+   "end": 315.001
+  },
+  {
+   "i": 94,
+   "section": "CHAPTER 1",
+   "group": 10,
+   "text": "So on 12 December 1452, the emperor's court declared the churches united.",
+   "start": 315.001,
+   "end": 321.462
+  },
+  {
+   "i": 95,
+   "section": "CHAPTER 1",
+   "group": 10,
+   "text": "Many Greeks were furious.",
+   "start": 321.462,
+   "end": 323.237
+  },
+  {
+   "i": 96,
+   "section": "CHAPTER 1",
+   "group": 10,
+   "text": "To them, it felt like selling their faith.",
+   "start": 323.237,
+   "end": 326.219
+  },
+  {
+   "i": 97,
+   "section": "CHAPTER 1",
+   "group": 10,
+   "text": "A chronicler named Doukas reports a famous remark from those days.",
+   "start": 326.219,
+   "end": 330.905
+  },
+  {
+   "i": 98,
+   "section": "CHAPTER 1",
+   "group": 11,
+   "text": "A great lord said he would rather see the Turkish turban in the city than the Latin mitre.",
+   "start": 331.255,
+   "end": 337.795
+  },
+  {
+   "i": 99,
+   "section": "CHAPTER 1",
+   "group": 11,
+   "text": "Historians still argue about the speaker.",
+   "start": 337.795,
+   "end": 340.774
+  },
+  {
+   "i": 100,
+   "section": "CHAPTER 1",
+   "group": 11,
+   "text": "But the anger behind those words was real.",
+   "start": 340.774,
+   "end": 343.827
+  },
+  {
+   "i": 101,
+   "section": "CHAPTER 1",
+   "group": 11,
+   "text": "And what did all that anger buy?",
+   "start": 343.827,
+   "end": 346.152
+  },
+  {
+   "i": 102,
+   "section": "CHAPTER 1",
+   "group": 11,
+   "text": "Two hundred archers, sent with the Pope's envoy.",
+   "start": 346.152,
+   "end": 349.64
+  },
+  {
+   "i": 103,
+   "section": "CHAPTER 1",
+   "group": 11,
+   "text": "Barely more.",
+   "start": 349.64,
+   "end": 350.512
+  },
+  {
+   "i": 104,
+   "section": "CHAPTER 1",
+   "group": 11,
+   "text": "Still, one gift did arrive that winter.",
+   "start": 350.512,
+   "end": 353.346
+  },
+  {
+   "i": 105,
+   "section": "CHAPTER 1",
+   "group": 11,
+   "text": "That January, a Genoese captain sailed into the harbour with seven hundred soldiers.",
+   "start": 353.346,
+   "end": 359.45
+  },
+  {
+   "i": 106,
+   "section": "CHAPTER 1",
+   "group": 11,
+   "text": "His name was Giovanni Giustiniani.",
+   "start": 359.45,
+   "end": 361.921
+  },
+  {
+   "i": 107,
+   "section": "CHAPTER 1",
+   "group": 11,
+   "text": "He was an expert in defending walls.",
+   "start": 361.921,
+   "end": 364.537
+  },
+  {
+   "i": 108,
+   "section": "CHAPTER 1",
+   "group": 11,
+   "text": "Constantine gave him command of the land walls.",
+   "start": 364.537,
+   "end": 367.953
+  },
+  {
+   "i": 109,
+   "section": "CHAPTER 1",
+   "group": 11,
+   "text": "Giustiniani planned to hold them at any cost.",
+   "start": 367.953,
+   "end": 371.223
+  },
+  {
+   "i": 110,
+   "section": "CHAPTER 1",
+   "group": 11,
+   "text": "Would it be enough?",
+   "start": 371.223,
+   "end": 372.604
+  },
+  {
+   "i": 111,
+   "section": "CHAPTER 1",
+   "group": 11,
+   "text": "Seven hundred men were not an army.",
+   "start": 372.604,
+   "end": 375.147
+  },
+  {
+   "i": 112,
+   "section": "CHAPTER 1",
+   "group": 11,
+   "text": "But Mehmed was about to bring one.",
+   "start": 375.147,
+   "end": 377.618
+  },
+  {
+   "i": 113,
+   "section": "CHAPTER 2",
+   "group": 12,
+   "text": "To understand how Mehmed planned to break the walls, you need to meet one man.",
+   "start": 378.418,
+   "end": 384.289
+  },
+  {
+   "i": 114,
+   "section": "CHAPTER 2",
+   "group": 12,
+   "text": "Before the siege began, a Hungarian engineer named Orban came looking for work.",
+   "start": 384.289,
+   "end": 390.235
+  },
+  {
+   "i": 115,
+   "section": "CHAPTER 2",
+   "group": 12,
+   "text": "Orban cast cannons.",
+   "start": 390.235,
+   "end": 391.665
+  },
+  {
+   "i": 116,
+   "section": "CHAPTER 2",
+   "group": 12,
+   "text": "Big ones, in bronze.",
+   "start": 391.665,
+   "end": 393.17
+  },
+  {
+   "i": 117,
+   "section": "CHAPTER 2",
+   "group": 12,
+   "text": "He went to the Byzantine emperor first.",
+   "start": 393.17,
+   "end": 396.106
+  },
+  {
+   "i": 118,
+   "section": "CHAPTER 2",
+   "group": 12,
+   "text": "But Constantine could not afford his price.",
+   "start": 396.106,
+   "end": 399.342
+  },
+  {
+   "i": 119,
+   "section": "CHAPTER 2",
+   "group": 12,
+   "text": "So Orban went to Mehmed instead.",
+   "start": 399.342,
+   "end": 401.751
+  },
+  {
+   "i": 120,
+   "section": "CHAPTER 2",
+   "group": 12,
+   "text": "Mehmed paid him well, and gave him everything he needed.",
+   "start": 401.751,
+   "end": 405.966
+  },
+  {
+   "i": 121,
+   "section": "CHAPTER 2",
+   "group": 12,
+   "text": "Mehmed asked him one question.",
+   "start": 405.966,
+   "end": 408.224
+  },
+  {
+   "i": 122,
+   "section": "CHAPTER 2",
+   "group": 12,
+   "text": "Could his gun break the walls of Constantinople?",
+   "start": 408.224,
+   "end": 411.836
+  },
+  {
+   "i": 123,
+   "section": "CHAPTER 2",
+   "group": 12,
+   "text": "Orban's answer became famous.",
+   "start": 411.836,
+   "end": 414.019
+  },
+  {
+   "i": 124,
+   "section": "CHAPTER 2",
+   "group": 12,
+   "text": "His gun, he said, could smash the walls of Babylon itself.",
+   "start": 414.019,
+   "end": 418.385
+  },
+  {
+   "i": 125,
+   "section": "CHAPTER 2",
+   "group": 12,
+   "text": "So Mehmed told him to build it.",
+   "start": 418.385,
+   "end": 420.718
+  },
+  {
+   "i": 126,
+   "section": "CHAPTER 2",
+   "group": 12,
+   "text": "In three months, Orban built a monster.",
+   "start": 420.718,
+   "end": 423.653
+  },
+  {
+   "i": 127,
+   "section": "CHAPTER 2",
+   "group": 12,
+   "text": "The cannon was around eight metres long.",
+   "start": 423.653,
+   "end": 426.664
+  },
+  {
+   "i": 128,
+   "section": "CHAPTER 2",
+   "group": 13,
+   "text": "It could throw a stone ball weighing several hundred kilograms.",
+   "start": 427.014,
+   "end": 431.433
+  },
+  {
+   "i": 129,
+   "section": "CHAPTER 2",
+   "group": 13,
+   "text": "In a test, the ball flew for more than a mile.",
+   "start": 431.433,
+   "end": 434.66
+  },
+  {
+   "i": 130,
+   "section": "CHAPTER 2",
+   "group": 13,
+   "text": "It buried itself deep in the ground.",
+   "start": 434.66,
+   "end": 437.185
+  },
+  {
+   "i": 131,
+   "section": "CHAPTER 2",
+   "group": 13,
+   "text": "Moving it took sixty oxen and hundreds of men.",
+   "start": 437.185,
+   "end": 440.412
+  },
+  {
+   "i": 132,
+   "section": "CHAPTER 2",
+   "group": 13,
+   "text": "And Orban's monster was not alone.",
+   "start": 440.412,
+   "end": 442.797
+  },
+  {
+   "i": 133,
+   "section": "CHAPTER 2",
+   "group": 13,
+   "text": "Mehmed brought around seventy smaller guns as well.",
+   "start": 442.797,
+   "end": 446.375
+  },
+  {
+   "i": 134,
+   "section": "CHAPTER 2",
+   "group": 13,
+   "text": "Imagine the road to Constantinople.",
+   "start": 446.375,
+   "end": 448.83
+  },
+  {
+   "i": 135,
+   "section": "CHAPTER 2",
+   "group": 13,
+   "text": "For weeks, this bronze giant crawled along it.",
+   "start": 448.83,
+   "end": 452.057
+  },
+  {
+   "i": 136,
+   "section": "CHAPTER 2",
+   "group": 13,
+   "text": "Mehmed would soon learn that size was not everything.",
+   "start": 452.057,
+   "end": 455.774
+  },
+  {
+   "i": 137,
+   "section": "CHAPTER 2",
+   "group": 13,
+   "text": "On 2 April 1453, the first Ottoman soldiers made camp outside the walls.",
+   "start": 455.774,
+   "end": 461.877
+  },
+  {
+   "i": 138,
+   "section": "CHAPTER 2",
+   "group": 13,
+   "text": "Inside, the defenders closed the gates.",
+   "start": 461.877,
+   "end": 464.613
+  },
+  {
+   "i": 139,
+   "section": "CHAPTER 2",
+   "group": 13,
+   "text": "They broke down the bridges over the moat.",
+   "start": 464.613,
+   "end": 467.559
+  },
+  {
+   "i": 140,
+   "section": "CHAPTER 2",
+   "group": 13,
+   "text": "Mehmed pitched his red and gold tent across from the middle of the land walls.",
+   "start": 467.559,
+   "end": 473.03
+  },
+  {
+   "i": 141,
+   "section": "CHAPTER 2",
+   "group": 14,
+   "text": "From there, he could watch the weakest stretch of the defences.",
+   "start": 473.38,
+   "end": 477.887
+  },
+  {
+   "i": 142,
+   "section": "CHAPTER 2",
+   "group": 14,
+   "text": "How many men did he bring?",
+   "start": 477.887,
+   "end": 479.747
+  },
+  {
+   "i": 143,
+   "section": "CHAPTER 2",
+   "group": 14,
+   "text": "Nobody counted them for certain.",
+   "start": 479.747,
+   "end": 482.036
+  },
+  {
+   "i": 144,
+   "section": "CHAPTER 2",
+   "group": 14,
+   "text": "Modern historians suggest up to eighty thousand.",
+   "start": 482.036,
+   "end": 485.469
+  },
+  {
+   "i": 145,
+   "section": "CHAPTER 2",
+   "group": 14,
+   "text": "Witnesses inside the city claimed far more.",
+   "start": 485.469,
+   "end": 488.545
+  },
+  {
+   "i": 146,
+   "section": "CHAPTER 2",
+   "group": 14,
+   "text": "At the heart of the army stood the Janissaries, the sultan's elite infantry.",
+   "start": 488.545,
+   "end": 493.981
+  },
+  {
+   "i": 147,
+   "section": "CHAPTER 2",
+   "group": 14,
+   "text": "Most had been taken from Christian families in the Balkans as boys.",
+   "start": 493.981,
+   "end": 498.774
+  },
+  {
+   "i": 148,
+   "section": "CHAPTER 2",
+   "group": 14,
+   "text": "They grew up as Muslims, trained for nothing but war.",
+   "start": 498.774,
+   "end": 502.565
+  },
+  {
+   "i": 149,
+   "section": "CHAPTER 2",
+   "group": 14,
+   "text": "Behind the walls stood about seven thousand defenders.",
+   "start": 502.565,
+   "end": 506.428
+  },
+  {
+   "i": 150,
+   "section": "CHAPTER 2",
+   "group": 14,
+   "text": "The emperor's friend, George Sphrantzes, counted the Greek men fit to fight.",
+   "start": 506.428,
+   "end": 511.864
+  },
+  {
+   "i": 151,
+   "section": "CHAPTER 2",
+   "group": 14,
+   "text": "He found fewer than five thousand.",
+   "start": 511.864,
+   "end": 514.296
+  },
+  {
+   "i": 152,
+   "section": "CHAPTER 2",
+   "group": 14,
+   "text": "Constantine read the list in silence.",
+   "start": 514.296,
+   "end": 516.943
+  },
+  {
+   "i": 153,
+   "section": "CHAPTER 2",
+   "group": 14,
+   "text": "After a long pause, he told Sphrantzes to keep the number secret.",
+   "start": 516.943,
+   "end": 521.592
+  },
+  {
+   "i": 154,
+   "section": "CHAPTER 2",
+   "group": 15,
+   "text": "How long could so few men hold so much wall?",
+   "start": 521.942,
+   "end": 524.769
+  },
+  {
+   "i": 155,
+   "section": "CHAPTER 2",
+   "group": 15,
+   "text": "Constantine had to choose where to put them.",
+   "start": 524.769,
+   "end": 527.597
+  },
+  {
+   "i": 156,
+   "section": "CHAPTER 2",
+   "group": 15,
+   "text": "So he sent his best troops to the weakest points.",
+   "start": 527.597,
+   "end": 530.745
+  },
+  {
+   "i": 157,
+   "section": "CHAPTER 2",
+   "group": 15,
+   "text": "Giustiniani took the middle of the land walls, right across from Mehmed's tent.",
+   "start": 530.745,
+   "end": 535.822
+  },
+  {
+   "i": 158,
+   "section": "CHAPTER 2",
+   "group": 15,
+   "text": "The Venetians guarded the palace at the northern end.",
+   "start": 535.822,
+   "end": 539.227
+  },
+  {
+   "i": 159,
+   "section": "CHAPTER 2",
+   "group": 15,
+   "text": "And where would Mehmed strike first?",
+   "start": 539.227,
+   "end": 541.54
+  },
+  {
+   "i": 160,
+   "section": "CHAPTER 2",
+   "group": 16,
+   "text": "On 6 April 1453, the siege began.",
+   "start": 541.89,
+   "end": 545.229
+  },
+  {
+   "i": 161,
+   "section": "CHAPTER 2",
+   "group": 16,
+   "text": "The guns fired every day, for weeks.",
+   "start": 545.229,
+   "end": 547.734
+  },
+  {
+   "i": 162,
+   "section": "CHAPTER 2",
+   "group": 16,
+   "text": "Picture yourself on the wall when the great cannon fires.",
+   "start": 547.734,
+   "end": 551.698
+  },
+  {
+   "i": 163,
+   "section": "CHAPTER 2",
+   "group": 16,
+   "text": "You feel the shot in your chest before you hear it.",
+   "start": 551.698,
+   "end": 555.246
+  },
+  {
+   "i": 164,
+   "section": "CHAPTER 2",
+   "group": 16,
+   "text": "The ground shakes.",
+   "start": 555.246,
+   "end": 556.498
+  },
+  {
+   "i": 165,
+   "section": "CHAPTER 2",
+   "group": 16,
+   "text": "Dust pours from the stones above you.",
+   "start": 556.498,
+   "end": 559.072
+  },
+  {
+   "i": 166,
+   "section": "CHAPTER 2",
+   "group": 16,
+   "text": "In the streets behind you, people run to the churches to pray.",
+   "start": 559.072,
+   "end": 563.385
+  },
+  {
+   "i": 167,
+   "section": "CHAPTER 2",
+   "group": 17,
+   "text": "But the great cannon could only fire a few times a day.",
+   "start": 563.735,
+   "end": 567.745
+  },
+  {
+   "i": 168,
+   "section": "CHAPTER 2",
+   "group": 17,
+   "text": "It needed hours to reload.",
+   "start": 567.745,
+   "end": 569.64
+  },
+  {
+   "i": 169,
+   "section": "CHAPTER 2",
+   "group": 17,
+   "text": "Still, every hit tore open part of the outer wall.",
+   "start": 569.64,
+   "end": 573.286
+  },
+  {
+   "i": 170,
+   "section": "CHAPTER 2",
+   "group": 17,
+   "text": "So every night, the defenders came out to repair it.",
+   "start": 573.286,
+   "end": 577.077
+  },
+  {
+   "i": 171,
+   "section": "CHAPTER 2",
+   "group": 17,
+   "text": "They packed the gaps with timber, earth and barrels.",
+   "start": 577.077,
+   "end": 580.869
+  },
+  {
+   "i": 172,
+   "section": "CHAPTER 2",
+   "group": 17,
+   "text": "By morning, a new wall of earth and wood stood where stone had stood the day before.",
+   "start": 580.869,
+   "end": 586.993
+  },
+  {
+   "i": 173,
+   "section": "CHAPTER 2",
+   "group": 17,
+   "text": "Here is the strange part.",
+   "start": 586.993,
+   "end": 588.816
+  },
+  {
+   "i": 174,
+   "section": "CHAPTER 2",
+   "group": 17,
+   "text": "The soft earth often worked better than stone.",
+   "start": 588.816,
+   "end": 592.17
+  },
+  {
+   "i": 175,
+   "section": "CHAPTER 2",
+   "group": 17,
+   "text": "It swallowed the cannon balls.",
+   "start": 592.17,
+   "end": 594.357
+  },
+  {
+   "i": 176,
+   "section": "CHAPTER 2",
+   "group": 17,
+   "text": "On 18 April, Mehmed sent his men against the broken wall at night.",
+   "start": 594.357,
+   "end": 599.607
+  },
+  {
+   "i": 177,
+   "section": "CHAPTER 2",
+   "group": 17,
+   "text": "For four hours, the fighting raged in the dark.",
+   "start": 599.607,
+   "end": 603.033
+  },
+  {
+   "i": 178,
+   "section": "CHAPTER 2",
+   "group": 18,
+   "text": "The defenders threw them back, and the Ottoman side lost far more men.",
+   "start": 604.033,
+   "end": 609.02
+  },
+  {
+   "i": 179,
+   "section": "CHAPTER 2",
+   "group": 18,
+   "text": "The walls were cracking.",
+   "start": 609.02,
+   "end": 610.73
+  },
+  {
+   "i": 180,
+   "section": "CHAPTER 2",
+   "group": 18,
+   "text": "But they had not fallen.",
+   "start": 610.73,
+   "end": 612.439
+  },
+  {
+   "i": 181,
+   "section": "CHAPTER 2",
+   "group": 18,
+   "text": "And as long as the harbour stayed open, ships could still bring help.",
+   "start": 612.439,
+   "end": 617.355
+  },
+  {
+   "i": 182,
+   "section": "CHAPTER 2",
+   "group": 18,
+   "text": "Which leaves the real question of this siege.",
+   "start": 617.355,
+   "end": 620.561
+  },
+  {
+   "i": 183,
+   "section": "CHAPTER 2",
+   "group": 18,
+   "text": "How do you beat a city you cannot cut off?",
+   "start": 620.561,
+   "end": 623.553
+  },
+  {
+   "i": 184,
+   "section": "CHAPTER 3",
+   "group": 19,
+   "text": "Two weeks into the siege, the land walls still held.",
+   "start": 624.352,
+   "end": 628.085
+  },
+  {
+   "i": 185,
+   "section": "CHAPTER 3",
+   "group": 19,
+   "text": "So Mehmed looked to the sea.",
+   "start": 628.085,
+   "end": 630.095
+  },
+  {
+   "i": 186,
+   "section": "CHAPTER 3",
+   "group": 19,
+   "text": "The city's harbour was the Golden Horn.",
+   "start": 630.095,
+   "end": 632.894
+  },
+  {
+   "i": 187,
+   "section": "CHAPTER 3",
+   "group": 19,
+   "text": "Across its mouth, the Byzantines had stretched a huge chain.",
+   "start": 632.894,
+   "end": 637.201
+  },
+  {
+   "i": 188,
+   "section": "CHAPTER 3",
+   "group": 19,
+   "text": "It floated on wooden logs.",
+   "start": 637.201,
+   "end": 639.067
+  },
+  {
+   "i": 189,
+   "section": "CHAPTER 3",
+   "group": 19,
+   "text": "It kept the Ottoman fleet out.",
+   "start": 639.067,
+   "end": 641.22
+  },
+  {
+   "i": 190,
+   "section": "CHAPTER 3",
+   "group": 19,
+   "text": "On the far side of the harbour stood Galata, a town run by merchants from Genoa.",
+   "start": 641.22,
+   "end": 646.962
+  },
+  {
+   "i": 191,
+   "section": "CHAPTER 3",
+   "group": 19,
+   "text": "Galata said it was neutral.",
+   "start": 646.962,
+   "end": 648.9
+  },
+  {
+   "i": 192,
+   "section": "CHAPTER 3",
+   "group": 19,
+   "text": "In truth, it traded with both sides.",
+   "start": 648.9,
+   "end": 651.484
+  },
+  {
+   "i": 193,
+   "section": "CHAPTER 3",
+   "group": 19,
+   "text": "On 20 April, a small Christian convoy appeared to the south.",
+   "start": 651.484,
+   "end": 656.221
+  },
+  {
+   "i": 194,
+   "section": "CHAPTER 3",
+   "group": 19,
+   "text": "Three ships were Genoese.",
+   "start": 656.221,
+   "end": 658.016
+  },
+  {
+   "i": 195,
+   "section": "CHAPTER 3",
+   "group": 19,
+   "text": "The fourth carried grain for the emperor.",
+   "start": 658.016,
+   "end": 660.959
+  },
+  {
+   "i": 196,
+   "section": "CHAPTER 3",
+   "group": 19,
+   "text": "Mehmed sent his whole navy against them.",
+   "start": 660.959,
+   "end": 663.83
+  },
+  {
+   "i": 197,
+   "section": "CHAPTER 3",
+   "group": 19,
+   "text": "Dozens of smaller ships swarmed the four.",
+   "start": 663.83,
+   "end": 666.773
+  },
+  {
+   "i": 198,
+   "section": "CHAPTER 3",
+   "group": 19,
+   "text": "Could four ships really fight off a whole navy?",
+   "start": 666.773,
+   "end": 670.146
+  },
+  {
+   "i": 199,
+   "section": "CHAPTER 3",
+   "group": 20,
+   "text": "Picture the scene from the sea walls.",
+   "start": 670.496,
+   "end": 673.067
+  },
+  {
+   "i": 200,
+   "section": "CHAPTER 3",
+   "group": 20,
+   "text": "The whole city is watching.",
+   "start": 673.067,
+   "end": 674.943
+  },
+  {
+   "i": 201,
+   "section": "CHAPTER 3",
+   "group": 20,
+   "text": "People crowd every tower.",
+   "start": 674.943,
+   "end": 676.68
+  },
+  {
+   "i": 202,
+   "section": "CHAPTER 3",
+   "group": 20,
+   "text": "The tall Christian ships ride high above the Ottoman galleys.",
+   "start": 676.68,
+   "end": 680.919
+  },
+  {
+   "i": 203,
+   "section": "CHAPTER 3",
+   "group": 20,
+   "text": "Their sailors hurl stones and fire down at the attackers.",
+   "start": 680.919,
+   "end": 684.88
+  },
+  {
+   "i": 204,
+   "section": "CHAPTER 3",
+   "group": 20,
+   "text": "Suddenly, the wind drops.",
+   "start": 684.88,
+   "end": 686.617
+  },
+  {
+   "i": 205,
+   "section": "CHAPTER 3",
+   "group": 20,
+   "text": "The four ships drift toward the Ottoman shore.",
+   "start": 686.617,
+   "end": 689.813
+  },
+  {
+   "i": 206,
+   "section": "CHAPTER 3",
+   "group": 20,
+   "text": "On the beach, Mehmed rides his horse into the waves, shouting at his admiral.",
+   "start": 689.813,
+   "end": 695.164
+  },
+  {
+   "i": 207,
+   "section": "CHAPTER 3",
+   "group": 21,
+   "text": "But near sunset, the wind returns.",
+   "start": 696.164,
+   "end": 698.951
+  },
+  {
+   "i": 208,
+   "section": "CHAPTER 3",
+   "group": 21,
+   "text": "The four ships break free and slip in behind the chain.",
+   "start": 698.951,
+   "end": 703.459
+  },
+  {
+   "i": 209,
+   "section": "CHAPTER 3",
+   "group": 21,
+   "text": "Inside the city, people cheered and rang the bells.",
+   "start": 703.459,
+   "end": 707.64
+  },
+  {
+   "i": 210,
+   "section": "CHAPTER 3",
+   "group": 22,
+   "text": "Mehmed was furious.",
+   "start": 707.99,
+   "end": 709.425
+  },
+  {
+   "i": 211,
+   "section": "CHAPTER 3",
+   "group": 22,
+   "text": "He had his admiral beaten, and took away his wealth.",
+   "start": 709.425,
+   "end": 713.351
+  },
+  {
+   "i": 212,
+   "section": "CHAPTER 3",
+   "group": 22,
+   "text": "Now he knew he could not break the chain from outside.",
+   "start": 713.351,
+   "end": 717.428
+  },
+  {
+   "i": 213,
+   "section": "CHAPTER 3",
+   "group": 22,
+   "text": "So what could he do?",
+   "start": 717.428,
+   "end": 718.938
+  },
+  {
+   "i": 214,
+   "section": "CHAPTER 3",
+   "group": 22,
+   "text": "He chose a plan that sounded impossible.",
+   "start": 718.938,
+   "end": 721.959
+  },
+  {
+   "i": 215,
+   "section": "CHAPTER 3",
+   "group": 22,
+   "text": "Behind Galata, there is a hill.",
+   "start": 721.959,
+   "end": 724.299
+  },
+  {
+   "i": 216,
+   "section": "CHAPTER 3",
+   "group": 22,
+   "text": "On the far side of that hill lies the Golden Horn.",
+   "start": 724.299,
+   "end": 728.075
+  },
+  {
+   "i": 217,
+   "section": "CHAPTER 3",
+   "group": 22,
+   "text": "His men laid a road of greased logs up the slope.",
+   "start": 728.075,
+   "end": 731.774
+  },
+  {
+   "i": 218,
+   "section": "CHAPTER 3",
+   "group": 23,
+   "text": "On 22 April, they dragged their ships over the hill.",
+   "start": 732.124,
+   "end": 736.432
+  },
+  {
+   "i": 219,
+   "section": "CHAPTER 3",
+   "group": 23,
+   "text": "Oxen pulled.",
+   "start": 736.432,
+   "end": 737.323
+  },
+  {
+   "i": 220,
+   "section": "CHAPTER 3",
+   "group": 23,
+   "text": "Men pushed.",
+   "start": 737.323,
+   "end": 738.14
+  },
+  {
+   "i": 221,
+   "section": "CHAPTER 3",
+   "group": 23,
+   "text": "Some crews even raised their sails as they rolled over the top.",
+   "start": 738.14,
+   "end": 742.818
+  },
+  {
+   "i": 222,
+   "section": "CHAPTER 3",
+   "group": 23,
+   "text": "Picture yourself on the sea wall that morning.",
+   "start": 742.818,
+   "end": 746.234
+  },
+  {
+   "i": 223,
+   "section": "CHAPTER 3",
+   "group": 23,
+   "text": "You look down at water that was safe yesterday.",
+   "start": 746.234,
+   "end": 749.724
+  },
+  {
+   "i": 224,
+   "section": "CHAPTER 3",
+   "group": 23,
+   "text": "Around seventy Ottoman ships are floating inside the harbour.",
+   "start": 749.724,
+   "end": 754.254
+  },
+  {
+   "i": 225,
+   "section": "CHAPTER 3",
+   "group": 24,
+   "text": "How had nobody stopped them?",
+   "start": 754.604,
+   "end": 756.423
+  },
+  {
+   "i": 226,
+   "section": "CHAPTER 3",
+   "group": 24,
+   "text": "The Genoese of Galata lived right beside that road.",
+   "start": 756.423,
+   "end": 759.737
+  },
+  {
+   "i": 227,
+   "section": "CHAPTER 3",
+   "group": 24,
+   "text": "Later, people in the city accused them of looking the other way.",
+   "start": 759.737,
+   "end": 763.895
+  },
+  {
+   "i": 228,
+   "section": "CHAPTER 3",
+   "group": 25,
+   "text": "Now the city had to guard its sea walls too.",
+   "start": 765.395,
+   "end": 768.297
+  },
+  {
+   "i": 229,
+   "section": "CHAPTER 3",
+   "group": 25,
+   "text": "Its defenders were stretched even thinner.",
+   "start": 768.297,
+   "end": 771.068
+  },
+  {
+   "i": 230,
+   "section": "CHAPTER 3",
+   "group": 25,
+   "text": "The Venetians in the harbour wanted to strike back.",
+   "start": 771.068,
+   "end": 774.432
+  },
+  {
+   "i": 231,
+   "section": "CHAPTER 3",
+   "group": 25,
+   "text": "On the night of 28 April, they tried to burn the Ottoman ships with fire boats.",
+   "start": 774.432,
+   "end": 780.039
+  },
+  {
+   "i": 232,
+   "section": "CHAPTER 3",
+   "group": 25,
+   "text": "But the Ottomans were ready.",
+   "start": 780.039,
+   "end": 781.886
+  },
+  {
+   "i": 233,
+   "section": "CHAPTER 3",
+   "group": 25,
+   "text": "Their guns sank the leading ship before it got close.",
+   "start": 781.886,
+   "end": 785.382
+  },
+  {
+   "i": 234,
+   "section": "CHAPTER 3",
+   "group": 25,
+   "text": "Forty sailors swam to the Ottoman shore.",
+   "start": 785.382,
+   "end": 788.021
+  },
+  {
+   "i": 235,
+   "section": "CHAPTER 3",
+   "group": 25,
+   "text": "Mehmed had every one of them killed in sight of the walls.",
+   "start": 788.021,
+   "end": 791.847
+  },
+  {
+   "i": 236,
+   "section": "CHAPTER 3",
+   "group": 25,
+   "text": "In reply, the defenders put two hundred and sixty Turkish prisoners to death on the walls.",
+   "start": 791.847,
+   "end": 797.783
+  },
+  {
+   "i": 237,
+   "section": "CHAPTER 3",
+   "group": 25,
+   "text": "The siege had turned into something darker.",
+   "start": 797.783,
+   "end": 800.62
+  },
+  {
+   "i": 238,
+   "section": "CHAPTER 3",
+   "group": 25,
+   "text": "And the city still had no way out.",
+   "start": 800.62,
+   "end": 802.863
+  },
+  {
+   "i": 239,
+   "section": "CHAPTER 3",
+   "group": 25,
+   "text": "So where would the next blow fall?",
+   "start": 802.863,
+   "end": 805.106
+  },
+  {
+   "i": 240,
+   "section": "CHAPTER 4",
+   "group": 26,
+   "text": "By May, the siege had lasted a month.",
+   "start": 805.906,
+   "end": 808.645
+  },
+  {
+   "i": 241,
+   "section": "CHAPTER 4",
+   "group": 26,
+   "text": "The city was hungry, and the defenders were worn out.",
+   "start": 808.645,
+   "end": 812.57
+  },
+  {
+   "i": 242,
+   "section": "CHAPTER 4",
+   "group": 26,
+   "text": "Mehmed now tried a new way in.",
+   "start": 812.57,
+   "end": 814.791
+  },
+  {
+   "i": 243,
+   "section": "CHAPTER 4",
+   "group": 26,
+   "text": "If he could not go through the walls, he would go under them.",
+   "start": 814.791,
+   "end": 819.308
+  },
+  {
+   "i": 244,
+   "section": "CHAPTER 4",
+   "group": 26,
+   "text": "He brought in miners from the silver mines of Serbia.",
+   "start": 819.308,
+   "end": 823.232
+  },
+  {
+   "i": 245,
+   "section": "CHAPTER 4",
+   "group": 26,
+   "text": "They began to dig tunnels toward the walls.",
+   "start": 823.232,
+   "end": 826.416
+  },
+  {
+   "i": 246,
+   "section": "CHAPTER 4",
+   "group": 26,
+   "text": "Inside the city, one man stood in their way.",
+   "start": 826.416,
+   "end": 829.674
+  },
+  {
+   "i": 247,
+   "section": "CHAPTER 4",
+   "group": 26,
+   "text": "Writers at the time called him a German, named Johannes Grant.",
+   "start": 829.674,
+   "end": 834.265
+  },
+  {
+   "i": 248,
+   "section": "CHAPTER 4",
+   "group": 26,
+   "text": "Some historians think he was really a Scot.",
+   "start": 834.265,
+   "end": 837.448
+  },
+  {
+   "i": 249,
+   "section": "CHAPTER 4",
+   "group": 26,
+   "text": "Either way, he knew mines.",
+   "start": 837.448,
+   "end": 839.374
+  },
+  {
+   "i": 250,
+   "section": "CHAPTER 4",
+   "group": 26,
+   "text": "His men dug their own tunnels to meet the Ottoman ones.",
+   "start": 839.374,
+   "end": 843.446
+  },
+  {
+   "i": 251,
+   "section": "CHAPTER 4",
+   "group": 27,
+   "text": "Imagine the fight down there.",
+   "start": 843.796,
+   "end": 845.926
+  },
+  {
+   "i": 252,
+   "section": "CHAPTER 4",
+   "group": 27,
+   "text": "You crawl in the dark, in a tunnel barely wider than your shoulders.",
+   "start": 845.926,
+   "end": 850.921
+  },
+  {
+   "i": 253,
+   "section": "CHAPTER 4",
+   "group": 27,
+   "text": "You hear picks on the other side of the earth.",
+   "start": 850.921,
+   "end": 854.3
+  },
+  {
+   "i": 254,
+   "section": "CHAPTER 4",
+   "group": 27,
+   "text": "You hold your breath.",
+   "start": 854.3,
+   "end": 855.843
+  },
+  {
+   "i": 255,
+   "section": "CHAPTER 4",
+   "group": 27,
+   "text": "Suddenly, the wall of earth gives way.",
+   "start": 855.843,
+   "end": 858.634
+  },
+  {
+   "i": 256,
+   "section": "CHAPTER 4",
+   "group": 27,
+   "text": "Your enemy is right in front of you.",
+   "start": 858.634,
+   "end": 861.279
+  },
+  {
+   "i": 257,
+   "section": "CHAPTER 4",
+   "group": 28,
+   "text": "So Grant's men burned some tunnels with Greek fire.",
+   "start": 861.629,
+   "end": 865.217
+  },
+  {
+   "i": 258,
+   "section": "CHAPTER 4",
+   "group": 28,
+   "text": "Others they collapsed on the diggers.",
+   "start": 865.217,
+   "end": 867.82
+  },
+  {
+   "i": 259,
+   "section": "CHAPTER 4",
+   "group": 28,
+   "text": "On 23 May, the defenders captured a pair of Ottoman officers underground.",
+   "start": 867.82,
+   "end": 873.377
+  },
+  {
+   "i": 260,
+   "section": "CHAPTER 4",
+   "group": 28,
+   "text": "Under torture, the officers gave away the location of every tunnel.",
+   "start": 873.377,
+   "end": 878.091
+  },
+  {
+   "i": 261,
+   "section": "CHAPTER 4",
+   "group": 28,
+   "text": "Within days, Grant's men had wrecked them all.",
+   "start": 878.091,
+   "end": 881.327
+  },
+  {
+   "i": 262,
+   "section": "CHAPTER 4",
+   "group": 29,
+   "text": "The miners had failed.",
+   "start": 882.327,
+   "end": 883.987
+  },
+  {
+   "i": 263,
+   "section": "CHAPTER 4",
+   "group": 29,
+   "text": "But what came next would hurt the city more than any tunnel.",
+   "start": 883.987,
+   "end": 888.516
+  },
+  {
+   "i": 264,
+   "section": "CHAPTER 4",
+   "group": 29,
+   "text": "While his miners dug, Mehmed had also tried words.",
+   "start": 888.516,
+   "end": 892.289
+  },
+  {
+   "i": 265,
+   "section": "CHAPTER 4",
+   "group": 29,
+   "text": "On 21 May, he sent the emperor an offer.",
+   "start": 892.289,
+   "end": 895.761
+  },
+  {
+   "i": 266,
+   "section": "CHAPTER 4",
+   "group": 29,
+   "text": "Give up the city, and you may go in peace.",
+   "start": 895.761,
+   "end": 898.931
+  },
+  {
+   "i": 267,
+   "section": "CHAPTER 4",
+   "group": 29,
+   "text": "Constantine could rule in the south of Greece instead.",
+   "start": 898.931,
+   "end": 903.006
+  },
+  {
+   "i": 268,
+   "section": "CHAPTER 4",
+   "group": 29,
+   "text": "His people could leave with their goods.",
+   "start": 903.006,
+   "end": 906.025
+  },
+  {
+   "i": 269,
+   "section": "CHAPTER 4",
+   "group": 29,
+   "text": "Constantine refused.",
+   "start": 906.025,
+   "end": 907.535
+  },
+  {
+   "i": 270,
+   "section": "CHAPTER 4",
+   "group": 29,
+   "text": "He would pay more tribute, he answered.",
+   "start": 907.535,
+   "end": 910.478
+  },
+  {
+   "i": 271,
+   "section": "CHAPTER 4",
+   "group": 29,
+   "text": "But the city was not his to give.",
+   "start": 910.478,
+   "end": 912.969
+  },
+  {
+   "i": 272,
+   "section": "CHAPTER 4",
+   "group": 29,
+   "text": "Everyone inside, he said, had chosen to die rather than surrender.",
+   "start": 912.969,
+   "end": 917.95
+  },
+  {
+   "i": 273,
+   "section": "CHAPTER 4",
+   "group": 29,
+   "text": "Yet the people of the city were losing hope.",
+   "start": 917.95,
+   "end": 921.271
+  },
+  {
+   "i": 274,
+   "section": "CHAPTER 4",
+   "group": 29,
+   "text": "Constantinople was full of old prophecies.",
+   "start": 921.271,
+   "end": 924.441
+  },
+  {
+   "i": 275,
+   "section": "CHAPTER 4",
+   "group": 29,
+   "text": "One said the city would fall under a waning moon.",
+   "start": 924.441,
+   "end": 928.139
+  },
+  {
+   "i": 276,
+   "section": "CHAPTER 4",
+   "group": 29,
+   "text": "On 22 May, the full moon rose over the walls.",
+   "start": 928.139,
+   "end": 931.988
+  },
+  {
+   "i": 277,
+   "section": "CHAPTER 4",
+   "group": 29,
+   "text": "But it did not rise whole.",
+   "start": 931.988,
+   "end": 933.951
+  },
+  {
+   "i": 278,
+   "section": "CHAPTER 4",
+   "group": 30,
+   "text": "For hours, part of it stayed dark.",
+   "start": 934.301,
+   "end": 936.639
+  },
+  {
+   "i": 279,
+   "section": "CHAPTER 4",
+   "group": 31,
+   "text": "It was an eclipse.",
+   "start": 938.139,
+   "end": 939.532
+  },
+  {
+   "i": 280,
+   "section": "CHAPTER 4",
+   "group": 31,
+   "text": "To the frightened people inside, it looked like the end.",
+   "start": 939.532,
+   "end": 943.867
+  },
+  {
+   "i": 281,
+   "section": "CHAPTER 4",
+   "group": 31,
+   "text": "A few days later, thick fog covered the city.",
+   "start": 943.867,
+   "end": 947.351
+  },
+  {
+   "i": 282,
+   "section": "CHAPTER 4",
+   "group": 31,
+   "text": "Some said a strange light glowed around the dome of the great church, Hagia Sophia.",
+   "start": 947.351,
+   "end": 953.776
+  },
+  {
+   "i": 283,
+   "section": "CHAPTER 4",
+   "group": 31,
+   "text": "To them, it was the spirit of God, leaving the city.",
+   "start": 953.776,
+   "end": 957.801
+  },
+  {
+   "i": 284,
+   "section": "CHAPTER 4",
+   "group": 31,
+   "text": "Still, Mehmed had worries of his own.",
+   "start": 957.801,
+   "end": 960.666
+  },
+  {
+   "i": 285,
+   "section": "CHAPTER 4",
+   "group": 31,
+   "text": "His men were tired too.",
+   "start": 960.666,
+   "end": 962.446
+  },
+  {
+   "i": 286,
+   "section": "CHAPTER 4",
+   "group": 31,
+   "text": "And rumours spoke of a Christian army on the way.",
+   "start": 962.446,
+   "end": 966.239
+  },
+  {
+   "i": 287,
+   "section": "CHAPTER 4",
+   "group": 31,
+   "text": "Constantine had said no.",
+   "start": 966.239,
+   "end": 968.097
+  },
+  {
+   "i": 288,
+   "section": "CHAPTER 4",
+   "group": 31,
+   "text": "Now Mehmed had to decide.",
+   "start": 968.097,
+   "end": 970.033
+  },
+  {
+   "i": 289,
+   "section": "CHAPTER 4",
+   "group": 31,
+   "text": "Should he risk everything on one final attack?",
+   "start": 970.033,
+   "end": 973.593
+  },
+  {
+   "i": 290,
+   "section": "TURNING POINT",
+   "group": 32,
+   "text": "So Mehmed called his commanders to his tent.",
+   "start": 974.393,
+   "end": 977.713
+  },
+  {
+   "i": 291,
+   "section": "TURNING POINT",
+   "group": 32,
+   "text": "His grand vizier, Halil, spoke first.",
+   "start": 977.713,
+   "end": 980.504
+  },
+  {
+   "i": 292,
+   "section": "TURNING POINT",
+   "group": 32,
+   "text": "Halil had never wanted this war.",
+   "start": 980.504,
+   "end": 982.918
+  },
+  {
+   "i": 293,
+   "section": "TURNING POINT",
+   "group": 32,
+   "text": "He urged the sultan to give up.",
+   "start": 982.918,
+   "end": 985.256
+  },
+  {
+   "i": 294,
+   "section": "TURNING POINT",
+   "group": 32,
+   "text": "A Western army might come any day, he warned.",
+   "start": 985.256,
+   "end": 988.651
+  },
+  {
+   "i": 295,
+   "section": "TURNING POINT",
+   "group": 32,
+   "text": "Better to make peace now.",
+   "start": 988.651,
+   "end": 990.537
+  },
+  {
+   "i": 296,
+   "section": "TURNING POINT",
+   "group": 32,
+   "text": "But a younger general, Zaganos, disagreed.",
+   "start": 990.537,
+   "end": 993.705
+  },
+  {
+   "i": 297,
+   "section": "TURNING POINT",
+   "group": 32,
+   "text": "The defenders were few and exhausted, he said.",
+   "start": 993.705,
+   "end": 997.175
+  },
+  {
+   "i": 298,
+   "section": "TURNING POINT",
+   "group": 32,
+   "text": "Attack now.",
+   "start": 997.175,
+   "end": 998.005
+  },
+  {
+   "i": 299,
+   "section": "TURNING POINT",
+   "group": 32,
+   "text": "So Mehmed chose Zaganos.",
+   "start": 998.005,
+   "end": 999.816
+  },
+  {
+   "i": 300,
+   "section": "TURNING POINT",
+   "group": 32,
+   "text": "He ordered one final assault.",
+   "start": 999.816,
+   "end": 1002.003
+  },
+  {
+   "i": 301,
+   "section": "TURNING POINT",
+   "group": 32,
+   "text": "For two days, his army prepared.",
+   "start": 1002.003,
+   "end": 1004.417
+  },
+  {
+   "i": 302,
+   "section": "TURNING POINT",
+   "group": 32,
+   "text": "At night, the camp blazed with fires.",
+   "start": 1004.417,
+   "end": 1007.208
+  },
+  {
+   "i": 303,
+   "section": "TURNING POINT",
+   "group": 32,
+   "text": "Drums and pipes played until dawn.",
+   "start": 1007.208,
+   "end": 1009.773
+  },
+  {
+   "i": 304,
+   "section": "TURNING POINT",
+   "group": 32,
+   "text": "Yet inside the city, on the evening of 28 May, something rare happened.",
+   "start": 1009.773,
+   "end": 1015.582
+  },
+  {
+   "i": 305,
+   "section": "TURNING POINT",
+   "group": 32,
+   "text": "Greeks and Latins crowded into Hagia Sophia together.",
+   "start": 1015.582,
+   "end": 1019.58
+  },
+  {
+   "i": 306,
+   "section": "TURNING POINT",
+   "group": 32,
+   "text": "All winter, they had quarrelled.",
+   "start": 1019.58,
+   "end": 1021.994
+  },
+  {
+   "i": 307,
+   "section": "TURNING POINT",
+   "group": 32,
+   "text": "Tonight, they prayed side by side.",
+   "start": 1021.994,
+   "end": 1024.559
+  },
+  {
+   "i": 308,
+   "section": "TURNING POINT",
+   "group": 33,
+   "text": "The emperor prayed with them.",
+   "start": 1024.909,
+   "end": 1027.177
+  },
+  {
+   "i": 309,
+   "section": "TURNING POINT",
+   "group": 33,
+   "text": "Afterwards, he rode out to the walls.",
+   "start": 1027.177,
+   "end": 1030.072
+  },
+  {
+   "i": 310,
+   "section": "TURNING POINT",
+   "group": 33,
+   "text": "Picture yourself in that crowd.",
+   "start": 1030.072,
+   "end": 1032.496
+  },
+  {
+   "i": 311,
+   "section": "TURNING POINT",
+   "group": 33,
+   "text": "Candles flicker on the gold.",
+   "start": 1032.496,
+   "end": 1034.687
+  },
+  {
+   "i": 312,
+   "section": "TURNING POINT",
+   "group": 33,
+   "text": "Will any of you see another sunset?",
+   "start": 1034.687,
+   "end": 1037.425
+  },
+  {
+   "i": 313,
+   "section": "TURNING POINT",
+   "group": 34,
+   "text": "It began just after midnight, on 29 May.",
+   "start": 1037.775,
+   "end": 1040.979
+  },
+  {
+   "i": 314,
+   "section": "TURNING POINT",
+   "group": 34,
+   "text": "Mehmed sent his men in three waves.",
+   "start": 1040.979,
+   "end": 1043.418
+  },
+  {
+   "i": 315,
+   "section": "TURNING POINT",
+   "group": 34,
+   "text": "First came the irregulars.",
+   "start": 1043.418,
+   "end": 1045.229
+  },
+  {
+   "i": 316,
+   "section": "TURNING POINT",
+   "group": 34,
+   "text": "They were poorly armed, and many were not even Turks.",
+   "start": 1045.229,
+   "end": 1048.922
+  },
+  {
+   "i": 317,
+   "section": "TURNING POINT",
+   "group": 34,
+   "text": "Their job was to wear the defenders down.",
+   "start": 1048.922,
+   "end": 1051.778
+  },
+  {
+   "i": 318,
+   "section": "TURNING POINT",
+   "group": 34,
+   "text": "For hours, they threw themselves at the stockade.",
+   "start": 1051.778,
+   "end": 1055.192
+  },
+  {
+   "i": 319,
+   "section": "TURNING POINT",
+   "group": 34,
+   "text": "Still, the line held.",
+   "start": 1055.192,
+   "end": 1056.655
+  },
+  {
+   "i": 320,
+   "section": "TURNING POINT",
+   "group": 34,
+   "text": "At last, Mehmed pulled them back.",
+   "start": 1056.655,
+   "end": 1058.954
+  },
+  {
+   "i": 321,
+   "section": "TURNING POINT",
+   "group": 34,
+   "text": "The second wave came from Anatolia.",
+   "start": 1058.954,
+   "end": 1061.392
+  },
+  {
+   "i": 322,
+   "section": "TURNING POINT",
+   "group": 34,
+   "text": "They were better soldiers.",
+   "start": 1061.392,
+   "end": 1063.204
+  },
+  {
+   "i": 323,
+   "section": "TURNING POINT",
+   "group": 34,
+   "text": "A great cannon blasted a hole in the stockade, and they rushed in.",
+   "start": 1063.204,
+   "end": 1067.802
+  },
+  {
+   "i": 324,
+   "section": "TURNING POINT",
+   "group": 34,
+   "text": "But the defenders trapped them inside and drove them out again.",
+   "start": 1067.802,
+   "end": 1072.191
+  },
+  {
+   "i": 325,
+   "section": "TURNING POINT",
+   "group": 34,
+   "text": "Dawn was close.",
+   "start": 1072.191,
+   "end": 1073.236
+  },
+  {
+   "i": 326,
+   "section": "TURNING POINT",
+   "group": 34,
+   "text": "Giustiniani's men had fought all night without rest.",
+   "start": 1073.236,
+   "end": 1076.859
+  },
+  {
+   "i": 327,
+   "section": "TURNING POINT",
+   "group": 34,
+   "text": "Now Mehmed sent his best troops, the Janissaries.",
+   "start": 1076.859,
+   "end": 1080.272
+  },
+  {
+   "i": 328,
+   "section": "TURNING POINT",
+   "group": 34,
+   "text": "They had trained for this moment all their lives.",
+   "start": 1080.272,
+   "end": 1083.686
+  },
+  {
+   "i": 329,
+   "section": "TURNING POINT",
+   "group": 35,
+   "text": "They marched forward in order, to the beat of drums.",
+   "start": 1084.036,
+   "end": 1087.888
+  },
+  {
+   "i": 330,
+   "section": "TURNING POINT",
+   "group": 35,
+   "text": "At first, even they could not break through.",
+   "start": 1087.888,
+   "end": 1091.148
+  },
+  {
+   "i": 331,
+   "section": "TURNING POINT",
+   "group": 35,
+   "text": "Would the walls hold one more time?",
+   "start": 1091.148,
+   "end": 1093.74
+  },
+  {
+   "i": 332,
+   "section": "TURNING POINT",
+   "group": 36,
+   "text": "Just after dawn, a shot struck Giovanni Giustiniani.",
+   "start": 1095.74,
+   "end": 1099.54
+  },
+  {
+   "i": 333,
+   "section": "TURNING POINT",
+   "group": 36,
+   "text": "Some say it was a bullet.",
+   "start": 1099.54,
+   "end": 1101.366
+  },
+  {
+   "i": 334,
+   "section": "TURNING POINT",
+   "group": 36,
+   "text": "Others say a crossbow bolt.",
+   "start": 1101.366,
+   "end": 1103.339
+  },
+  {
+   "i": 335,
+   "section": "TURNING POINT",
+   "group": 36,
+   "text": "Either way, the wound was serious.",
+   "start": 1103.339,
+   "end": 1105.823
+  },
+  {
+   "i": 336,
+   "section": "TURNING POINT",
+   "group": 36,
+   "text": "His men carried him off the walls, toward the ships in the harbour.",
+   "start": 1105.823,
+   "end": 1110.718
+  },
+  {
+   "i": 337,
+   "section": "TURNING POINT",
+   "group": 36,
+   "text": "Many of his Genoese soldiers followed him.",
+   "start": 1110.718,
+   "end": 1113.787
+  },
+  {
+   "i": 338,
+   "section": "TURNING POINT",
+   "group": 36,
+   "text": "The defenders saw their commander go.",
+   "start": 1113.787,
+   "end": 1116.49
+  },
+  {
+   "i": 339,
+   "section": "TURNING POINT",
+   "group": 36,
+   "text": "Panic spread along the walls.",
+   "start": 1116.49,
+   "end": 1118.609
+  },
+  {
+   "i": 340,
+   "section": "TURNING POINT",
+   "group": 36,
+   "text": "So how did the Ottomans get onto the walls so fast?",
+   "start": 1118.609,
+   "end": 1122.335
+  },
+  {
+   "i": 341,
+   "section": "TURNING POINT",
+   "group": 36,
+   "text": "One chronicler, Doukas, adds a strange detail.",
+   "start": 1122.335,
+   "end": 1125.696
+  },
+  {
+   "i": 342,
+   "section": "TURNING POINT",
+   "group": 36,
+   "text": "A small gate in the wall had been left open.",
+   "start": 1125.696,
+   "end": 1128.91
+  },
+  {
+   "i": 343,
+   "section": "TURNING POINT",
+   "group": 36,
+   "text": "Ottoman soldiers slipped through it and raised their flag on a tower.",
+   "start": 1128.91,
+   "end": 1133.952
+  },
+  {
+   "i": 344,
+   "section": "TURNING POINT",
+   "group": 36,
+   "text": "Many historians doubt the story.",
+   "start": 1133.952,
+   "end": 1136.29
+  },
+  {
+   "i": 345,
+   "section": "TURNING POINT",
+   "group": 36,
+   "text": "No trace of such a gate has ever turned up.",
+   "start": 1136.29,
+   "end": 1139.431
+  },
+  {
+   "i": 346,
+   "section": "TURNING POINT",
+   "group": 36,
+   "text": "But that morning, the defenders believed their eyes.",
+   "start": 1139.431,
+   "end": 1143.231
+  },
+  {
+   "i": 347,
+   "section": "TURNING POINT",
+   "group": 37,
+   "text": "They looked up and saw Ottoman flags on the walls.",
+   "start": 1143.581,
+   "end": 1147.387
+  },
+  {
+   "i": 348,
+   "section": "TURNING POINT",
+   "group": 37,
+   "text": "Ottoman soldiers broke through.",
+   "start": 1147.387,
+   "end": 1149.748
+  },
+  {
+   "i": 349,
+   "section": "TURNING POINT",
+   "group": 38,
+   "text": "And what became of the emperor?",
+   "start": 1150.098,
+   "end": 1151.624
+  },
+  {
+   "i": 350,
+   "section": "TURNING POINT",
+   "group": 39,
+   "text": "Constantine the Eleventh is said to have died in the fighting.",
+   "start": 1152.124,
+   "end": 1155.965
+  },
+  {
+   "i": 351,
+   "section": "TURNING POINT",
+   "group": 39,
+   "text": "His body was never identified for certain.",
+   "start": 1155.965,
+   "end": 1158.567
+  },
+  {
+   "i": 352,
+   "section": "TURNING POINT",
+   "group": 39,
+   "text": "Legend says he threw off his imperial robes and charged the enemy like a common soldier.",
+   "start": 1158.567,
+   "end": 1164.018
+  },
+  {
+   "i": 353,
+   "section": "TURNING POINT",
+   "group": 39,
+   "text": "Across the city, the church bells rang the alarm.",
+   "start": 1164.018,
+   "end": 1167.054
+  },
+  {
+   "i": 354,
+   "section": "TURNING POINT",
+   "group": 39,
+   "text": "Thousands ran to Hagia Sophia and barred the great doors.",
+   "start": 1167.054,
+   "end": 1170.585
+  },
+  {
+   "i": 355,
+   "section": "TURNING POINT",
+   "group": 39,
+   "text": "An old prophecy said an angel would come down there and save the city.",
+   "start": 1170.585,
+   "end": 1174.921
+  },
+  {
+   "i": 356,
+   "section": "TURNING POINT",
+   "group": 39,
+   "text": "But no angel came.",
+   "start": 1174.921,
+   "end": 1176.036
+  },
+  {
+   "i": 357,
+   "section": "TURNING POINT",
+   "group": 39,
+   "text": "The soldiers broke down the doors.",
+   "start": 1176.036,
+   "end": 1178.143
+  },
+  {
+   "i": 358,
+   "section": "TURNING POINT",
+   "group": 40,
+   "text": "By midday, the city belonged to Mehmed.",
+   "start": 1180.143,
+   "end": 1182.999
+  },
+  {
+   "i": 359,
+   "section": "TURNING POINT",
+   "group": 40,
+   "text": "That afternoon, the young sultan rode through the gates.",
+   "start": 1182.999,
+   "end": 1187.1
+  },
+  {
+   "i": 360,
+   "section": "TURNING POINT",
+   "group": 40,
+   "text": "He went straight to Hagia Sophia.",
+   "start": 1187.1,
+   "end": 1189.517
+  },
+  {
+   "i": 361,
+   "section": "TURNING POINT",
+   "group": 40,
+   "text": "He had promised his soldiers three days of plunder.",
+   "start": 1189.517,
+   "end": 1193.252
+  },
+  {
+   "i": 362,
+   "section": "TURNING POINT",
+   "group": 40,
+   "text": "Some accounts say he stopped it after one day.",
+   "start": 1193.252,
+   "end": 1196.621
+  },
+  {
+   "i": 363,
+   "section": "TURNING POINT",
+   "group": 40,
+   "text": "Looking at the ruined streets, he is said to have wept.",
+   "start": 1196.621,
+   "end": 1200.649
+  },
+  {
+   "i": 364,
+   "section": "TURNING POINT",
+   "group": 40,
+   "text": "Not everyone was caught.",
+   "start": 1200.649,
+   "end": 1202.406
+  },
+  {
+   "i": 365,
+   "section": "TURNING POINT",
+   "group": 40,
+   "text": "In the harbour, some Venetian and Genoese ships broke out past the chain, packed with refugees.",
+   "start": 1202.406,
+   "end": 1209.364
+  },
+  {
+   "i": 366,
+   "section": "TURNING POINT",
+   "group": 40,
+   "text": "Hagia Sophia had been the great church of the Romans for nine hundred years.",
+   "start": 1209.364,
+   "end": 1214.93
+  },
+  {
+   "i": 367,
+   "section": "TURNING POINT",
+   "group": 40,
+   "text": "Now it became a mosque.",
+   "start": 1214.93,
+   "end": 1216.614
+  },
+  {
+   "i": 368,
+   "section": "TURNING POINT",
+   "group": 40,
+   "text": "The city fell on a Tuesday.",
+   "start": 1216.614,
+   "end": 1218.591
+  },
+  {
+   "i": 369,
+   "section": "TURNING POINT",
+   "group": 40,
+   "text": "Many Greeks still call Tuesday an unlucky day.",
+   "start": 1218.591,
+   "end": 1221.96
+  },
+  {
+   "i": 370,
+   "section": "CLOSE",
+   "group": 41,
+   "text": "So that is how a thousand-year wall fell in 53 days.",
+   "start": 1222.76,
+   "end": 1227.11
+  },
+  {
+   "i": 371,
+   "section": "CLOSE",
+   "group": 41,
+   "text": "It did not fall to one cannon, or to one clever trick.",
+   "start": 1227.11,
+   "end": 1231.16
+  },
+  {
+   "i": 372,
+   "section": "CLOSE",
+   "group": 41,
+   "text": "The cannon cracked the walls.",
+   "start": 1231.16,
+   "end": 1233.335
+  },
+  {
+   "i": 373,
+   "section": "CLOSE",
+   "group": 41,
+   "text": "The ships over the hill stretched the defenders thin.",
+   "start": 1233.335,
+   "end": 1237.31
+  },
+  {
+   "i": 374,
+   "section": "CLOSE",
+   "group": 41,
+   "text": "And when Giustiniani left the wall, their hope left with him.",
+   "start": 1237.31,
+   "end": 1241.885
+  },
+  {
+   "i": 375,
+   "section": "CLOSE",
+   "group": 41,
+   "text": "Behind all of it stood a young sultan who would not give up.",
+   "start": 1241.885,
+   "end": 1246.384
+  },
+  {
+   "i": 376,
+   "section": "CLOSE",
+   "group": 41,
+   "text": "What happened to the men in this story?",
+   "start": 1246.384,
+   "end": 1249.309
+  },
+  {
+   "i": 377,
+   "section": "CLOSE",
+   "group": 41,
+   "text": "Giustiniani reached the island of Chios.",
+   "start": 1249.309,
+   "end": 1252.309
+  },
+  {
+   "i": 378,
+   "section": "CLOSE",
+   "group": 41,
+   "text": "He died of his wound on 1 June.",
+   "start": 1252.309,
+   "end": 1254.859
+  },
+  {
+   "i": 379,
+   "section": "CLOSE",
+   "group": 41,
+   "text": "Halil, the man who had urged peace, lost his post within days.",
+   "start": 1254.859,
+   "end": 1259.509
+  },
+  {
+   "i": 380,
+   "section": "CLOSE",
+   "group": 41,
+   "text": "Six weeks later, Mehmed had him executed.",
+   "start": 1259.509,
+   "end": 1262.584
+  },
+  {
+   "i": 381,
+   "section": "CLOSE",
+   "group": 41,
+   "text": "Orban's fate is less clear.",
+   "start": 1262.584,
+   "end": 1264.609
+  },
+  {
+   "i": 382,
+   "section": "CLOSE",
+   "group": 41,
+   "text": "One story says he died when one of his own cannons burst.",
+   "start": 1264.609,
+   "end": 1268.884
+  },
+  {
+   "i": 383,
+   "section": "CLOSE",
+   "group": 41,
+   "text": "And Mehmed was only twenty-one.",
+   "start": 1268.884,
+   "end": 1271.209
+  },
+  {
+   "i": 384,
+   "section": "CLOSE",
+   "group": 41,
+   "text": "From now on, he called himself Caesar of Rome.",
+   "start": 1271.209,
+   "end": 1274.659
+  },
+  {
+   "i": 385,
+   "section": "CLOSE",
+   "group": 42,
+   "text": "In his eyes, the Roman Empire had not ended.",
+   "start": 1275.009,
+   "end": 1278.945
+  },
+  {
+   "i": 386,
+   "section": "CLOSE",
+   "group": 42,
+   "text": "It simply had a new ruler.",
+   "start": 1278.945,
+   "end": 1281.27
+  },
+  {
+   "i": 387,
+   "section": "CLOSE",
+   "group": 43,
+   "text": "So what did the fall really change?",
+   "start": 1282.27,
+   "end": 1284.651
+  },
+  {
+   "i": 388,
+   "section": "CLOSE",
+   "group": 43,
+   "text": "The fall of Constantinople ended the Byzantine Empire.",
+   "start": 1284.651,
+   "end": 1288.324
+  },
+  {
+   "i": 389,
+   "section": "CLOSE",
+   "group": 43,
+   "text": "The city became the new Ottoman capital.",
+   "start": 1288.324,
+   "end": 1291.045
+  },
+  {
+   "i": 390,
+   "section": "CLOSE",
+   "group": 43,
+   "text": "In time, the world would know it as Istanbul.",
+   "start": 1291.045,
+   "end": 1294.106
+  },
+  {
+   "i": 391,
+   "section": "CLOSE",
+   "group": 43,
+   "text": "Greek scholars had been moving to Italy for decades.",
+   "start": 1294.106,
+   "end": 1297.643
+  },
+  {
+   "i": 392,
+   "section": "CLOSE",
+   "group": 43,
+   "text": "After the fall, many more fled west.",
+   "start": 1297.643,
+   "end": 1300.092
+  },
+  {
+   "i": 393,
+   "section": "CLOSE",
+   "group": 43,
+   "text": "They carried books and ideas that helped feed the Renaissance.",
+   "start": 1300.092,
+   "end": 1304.309
+  },
+  {
+   "i": 394,
+   "section": "CLOSE",
+   "group": 43,
+   "text": "The news reached Venice and Rome weeks later.",
+   "start": 1304.309,
+   "end": 1307.37
+  },
+  {
+   "i": 395,
+   "section": "CLOSE",
+   "group": 43,
+   "text": "People could hardly believe it.",
+   "start": 1307.37,
+   "end": 1309.479
+  },
+  {
+   "i": 396,
+   "section": "CLOSE",
+   "group": 43,
+   "text": "The Pope called for a new crusade to take the city back.",
+   "start": 1309.479,
+   "end": 1313.288
+  },
+  {
+   "i": 397,
+   "section": "CLOSE",
+   "group": 43,
+   "text": "It never came.",
+   "start": 1313.288,
+   "end": 1314.241
+  },
+  {
+   "i": 398,
+   "section": "CLOSE",
+   "group": 43,
+   "text": "Some historians even mark that day as the end of the Middle Ages.",
+   "start": 1314.241,
+   "end": 1318.662
+  },
+  {
+   "i": 399,
+   "section": "CLOSE",
+   "group": 43,
+   "text": "And the Greeks never forgot their last emperor.",
+   "start": 1318.662,
+   "end": 1321.859
+  },
+  {
+   "i": 400,
+   "section": "CLOSE",
+   "group": 43,
+   "text": "A legend grew that an angel had turned him to marble, and hidden him in a cave near the Golden Gate.",
+   "start": 1321.859,
+   "end": 1328.661
+  },
+  {
+   "i": 401,
+   "section": "CLOSE",
+   "group": 44,
+   "text": "One day, the story goes, he will wake up and take back his city.",
+   "start": 1329.011,
+   "end": 1334.129
+  },
+  {
+   "i": 402,
+   "section": "CLOSE",
+   "group": 44,
+   "text": "You can still walk along those walls today.",
+   "start": 1334.129,
+   "end": 1337.567
+  },
+  {
+   "i": 403,
+   "section": "CLOSE",
+   "group": 44,
+   "text": "Long stretches of them still stand, scarred by centuries of war.",
+   "start": 1337.567,
+   "end": 1342.685
+  },
+  {
+   "i": 404,
+   "section": "CLOSE",
+   "group": 44,
+   "text": "If you go, find the stretch near the old Gate of Saint Romanus.",
+   "start": 1342.685,
+   "end": 1347.723
+  },
+  {
+   "i": 405,
+   "section": "CLOSE",
+   "group": 44,
+   "text": "That is where the last battle raged.",
+   "start": 1347.723,
+   "end": 1350.602
+  },
+  {
+   "i": 406,
+   "section": "CLOSE",
+   "group": 44,
+   "text": "Next time, we follow Mehmed into the broken city.",
+   "start": 1350.602,
+   "end": 1354.52
+  },
+  {
+   "i": 407,
+   "section": "CLOSE",
+   "group": 44,
+   "text": "How did Mehmed turn it into the capital of an empire?",
+   "start": 1354.52,
+   "end": 1358.758
+  },
+  {
+   "i": 408,
+   "section": "CLOSE",
+   "group": 44,
+   "text": "That episode is part of this series, so subscribe if you want to walk the walls with me again.",
+   "start": 1358.758,
+   "end": 1366.275
+  },
+  {
+   "i": 409,
+   "section": "CLOSE",
+   "group": 44,
+   "text": "Until next time, keep looking back.",
+   "start": 1366.275,
+   "end": 1369.074
+  }
+ ]
+}

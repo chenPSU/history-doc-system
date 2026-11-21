@@ -1,0 +1,10 @@
+# Mix plan (pipeline/mix.py). Times are seconds on the episode timeline. v2 test covers 0:00-1:00 only.
+# Assets are in assets/manifest.csv (licence + credit). Music for the full episode: YouTube Audio Library (D6).
+music:
+  # HOOK + PROMISE: dark ambient bed; swells in the pauses (ducked under the voice)
+  - {asset: wm-64741168, from: 0.0, to: 49.5, offset: 4.0, fade_in: 2.0, fade_out: 3.0}       # Lightless Dawn (Kevin MacLeod, CC BY 3.0)
+sfx:
+  - {asset: wm-16918997, at: 0.0, dur: 37.5, level_db: -24, fade_in: 1.5, fade_out: 3.0}      # night wind on the walls (CC0)
+  - {asset: wm-3184777, at: 0.3, dur: 3.2, level_db: -17, lowpass: 700, fade_in: 0.4, fade_out: 0.6}   # distant drums, then silence (script cue)
+  - {asset: wm-3184777, at: 23.6, dur: 7.0, level_db: -14, lowpass: 900, fade_in: 1.0, fade_out: 1.5}  # "you would hear drums out in the dark"
+  - {asset: wm-90733962, at: 46.9, dur: 5.5, level_db: -15, fade_out: 2.5}                   # sound bridge: city bell before the CONTEXT cut

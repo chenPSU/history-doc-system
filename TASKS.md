@@ -40,6 +40,7 @@ Work top to bottom. Each task has acceptance criteria (AC). Tick the box when th
   AC: the owner listens and approves the names in the first episode.
 - [ ] **P2.3 Mix.** Music −20 dB under voice with ducking, SFX bed, music-out cues, final loudness −14 LUFS integrated, true peak −1 dBTP (ffmpeg `loudnorm`, two-pass).
   AC: measured with `ffmpeg -af ebur128`; values written to `audio/mix_report.json`.
+  Built 22 Nov: `pipeline/mix.py` (plan `audio/mix_plan.yaml`: music beds ducked by a voice-keyed sidechain compressor, SFX with low-pass/fades, two-pass loudnorm), `pipeline/audio_fetch.py` (Commons audio by exact title, manifest row per file). v2 test 0:00–1:00: -14.0 LUFS, -1.0 dBTP, passed. Music for the full episode still to choose (D6: YouTube Audio Library, owner downloads).
 
 ## P3 · Assets (target: 4 Dec)
 
@@ -56,6 +57,9 @@ Work top to bottom. Each task has acceptance criteria (AC). Tick the box when th
   Built 21 Nov: `pipeline/images.py` + `tools/images.py` (init → `assets/ai_prompts.yaml`, dry run with request count and cost, `--go`, `check`), `config/images.yaml` (Gemini `gemini-2.5-flash-image`, 3 print styles, fixed rules: historical print, anonymous figures, no faces/portraits). Guard refuses a scene that asks for realism, names a single ruler or a person on the episode's `real_people` list. Manifest rows: `ai_generated=y`, `label=Illustration`, prompt hash (an unchanged prompt is never re-requested). Constantinople (owner approved 13 requests, ~$0.52, paid from the same Gemini billing as TTS): all 13 images made in 14 requests (#233 came back text-only once and was retried, ~$0.56; 1344×768, engraving style, people small/anonymous, no faces); `tools/images.py check` passes. Gemini added fake engraver signatures on #172 and #221 despite the rules: painted out (noted in the manifest). Contact sheet: `assets/ai_contact_sheet.jpg`.
 
 ## P4 · Assembly and render (target: 10 Dec)
+
+- [ ] **P4.5 Visual v2 (owner, 21 Nov 2026):** the first draft felt like a slide show. Benchmark: `docs/benchmark-2026-11.md`. Picture per sentence (hybrid B: real pictures for real people/objects/places, AI old-print scenes for story beats), every picture full frame on a focus point (`assets/framing.yaml`), short captions on the picture, soft 0.5 s dissolves, AI print margins trimmed, music + SFX.
+  Done so far (22 Nov): renderer and timeline support all of it; opening 0:00–1:00 rebuilt (7 AI scenes + 5 retried, Buondelmonti map, mix) → `render/preview_v2_opening.mp4`. Next: owner verdict, then the rest of the episode.
 
 - [x] **P4.1 Timeline builder:** `timing.json` + `shotlist.csv` + assets → an edit decision list (JSON).
   Done 21 Nov: `pipeline/timeline.py` + `tools/timeline.py` → `render/edl.json`. Shots run sentence start → next sentence start (pauses keep the picture), " | " cells split evenly, 2 s tail; fit `cover` (aspect ≥ 1.5) or `contain_blur`; Ken Burns 5–10% by length, pans; cards (chapter / fact); label "Illustration" on AI assets; fade to black at chapter starts, dissolve after a scripted pause, else cut; audio cues timed (J-cut / sound bridge 1 s early); chapters; pacing stats. Constantinople: 420 shots, 22:51, PASS. Open: (1) pace: after the hook shots average 3.3 s (302 under 4 s) against the 4–7 s rule, an owner call best made on a rendered preview (P4.2); (2) 67 map shots are placeholders until their clips exist (P4.4).

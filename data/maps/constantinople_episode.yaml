@@ -938,7 +938,6 @@ features:
     run: [0.2, 4.0]
 clips:
   night_walls:
-    shot: s001.2
     duration: 2.8
     view: &id002 [28.8685, 40.9869, 29.0055, 41.0451]
     palette: slate
@@ -953,7 +952,6 @@ clips:
     - &id003 {use: land_walls, appear: -1}
     - {use: lbl_city, appear: -1}
   walls_drawn:
-    shot: s006.2
     duration: 2.4
     view: *id002
     show:
@@ -961,7 +959,6 @@ clips:
     - use: land_walls
       draw: [0.1, 1.8]
   army_arrows:
-    shot: s007.2
     duration: 2.6
     view: *id002
     show:

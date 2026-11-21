@@ -27,6 +27,8 @@ export type Shot = {
   text?: string;
   reason?: string;
   label?: string;
+  focus?: [number, number]; // where the picture is framed and where the camera pushes in (0..1)
+  caption?: string;
 };
 
 export type EpisodeProps = {
@@ -62,12 +64,13 @@ const Still: React.FC<{shot: Shot; w: number; h: number}> = ({shot, w, h}) => {
   const frame = useCurrentFrame();
   const t = shot.dur > 1 ? frame / (shot.dur - 1) : 0;
   const tf = transformOf(shot.motion, Math.min(1, Math.max(0, t)), w, h);
+  const [fx, fy] = shot.focus ?? [0.5, 0.5];
   return (
-    <AbsoluteFill style={{transform: tf, willChange: 'transform'}}>
+    <AbsoluteFill style={{transform: tf, transformOrigin: `${fx * 100}% ${fy * 100}%`, willChange: 'transform'}}>
       {shot.bg ? <Img src={staticFile(shot.bg)} style={{position: 'absolute', width: '100%', height: '100%', objectFit: 'cover'}} /> : null}
       <Img
         src={staticFile(shot.src!)}
-        style={{position: 'absolute', width: '100%', height: '100%', objectFit: shot.fit === 'cover' ? 'cover' : 'contain'}}
+        style={{position: 'absolute', width: '100%', height: '100%', objectFit: shot.fit === 'cover' ? 'cover' : 'contain', objectPosition: `${fx * 100}% ${fy * 100}%`}}
       />
     </AbsoluteFill>
   );
@@ -135,11 +138,23 @@ const Placeholder: React.FC<{shot: Shot; h: number}> = ({shot, h}) => (
   </AbsoluteFill>
 );
 
+// A short story label on the picture (who, when, how many): gold rule + serif text, eases in after the cut.
+const Caption: React.FC<{text: string; h: number}> = ({text, h}) => {
+  const frame = useCurrentFrame();
+  const show = interpolate(frame, [8, 22], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  return (
+    <div style={{position: 'absolute', left: h * 0.06, bottom: h * 0.1, opacity: show, transform: `translateY(${(1 - show) * h * 0.012}px)`}}>
+      <div style={{width: h * 0.05, height: Math.max(2, h * 0.0025), background: GOLD, marginBottom: h * 0.012}} />
+      <div style={{fontFamily: SERIF, fontSize: h * 0.042, color: INK, textShadow: '0 0 12px rgba(0,0,0,0.95), 0 0 3px rgba(0,0,0,0.9)'}}>{text}</div>
+    </div>
+  );
+};
+
 const Label: React.FC<{text: string; h: number}> = ({text, h}) => (
   <div
     style={{
       // Readable on light engravings too: a dark translucent tab behind the word.
-      position: 'absolute', left: h * 0.04, bottom: h * 0.04, fontFamily: SERIF, fontSize: h * 0.024,
+      position: 'absolute', right: h * 0.04, bottom: h * 0.04, fontFamily: SERIF, fontSize: h * 0.024,
       letterSpacing: h * 0.003, color: INK, background: 'rgba(20,17,13,0.62)', padding: `${h * 0.006}px ${h * 0.014}px`,
       borderRadius: h * 0.004,
     }}
@@ -162,6 +177,7 @@ const ShotView: React.FC<{shot: Shot; w: number; h: number}> = ({shot, w, h}) =>
   return (
     <AbsoluteFill style={{opacity, overflow: 'hidden'}}>
       {inner}
+      {shot.caption ? <Caption text={shot.caption} h={h} /> : null}
       {shot.label ? <Label text={shot.label} h={h} /> : null}
     </AbsoluteFill>
   );

@@ -1,13 +1,13 @@
 sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
-1,HOOK,"It is just after midnight, on 29 May 1453.",location | map,Theodosian Walls Istanbul at night | map: Constantinople 1453 land walls at night,zoom_in | map_anim,4.68,wm-57204983 | map-night_walls
-2,HOOK,"About seven thousand defenders stand on the walls of Constantinople, waiting in the dark.",painting | location | card,"Theophilos Hatzimihail Fall of Constantinople painting defenders on the walls | Theodosian Walls Istanbul towers | card: about 7,000 defenders",zoom_out | pan_right | static,6.95,wm-15745931 | wm-186630934 | 
-3,HOOK,"By sunrise, walls that have stood for a thousand years will fall.",painting | card,Fausto Zonaro Mehmed II conquering Constantinople painting | card: 1453,zoom_in | static,5.07,wm-2727659 | 
-4,HOOK,How did a young sultan break a thousand-year wall in just 53 days?,painting | location | card,Gentile Bellini portrait of Mehmed II National Gallery | Theodosian Walls Istanbul at night | card: 53 DAYS,zoom_out | pan_left | static,5.57,wm-147845 | wm-57204983 | 
-5,HOOK,"If you stood beside the defenders tonight, you would hear drums out in the dark.",manuscript | location | manuscript,Le siège de Constantinople 1453 Jean Le Tavernier miniature | Theodosian Walls Istanbul moat at dusk | Nusretname Ottoman army and city,zoom_in | pan_right | zoom_out,6.19,wm-87115344 | wm-74764600 | wm-179648109
-6,HOOK,No army had ever broken through these land walls.,location | map,Theodosian Walls Istanbul Edirnekapi section | map: land walls outline drawn on,zoom_in | map_anim,3.79,wm-74764603 | map-walls_drawn
-7,HOOK,But below them waits an army many times larger.,manuscript | map,Nusretname Ottoman army and city | map: Ottoman army arrows toward the walls,zoom_out | map_anim,3.63,wm-15688654 | map-army_arrows
-8,PROMISE,"It came down to a cannon that nobody else would pay for, and a fleet that sailed over a hill.",artefact,Dardanelles Gun Turkish Bronze,zoom_in,6.76,wm-146012287
-9,PROMISE,Let's go back to the city at its height.,engraving,Antoine Ignace Melling Voyage pittoresque de Constantinople engraving panorama of the city,zoom_out,2.91,wm-66885458
+1,HOOK,"It is just after midnight, on 29 May 1453.",illustration_ai,Illustration: the land walls at midnight,zoom_in,4.68,ai-001
+2,HOOK,"About seven thousand defenders stand on the walls of Constantinople, waiting in the dark.",illustration_ai | illustration_ai,Illustration: defenders on the battlements at night | Illustration: defenders round a brazier on the wall-walk,zoom_out | pan_right,6.95,ai-002-1 | ai-002-2
+3,HOOK,"By sunrise, walls that have stood for a thousand years will fall.",painting,Fausto Zonaro Mehmed II conquering Constantinople painting,zoom_in,5.07,wm-2727659
+4,HOOK,How did a young sultan break a thousand-year wall in just 53 days?,painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_in,5.57,wm-147845
+5,HOOK,"If you stood beside the defenders tonight, you would hear drums out in the dark.",illustration_ai,Illustration: Ottoman campfires in the dark beyond the moat,zoom_out,6.19,ai-005
+6,HOOK,No army had ever broken through these land walls.,illustration_ai,Illustration: the triple land walls from above,pan_right,3.79,ai-006
+7,HOOK,But below them waits an army many times larger.,illustration_ai,Illustration: a vast army below the walls at dawn,zoom_in,3.63,ai-007
+8,PROMISE,"It came down to a cannon that nobody else would pay for, and a fleet that sailed over a hill.",artefact | illustration_ai,Dardanelles Gun Turkish Bronze | Illustration: galley rolling over a hilltop,zoom_in | zoom_out,6.76,wm-146012287 | ai-222
+9,PROMISE,Let's go back to the city at its height.,manuscript,"Map of Constantinople, Buondelmonti",pan_down,2.91,wm-98641878
 10,CONTEXT,Constantinople was a Roman city.,card,card: 330 AD · Constantinople,static,2.0,
 11,CONTEXT,The emperor Constantine the Great made it his new capital in 330 AD.,artefact,Constantine the Great mosaic Hagia Sophia southwestern entrance,zoom_in,4.81,wm-148609
 12,CONTEXT,"In the centuries that followed, the western half of the Roman Empire collapsed.",map,"map: Roman Empire split east and west, the west fades (395-476)",map_anim,4.94,map-rome_split

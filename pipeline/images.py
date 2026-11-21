@@ -48,6 +48,25 @@ def load_config(path: Path = CONFIG_PATH) -> dict:
 
 
 # ---------------------------------------------------------------- prompts file
+def _cells(v: str | None) -> list[str]:
+    return [x.strip() for x in (v or "").split("|")]
+
+
+def ai_subshots(ep: Path) -> list[tuple[str, int, int, dict, str]]:
+    """(key, sentence_no, j, row, search term) for every illustration_ai sub-shot.
+    key is "N" when the sentence has one shot, "N.k" when it has several (k counts from 1)."""
+    out = []
+    for r in _shots(ep):
+        terms = [t for t in _cells(r["search_terms"]) if t] or [""]
+        vts = _cells(r["visual_type"])
+        for j, term in enumerate(terms):
+            vt = vts[j] if len(vts) > 1 and j < len(vts) else vts[0]
+            if vt == VT:
+                no = int(r["sentence_no"])
+                out.append((str(no) if len(terms) == 1 else f"{no}.{j + 1}", no, j, r, term))
+    return out
+
+
 def _shots(ep: Path) -> list[dict]:
     with (ep / "shotlist.csv").open(encoding="utf-8", newline="") as f:
         return list(csv.DictReader(f))
@@ -76,12 +95,10 @@ def init_prompts(ep: Path, cfg: dict) -> tuple[Path, int]:
     data = data or {"style": cfg.get("default_style", "engraving"), "context": "", "real_people": [], "shots": {}}
     shots = data.setdefault("shots", {})
     added = 0
-    for r in _shots(ep):
-        if r["visual_type"] != VT:
-            continue
-        no = int(r["sentence_no"])
-        if no not in shots:
-            shots[no] = {"sentence": r["sentence"], "subject": subject_from_terms(r["search_terms"])}
+    have = {str(k) for k in shots}
+    for key, no, j, r, term in ai_subshots(ep):
+        if key not in have:
+            shots[int(key) if "." not in key else key] = {"sentence": r["sentence"], "subject": subject_from_terms(term)}
             added += 1
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text("# AI illustration prompts (tools/images.py). Edit `subject` per shot; `style` from config/images.yaml.\n"
@@ -128,7 +145,9 @@ def prompt_hash(model: str, aspect: str, prompt: str) -> str:
 # ---------------------------------------------------------------- plan
 @dataclass
 class Item:
+    key: str             # "N" or "N.k" (sub-shot k of sentence N)
     no: int
+    j: int
     sentence: str
     prompt: str
     hash: str
@@ -138,29 +157,38 @@ class Item:
 
     @property
     def asset_id(self) -> str:
-        return f"ai-{self.no:03d}"
+        return f"ai-{self.no:03d}" if "." not in self.key else f"ai-{self.no:03d}-{self.j + 1}"
 
 
 def plan(ep: Path, cfg: dict, only: set[int] | None = None) -> list[Item]:
     ep = Path(ep)
     data = load_prompts(ep)
     style, context, people = data.get("style", cfg.get("default_style")), data.get("context", ""), data.get("real_people", [])
-    shot_nos = {int(r["sentence_no"]) for r in _shots(ep) if r["visual_type"] == VT}
+    subs = {key: (no, j) for key, no, j, _, _ in ai_subshots(ep)}
+    entries = {str(k): v for k, v in (data.get("shots") or {}).items()}
     man = {m["asset_id"]: m for m in read_manifest(ep / "assets" / "manifest.csv")}
     items = []
-    for no, entry in sorted((int(k), v) for k, v in (data.get("shots") or {}).items()):
-        if no not in shot_nos or (only and no not in only):
+    for key, (no, j) in subs.items():
+        entry = entries.get(key)
+        if entry is None or (only and no not in only):
+            continue
+        aid = f"ai-{no:03d}" if "." not in key else f"ai-{no:03d}-{j + 1}"
+        if entry.get("reuse"):                     # an AI image already made for another shot: no request
+            src = man.get(entry["reuse"])
+            ok = src is not None and (ep / src["file"]).exists()
+            items.append(Item(key, no, j, entry.get("sentence", ""), "", "", src["file"] if ok else "", "reuse" if ok else "refused",
+                              [] if ok else [f"reuse: {entry['reuse']} has no image"]))
             continue
         subject, ctx = entry.get("subject", ""), entry.get("context", context)   # a shot may override the setting
         prompt = build_prompt(subject, ctx, entry.get("style", style), cfg)
         h = prompt_hash(cfg["model"], cfg["aspect_ratio"], prompt)
         reasons = problems(subject, ctx, cfg, people)
-        file = f"assets/ai-{no:03d}.png"
-        row = man.get(f"ai-{no:03d}")
+        file = f"assets/{aid}.png"
+        row = man.get(aid)
         done = row is not None and f"prompt_hash={h}" in row.get("notes", "") and (ep / row["file"]).exists()
-        items.append(Item(no, entry.get("sentence", ""), prompt, h, row["file"] if done else file,
+        items.append(Item(key, no, j, entry.get("sentence", ""), prompt, h, row["file"] if done else file,
                           "refused" if reasons else ("done" if done else "todo"), reasons))
-    missing = sorted(shot_nos - {i.no for i in items}) if not only else []
+    missing = [k for k in subs if k not in entries] if not only else []
     if missing:
         raise ImageError(f"shots {missing} are {VT} but have no entry in ai_prompts.yaml: run `init` again")
     return items
@@ -218,15 +246,22 @@ def make_provider(cfg: dict):
 
 
 # ---------------------------------------------------------------- run
-def _set_shot_asset(ep: Path, updates: dict[int, str]) -> None:
+def _set_shot_asset(ep: Path, updates: dict[tuple[int, int], str]) -> None:
+    """updates: (sentence_no, j) -> asset id, written into cell j of the row's asset_id."""
     path = ep / "shotlist.csv"
     with path.open(encoding="utf-8", newline="") as f:
         reader = csv.DictReader(f)
         cols, rows = reader.fieldnames, list(reader)
     for r in rows:
         no = int(r["sentence_no"])
-        if no in updates and r["visual_type"] == VT:
-            r["asset_id"] = updates[no]
+        n = len([t for t in _cells(r["search_terms"]) if t]) or 1
+        ids = _cells(r.get("asset_id")) + [""] * n
+        changed = False
+        for j in range(n):
+            if (no, j) in updates:
+                ids[j], changed = updates[(no, j)], True
+        if changed:
+            r["asset_id"] = " | ".join(ids[:n]) if n > 1 else ids[0]
     with path.open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=cols)
         w.writeheader()
@@ -257,15 +292,15 @@ def generate(ep: Path, cfg: dict, provider, go: bool = False, only: set[int] | N
         try:
             data, mime = provider.generate(item.prompt)
         except QuotaExhausted as e:
-            log(f"#{item.no}: quota used up, stopping ({e})")
+            log(f"#{item.key}: quota used up, stopping ({e})")
             result["failed"].append(item.no)
             break
         except ImageError as e:
-            log(f"#{item.no}: {e}")
+            log(f"#{item.key}: {e}")
             result["failed"].append(item.no)
             continue
         if mime not in ("image/png", "image/jpeg", "image/webp"):
-            log(f"#{item.no}: unexpected {mime}")
+            log(f"#{item.key}: unexpected {mime}")
             result["failed"].append(item.no)
             continue
         item.file = f"assets/{item.asset_id}{'.png' if mime == 'image/png' else '.jpg' if mime == 'image/jpeg' else '.webp'}"
@@ -273,9 +308,9 @@ def generate(ep: Path, cfg: dict, provider, go: bool = False, only: set[int] | N
         (ep / item.file).write_bytes(data)
         rows = [r for r in read_manifest(mpath) if r["asset_id"] != item.asset_id] + [manifest_row(item, cfg)]
         write_manifest(mpath, rows)            # saved after every image: a stopped run loses nothing
-        _set_shot_asset(ep, {item.no: item.asset_id})
+        _set_shot_asset(ep, {(item.no, item.j): item.asset_id})
         result["made"].append(item.no)
-        log(f"#{item.no}: {item.file} ({len(data) // 1024} KB)")
+        log(f"#{item.key}: {item.file} ({len(data) // 1024} KB)")
     return result
 
 
@@ -285,12 +320,14 @@ def check(ep: Path, cfg: dict) -> list[str]:
     man = {m["asset_id"]: m for m in read_manifest(ep / "assets" / "manifest.csv")}
     for item in plan(ep, cfg):
         row = man.get(item.asset_id)
+        if item.status == "reuse":
+            continue
         if item.status == "refused":
-            errs.append(f"#{item.no}: prompt refused: {'; '.join(item.reasons)}")
+            errs.append(f"#{item.key}: prompt refused: {'; '.join(item.reasons)}")
         elif item.status != "done":
-            errs.append(f"#{item.no}: no image for the current prompt")
+            errs.append(f"#{item.key}: no image for the current prompt")
         elif row["ai_generated"] != "y" or f"label={cfg.get('label', 'Illustration')}" not in row["notes"]:
-            errs.append(f"#{item.no}: manifest row must have ai_generated=y and the on-screen label")
+            errs.append(f"#{item.key}: manifest row must have ai_generated=y and the on-screen label")
     for aid, m in man.items():
         if aid.startswith("ai-") and m.get("ai_generated") != "y":
             errs.append(f"{aid}: AI asset without ai_generated=y")

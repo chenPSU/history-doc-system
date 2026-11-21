@@ -1,0 +1,20 @@
+# Framing for the episode render (pipeline/timeline.py, v2).
+# focus: where an image is framed and where the camera pushes in, as [x, y] fractions of the picture (0..1).
+# fit: `contain` keeps the whole picture small on a blurred copy (use only when cropping would lose the point).
+# captions: a short on-picture label per shot id (sNNN.k). Facts must be in factsheet.md or the asset's own record.
+focus:
+  wm-2727659: [0.45, 0.55]     # Zonaro: Mehmed on the white horse
+  wm-147845: [0.40, 0.33]      # Bellini: the sultan's face
+  wm-146012287: [0.30, 0.45]   # Dardanelles Gun: the muzzle
+  wm-148609: [0.45, 0.30]      # Constantine mosaic: the face
+  wm-98641878: [0.50, 0.42]    # Buondelmonti: the city on its peninsula
+fit: {}
+captions:
+  s001.1: 29 May 1453
+  s002.1: About 7,000 defenders
+  s003.1: Painting by Fausto Zonaro
+  s004.1: Sultan Mehmed II
+  s006.1: Unbroken for about 1,000 years
+  s008.1: A later Ottoman bombard (1464)
+  s009.1: Constantinople, drawn c. 1420
+  s011.1: Constantine the Great · mosaic, Hagia Sophia

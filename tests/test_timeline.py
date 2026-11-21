@@ -84,7 +84,8 @@ def test_shots_cover_the_narration_end_to_end_and_split_sentences_evenly(tmp_pat
 
 def test_fit_motion_cards_labels_video_and_placeholders(tmp_path):
     s = {x["id"]: x for x in T.build(make_ep(tmp_path), probe)["shots"]}
-    assert s["s001.1"]["fit"] == "cover" and s["s002.1"]["fit"] == "contain_blur"          # 16:9 vs 4:3
+    assert s["s001.1"]["fit"] == "cover" and s["s002.1"]["fit"] == "cover"                 # v2: every picture fills the frame
+    assert s["s002.1"]["focus"] == list(T.DEFAULT_FOCUS)
     assert s["s001.1"]["motion"] == {"type": "zoom", "scale": [1.0, 1.05]}
     assert s["s002.1"]["motion"]["scale"][0] > 1 and s["s002.1"]["motion"]["scale"][1] == 1.0
     assert s["s003.1"]["motion"]["type"] == "pan" and s["s003.1"]["motion"]["x"] == [1, -1]  # pan_left
@@ -102,10 +103,10 @@ def test_ken_burns_grows_with_length_but_stays_5_to_10_percent():
 
 def test_transitions_fade_at_chapters_and_dissolve_after_pauses(tmp_path):
     s = {x["id"]: x for x in T.build(make_ep(tmp_path), probe)["shots"]}
-    assert s["s001.1"]["transition_in"] == "cut" and s["s002.1"]["transition_in"] == "cut"
+    assert s["s002.1"]["transition_in"] == "dissolve" and s["s002.1"]["transition_s"] == T.SOFT   # soft change
     assert s["s003.1"]["transition_in"] == "dissolve"          # after [PAUSE 1.5]
     assert s["s004.1"]["transition_in"] == "fade_black"        # CHAPTER 1 starts
-    assert s["s004.2"]["transition_in"] == "cut"
+    assert s["s004.2"]["transition_s"] == T.SOFT
 
 
 def test_cues_are_timed_and_j_cuts_lead_the_picture(tmp_path):
@@ -160,3 +161,12 @@ def test_inline_map_assets_become_map_shots(tmp_path):
         w.writerows(rows)
     s = {x["id"]: x for x in T.build(ep, probe)["shots"]}
     assert s["s003.2"]["kind"] == "map" and (s["s003.2"]["library"], s["s003.2"]["clip"]) == ("data/maps/x.yaml", "walls")
+
+
+def test_framing_file_sets_focus_fit_and_captions(tmp_path):
+    ep = make_ep(tmp_path)
+    (ep / "assets" / "framing.yaml").write_text(
+        "focus: {wm-2: [0.3, 0.2]}\nfit: {wm-1: contain}\ncaptions: {s002.1: 29 May 1453}\n", encoding="utf-8")
+    s = {x["id"]: x for x in T.build(ep, probe)["shots"]}
+    assert s["s002.1"]["focus"] == [0.3, 0.2] and s["s002.1"]["caption"] == "29 May 1453"
+    assert s["s001.1"]["fit"] == "contain_blur" and "caption" not in s["s001.1"]

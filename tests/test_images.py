@@ -119,3 +119,14 @@ def test_new_ai_shot_without_a_prompt_entry_is_an_error(tmp_path):
         csv.writer(f).writerow([2, "CHAPTER 1", "S.", "illustration_ai", "Illustration: b", "zoom_in", "4", ""])
     with pytest.raises(I.ImageError, match="no entry"):
         I.plan(ep, CFG)
+
+
+def test_ai_sub_shots_get_their_own_prompt_asset_and_cell(tmp_path):
+    ep = make_ep(tmp_path, [(2, "illustration_ai | painting | illustration_ai", "Illustration: a | b | Illustration: c")])
+    I.init_prompts(ep, CFG)
+    data = yaml.safe_load(I.prompts_path(ep).read_text(encoding="utf-8"))
+    assert set(map(str, data["shots"])) == {"2.1", "2.3"} and data["shots"]["2.3"]["subject"] == "C"
+    res = I.generate(ep, CFG, I.FakeImage(), go=True)
+    assert res["requests"] == 2
+    assert shot_assets(ep)[2] == "ai-002-1 |  | ai-002-3"
+    assert (ep / "assets" / "ai-002-3.png").exists() and I.check(ep, CFG) == []

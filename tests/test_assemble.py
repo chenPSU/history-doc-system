@@ -52,13 +52,13 @@ def test_proxies_are_sized_for_the_frame_graded_and_backgrounds_made(tmp_path):
     stage = tmp_path / "stage"
     p = A.build_props(edl, ep, stage, 1920, 1080)
     s1, s2 = p["shots"][:2]
-    assert s1["src"] == "p/wm-1_g.jpg" and s2["src"] == "p/wm-2.jpg"          # location photos are graded
+    assert s1["src"] == "p/wm-1_g.jpg" and s2["src"] == "p/wm-2_t.jpg"        # photos graded; labelled AI prints trimmed
     with Image.open(stage / s1["src"]) as im:
         assert im.height == round(1080 * A.MAX_SCALE) and im.width < 6000        # cover at the largest zoom
         r, g, b = im.getpixel((10, 10))
     assert (r, g, b) != (200, 120, 60)
     with Image.open(stage / s2["src"]) as im:
-        assert im.size == (800, 600)                                             # never upscaled
+        assert im.size == (800, 600)                                             # never upscaled; no paper margin to trim
     assert s2["bg"] == "bg/wm-2.jpg" and (stage / "bg" / "wm-2.jpg").exists() and "bg" not in s1
     assert (stage / "narration.wav").exists() and (stage / "grain.png").exists()
 

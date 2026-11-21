@@ -1,74 +1,119 @@
 # AI illustration prompts (tools/images.py). Edit `subject` per shot; `style` from config/images.yaml.
-# Only scenes no real image shows. People stay anonymous (no faces, no rulers); facts as in factsheet.md.
+# v2 (21 Nov 2026, owner chose hybrid B): AI scenes for story beats with no exact real picture; `reuse:` points at an existing AI image.
 style: engraving
-context: >-
-  The siege of Constantinople, spring 1453. 15th-century Mediterranean ships, Ottoman and Italian
-  sailors and soldiers in period dress, stone city walls with square towers.
-real_people: [Mehmed, Constantine, Palaiologos, Giustiniani, Orban, Halil, Zaganos, Notaras, Grant,
-              Sphrantzes, Barbaro, Doukas, Kritoboulos]
+context: The siege of Constantinople, spring 1453. 15th-century Mediterranean ships, Ottoman and Italian sailors
+  and soldiers in period dress, stone city walls with square towers.
+real_people:
+- Mehmed
+- Constantine
+- Palaiologos
+- Giustiniani
+- Orban
+- Halil
+- Zaganos
+- Notaras
+- Grant
+- Sphrantzes
+- Barbaro
+- Doukas
+- Kritoboulos
 shots:
   82:
     sentence: One stone ball sank his ship.
-    subject: >-
-      A Venetian merchant galley breaking apart and sinking in a narrow strait, struck by a huge stone
-      cannonball fired from a stone fortress on the steep shore, a plume of water, smoke drifting from the fortress
+    subject: A Venetian merchant galley breaking apart and sinking in a narrow strait, struck by a huge stone cannonball
+      fired from a stone fortress on the steep shore, a plume of water, smoke drifting from the fortress
   172:
     sentence: They packed the gaps with timber, earth and barrels.
-    subject: >-
-      Night: small anonymous figures by torchlight filling a breach in a broken stone wall with timber beams,
-      baskets of earth and wooden barrels, seen from a distance
+    subject: 'Night: small anonymous figures by torchlight filling a breach in a broken stone wall with timber beams,
+      baskets of earth and wooden barrels, seen from a distance'
   173:
     sentence: By morning, a new wall of earth and wood stood where stone had stood the day before.
-    subject: >-
-      Dawn: a rough stockade of earth, timber and barrels standing in the gap of a shattered stone wall,
-      rubble below, morning mist, no people
+    subject: 'Dawn: a rough stockade of earth, timber and barrels standing in the gap of a shattered stone wall,
+      rubble below, morning mist, no people'
   203:
     sentence: The tall Christian ships ride high above the Ottoman galleys.
-    subject: >-
-      Sea battle: four tall high-sided sailing ships with round sails, surrounded by a swarm of many low
-      oared galleys far below their decks, city walls on the horizon
+    subject: 'Sea battle: four tall high-sided sailing ships with round sails, surrounded by a swarm of many low
+      oared galleys far below their decks, city walls on the horizon'
   218:
     sentence: His men laid a road of greased logs up the slope.
-    subject: >-
-      A long track of wooden logs laid across a steep wooded hillside like the rungs of a ladder,
-      small workers greasing them with buckets of fat, seen from high above
+    subject: A long track of wooden logs laid across a steep wooded hillside like the rungs of a ladder, small workers
+      greasing them with buckets of fat, seen from high above
   220:
     sentence: Oxen pulled.
-    subject: >-
-      Teams of yoked oxen straining on long ropes, hauling a wooden galley on log rollers up a hill,
-      side view, drovers small and seen from behind
+    subject: Teams of yoked oxen straining on long ropes, hauling a wooden galley on log rollers up a hill, side
+      view, drovers small and seen from behind
   221:
     sentence: Men pushed.
-    subject: >-
-      Seen from behind and below: a crowd of anonymous labourers leaning their shoulders into the stern
-      of a galley on log rollers on a slope
+    subject: 'Seen from behind and below: a crowd of anonymous labourers leaning their shoulders into the stern
+      of a galley on log rollers on a slope'
   222:
     sentence: Some crews even raised their sails as they rolled over the top.
-    subject: >-
-      A galley with its sails raised and oars out, cresting a bare hilltop on rollers against the sky,
-      a harbour visible far below on the other side, wide view
+    subject: A galley with its sails raised and oars out, cresting a bare hilltop on rollers against the sky, a
+      harbour visible far below on the other side, wide view
   233:
     sentence: But the Ottomans were ready.
-    subject: >-
-      Night harbour: a row of cannons on a dark shore firing flashes across the water at small ships
-      loaded with fire, smoke and reflections on the water, wide view from the shore
+    subject: 'Night harbour: a row of cannons on a dark shore firing flashes across the water at small ships loaded
+      with fire, smoke and reflections on the water, wide view from the shore'
   253:
     sentence: You crawl in the dark, in a tunnel barely wider than your shoulders.
-    subject: >-
-      A very narrow underground tunnel shored with timber props, lit by one small oil lamp,
-      the dark shape of a crawling miner from behind
+    subject: A very narrow underground tunnel shored with timber props, lit by one small oil lamp, the dark shape
+      of a crawling miner from behind
   255:
     sentence: You hold your breath.
-    subject: >-
-      Inside a timbered tunnel: a miner in silhouette pressing his ear to the earth wall,
-      a lamp on the floor, deep shadows
+    subject: 'Inside a timbered tunnel: a miner in silhouette pressing his ear to the earth wall, a lamp on the
+      floor, deep shadows'
   257:
     sentence: Your enemy is right in front of you.
-    subject: >-
-      A tunnel wall of earth caving in, a hole opening onto a second tunnel with lamplight and the dark
-      silhouettes of diggers with picks on the other side
+    subject: A tunnel wall of earth caving in, a hole opening onto a second tunnel with lamplight and the dark silhouettes
+      of diggers with picks on the other side
   303:
     sentence: At night, the camp blazed with fires.
-    subject: >-
-      A vast army camp of tents across a plain at night, hundreds of campfires, smoke and glow rising,
-      the dark line of city walls and towers in the distance
+    subject: A vast army camp of tents across a plain at night, hundreds of campfires, smoke and glow rising, the
+      dark line of city walls and towers in the distance
+  1:
+    sentence: It is just after midnight, on 29 May 1453.
+    subject: 'Midnight: the great land walls under a thin crescent moon, a long line of square towers fading into
+      the dark, a few small torches on the battlements, the dry moat in deep shadow below, seen from the empty field
+      outside A dark night scene printed with heavy dark ink: the sky and the shadows are almost black; only moonlight
+      and torchlight are pale.'
+    context: 'The land walls of Constantinople in 1453. They stand on dry land, far inland from any sea: no water,
+      no ships, no boats anywhere in the picture. Soldiers in 15th-century helmets and cloaks.'
+  '2.1':
+    sentence: About seven thousand defenders stand on the walls of Constantinople, waiting in the dark.
+    subject: 'Night: a row of anonymous defenders in helmets and cloaks on the battlements of a land wall, seen
+      from behind, looking out over a dark empty plain, torchlight on the stone A dark night scene printed with
+      heavy dark ink: the sky and the shadows are almost black; only moonlight and torchlight are pale.'
+    context: 'The land walls of Constantinople in 1453. They stand on dry land, far inland from any sea: no water,
+      no ships, no boats anywhere in the picture. Soldiers in 15th-century helmets and cloaks.'
+  '2.2':
+    sentence: About seven thousand defenders stand on the walls of Constantinople, waiting in the dark.
+    subject: 'Night: a few defenders gathered round a glowing brazier on a wall-walk between two towers, seen from
+      a distance, spears leaning on the parapet, dark fields beyond the wall A dark night scene printed with heavy
+      dark ink: the sky and the shadows are almost black; only moonlight and torchlight are pale.'
+    context: 'The land walls of Constantinople in 1453. They stand on dry land, far inland from any sea: no water,
+      no ships, no boats anywhere in the picture. Soldiers in 15th-century helmets and cloaks.'
+  5:
+    sentence: If you stood beside the defenders tonight, you would hear drums out in the dark.
+    subject: 'Night, seen from the top of the city walls: beyond the moat, a dark plain filled with countless small
+      campfires of a vast army, drummers as tiny silhouettes, smoke rising into the dark'
+  6:
+    sentence: No army had ever broken through these land walls.
+    subject: 'A bird''s-eye view of the triple land walls running across open countryside: a dry moat, a low outer
+      wall and a tall inner wall with square towers, stretching to the horizon, fields on the outside, city roofs
+      on the inside'
+    context: 'The land walls of Constantinople in 1453. They stand on dry land, far inland from any sea: no water,
+      no ships, no boats anywhere in the picture. Soldiers in 15th-century helmets and cloaks.'
+  7:
+    sentence: But below them waits an army many times larger.
+    subject: 'Dawn: a vast army encamped below the city walls, rows of tents and banners filling the plain to the
+      horizon, tiny soldiers, the walls in the foreground'
+  '8.2':
+    sentence: It came down to a cannon that nobody else would pay for, and a fleet that sailed over a hill.
+    reuse: ai-222
+  9:
+    sentence: Let's go back to the city at its height.
+    subject: 'Constantinople at its height around the year 1000: a panorama of the walled city on its peninsula,
+      the great domed church of Hagia Sophia on the hill with no towers beside it, palaces and churches with domes,
+      the harbour full of sailing ships, the sea on three sides'
+    context: 'The Byzantine city of Constantinople before 1453: Christian domed churches; there are no minarets
+      and no mosques anywhere. Medieval Mediterranean ships.'

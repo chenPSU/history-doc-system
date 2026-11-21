@@ -5,9 +5,12 @@ The edit decision list (EDL) is what the renderer (P4.2) draws, second by second
   from 0 to the end of the narration plus a short tail, so the picture never goes black by accident.
   A shot runs from its sentence start to the next sentence start, so pauses keep the last picture.
 - kind: image | video | map (a clip of a data/maps library, drawn inline) | card | placeholder (no clip yet, or a missing file).
-- fit: "cover" for wide images; "contain_blur" for 4:3 and portrait (centred on a dark blurred copy).
+- fit: "cover" (full frame) for every image, framed on its `focus` point (assets/framing.yaml, default centre);
+  "contain_blur" (small on a dark blurred copy) only where framing.yaml asks for it (v2, owner 21 Nov 2026).
+- caption: a short on-picture label for a shot (who, when, how many), from framing.yaml `captions`.
 - motion: Ken Burns 5-10% (bigger for longer shots), pans with the same slack; cards are static.
-- transition_in: fade_black at chapter starts, dissolve after a scripted pause, otherwise cut.
+- transition_in: fade_black at chapter starts, a longer dissolve after a scripted pause, otherwise a soft 0.5 s dissolve
+  (the breakout videos in docs/benchmark-2026-11.md blend every shot; hard cuts read as a slide show).
 - label: "Illustration" on every ai_generated=y asset (P3.4).
 - cues: MUSIC / SFX / J-CUT / L-CUT / SOUND BRIDGE / MIX from script.md, at the time they apply
   (J-cuts and sound bridges start before the cut). The mix stage reads them.
@@ -31,7 +34,8 @@ FPS, WIDTH, HEIGHT = 30, 3840, 2160
 TAIL = 2.0                     # seconds of picture after the last word (sign-off), faded out
 FADE_BLACK, DISSOLVE = 1.0, 0.8
 PAUSE_FOR_DISSOLVE = 1.0       # a gap this long before a sentence (a [PAUSE]) gets a dissolve
-WIDE = 1.5                     # aspect at or above this fills the frame; below it sits on a blurred copy
+SOFT = 0.5                     # every ordinary shot change is a short dissolve
+DEFAULT_FOCUS = (0.5, 0.42)    # where to frame an image when framing.yaml says nothing (faces sit a bit high)
 HOOK_WINDOW, HOOK_MAX, MAX_SHOT = 30.0, 3.0, 10.0
 PACE_MEAN = (3.0, 4.0)       # average shot after the hook (owner, 21 Nov 2026; was 4-7 s per shot)
 CHAPTER_SECTIONS = re.compile(r"^(CONTEXT|CHAPTER \d+|TURNING POINT|CLOSE)$")
@@ -166,8 +170,18 @@ def _subs(row: dict) -> list[Sub]:
 
 
 # ---------------------------------------------------------------- build
+def load_framing(ep: Path) -> dict:
+    """assets/framing.yaml: focus: {asset_id: [x, y] 0..1}, fit: {asset_id: contain}, captions: {shot_id: text}."""
+    import yaml
+    p = Path(ep) / "assets" / "framing.yaml"
+    data = yaml.safe_load(p.read_text(encoding="utf-8")) if p.exists() else None
+    data = data or {}
+    return {k: data.get(k) or {} for k in ("focus", "fit", "captions")}
+
+
 def build(ep: Path, probe=None) -> dict:
     ep = Path(ep)
+    framing = load_framing(ep)
     timing, rows = load_timing(ep), load_shots(ep)
     sents = timing.get("sentences", [])
     if [s["text"] for s in sents] != [r["sentence"] for r in rows]:
@@ -191,7 +205,7 @@ def build(ep: Path, probe=None) -> dict:
             s1 = round(end if sub.j == sub.n - 1 else start + step * (sub.j + 1), 3)
             dur = round(s1 - s0, 3)
             item = {"id": f"s{sub.no:03d}.{sub.j + 1}", "sentence_no": sub.no, "section": sub.section,
-                    "start": s0, "end": s1, "duration": dur, "visual_type": sub.vt, "transition_in": "cut"}
+                    "start": s0, "end": s1, "duration": dur, "visual_type": sub.vt, "transition_in": "dissolve", "transition_s": SOFT}
             if sub.j == 0 and new_section:
                 chapter = CHAPTER_SECTIONS.match(row["section"])
                 item["transition_in"] = "fade_black" if chapter else "dissolve"
@@ -215,7 +229,8 @@ def build(ep: Path, probe=None) -> dict:
                     aspect = info["width"] / info["height"]
                     item.update(kind="video" if video else "image", asset_id=sub.asset_id, file=m["file"],
                                 size=[info["width"], info["height"]],
-                                fit="cover" if aspect >= WIDE else "contain_blur",
+                                fit="contain_blur" if framing["fit"].get(sub.asset_id) == "contain" else "cover",
+                                focus=list(framing["focus"].get(sub.asset_id, DEFAULT_FOCUS)),
                                 motion={"type": "play"} if video else ken_burns(sub.motion, dur))
                     if video:
                         item["clip_s"] = info["duration"]
@@ -228,6 +243,8 @@ def build(ep: Path, probe=None) -> dict:
                                                                          else f"{sub.asset_id} not in manifest")
                 item.update(kind="placeholder", text=sub.term, reason=reason, motion={"type": "static"})
                 missing.append(item["id"])
+            if framing["captions"].get(item["id"]):
+                item["caption"] = str(framing["captions"][item["id"]])
             shots.append(item)
 
     shots[-1]["fade_out_s"] = TAIL

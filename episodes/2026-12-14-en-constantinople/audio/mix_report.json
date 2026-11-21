@@ -1,0 +1,25 @@
+{
+ "file": "audio/mix_0-60.wav",
+ "window": [
+  0,
+  60
+ ],
+ "narration_lufs": -20.2,
+ "asset_lufs": {
+  "wm-16918997": -14.0,
+  "wm-64741168": -24.3,
+  "wm-90733962": -15.1,
+  "wm-3184777": -17.1
+ },
+ "music_bed_db_vs_voice": -9.0,
+ "target": {
+  "lufs": -14.0,
+  "true_peak": -1.0
+ },
+ "measured": {
+  "integrated_lufs": -14.0,
+  "lra_lu": 5.1,
+  "true_peak_dbtp": -1.0
+ },
+ "passed": true
+}

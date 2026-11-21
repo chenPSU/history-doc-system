@@ -61,9 +61,9 @@ def main(argv=None) -> int:
         print(it.prompt if it else f"no AI shot #{a.show}")
         return 0 if it else 2
     for i in items:
-        mark = {"done": "done   ", "todo": "todo   ", "refused": "REFUSED"}[i.status]
-        subject = i.prompt.split("Scene: ", 1)[1].split("\n", 1)[0]
-        print(f"{mark} #{i.no:>3} {subject[:100]}")
+        mark = {"done": "done   ", "todo": "todo   ", "refused": "REFUSED", "reuse": "reuse  "}[i.status]
+        subject = i.prompt.split("Scene: ", 1)[1].split("\n", 1)[0] if i.prompt else f"(reuses {i.file})"
+        print(f"{mark} #{i.key:>5} {subject[:100]}")
         for r in i.reasons:
             print(f"          ! {r}")
     todo = [i for i in items if i.status == "todo"][: a.max] if a.max else [i for i in items if i.status == "todo"]

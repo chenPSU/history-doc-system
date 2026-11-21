@@ -34,6 +34,8 @@ React/TypeScript renders the video (maps, year counters, chapter cards, Ken Burn
 Same Google account as TTS, called by API inside the pipeline (P3.4). Rough cost ~$0.04/image, ~10-20 images/episode (under $1), reused for TH. Images carry a SynthID watermark, which is fine because AI images are labelled anyway.
 Rules unchanged: only where no real image exists; painterly/old-print style; on-screen label "Illustration"; `ai_generated=y` in the manifest; disclosure on upload if realistic; no realistic AI image of a real person.
 
+- **Update 21 Nov 2026 (owner): hybrid "B".** After the first draft felt like a slide show and the benchmark (`docs/benchmark-2026-11.md`) showed breakout videos draw a picture for every sentence, AI scenes are used for every story beat that has no *exact* real picture (not only "no real image at all"). Real pictures stay for real people, objects and places (portraits, artefacts, the walls). Same style rules: old-print look, anonymous figures, label "Illustration", `ai_generated=y`. Budget about 150–200 images per episode (~$6–8). Each paid batch still needs the owner's yes with the request count.
+
 ## D8 · Footage sources — DECIDED
 Public domain first: Library of Congress, NARA, Wikimedia Commons (PD/CC0/CC BY/CC BY-SA with credit), Internet Archive/Prelinger. Every asset logged in `assets/manifest.csv`.
 - Image licences (21 Nov 2026, owner): download public domain, CC0, CC BY and **CC BY-SA** (most present-day location photos on Commons are BY-SA). Never NC, ND or unknown. Every CC BY / BY-SA file is credited in the description (author, licence, link), from `assets/manifest.csv`. Internet Archive: PD/CC0 only (uploader-declared licences). Set in `config/assets.yaml`.
