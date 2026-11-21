@@ -12,7 +12,7 @@ The edit decision list (EDL) is what the renderer (P4.2) draws, second by second
 - cues: MUSIC / SFX / J-CUT / L-CUT / SOUND BRIDGE / MIX from script.md, at the time they apply
   (J-cuts and sound bridges start before the cut). The mix stage reads them.
 - chapters: section starts with the chapter-card text (YouTube chapters, P5.1).
-- stats + errors/warnings: the P4.2 pacing rules checked on the real timeline.
+- stats + errors/warnings: the P4.2 pacing rules checked on the real timeline (hook 2-3 s, then an average of 3-4 s).
 """
 from __future__ import annotations
 
@@ -32,7 +32,8 @@ TAIL = 2.0                     # seconds of picture after the last word (sign-of
 FADE_BLACK, DISSOLVE = 1.0, 0.8
 PAUSE_FOR_DISSOLVE = 1.0       # a gap this long before a sentence (a [PAUSE]) gets a dissolve
 WIDE = 1.5                     # aspect at or above this fills the frame; below it sits on a blurred copy
-HOOK_WINDOW, HOOK_MAX, PACE, MAX_SHOT = 30.0, 3.0, (4.0, 7.0), 10.0
+HOOK_WINDOW, HOOK_MAX, MAX_SHOT = 30.0, 3.0, 10.0
+PACE_MEAN = (3.0, 4.0)       # average shot after the hook (owner, 21 Nov 2026; was 4-7 s per shot)
 CHAPTER_SECTIONS = re.compile(r"^(CONTEXT|CHAPTER \d+|TURNING POINT|CLOSE)$")
 AUDIO_CUES = ("MUSIC", "SFX", "J-CUT", "L-CUT", "SOUND BRIDGE", "MIX")
 LEAD_CUES = ("J-CUT", "SOUND BRIDGE")   # sound of the next scene starts before its picture
@@ -235,7 +236,9 @@ def build(ep: Path, probe=None) -> dict:
     if too_long:
         errors.append(f"shot(s) over {MAX_SHOT:.0f}s: {', '.join(too_long)}")
     body = [s["duration"] for s in shots if s["start"] >= HOOK_WINDOW]
-    in_pace = sum(PACE[0] <= d <= PACE[1] for d in body)
+    mean = sum(body) / max(1, len(body))
+    if body and not PACE_MEAN[0] - 0.25 <= mean <= PACE_MEAN[1] + 0.25:
+        warnings.append(f"average shot after the first 30 s is {mean:.1f}s (aim {PACE_MEAN[0]:.0f}-{PACE_MEAN[1]:.0f}s)")
     for a, b in zip(shots, shots[1:]):
         if abs(a["end"] - b["start"]) > 1e-6:
             errors.append(f"gap or overlap between {a['id']} and {b['id']}")
@@ -264,9 +267,8 @@ def build(ep: Path, probe=None) -> dict:
                            "mean": round(sum(s["duration"] for s in shots if s["start"] < HOOK_WINDOW)
                                          / max(1, sum(s["start"] < HOOK_WINDOW for s in shots)), 2),
                            "over_3s": len(hook_long)},
-             "after_30s": {"shots": len(body), "mean": round(sum(body) / max(1, len(body)), 2),
-                           "in_4_to_7s": in_pace, "under_4s": sum(d < PACE[0] for d in body),
-                           "over_7s": sum(d > PACE[1] for d in body)},
+             "after_30s": {"shots": len(body), "mean": round(mean, 2), "under_2s": sum(d < 2 for d in body),
+                           "over_7s": sum(d > 7 for d in body)},
              "contain_blur": sum(s.get("fit") == "contain_blur" for s in shots),
              "labelled_ai": sum("label" in s for s in shots),
              "placeholders": len(missing)}

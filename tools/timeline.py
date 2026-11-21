@@ -35,8 +35,8 @@ def main(argv=None) -> int:
     print(f"{out}: {st['shots']} shots, {int(m)}:{s:04.1f}, kinds {st['kinds']}")
     f, a = st["first_30s"], st["after_30s"]
     print(f"first 30 s: {f['shots']} shots, mean {f['mean']} s, {f['over_3s']} over 3 s")
-    print(f"after 30 s: {a['shots']} shots, mean {a['mean']} s; 4-7 s: {a['in_4_to_7s']}, "
-          f"under 4 s: {a['under_4s']}, over 7 s: {a['over_7s']}")
+    print(f"after 30 s: {a['shots']} shots, mean {a['mean']} s (aim 3-4 s); under 2 s: {a['under_2s']}, "
+          f"over 7 s: {a['over_7s']}")
     print(f"4:3/portrait on blurred background: {st['contain_blur']}; AI labelled: {st['labelled_ai']}; "
           f"cues: {len(edl['cues'])}; chapters: {len(edl['chapters'])}")
     if edl["placeholders"]:

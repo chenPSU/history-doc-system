@@ -138,3 +138,10 @@ def test_card_kinds():
     assert T.card_of('quote card: "Better the turban." (reported by Doukas)') ==         {"text": "Better the turban.", "source": "reported by Doukas", "style": "quote"}
     assert T.card_of("end card: Until next time, keep looking back.")["text"] == "Until next time, keep looking back."
     assert T.card_of("end card: series playlist") == {"text": "", "style": "end"}
+
+
+def test_average_pace_after_the_hook_is_checked(tmp_path):
+    e = T.build(make_ep(tmp_path), probe)
+    a = e["stats"]["after_30s"]
+    assert a["shots"] == 2 and a["mean"] == pytest.approx((40 - 33.8 + 6.0) / 2, abs=0.01)
+    assert any("average shot after the first 30 s" in w for w in e["warnings"])     # 6.1 s: slower than 3-4 s
