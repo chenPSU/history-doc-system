@@ -131,3 +131,10 @@ def test_shotlist_out_of_step_with_timing_is_refused(tmp_path):
     (ep / "audio" / "narration_timing.json").write_text(json.dumps(t))
     with pytest.raises(T.TimelineError, match="disagree"):
         T.build(ep, probe)
+
+
+def test_card_kinds():
+    assert T.card_of("card: 1452 · Edirne") == {"text": "1452 · Edirne", "style": "chapter"}
+    assert T.card_of('quote card: "Better the turban." (reported by Doukas)') ==         {"text": "Better the turban.", "source": "reported by Doukas", "style": "quote"}
+    assert T.card_of("end card: Until next time, keep looking back.")["text"] == "Until next time, keep looking back."
+    assert T.card_of("end card: series playlist") == {"text": "", "style": "end"}

@@ -129,7 +129,17 @@ def ken_burns(motion: str, dur: float) -> dict:
 
 
 def card_of(term: str) -> dict:
-    text = re.sub(r"^\s*card\s*:\s*", "", term, flags=re.I).strip()
+    """card: / quote card: / end card: cells -> what the card shows.
+    chapter = "<when> · <where>"; quote = words + (source); end = the sign-off, or blank under YouTube's end
+    screen when the cell is only a production note (no closing punctuation, e.g. "series playlist")."""
+    m = re.match(r"^\s*(quote |end )?card\s*:\s*(.*)$", term, flags=re.I)
+    kind, text = ((m.group(1) or "").strip().lower(), m.group(2).strip()) if m else ("", term.strip())
+    if kind == "quote":
+        q = re.match(r'^(.*?)\s*\(([^()]*)\)\s*$', text)
+        words, source = (q.group(1), q.group(2)) if q else (text, "")
+        return {"text": words.strip().strip('"').strip("“”"), "source": source, "style": "quote"}
+    if kind == "end":
+        return {"text": text if re.search(r"[.!?]$", text) else "", "style": "end"}
     return {"text": text, "style": "chapter" if " · " in text else "fact"}
 
 

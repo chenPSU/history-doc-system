@@ -20,7 +20,7 @@ export type Shot = {
   fit?: 'cover' | 'contain_blur';
   clipFrames?: number;
   holdLast?: boolean;
-  card?: {text: string; style: 'chapter' | 'fact'};
+  card?: {text: string; style: 'chapter' | 'fact' | 'quote' | 'end'; source?: string};
   text?: string;
   reason?: string;
   label?: string;
@@ -100,6 +100,15 @@ const Card: React.FC<{shot: Shot; h: number}> = ({shot, h}) => {
         <div style={{fontSize: h * 0.075, fontStyle: 'italic'}}>{where}</div>
       </div>
     );
+  } else if (c.style === 'quote') {
+    body = (
+      <div style={{...base, maxWidth: '72%'}}>
+        <div style={{fontSize: h * 0.058, fontStyle: 'italic', lineHeight: 1.25}}>&ldquo;{c.text}&rdquo;</div>
+        {c.source ? <div style={{fontSize: h * 0.026, color: GOLD, marginTop: h * 0.035, letterSpacing: h * 0.002}}>{c.source}</div> : null}
+      </div>
+    );
+  } else if (c.style === 'end') {
+    body = <div style={{...base, fontSize: h * 0.05, fontStyle: 'italic'}}>{c.text}</div>;
   } else {
     body = (
       <div style={{...base, fontSize: c.text.length > 24 ? h * 0.06 : h * 0.09, maxWidth: '78%', lineHeight: 1.15}}>
