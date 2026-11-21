@@ -152,8 +152,9 @@ class Item:
     prompt: str
     hash: str
     file: str            # relative to the episode folder
-    status: str          # "done" (image with this prompt exists) | "todo" | "refused"
+    status: str          # "done" (image with this prompt exists) | "todo" | "refused" | "reuse"
     reasons: list[str]
+    reuse: str = ""      # asset id of an existing AI image this shot shows again
 
     @property
     def asset_id(self) -> str:
@@ -177,7 +178,7 @@ def plan(ep: Path, cfg: dict, only: set[int] | None = None) -> list[Item]:
             src = man.get(entry["reuse"])
             ok = src is not None and (ep / src["file"]).exists()
             items.append(Item(key, no, j, entry.get("sentence", ""), "", "", src["file"] if ok else "", "reuse" if ok else "refused",
-                              [] if ok else [f"reuse: {entry['reuse']} has no image"]))
+                              [] if ok else [f"reuse: {entry['reuse']} has no image"], entry["reuse"]))
             continue
         subject, ctx = entry.get("subject", ""), entry.get("context", context)   # a shot may override the setting
         prompt = build_prompt(subject, ctx, entry.get("style", style), cfg)
@@ -286,6 +287,9 @@ def generate(ep: Path, cfg: dict, provider, go: bool = False, only: set[int] | N
               "planned": [i.no for i in todo], "made": [], "failed": [], "requests": 0}
     if not go:
         return result
+    reuses = {(i.no, i.j): i.reuse for i in items if i.status == "reuse"}
+    if reuses:
+        _set_shot_asset(ep, reuses)            # free: the shot shows an image that already exists
     mpath = ep / "assets" / "manifest.csv"
     for item in todo:
         result["requests"] += 1

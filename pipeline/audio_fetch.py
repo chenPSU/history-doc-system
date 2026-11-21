@@ -51,7 +51,7 @@ def fetch(ep: Path, titles: dict[str, str], http: Http, allowed_classes, log=pri
         data = http.get(i["url"])
         (ep / rel).parent.mkdir(parents=True, exist_ok=True)
         (ep / rel).write_bytes(data)
-        rows = [r for r in rows if r["asset_id"] != aid]
+        rows = [r for r in read_manifest(mpath) if r["asset_id"] != aid]   # re-read: other stages write this file too
         rows.append({"asset_id": aid, "file": rel, "source": "commons", "source_url": i["page"], "licence": i["licence"],
                      "credit": i["credit"], "ai_generated": "n",
                      "notes": f"class={i['class']}; kind=audio; role={role}; title={title[5:120]}"})

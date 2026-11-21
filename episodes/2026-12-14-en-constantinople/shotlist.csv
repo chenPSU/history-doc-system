@@ -148,7 +148,7 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 147,CHAPTER 2,"At the heart of the army stood the Janissaries, the sultan's elite infantry.",painting,A Janissary of War with a Lion MET,zoom_out,5.44,wm-60857562
 148,CHAPTER 2,Most had been taken from Christian families in the Balkans as boys.,manuscript,Devshirme,zoom_in,4.79,wm-6886796
 149,CHAPTER 2,"They grew up as Muslims, trained for nothing but war.",painting,Jean Baptiste Vanmour Janissary painting,zoom_out,3.79,wm-34255856
-150,CHAPTER 2,Behind the walls stood about seven thousand defenders.,illustration_ai,Illustration: reuse ai-002-1,zoom_out,3.86,
+150,CHAPTER 2,Behind the walls stood about seven thousand defenders.,illustration_ai,Illustration: reuse ai-002-1,zoom_out,3.86,ai-002-1
 151,CHAPTER 2,"The emperor's friend, George Sphrantzes, counted the Greek men fit to fight.",illustration_ai,"Illustration: A clerk's table: a long roll of names, a quill, an inkwell and a candle, no people A dark ",zoom_in,5.44,ai-151
 152,CHAPTER 2,He found fewer than five thousand.,illustration_ai,"Illustration: Men lining up in a palace courtyard to be counted, a clerk with a list, seen from above",zoom_out,2.43,ai-152
 153,CHAPTER 2,Constantine read the list in silence.,painting,Konstantinos XI Palaiologos fresco,zoom_in,2.65,wm-156603065
@@ -199,20 +199,20 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 198,CHAPTER 3,Dozens of smaller ships swarmed the four.,manuscript,medieval naval battle miniature,zoom_out,2.94,wm-31451991
 199,CHAPTER 3,Could four ships really fight off a whole navy?,map,map: four ships surrounded,map_anim,3.37,map-four_surrounded
 200,CHAPTER 3,Picture the scene from the sea walls.,illustration_ai,"Illustration: Soldiers seen from behind on top of the sea walls, looking out at a sea battle in the dist",zoom_in,2.57,ai-200
-201,CHAPTER 3,The whole city is watching.,illustration_ai,"Illustration: Townspeople crowding every rooftop and balcony, pointing toward the sea",zoom_out,1.88,
-202,CHAPTER 3,People crowd every tower.,illustration_ai,"Illustration: People packed on the top of a city tower, waving and shouting toward the sea",zoom_in,1.74,
+201,CHAPTER 3,The whole city is watching.,illustration_ai,"Illustration: Townspeople crowding every rooftop and balcony, pointing toward the sea",zoom_out,1.88,ai-201
+202,CHAPTER 3,People crowd every tower.,illustration_ai,"Illustration: People packed on the top of a city tower, waving and shouting toward the sea",zoom_in,1.74,ai-202
 203,CHAPTER 3,The tall Christian ships ride high above the Ottoman galleys.,illustration_ai,"Illustration: four tall sailing ships surrounded by galleys, old-print style",zoom_out,4.24,ai-203
 204,CHAPTER 3,Their sailors hurl stones and fire down at the attackers.,manuscript,Greek fire Madrid Skylitzes,zoom_in,3.96,wm-302463
-205,CHAPTER 3,"Suddenly, the wind drops.",illustration_ai,"Illustration: Tall sailing ships with slack, empty sails on a glassy still sea, flags hanging limp",zoom_out,1.74,
+205,CHAPTER 3,"Suddenly, the wind drops.",illustration_ai,"Illustration: Tall sailing ships with slack, empty sails on a glassy still sea, flags hanging limp",zoom_out,1.74,ai-205
 206,CHAPTER 3,The four ships drift toward the Ottoman shore.,map,map: the four ships drift toward the Ottoman shore,map_anim,3.2,map-ships_drift
 207,CHAPTER 3,"On the beach, Mehmed rides his horse into the waves, shouting at his admiral.",painting,Stanisław von Chlebowski Entry of Sultan Mehmed II in Constantinople,zoom_in,5.35,wm-105246598
 208,CHAPTER 3,"But near sunset, the wind returns.",location,sunset over the Sea of Marmara,zoom_out,2.79,wm-194413516
 209,CHAPTER 3,The four ships break free and slip in behind the chain.,map,map: the four ships slip behind the chain,map_anim,4.51,map-behind_chain
-210,CHAPTER 3,"Inside the city, people cheered and rang the bells.",illustration_ai,Illustration: People cheering in a city square at sunset while bells ring in a church tower,zoom_in,4.18,
+210,CHAPTER 3,"Inside the city, people cheered and rang the bells.",illustration_ai,Illustration: People cheering in a city square at sunset while bells ring in a church tower,zoom_in,4.18,ai-210
 211,CHAPTER 3,Mehmed was furious.,painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,1.43,wm-150447925
-212,CHAPTER 3,"He had his admiral beaten, and took away his wealth.",illustration_ai,Illustration: Guards carrying away chests of gold coins and fine robes from a commander's tent,zoom_in,3.93,
+212,CHAPTER 3,"He had his admiral beaten, and took away his wealth.",illustration_ai,Illustration: Guards carrying away chests of gold coins and fine robes from a commander's tent,zoom_in,3.93,ai-212
 213,CHAPTER 3,Now he knew he could not break the chain from outside.,map,map: the chain still holds,map_anim,4.08,map-chain_holds
-214,CHAPTER 3,So what could he do?,illustration_ai,"Illustration: The floating chain across the mouth of a harbour at dusk, warships waiting beyond it",zoom_out,1.51,
+214,CHAPTER 3,So what could he do?,illustration_ai,"Illustration: The floating chain across the mouth of a harbour at dusk, warships waiting beyond it",zoom_out,1.51,ai-214
 215,CHAPTER 3,He chose a plan that sounded impossible.,map,map: Ottoman ships hauled over the Galata hill into the Golden Horn,map_anim,3.02,map-over_the_hill
 216,CHAPTER 3,"Behind Galata, there is a hill.",map,map: the hill behind Galata,map_anim,2.34,map-hill_behind_galata
 217,CHAPTER 3,On the far side of that hill lies the Golden Horn.,map,map: route over the hill into the Golden Horn,map_anim,3.78,map-route_over_hill
@@ -221,21 +221,21 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 220,CHAPTER 3,Oxen pulled.,illustration_ai,old print style: oxen hauling a galley on greased log rollers up a hill,zoom_out,0.89,ai-220
 221,CHAPTER 3,Men pushed.,illustration_ai,old print style: crowd of men pushing a galley on rollers,zoom_in,0.82,ai-221
 222,CHAPTER 3,Some crews even raised their sails as they rolled over the top.,illustration_ai,old print style: galley with raised sails rolling over a hilltop,zoom_out,4.68,ai-222
-223,CHAPTER 3,Picture yourself on the sea wall that morning.,illustration_ai,Illustration: Dawn over the sea walls: a soldier seen from behind looking down at the harbour,zoom_in,3.42,
-224,CHAPTER 3,You look down at water that was safe yesterday.,illustration_ai,Illustration: Dozens of oared galleys floating inside a harbour below city walls in the morning light,zoom_out,3.49,
+223,CHAPTER 3,Picture yourself on the sea wall that morning.,illustration_ai,Illustration: Dawn over the sea walls: a soldier seen from behind looking down at the harbour,zoom_in,3.42,ai-223
+224,CHAPTER 3,You look down at water that was safe yesterday.,illustration_ai,Illustration: Dozens of oared galleys floating inside a harbour below city walls in the morning light,zoom_out,3.49,ai-224
 225,CHAPTER 3,Around seventy Ottoman ships are floating inside the harbour.,map,map: about 70 Ottoman ships inside the Golden Horn,map_anim,4.53,map-seventy_ships
-226,CHAPTER 3,How had nobody stopped them?,illustration_ai,Illustration: A wooded hill above a harbour with a trail of crushed logs and ruts running down its slope,zoom_in,1.82,
-227,CHAPTER 3,The Genoese of Galata lived right beside that road.,illustration_ai,"Illustration: A walled harbour town on a hillside with its gates shut, a road of logs passing just outsi",zoom_out,3.31,
+226,CHAPTER 3,How had nobody stopped them?,illustration_ai,Illustration: A wooded hill above a harbour with a trail of crushed logs and ruts running down its slope,zoom_in,1.82,ai-226
+227,CHAPTER 3,The Genoese of Galata lived right beside that road.,illustration_ai,"Illustration: A walled harbour town on a hillside with its gates shut, a road of logs passing just outsi",zoom_out,3.31,ai-227
 228,CHAPTER 3,"Later, people in the city accused them of looking the other way.",location,Galata Tower Istanbul,zoom_in,4.16,wm-38102136
 229,CHAPTER 3,Now the city had to guard its sea walls too.,map,map: the sea walls now in danger,map_anim,2.9,map-sea_walls_danger
-230,CHAPTER 3,Its defenders were stretched even thinner.,illustration_ai,"Illustration: A few defenders spread far apart along a very long sea wall, seen from a tower",zoom_out,2.77,
-231,CHAPTER 3,The Venetians in the harbour wanted to strike back.,illustration_ai,"Illustration: Sailors in a harbour at night loading small boats with brushwood, barrels of pitch and oil",zoom_in,3.36,
-232,CHAPTER 3,"On the night of 28 April, they tried to burn the Ottoman ships with fire boats.",illustration_ai,Illustration: Small boats loaded with fire slipping across a dark harbour toward anchored ships A dark n,zoom_out,5.61,
+230,CHAPTER 3,Its defenders were stretched even thinner.,illustration_ai,"Illustration: A few defenders spread far apart along a very long sea wall, seen from a tower",zoom_out,2.77,ai-230
+231,CHAPTER 3,The Venetians in the harbour wanted to strike back.,illustration_ai,"Illustration: Sailors in a harbour at night loading small boats with brushwood, barrels of pitch and oil",zoom_in,3.36,ai-231
+232,CHAPTER 3,"On the night of 28 April, they tried to burn the Ottoman ships with fire boats.",illustration_ai,Illustration: Small boats loaded with fire slipping across a dark harbour toward anchored ships A dark n,zoom_out,5.61,ai-232
 233,CHAPTER 3,But the Ottomans were ready.,illustration_ai,"Illustration: fire boats in the night harbour, old-print style",zoom_out,1.85,ai-233
 234,CHAPTER 3,Their guns sank the leading ship before it got close.,engraving,naval cannon fire engraving,zoom_in,3.5,wm-32879564
-235,CHAPTER 3,Forty sailors swam to the Ottoman shore.,illustration_ai,Illustration: Sailors swimming toward a dark shore where soldiers wait with torches A dark night scene p,zoom_out,2.64,
+235,CHAPTER 3,Forty sailors swam to the Ottoman shore.,illustration_ai,Illustration: Sailors swimming toward a dark shore where soldiers wait with torches A dark night scene p,zoom_out,2.64,ai-235
 236,CHAPTER 3,Mehmed had every one of them killed in sight of the walls.,location,Theodosian Walls Istanbul at dusk,zoom_in,3.83,wm-74764600
-237,CHAPTER 3,"In reply, the defenders put two hundred and sixty Turkish prisoners to death on the walls.",illustration_ai,"Illustration: The land walls at dusk under a heavy dark sky, crows circling above the towers",zoom_out,5.94,
+237,CHAPTER 3,"In reply, the defenders put two hundred and sixty Turkish prisoners to death on the walls.",illustration_ai,"Illustration: The land walls at dusk under a heavy dark sky, crows circling above the towers",zoom_out,5.94,ai-237
 238,CHAPTER 3,The siege had turned into something darker.,location,Theodosian Walls Istanbul dark sky,zoom_in,2.84,wm-186630934
 239,CHAPTER 3,And the city still had no way out.,map,"map: the city boxed in, land and sea",map_anim,2.24,map-city_boxed
 240,CHAPTER 3,So where would the next blow fall?,map,map: the land walls again,map_anim,2.24,map-land_walls_again
@@ -246,7 +246,7 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 245,CHAPTER 4,He brought in miners from the silver mines of Serbia.,location,Novo Brdo fortress Serbia,zoom_in,3.92,wm-79770433
 246,CHAPTER 4,They began to dig tunnels toward the walls.,engraving,Agricola De re metallica mine tunnel woodcut 1556,zoom_out,3.18,wm-196814331
 247,CHAPTER 4,"Inside the city, one man stood in their way.",location,Theodosian Walls Istanbul from inside,zoom_in,3.26,wm-186630934
-248,CHAPTER 4,"Writers at the time called him a German, named Johannes Grant.",illustration_ai,"Illustration: A countermine shaft being dug inside the city walls: workers with picks and baskets, a lam",zoom_out,4.59,
+248,CHAPTER 4,"Writers at the time called him a German, named Johannes Grant.",illustration_ai,"Illustration: A countermine shaft being dug inside the city walls: workers with picks and baskets, a lam",zoom_out,4.59,ai-248
 249,CHAPTER 4,Some historians think he was really a Scot.,card,card: German or Scot?,static,3.18,
 250,CHAPTER 4,"Either way, he knew mines.",engraving,Agricola De re metallica mine tunnel woodcut 1556 miners,zoom_out,1.93,wm-104395405
 251,CHAPTER 4,His men dug their own tunnels to meet the Ottoman ones.,map,map: countermine tunnels meet the Ottoman tunnels,map_anim,4.07,map-countermines
@@ -258,31 +258,31 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 257,CHAPTER 4,Your enemy is right in front of you.,illustration_ai,"Illustration: two miners face to face in a tunnel, old-print style",zoom_out,2.64,ai-257
 258,CHAPTER 4,So Grant's men burned some tunnels with Greek fire.,manuscript,Madrid Skylitzes Greek fire miniature,zoom_in,3.59,wm-15268427
 259,CHAPTER 4,Others they collapsed on the diggers.,engraving,Agricola De re metallica mine tunnel woodcut 1556 timbering,zoom_out,2.6,wm-196814331
-260,CHAPTER 4,"On 23 May, the defenders captured a pair of Ottoman officers underground.",illustration_ai,Illustration: Soldiers with torches leading two prisoners out of a tunnel entrance,zoom_out,5.56,
+260,CHAPTER 4,"On 23 May, the defenders captured a pair of Ottoman officers underground.",illustration_ai,Illustration: Soldiers with torches leading two prisoners out of a tunnel entrance,zoom_out,5.56,ai-260
 261,CHAPTER 4,"Under torture, the officers gave away the location of every tunnel.",manuscript,Byzantine prisoners miniature,zoom_in,4.71,wm-15190703
 262,CHAPTER 4,"Within days, Grant's men had wrecked them all.",map,map: every tunnel destroyed,map_anim,3.24,map-tunnels_destroyed
 263,CHAPTER 4,The miners had failed.,location,Theodosian Walls Istanbul still standing,zoom_out,1.66,wm-74764603
 264,CHAPTER 4,But what came next would hurt the city more than any tunnel.,painting,Zografos Makriyannis The fall of Konstantinople,zoom_in,4.53,wm-2208722
 265,CHAPTER 4,"While his miners dug, Mehmed had also tried words.",painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,3.77,wm-148822992
-266,CHAPTER 4,"On 21 May, he sent the emperor an offer.",illustration_ai,Illustration: An envoy on horseback with a small escort approaching a closed city gate under a white fla,zoom_out,3.47,
-267,CHAPTER 4,"Give up the city, and you may go in peace.",illustration_ai,"Illustration: An envoy unrolling a letter before officials in a palace hall with columns, seen from a di",zoom_in,3.17,
+266,CHAPTER 4,"On 21 May, he sent the emperor an offer.",illustration_ai,Illustration: An envoy on horseback with a small escort approaching a closed city gate under a white fla,zoom_out,3.47,ai-266
+267,CHAPTER 4,"Give up the city, and you may go in peace.",illustration_ai,"Illustration: An envoy unrolling a letter before officials in a palace hall with columns, seen from a di",zoom_in,3.17,ai-267
 268,CHAPTER 4,Constantine could rule in the south of Greece instead.,map,"map: the Peloponnese, offered to Constantine",map_anim,4.07,map-peloponnese
-269,CHAPTER 4,His people could leave with their goods.,illustration_ai,"Illustration: Families leaving through a city gate with carts of belongings, mules and bundles",zoom_out,3.02,
+269,CHAPTER 4,His people could leave with their goods.,illustration_ai,"Illustration: Families leaving through a city gate with carts of belongings, mules and bundles",zoom_out,3.02,ai-269
 270,CHAPTER 4,Constantine refused.,painting,Theophilos Hatzimihail Constantine Palaeologus 1914,zoom_in,1.51,wm-113863587
 271,CHAPTER 4,"He would pay more tribute, he answered.",artefact,Byzantine gold coin,zoom_out,2.94,wm-183174599
 272,CHAPTER 4,But the city was not his to give.,location,Hagia Sophia exterior,zoom_in,2.49,wm-387533
 273,CHAPTER 4,"Everyone inside, he said, had chosen to die rather than surrender.",card,quote card: we have all decided to die (Constantine's reply),static,4.98,
-274,CHAPTER 4,Yet the people of the city were losing hope.,illustration_ai,"Illustration: Worried townspeople in a narrow street at dusk, looking up at the sky",zoom_out,3.32,
+274,CHAPTER 4,Yet the people of the city were losing hope.,illustration_ai,"Illustration: Worried townspeople in a narrow street at dusk, looking up at the sky",zoom_out,3.32,ai-274
 275,CHAPTER 4,Constantinople was full of old prophecies.,manuscript,Bodleian Library MS Barocci 170 folio 11v,zoom_in,3.17,wm-151929366
 276,CHAPTER 4,One said the city would fall under a waning moon.,engraving,waning moon old astronomy engraving,zoom_out,3.7,wm-17404834
-277,CHAPTER 4,"On 22 May, the full moon rose over the walls.",illustration_ai,Illustration: A full moon rising over the walls and towers at night A dark night scene printed with heav,zoom_in,3.85,
+277,CHAPTER 4,"On 22 May, the full moon rose over the walls.",illustration_ai,Illustration: A full moon rising over the walls and towers at night A dark night scene printed with heav,zoom_in,3.85,ai-277
 278,CHAPTER 4,But it did not rise whole.,location,partial lunar eclipse photograph NASA,zoom_in,1.96,wm-162060093
-279,CHAPTER 4,"For hours, part of it stayed dark.",illustration_ai,"Illustration: The moon partly dark over the city towers, small figures on the walls pointing at it A dar",zoom_out,2.34,
+279,CHAPTER 4,"For hours, part of it stayed dark.",illustration_ai,"Illustration: The moon partly dark over the city towers, small figures on the walls pointing at it A dar",zoom_out,2.34,ai-279
 280,CHAPTER 4,It was an eclipse.,location,partial lunar eclipse photograph NASA,zoom_out,1.39,wm-162060093
-281,CHAPTER 4,"To the frightened people inside, it looked like the end.",illustration_ai,"Illustration: A dark city at night, small lamps in windows, people kneeling in prayer in a street A dark",zoom_out,4.33,
-282,CHAPTER 4,"A few days later, thick fog covered the city.",illustration_ai,"Illustration: Thick fog covering the domes, roofs and walls of the city, shapes barely visible",zoom_in,3.48,
-283,CHAPTER 4,"Some said a strange light glowed around the dome of the great church, Hagia Sophia.",illustration_ai,Illustration: A strange pale light glowing around a great dome in the fog at night A dark night scene pr,zoom_out,6.42,
-284,CHAPTER 4,"To them, it was the spirit of God, leaving the city.",illustration_ai,"Illustration: A faint beam of light rising from a great dome into the night sky, small figures watching ",zoom_in,4.03,
+281,CHAPTER 4,"To the frightened people inside, it looked like the end.",illustration_ai,"Illustration: A dark city at night, small lamps in windows, people kneeling in prayer in a street A dark",zoom_out,4.33,ai-281
+282,CHAPTER 4,"A few days later, thick fog covered the city.",illustration_ai,"Illustration: Thick fog covering the domes, roofs and walls of the city, shapes barely visible",zoom_in,3.48,ai-282
+283,CHAPTER 4,"Some said a strange light glowed around the dome of the great church, Hagia Sophia.",illustration_ai,Illustration: A strange pale light glowing around a great dome in the fog at night A dark night scene pr,zoom_out,6.42,ai-283
+284,CHAPTER 4,"To them, it was the spirit of God, leaving the city.",illustration_ai,"Illustration: A faint beam of light rising from a great dome into the night sky, small figures watching ",zoom_in,4.03,ai-284
 285,CHAPTER 4,"Still, Mehmed had worries of his own.",artefact,Portrait medal of Sultan Mehmed II Triumphal Chariot MET,zoom_out,2.87,wm-60885532
 286,CHAPTER 4,His men were tired too.,manuscript,Nusretname folio 34b,zoom_in,1.78,wm-179648349
 287,CHAPTER 4,And rumours spoke of a Christian army on the way.,map,map: rumoured relief fleet from Venice,map_anim,3.79,map-relief_fleet
@@ -304,15 +304,15 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 303,TURNING POINT,"At night, the camp blazed with fires.",illustration_ai,"Illustration: campfires of an army below city walls at night, old-print style",zoom_in,2.79,ai-303
 304,TURNING POINT,Drums and pipes played until dawn.,manuscript,Ottoman mehter military band miniature,zoom_out,2.57,wm-52951957
 305,TURNING POINT,"Yet inside the city, on the evening of 28 May, something rare happened.",card,card: 28 May 1453 · Hagia Sophia,static,5.81,
-306,TURNING POINT,Greeks and Latins crowded into Hagia Sophia together.,illustration_ai,"Illustration: A vast candle-lit domed church packed with people praying, Greek and Latin clergy side by ",zoom_in,4.0,
-307,TURNING POINT,"All winter, they had quarrelled.",illustration_ai,"Illustration: Two groups of clergy in different robes arguing in a church courtyard, seen from a distanc",zoom_out,2.41,
+306,TURNING POINT,Greeks and Latins crowded into Hagia Sophia together.,illustration_ai,"Illustration: A vast candle-lit domed church packed with people praying, Greek and Latin clergy side by ",zoom_in,4.0,ai-306
+307,TURNING POINT,"All winter, they had quarrelled.",illustration_ai,"Illustration: Two groups of clergy in different robes arguing in a church courtyard, seen from a distanc",zoom_out,2.41,ai-307
 308,TURNING POINT,"Tonight, they prayed side by side.",location,Hagia Sophia candles,zoom_in,2.56,wm-18845841
 309,TURNING POINT,The emperor prayed with them.,painting,Theophilos Hatzimihail Constantine Palaeologus no date,zoom_out,2.27,wm-113863586
-310,TURNING POINT,"Afterwards, he rode out to the walls.",illustration_ai,Illustration: A small group of riders with torches riding along the inside of the dark land walls A dark,pan_left,2.89,
-311,TURNING POINT,Picture yourself in that crowd.,illustration_ai,"Illustration: Inside a praying crowd: the backs of heads and shoulders, candles, gold mosaics glimmering",zoom_in,2.42,
+310,TURNING POINT,"Afterwards, he rode out to the walls.",illustration_ai,Illustration: A small group of riders with torches riding along the inside of the dark land walls A dark,pan_left,2.89,ai-310
+311,TURNING POINT,Picture yourself in that crowd.,illustration_ai,"Illustration: Inside a praying crowd: the backs of heads and shoulders, candles, gold mosaics glimmering",zoom_in,2.42,ai-311
 312,TURNING POINT,Candles flicker on the gold.,location,Hagia Sophia gold mosaics,zoom_out,2.19,wm-31948537
-313,TURNING POINT,Will any of you see another sunset?,illustration_ai,"Illustration: A red sunset over a great dome and the city walls, seen from the harbour",zoom_in,2.74,
-314,TURNING POINT,"It began just after midnight, on 29 May.",illustration_ai,Illustration: reuse ai-001,zoom_out,3.2,
+313,TURNING POINT,Will any of you see another sunset?,illustration_ai,"Illustration: A red sunset over a great dome and the city walls, seen from the harbour",zoom_in,2.74,ai-313
+314,TURNING POINT,"It began just after midnight, on 29 May.",illustration_ai,Illustration: reuse ai-001,zoom_out,3.2,ai-001
 315,TURNING POINT,Mehmed sent his men in three waves.,map,map: three waves of attack,map_anim,2.44,map-three_waves
 316,TURNING POINT,First came the irregulars.,painting,Zografos Makriyannis The fall of Konstantinople,zoom_out,1.81,wm-2208722
 317,TURNING POINT,"They were poorly armed, and many were not even Turks.",manuscript,Ottoman capture of Tabriz in 1618 Nadiri,zoom_in,3.69,wm-186341019
@@ -322,27 +322,27 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 321,TURNING POINT,"At last, Mehmed pulled them back.",map,map: the first wave pulls back,map_anim,2.3,map-first_wave_back
 322,TURNING POINT,The second wave came from Anatolia.,map,map: the second wave from Anatolia,map_anim,2.44,map-second_wave
 323,TURNING POINT,They were better soldiers.,painting,A Janissary of War with a Lion MET,zoom_in,1.81,wm-60857561
-324,TURNING POINT,"A great cannon blasted a hole in the stockade, and they rushed in.",illustration_ai,"Illustration: A cannon blast tearing a hole in a wooden stockade, soldiers rushing through the smoke",zoom_out,4.6,
+324,TURNING POINT,"A great cannon blasted a hole in the stockade, and they rushed in.",illustration_ai,"Illustration: A cannon blast tearing a hole in a wooden stockade, soldiers rushing through the smoke",zoom_out,4.6,ai-324
 325,TURNING POINT,But the defenders trapped them inside and drove them out again.,manuscript,Le siège de Constantinople 1453 Jean Le Tavernier miniature detail,zoom_in,4.39,wm-87115344
-326,TURNING POINT,Dawn was close.,illustration_ai,"Illustration: The first grey light of dawn over smoking, broken walls",zoom_out,1.05,
+326,TURNING POINT,Dawn was close.,illustration_ai,"Illustration: The first grey light of dawn over smoking, broken walls",zoom_out,1.05,ai-326
 327,TURNING POINT,Giustiniani's men had fought all night without rest.,painting,Moldovita monastery fresco siege of Constantinople,zoom_in,3.62,wm-39994434
 328,TURNING POINT,"Now Mehmed sent his best troops, the Janissaries.",painting,Jean Baptiste Vanmour Janissary painting,zoom_out,3.41,wm-34251726
 329,TURNING POINT,They had trained for this moment all their lives.,manuscript,Sultan Mehmet III Enthroned Attended by Two Janissaries,zoom_in,3.41,wm-27308689
 330,TURNING POINT,"They marched forward in order, to the beat of drums.",manuscript,Ottoman mehter military band miniature,zoom_out,3.85,wm-157230942
 331,TURNING POINT,"At first, even they could not break through.",location,Istanbul Wall outside Topkapı gate,zoom_in,3.26,wm-132272578
 332,TURNING POINT,Would the walls hold one more time?,location,Theodosian Walls Istanbul at dawn,pan_right,2.59,wm-74764598
-333,TURNING POINT,"Just after dawn, a shot struck Giovanni Giustiniani.",illustration_ai,"Illustration: A crossbow bolt and a dented helmet lying on the bloody stones of a parapet, smoke driftin",zoom_out,3.8,
-334,TURNING POINT,Some say it was a bullet.,illustration_ai,Illustration: A small lead bullet beside a powder flask and a hand-gun lying on a stone ledge,zoom_in,1.83,
+333,TURNING POINT,"Just after dawn, a shot struck Giovanni Giustiniani.",illustration_ai,"Illustration: A crossbow bolt and a dented helmet lying on the bloody stones of a parapet, smoke driftin",zoom_out,3.8,ai-333
+334,TURNING POINT,Some say it was a bullet.,illustration_ai,Illustration: A small lead bullet beside a powder flask and a hand-gun lying on a stone ledge,zoom_in,1.83,ai-334
 335,TURNING POINT,Others say a crossbow bolt.,artefact,medieval crossbow bolt,zoom_out,1.97,wm-77636249
-336,TURNING POINT,"Either way, the wound was serious.",illustration_ai,"Illustration: Soldiers carrying a wounded man on a stretcher down the stone steps of the wall, seen from",zoom_in,2.48,
+336,TURNING POINT,"Either way, the wound was serious.",illustration_ai,"Illustration: Soldiers carrying a wounded man on a stretcher down the stone steps of the wall, seen from",zoom_in,2.48,ai-336
 337,TURNING POINT,"His men carried him off the walls, toward the ships in the harbour.",map,map: Giustiniani carried toward the harbour,map_anim,4.89,map-giustiniani_carried
-338,TURNING POINT,Many of his Genoese soldiers followed him.,illustration_ai,"Illustration: Soldiers in Genoese armour leaving the walls through a small gate toward the harbour, look",zoom_out,3.07,
+338,TURNING POINT,Many of his Genoese soldiers followed him.,illustration_ai,"Illustration: Soldiers in Genoese armour leaving the walls through a small gate toward the harbour, look",zoom_out,3.07,ai-338
 339,TURNING POINT,The defenders saw their commander go.,artefact,Siege of Constantinople Model Istanbul Military Museum,zoom_in,2.7,wm-87535390
 340,TURNING POINT,Panic spread along the walls.,painting,Theophilos Hatzimihail Constantine Palaeologus 1914,zoom_out,2.12,wm-113863587
 341,TURNING POINT,So how did the Ottomans get onto the walls so fast?,location,Romanus Gate in the Theodosian Walls of Constantinople,zoom_in,3.73,wm-175177649
-342,TURNING POINT,"One chronicler, Doukas, adds a strange detail.",illustration_ai,Illustration: reuse ai-098,zoom_out,3.36,
+342,TURNING POINT,"One chronicler, Doukas, adds a strange detail.",illustration_ai,Illustration: reuse ai-098,zoom_out,3.36,ai-098
 343,TURNING POINT,A small gate in the wall had been left open.,map,map: the small Kerkoporta gate near the Blachernae walls,map_anim,3.21,map-kerkoporta
-344,TURNING POINT,Ottoman soldiers slipped through it and raised their flag on a tower.,illustration_ai,"Illustration: A red flag with a crescent being raised on top of a tower, soldiers climbing over the batt",zoom_out,5.04,
+344,TURNING POINT,Ottoman soldiers slipped through it and raised their flag on a tower.,illustration_ai,"Illustration: A red flag with a crescent being raised on top of a tower, soldiers climbing over the batt",zoom_out,5.04,ai-344
 345,TURNING POINT,Many historians doubt the story.,card,card: a legend? (Doukas only),static,2.34,
 346,TURNING POINT,No trace of such a gate has ever turned up.,location,Blachernae walls Istanbul,zoom_in,3.14,wm-2441357
 347,TURNING POINT,"But that morning, the defenders believed their eyes.",manuscript,Siege of Constantinople BnF MS Fr 9087,zoom_out,3.8,wm-1277120
@@ -354,17 +354,17 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 353,TURNING POINT,Legend says he threw off his imperial robes and charged the enemy like a common soldier.,painting,Theophilos Hatzimihail Constantine XI charging,zoom_in,5.45,wm-113848694
 354,TURNING POINT,"Across the city, the church bells rang the alarm.",location,Istanbul church bell,zoom_out,3.04,wm-6024770
 355,TURNING POINT,Thousands ran to Hagia Sophia and barred the great doors.,location,Hagia Sophia Imperial Gate doors,zoom_in,3.53,wm-123120554
-356,TURNING POINT,An old prophecy said an angel would come down there and save the city.,illustration_ai,"Illustration: People crowded inside a great church, all looking up at the dome, waiting",zoom_out,4.34,
+356,TURNING POINT,An old prophecy said an angel would come down there and save the city.,illustration_ai,"Illustration: People crowded inside a great church, all looking up at the dome, waiting",zoom_out,4.34,ai-356
 357,TURNING POINT,But no angel came.,location,Hagia Sophia dome,zoom_in,1.12,wm-11863004
 358,TURNING POINT,The soldiers broke down the doors.,location,Hagia Sophia Imperial Gate doors close-up,zoom_out,2.11,wm-2964577
-359,TURNING POINT,"By midday, the city belonged to Mehmed.",illustration_ai,"Illustration: Smoke over the conquered city at midday, red banners flying on the walls and towers",zoom_in,2.86,
+359,TURNING POINT,"By midday, the city belonged to Mehmed.",illustration_ai,"Illustration: Smoke over the conquered city at midday, red banners flying on the walls and towers",zoom_in,2.86,ai-359
 360,TURNING POINT,"That afternoon, the young sultan rode through the gates.",painting,Benjamin-Constant Entry of Mahomet II into Constantinople 1876,zoom_in,4.1,wm-1818511
 361,TURNING POINT,He went straight to Hagia Sophia.,location,Hagia Sophia exterior,zoom_out,2.42,wm-24932378
 362,TURNING POINT,He had promised his soldiers three days of plunder.,manuscript,Le siège de Constantinople 1453 Jean Le Tavernier miniature,zoom_in,3.73,wm-1277120
 363,TURNING POINT,Some accounts say he stopped it after one day.,card,card: three days? or one?,static,3.37,
 364,TURNING POINT,"Looking at the ruined streets, he is said to have wept.",painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,4.03,wm-147845
-365,TURNING POINT,Not everyone was caught.,illustration_ai,Illustration: Small boats and ships crowded with refugees pulling away from a harbour quay,zoom_in,1.76,
-366,TURNING POINT,"In the harbour, some Venetian and Genoese ships broke out past the chain, packed with refugees.",illustration_ai,"Illustration: Sailing ships forcing their way out of a harbour past a broken floating chain, decks packe",zoom_out,6.96,
+365,TURNING POINT,Not everyone was caught.,illustration_ai,Illustration: Small boats and ships crowded with refugees pulling away from a harbour quay,zoom_in,1.76,ai-365
+366,TURNING POINT,"In the harbour, some Venetian and Genoese ships broke out past the chain, packed with refugees.",illustration_ai,"Illustration: Sailing ships forcing their way out of a harbour past a broken floating chain, decks packe",zoom_out,6.96,ai-366
 367,TURNING POINT,Hagia Sophia had been the great church of the Romans for nine hundred years.,engraving,Gaspare Fossati Hagia Sophia lithograph 1852 interior,zoom_in,5.57,wm-82124598
 368,TURNING POINT,Now it became a mosque.,location,Hagia Sophia minarets exterior,zoom_out,1.68,wm-203279771
 369,TURNING POINT,The city fell on a Tuesday.,card,"card: Tuesday, 29 May 1453",static,1.98,
@@ -373,14 +373,14 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 372,CLOSE,"It did not fall to one cannon, or to one clever trick.",artefact,Dardanelles Gun 2023,zoom_out,4.05,wm-141499539
 373,CLOSE,The cannon cracked the walls.,artefact,Dardanelles Gun Turkish Bronze,zoom_in,2.17,wm-146012287
 374,CLOSE,The ships over the hill stretched the defenders thin.,map,map: ships in the Golden Horn stretch the defence along the sea walls,map_anim,3.97,map-horn_stretch
-375,CLOSE,"And when Giustiniani left the wall, their hope left with him.",illustration_ai,"Illustration: An empty stretch of battlements at dawn, an abandoned helmet and shield on the stones",zoom_out,4.58,
+375,CLOSE,"And when Giustiniani left the wall, their hope left with him.",illustration_ai,"Illustration: An empty stretch of battlements at dawn, an abandoned helmet and shield on the stones",zoom_out,4.58,ai-375
 376,CLOSE,Behind all of it stood a young sultan who would not give up.,painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_in,4.5,wm-99605243
 377,CLOSE,What happened to the men in this story?,painting,Theophilos Hatzimihail Constantine Palaeologus no date,zoom_out,2.92,wm-113863586
 378,CLOSE,Giustiniani reached the island of Chios.,map,map: Chios,map_anim,3.0,map-chios
 379,CLOSE,He died of his wound on 1 June.,location,Chios castle,zoom_in,2.55,wm-19876764
 380,CLOSE,"Halil, the man who had urged peace, lost his post within days.",manuscript,Ottoman vizier miniature,zoom_out,4.65,wm-198042213
-381,CLOSE,"Six weeks later, Mehmed had him executed.",illustration_ai,"Illustration: A palace courtyard at dusk, guards standing at a closed door",zoom_in,3.08,
-382,CLOSE,Orban's fate is less clear.,illustration_ai,"Illustration: A burst bronze cannon split open on its wooden carriage, smoke still rising",zoom_out,2.02,
+381,CLOSE,"Six weeks later, Mehmed had him executed.",illustration_ai,"Illustration: A palace courtyard at dusk, guards standing at a closed door",zoom_in,3.08,ai-381
+382,CLOSE,Orban's fate is less clear.,illustration_ai,"Illustration: A burst bronze cannon split open on its wooden carriage, smoke still rising",zoom_out,2.02,ai-382
 383,CLOSE,One story says he died when one of his own cannons burst.,engraving,cannon explosion engraving,zoom_in,4.28,wm-32174470
 384,CLOSE,And Mehmed was only twenty-one.,painting,Gennadios II and Mehmed II,zoom_out,2.33,wm-7828957
 385,CLOSE,"From now on, he called himself Caesar of Rome.",artefact,Mehmed II tughra,zoom_in,3.45,wm-22883769
@@ -396,7 +396,7 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 395,CLOSE,The news reached Venice and Rome weeks later.,engraving,Jacopo de' Barbari view of Venice 1500,zoom_out,3.06,wm-138314495
 396,CLOSE,People could hardly believe it.,painting,Gentile Bellini Venice procession in Piazza San Marco,zoom_in,2.11,wm-141956642
 397,CLOSE,The Pope called for a new crusade to take the city back.,painting,Pope Nicholas V portrait,zoom_out,3.81,wm-78282795
-398,CLOSE,It never came.,illustration_ai,"Illustration: An empty sea seen from a harbour wall, no ships anywhere on the horizon",zoom_out,0.95,
+398,CLOSE,It never came.,illustration_ai,"Illustration: An empty sea seen from a harbour wall, no ships anywhere on the horizon",zoom_out,0.95,ai-398
 399,CLOSE,Some historians even mark that day as the end of the Middle Ages.,card,"card: 1453, the end of the Middle Ages?",static,4.42,
 400,CLOSE,And the Greeks never forgot their last emperor.,artefact,Bust of Constantine Palaiologos Papagos,zoom_in,3.2,wm-147081573
 401,CLOSE,"A legend grew that an angel had turned him to marble, and hidden him in a cave near the Golden Gate.",location,Golden Gate Yedikule Istanbul,zoom_out,6.8,wm-132404941
