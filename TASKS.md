@@ -57,10 +57,13 @@ Work top to bottom. Each task has acceptance criteria (AC). Tick the box when th
 
 ## P4 · Assembly and render (target: 10 Dec)
 
-- [ ] **P4.1 Timeline builder:** `timing.json` + `shotlist.csv` + assets → an edit decision list (JSON).
+- [x] **P4.1 Timeline builder:** `timing.json` + `shotlist.csv` + assets → an edit decision list (JSON).
+  Done 21 Nov: `pipeline/timeline.py` + `tools/timeline.py` → `render/edl.json`. Shots run sentence start → next sentence start (pauses keep the picture), " | " cells split evenly, 2 s tail; fit `cover` (aspect ≥ 1.5) or `contain_blur`; Ken Burns 5–10% by length, pans; cards (chapter / fact); label "Illustration" on AI assets; fade to black at chapter starts, dissolve after a scripted pause, else cut; audio cues timed (J-cut / sound bridge 1 s early); chapters; pacing stats. Constantinople: 420 shots, 22:51, PASS. Open: (1) pace: after the hook shots average 3.3 s (302 under 4 s) against the 4–7 s rule, an owner call best made on a rendered preview (P4.2); (2) 67 map shots are placeholders until their clips exist (P4.4).
 - [ ] **P4.2 Renderer** (engine per decisions): Ken Burns 5–10% zoom with alternating direction, 4:3 archive centred on a blurred 16:9 background, chapter cards (year + place), the label "Illustration" on every `ai_generated=y` asset (P3.4), dissolves, fade to black between chapters, J/L-cuts from the cues, subtle film grain. Export 4K.
   AC: Constantinople renders end to end; shot changes every 2–3 s in the first 30 s, then every 4–7 s.
 - [ ] **P4.3 Captions:** SRT from `timing.json` (EN and TH).
+- [ ] **P4.4 Map clips for the episode:** write a clip in `data/maps/<name>.yaml` for every `map` shot (Constantinople: 67, one exists), render into `render/maps/`, put `map-<clip>` in the shot's asset cell.
+  AC: `tools/timeline.py` shows no map placeholders.
 
 ## P5 · Packaging (target: 12 Dec)
 
