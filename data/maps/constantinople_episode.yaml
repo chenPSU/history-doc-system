@@ -1735,7 +1735,7 @@ clips:
   capital_moves:
     shot: s390.1
     duration: 3.1
-    view: *id009
+    view: [25.93, 40.47, 29.87, 42.13]   # wider than the other Thrace clips so the long label fits
     land: eastmed
     show:
     - {use: edirne, appear: -1}
