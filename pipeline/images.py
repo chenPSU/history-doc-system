@@ -151,10 +151,10 @@ def plan(ep: Path, cfg: dict, only: set[int] | None = None) -> list[Item]:
     for no, entry in sorted((int(k), v) for k, v in (data.get("shots") or {}).items()):
         if no not in shot_nos or (only and no not in only):
             continue
-        subject = entry.get("subject", "")
-        prompt = build_prompt(subject, context, entry.get("style", style), cfg)
+        subject, ctx = entry.get("subject", ""), entry.get("context", context)   # a shot may override the setting
+        prompt = build_prompt(subject, ctx, entry.get("style", style), cfg)
         h = prompt_hash(cfg["model"], cfg["aspect_ratio"], prompt)
-        reasons = problems(subject, context, cfg, people)
+        reasons = problems(subject, ctx, cfg, people)
         file = f"assets/ai-{no:03d}.png"
         row = man.get(f"ai-{no:03d}")
         done = row is not None and f"prompt_hash={h}" in row.get("notes", "") and (ep / row["file"]).exists()

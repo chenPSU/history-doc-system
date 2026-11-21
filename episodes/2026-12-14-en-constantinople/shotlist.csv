@@ -80,7 +80,7 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 79,CHAPTER 1,Mehmed set a simple rule.,painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_in,1.84,wm-2457044
 80,CHAPTER 1,Every ship must stop and pay.,artefact,stone cannonballs Rumelihisari,zoom_out,2.14,wm-109017364
 81,CHAPTER 1,"Late in 1452, a Venetian captain refused to stop.",engraving,Venetian galley at Curzola engraving,zoom_in,4.5,wm-11659807
-82,CHAPTER 1,One stone ball sank his ship.,illustration_ai,"Illustration: a Venetian ship hit by a stone ball below a fortress, old-print style",zoom_out,2.14,
+82,CHAPTER 1,One stone ball sank his ship.,illustration_ai,"Illustration: a Venetian ship hit by a stone ball below a fortress, old-print style",zoom_out,2.14,ai-082
 83,CHAPTER 1,Most of his crew lost their heads.,engraving,15th century Ottoman soldiers woodcut,zoom_in,2.51,wm-155082014
 84,CHAPTER 1,"The captain was impaled beside the road, where every passing sailor could see him.",location,Rumeli Hisarı Barbican 2006,zoom_out,6.04,wm-138225089
 85,CHAPTER 1,The message was clear.,location,Bosphorus at dusk,zoom_in,1.56,wm-56113107
@@ -170,8 +170,8 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 169,CHAPTER 2,It needed hours to reload.,card,card: hours to reload,static,1.89,
 170,CHAPTER 2,"Still, every hit tore open part of the outer wall.",location,Theodosian Walls Istanbul breach,zoom_out,3.65,wm-132861794
 171,CHAPTER 2,"So every night, the defenders came out to repair it.",engraving,Le Donne di Famagosta recano sassi ed altre materie sulle mura,zoom_in,3.79,wm-155217531
-172,CHAPTER 2,"They packed the gaps with timber, earth and barrels.",illustration_ai,"Illustration: defenders packing a wall breach with timber, earth and barrels at night, old-print style",zoom_out,3.79,
-173,CHAPTER 2,"By morning, a new wall of earth and wood stood where stone had stood the day before.",illustration_ai,"Illustration: an earth-and-timber stockade at dawn on the broken wall, old-print style",zoom_in,6.12,
+172,CHAPTER 2,"They packed the gaps with timber, earth and barrels.",illustration_ai,"Illustration: defenders packing a wall breach with timber, earth and barrels at night, old-print style",zoom_out,3.79,ai-172
+173,CHAPTER 2,"By morning, a new wall of earth and wood stood where stone had stood the day before.",illustration_ai,"Illustration: an earth-and-timber stockade at dawn on the broken wall, old-print style",zoom_in,6.12,ai-173
 174,CHAPTER 2,Here is the strange part.,location,Theodosian Walls Istanbul outer wall,zoom_out,1.82,wm-1456275
 175,CHAPTER 2,The soft earth often worked better than stone.,location,Theodosian Walls Istanbul earth and stone,zoom_in,3.35,wm-1456280
 176,CHAPTER 2,It swallowed the cannon balls.,artefact,Stone cannonballs at Cēsis Castle,zoom_out,2.19,wm-55610078
@@ -201,7 +201,7 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 200,CHAPTER 3,Picture the scene from the sea walls.,location,Istanbul sea walls Marmara,zoom_in,2.57,wm-11093805
 201,CHAPTER 3,The whole city is watching.,engraving,Antoine Ignace Melling Voyage pittoresque de Constantinople engraving crowd on the city walls,zoom_out,1.88,wm-66885439
 202,CHAPTER 3,People crowd every tower.,location,Istanbul sea wall tower,zoom_in,1.74,wm-31948519
-203,CHAPTER 3,The tall Christian ships ride high above the Ottoman galleys.,illustration_ai,"Illustration: four tall sailing ships surrounded by galleys, old-print style",zoom_out,4.24,
+203,CHAPTER 3,The tall Christian ships ride high above the Ottoman galleys.,illustration_ai,"Illustration: four tall sailing ships surrounded by galleys, old-print style",zoom_out,4.24,ai-203
 204,CHAPTER 3,Their sailors hurl stones and fire down at the attackers.,manuscript,Greek fire Madrid Skylitzes,zoom_in,3.96,wm-302463
 205,CHAPTER 3,"Suddenly, the wind drops.",location,Entering the Bosphorus from the Black Sea LCCN2011649900,zoom_out,1.74,wm-92656994
 206,CHAPTER 3,The four ships drift toward the Ottoman shore.,map,map: the four ships drift toward the Ottoman shore,map_anim,3.2,
@@ -216,11 +216,11 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 215,CHAPTER 3,He chose a plan that sounded impossible.,map,map: Ottoman ships hauled over the Galata hill into the Golden Horn,map_anim,3.02,
 216,CHAPTER 3,"Behind Galata, there is a hill.",map,map: the hill behind Galata,map_anim,2.34,
 217,CHAPTER 3,On the far side of that hill lies the Golden Horn.,map,map: route over the hill into the Golden Horn,map_anim,3.78,
-218,CHAPTER 3,His men laid a road of greased logs up the slope.,illustration_ai,"Illustration: a slipway of greased logs up a hillside, old-print style",zoom_in,3.7,
+218,CHAPTER 3,His men laid a road of greased logs up the slope.,illustration_ai,"Illustration: a slipway of greased logs up a hillside, old-print style",zoom_in,3.7,ai-218
 219,CHAPTER 3,"On 22 April, they dragged their ships over the hill.",map,"map: route of the ships over the hill, 22 April",map_anim,4.31,
-220,CHAPTER 3,Oxen pulled.,illustration_ai,old print style: oxen hauling a galley on greased log rollers up a hill,zoom_out,0.89,
-221,CHAPTER 3,Men pushed.,illustration_ai,old print style: crowd of men pushing a galley on rollers,zoom_in,0.82,
-222,CHAPTER 3,Some crews even raised their sails as they rolled over the top.,illustration_ai,old print style: galley with raised sails rolling over a hilltop,zoom_out,4.68,
+220,CHAPTER 3,Oxen pulled.,illustration_ai,old print style: oxen hauling a galley on greased log rollers up a hill,zoom_out,0.89,ai-220
+221,CHAPTER 3,Men pushed.,illustration_ai,old print style: crowd of men pushing a galley on rollers,zoom_in,0.82,ai-221
+222,CHAPTER 3,Some crews even raised their sails as they rolled over the top.,illustration_ai,old print style: galley with raised sails rolling over a hilltop,zoom_out,4.68,ai-222
 223,CHAPTER 3,Picture yourself on the sea wall that morning.,location,Istanbul sea walls Golden Horn,zoom_in,3.42,wm-2946327
 224,CHAPTER 3,You look down at water that was safe yesterday.,location,Golden Horn Istanbul view water,zoom_out,3.49,wm-104669888
 225,CHAPTER 3,Around seventy Ottoman ships are floating inside the harbour.,map,map: about 70 Ottoman ships inside the Golden Horn,map_anim,4.53,
@@ -251,11 +251,11 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 250,CHAPTER 4,"Either way, he knew mines.",engraving,Agricola De re metallica mine tunnel woodcut 1556 miners,zoom_out,1.93,wm-104395405
 251,CHAPTER 4,His men dug their own tunnels to meet the Ottoman ones.,map,map: countermine tunnels meet the Ottoman tunnels,map_anim,4.07,
 252,CHAPTER 4,Imagine the fight down there.,engraving,Agricola De re metallica mine tunnel woodcut 1556 tunnel,zoom_in,2.13,wm-26854605
-253,CHAPTER 4,"You crawl in the dark, in a tunnel barely wider than your shoulders.",illustration_ai,"Illustration: a narrow tunnel lit by one torch, old-print style",zoom_out,5.0,
+253,CHAPTER 4,"You crawl in the dark, in a tunnel barely wider than your shoulders.",illustration_ai,"Illustration: a narrow tunnel lit by one torch, old-print style",zoom_out,5.0,ai-253
 254,CHAPTER 4,You hear picks on the other side of the earth.,engraving,Agricola De re metallica mine tunnel woodcut 1556 picks,zoom_in,3.38,wm-67573258
-255,CHAPTER 4,You hold your breath.,illustration_ai,"Illustration: a miner listening at a tunnel wall, old-print style",zoom_out,1.54,
+255,CHAPTER 4,You hold your breath.,illustration_ai,"Illustration: a miner listening at a tunnel wall, old-print style",zoom_out,1.54,ai-255
 256,CHAPTER 4,"Suddenly, the wall of earth gives way.",engraving,Agricola De re metallica mine tunnel woodcut 1556 collapsing earth,zoom_in,2.79,wm-196814331
-257,CHAPTER 4,Your enemy is right in front of you.,illustration_ai,"Illustration: two miners face to face in a tunnel, old-print style",zoom_out,2.64,
+257,CHAPTER 4,Your enemy is right in front of you.,illustration_ai,"Illustration: two miners face to face in a tunnel, old-print style",zoom_out,2.64,ai-257
 258,CHAPTER 4,So Grant's men burned some tunnels with Greek fire.,manuscript,Madrid Skylitzes Greek fire miniature,zoom_in,3.59,wm-15268427
 259,CHAPTER 4,Others they collapsed on the diggers.,engraving,Agricola De re metallica mine tunnel woodcut 1556 timbering,zoom_out,2.6,wm-196814331
 260,CHAPTER 4,"On 23 May, the defenders captured a pair of Ottoman officers underground.",card,card: 23 May,static,5.56,
@@ -301,7 +301,7 @@ sentence_no,section,sentence,visual_type,search_terms,motion,duration_s,asset_id
 300,TURNING POINT,So Mehmed chose Zaganos.,painting,Gentile Bellini portrait of Mehmed II National Gallery,zoom_out,1.81,wm-147845
 301,TURNING POINT,He ordered one final assault.,artefact,Siege of Constantinople Model Istanbul Military Museum,zoom_in,2.19,wm-87535390
 302,TURNING POINT,"For two days, his army prepared.",manuscript,Ottoman army at Tiflis in 1578 Nusretname miniature,zoom_out,2.41,wm-15688654
-303,TURNING POINT,"At night, the camp blazed with fires.",illustration_ai,"Illustration: campfires of an army below city walls at night, old-print style",zoom_in,2.79,
+303,TURNING POINT,"At night, the camp blazed with fires.",illustration_ai,"Illustration: campfires of an army below city walls at night, old-print style",zoom_in,2.79,ai-303
 304,TURNING POINT,Drums and pipes played until dawn.,manuscript,Ottoman mehter military band miniature,zoom_out,2.57,wm-52951957
 305,TURNING POINT,"Yet inside the city, on the evening of 28 May, something rare happened.",card,card: 28 May 1453 · Hagia Sophia,static,5.81,
 306,TURNING POINT,Greeks and Latins crowded into Hagia Sophia together.,engraving,Gaspare Fossati Hagia Sophia lithograph 1852 interior,zoom_in,4.0,wm-82123411
