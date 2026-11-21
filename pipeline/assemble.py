@@ -158,7 +158,7 @@ def build_props(edl: dict, ep: Path, stage: Path, width: int, height: int, log=p
             "audio": "narration.wav", "grain": "grain.png", "shots": items}
 
 
-def stage_episode(ep: Path, height: int = 2160, log=print) -> tuple[Path, Path]:
+def stage_episode(ep: Path, height: int = 1080, log=print) -> tuple[Path, Path]:
     ep = Path(ep)
     edl_path = ep / "render" / "edl.json"
     if not edl_path.exists():
@@ -174,7 +174,7 @@ def stage_episode(ep: Path, height: int = 2160, log=print) -> tuple[Path, Path]:
     return stage, pf
 
 
-def render(ep: Path, out: Path, height: int = 2160, start: float | None = None, end: float | None = None,
+def render(ep: Path, out: Path, height: int = 1080, start: float | None = None, end: float | None = None,
            concurrency: int | None = None, log=print) -> Path:
     if not REMOTION_CLI.exists():
         raise RenderError("Remotion is not installed: run `npm install` in video/")

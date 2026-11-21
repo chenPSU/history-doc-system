@@ -32,7 +32,7 @@ Produce one episode package in the channel's fixed style: a calm, credible docum
 ## Visual rules
 - Source priority: 1) public-domain footage and photos (Library of Congress, NARA, Internet Archive/Prelinger, Pond5 Public Domain; check the licence of every file) 2) self-made animated maps 3) public-domain paintings, manuscripts, artefacts 4) present-day location shots 5) AI images in a painterly/old-print style only, for scenes with no real image.
 - Cluster mix: WWII = real footage >50% + front-line maps, day-counter cards, heavy grain. Entire history = maps 30-40% with territory growing/shrinking and a year counter. Ancient/myth = artefacts and classical paintings with 2.5D parallax; gold frame for legend, white frame for evidence. Empires = one colour spreading across the map. Southeast Asia (TH) = regional maps, trade/army routes, present-day ruins and drone shots, ancient + modern place names on screen.
-- Editing: change shot every 2-3 s in the first 30 s, then about one shot per sentence (average 3-4 s; owner chose this pace on 21 Nov 2026), nothing static over 10 s. Slow 5-10% Ken Burns zoom, alternating direction. Cuts and dissolves only, short fade to black between chapters. 4:3 archive centred on a dark blurred 16:9 background. Colorized footage is labelled "colorized". Export 4K.
+- Editing: change shot every 2-3 s in the first 30 s, then about one shot per sentence (average 3-4 s; owner chose this pace on 21 Nov 2026), nothing static over 10 s. Slow 5-10% Ken Burns zoom, alternating direction. Cuts and dissolves only, short fade to black between chapters. 4:3 archive centred on a dark blurred 16:9 background. Colorized footage is labelled "colorized". Export 1080p (owner, 21 Nov 2026).
 - Vary zoom directions, map colours, shot order, thumbnail layout, and title formula between episodes. Never reuse the same template on consecutive videos.
 
 ## Sound
@@ -43,7 +43,7 @@ Produce one episode package in the channel's fixed style: a calm, credible docum
 
 ## Thumbnail and title
 - One strong image (face from an old photo, battlefield, or map), at most 4 words or a single number (year, days, years), sepia or black-and-white plus one channel accent colour (deep red or gold).
-- Title formulas, rotated: compressed time ("The Entire History of X"), countdown ("100 Days of..."), rise and fall, the forgotten secret, real footage ("Restored 4K"), everyday life, dark mysteries. Thai titles always include the proper name and the years.
+- Title formulas, rotated: compressed time ("The Entire History of X"), countdown ("100 Days of..."), rise and fall, the forgotten secret, real footage ("Restored Footage"; never "4K": we export 1080p), everyday life, dark mysteries. Thai titles always include the proper name and the years.
 
 ## Shorts
 3-5 per long video, 30-60 s, 9:16, cut from the strongest anecdote, big captions, ending with a line pointing to the long video.

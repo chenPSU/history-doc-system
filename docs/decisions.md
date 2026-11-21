@@ -16,6 +16,7 @@ React/TypeScript renders the video (maps, year counters, chapter cards, Ken Burn
 - The owner already runs Remotion on this machine (LupasProject), so the toolchain is proven on Windows.
 - Licence: free for individuals and companies with up to 3 employees. Re-check if the business grows past that.
 - Rejected: Python + ffmpeg/MoviePy (weak for animated maps and text), HyperFrames (unproven here, too risky for 14 Dec), DaVinci Resolve EDL (manual finishing does not scale to 4 long videos/week).
+- Export resolution — DECIDED (21 Nov 2026, owner): **1080p 30 fps**, not 4K. Measured on this PC for a 23-min episode: 1080p ≈ 50 min and ~2.3 GB; 4K ≈ 4 h and ~8 GB. At 4 episodes a week, 4K would keep the PC rendering ~16 h a week. `tools/assemble.py --4k` still exists. Titles must not say "4K".
 
 ## D5 · Narration voice — DECIDED (20 Nov 2026, owner)
 - **EN: Gemini TTS, voice Charon** (owner's pick, 20 Nov 2026). Listening test: the Constantinople hook (~54 s) in Charon, Orus and Iapetus, loudness-matched; 9 requests. ElevenLabs was not tested: the owner chose from the Gemini samples. It stays an option if retention data later points at the voice (ElevenLabs about $99/month at our volume). Rough Gemini cost: under $1 per 25-min episode. Same voice on every EN episode. Charon is also QURIO's Thai voice; different language and audience, so no clash. Gemini key: copied from the Lupas `.env` with the owner's OK, so both projects share one daily quota.
