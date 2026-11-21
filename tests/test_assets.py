@@ -166,3 +166,31 @@ def test_user_agent_needs_contact_information(monkeypatch):
     monkeypatch.setattr(E, "load_env", lambda: None)   # no .env in this test
     with pytest.raises(ValueError, match="ASSETS_CONTACT"):
         E.user_agent({**CFG, "contact": ""})
+
+
+def test_shortened_queries_must_stay_on_topic():
+    term = "Fausto Zonaro Ottoman fleet transported overland Golden Horn painting"
+    woman = Candidate("commons", "1", "File:Fausto Zonaro - Woman Playing a String Instrument.jpg", "", "", "pd", "PD")
+    ships = Candidate("commons", "2", "File:Zonaro - Ottoman fleet carried overland to the Golden Horn.jpg", "", "", "pd", "PD")
+    assert not E.relevant(woman, term, "Fausto Zonaro Ottoman fleet transported")
+    assert E.relevant(ships, term, "Fausto Zonaro Ottoman fleet transported")
+    assert E.relevant(woman, term, term)                 # the full term is trusted
+    castle = Candidate("commons", "3", "File:Rochester Castle, Kent, England - Norman Keep.jpg", "", "", "pd", "PD")
+    assert not E.relevant(castle, "medieval siege crossing a moat engraving", "medieval siege crossing")
+    assert E.query_variants("Palma il Giovane conquest of Constantinople 1204 painting")[-1] == "Palma il Giovane conquest"
+
+
+def test_one_file_is_placed_on_at_most_three_shots(tmp_path):
+    web = FakeWeb({"zonaro conquest": [commons_page(3, "File:Zonaro conquest.jpg", "pd", "Public domain")]})
+    ep = make_ep(tmp_path, [("painting", "zonaro conquest", "")] * 5)
+    s = E.fetch_episode(ep, CFG, http=Http("t", fetch=web, sleep=lambda s: None), go=True, log=lambda *a: None)
+    assert (s["fetched"], s["reused"], s["missed"]) == (1, 2, 2)
+
+
+def test_review_sheet_lists_assets_misses_and_own_shots(tmp_path):
+    from pipeline.assets import review
+    web = FakeWeb({"zonaro conquest": [commons_page(3, "File:Zonaro conquest.jpg", "pd", "Public domain")]})
+    ep = make_ep(tmp_path, [("painting | map", "zonaro conquest | walls map", ""), ("location", "nothing here", "")])
+    E.fetch_episode(ep, CFG, http=Http("t", fetch=web, sleep=lambda s: None), go=True, log=lambda *a: None)
+    page = review.build(ep).read_text(encoding="utf-8")
+    assert 'src="wm-3.jpg"' in page and "1 shots with an asset · 1 without · 1 made by us" in page

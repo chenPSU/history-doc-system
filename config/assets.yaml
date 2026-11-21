@@ -18,6 +18,7 @@ ia_allowed_licences: [pd, cc0]
 
 width: 3840          # 4K export: Commons gives a 3840 px wide rendition, or the original when smaller
 search_limit: 20     # results looked at per search
+max_uses_per_asset: 3   # one file on at most 3 shots per episode (different crops); then the shot is a miss
 min_width: 1200      # smaller images look soft in a 4K frame; skipped
 
 # Shot types we never fetch: our own maps (P3.3), text cards (render), AI images (P3.4).

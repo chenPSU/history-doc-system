@@ -11,7 +11,9 @@ from __future__ import annotations
 
 import csv
 import os
+import re
 import sys
+from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -25,6 +27,10 @@ from ..voice import load_env
 ROOT = Path(__file__).resolve().parents[2]
 NOISE = {"drone", "aerial", "close-up", "closeup", "detail", "dawn", "dusk", "night", "sunset", "sunrise",
          "view", "today", "modern", "present-day", "wide", "shot", "photo", "texture"}
+STOP = {"a", "an", "the", "of", "at", "on", "in", "into", "to", "from", "by", "with", "and", "or", "for", "before",
+        "after", "over", "under", "de", "la", "le", "les", "des", "du", "il", "di", "von", "der", "seen"}
+GENERIC = {"painting", "engraving", "miniature", "manuscript", "portrait", "medieval", "old", "file", "jpg", "png",
+           "tif", "image", "picture", "illustration", "print", "lithograph", "drawing", "photograph"}
 
 
 def load_config(path: Path | None = None) -> dict:
@@ -53,15 +59,44 @@ def split_cell(s: str | None) -> list[str]:
 
 
 def query_variants(term: str) -> list[str]:
-    """The term as written, then without camera words, then shorter (down to 2 words)."""
+    """The term as written, then without camera words, then shorter: never below half the words (or 2),
+    and never ending on a stop word ("... siege of")."""
     out = [term.strip()]
     words = [w for w in term.split() if w.lower().strip(",.") not in NOISE]
-    while len(words) >= 2:
+    floor = max(2, -(-len(words) // 2))
+    while len(words) >= floor:
+        while len(words) > 1 and words[-1].lower() in STOP:
+            words = words[:-1]
         q = " ".join(words)
-        if q not in out:
+        if len(words) >= floor and q not in out:
             out.append(q)
         words = words[:-1]
     return out
+
+
+def content_words(text: str) -> list[str]:
+    """Lower-case words that carry meaning (no stop, camera or generic words), plural 's' stripped, in order."""
+    out = []
+    for w in re.findall(r"[^\W_]+", text.lower()):
+        if len(w) < 3 or w in STOP or w in NOISE or w in GENERIC:
+            continue
+        w = w[:-1] if len(w) > 3 and w.endswith("s") and not w.endswith("ss") else w
+        if w not in out:
+            out.append(w)
+    return out
+
+
+def relevant(c: Candidate, term: str, query: str) -> bool:
+    """A file found with the full term is trusted (Commons matched every word). A file found with a
+    shortened query must share 2 meaning words with the full term in its title, and not only the first
+    two (usually the artist: 'Fausto Zonaro - Woman Playing a String Instrument' is not the fleet)."""
+    if query.strip() == term.strip():
+        return True
+    tw = content_words(term)
+    overlap = set(tw) & set(content_words(c.title))
+    if len(overlap) < min(2, len(tw)):
+        return False
+    return len(tw) <= 3 or not overlap <= set(tw[:2])
 
 
 class Searcher:
@@ -109,7 +144,8 @@ class Pick:
     seen: set = field(default_factory=set)   # licence classes of rejected results, for the misses report
 
 
-def pick(searcher: Searcher, term: str, visual_type: str, used: set, log=print) -> Pick:
+def pick(searcher: Searcher, term: str, visual_type: str, used, log=print, max_uses: int = 3) -> Pick:
+    """`used`: asset id -> times already placed in the episode. A file is placed at most `max_uses` times."""
     seen, fallback = set(), None
     for source in searcher.cfg.get("routes", {}).get(visual_type, ["commons"]):
         for q in query_variants(term):
@@ -122,11 +158,18 @@ def pick(searcher: Searcher, term: str, visual_type: str, used: set, log=print) 
                 break
             ok = [c for c in cands if searcher.usable(c, source)]
             seen.update(c.licence_class for c in cands if c not in ok)
+            if cands and not ok:
+                continue
+            ok = [c for c in ok if relevant(c, term, q)]
+            if cands and not ok:
+                seen.add("off-topic")
+                continue
             for c in ok:
-                if c.asset_id not in used:
+                if not used.get(c.asset_id):
                     return Pick(c, q, source, seen=seen)
-            if ok and fallback is None:
-                fallback = Pick(ok[0], q, source, reused=True)
+            again = [c for c in ok if used.get(c.asset_id, 0) < max_uses]
+            if again and fallback is None:
+                fallback = Pick(again[0], q, source, reused=True)
             if ok:
                 break   # this query found allowed files (all used already): don't broaden it
     if fallback:
@@ -190,11 +233,12 @@ def fetch_episode(ep: Path, cfg: dict, http: Http | None = None, go: bool = Fals
     mpath, assets_dir = ep / "assets" / "manifest.csv", ep / "assets"
     manifest = read_manifest(mpath)
     in_manifest = {m["asset_id"] for m in manifest}
-    used = {x for r in rows for x in split_cell(r.get("asset_id")) if x}
+    used = Counter(x for r in rows for x in split_cell(r.get("asset_id")) if x)
+    max_uses = int(cfg.get("max_uses_per_asset", 3))
     misses = []
     for t in tasks:
         try:
-            p = pick(searcher, t.term, t.visual_type, used, log)
+            p = pick(searcher, t.term, t.visual_type, used, log, max_uses)
         except RateLimited as e:
             summary["stopped"] = str(e)
             break
@@ -219,7 +263,7 @@ def fetch_episode(ep: Path, cfg: dict, http: Http | None = None, go: bool = Fals
             manifest.append(manifest_row(p.cand, f"assets/{path.name}", p.query))
             in_manifest.add(p.cand.asset_id)
             write_manifest(mpath, manifest)
-        used.add(p.cand.asset_id)
+        used[p.cand.asset_id] += 1
         r = rows[t.row]
         n_shots = len(split_cell(r.get("search_terms")))
         ids = (split_cell(r.get("asset_id")) + [""] * n_shots)[:n_shots]
