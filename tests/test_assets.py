@@ -207,3 +207,18 @@ def test_broken_download_is_retried():
         return JPEG
 
     assert Http("t", fetch=flaky, sleep=lambda s: None).get("https://upload.wikimedia.org/a.jpg") == JPEG
+
+
+def test_prune_drops_unused_assets_and_files(tmp_path):
+    web = FakeWeb({"zonaro conquest": [commons_page(3, "File:Zonaro conquest.jpg", "pd", "Public domain")]})
+    ep = make_ep(tmp_path, [("painting", "zonaro conquest", "")])
+    E.fetch_episode(ep, CFG, http=Http("t", fetch=web, sleep=lambda s: None), go=True, log=lambda *a: None)
+    assert E.prune(ep) == []
+    rows = read(ep, "shotlist.csv")
+    rows[0]["asset_id"] = ""
+    with (ep / "shotlist.csv").open("w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=list(rows[0]))
+        w.writeheader()
+        w.writerows(rows)
+    assert E.prune(ep) == ["wm-3"]
+    assert read(ep, "assets/manifest.csv") == [] and not (ep / "assets" / "wm-3.jpg").exists()

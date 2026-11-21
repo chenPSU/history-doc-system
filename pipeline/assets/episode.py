@@ -282,3 +282,29 @@ def fetch_episode(ep: Path, cfg: dict, http: Http | None = None, go: bool = Fals
             w.writerows(misses)
     summary["http_calls"] = http.calls
     return summary
+
+
+def prune(ep: Path, delete_files: bool = True) -> list[str]:
+    """Drop manifest rows (and their downloaded files) that no shot uses any more, so credits list only
+    what is on screen. Rows marked ai_generated=y are kept (P3.4 owns them)."""
+    ep = Path(ep)
+    _, rows = _read_rows(ep / "shotlist.csv")
+    in_use = {x for r in rows for x in split_cell(r.get("asset_id")) if x}
+    mpath = ep / "assets" / "manifest.csv"
+    keep, gone = [], []
+    for m in read_manifest(mpath):
+        if m["asset_id"] in in_use or m.get("ai_generated") == "y":
+            keep.append(m)
+            continue
+        gone.append(m["asset_id"])
+        f = ep / m["file"]
+        if delete_files and f.is_file() and f.resolve().parent == (ep / "assets").resolve():
+            f.unlink()
+    write_manifest(mpath, keep)
+    if delete_files:  # downloads left over from earlier runs that never made it into the manifest
+        kept = {m["asset_id"] for m in keep}
+        for f in (ep / "assets").glob("*"):
+            if f.is_file() and f.stem.startswith(("wm-", "ia-")) and f.stem not in kept:
+                gone.append(f.stem)
+                f.unlink()
+    return gone

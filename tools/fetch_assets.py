@@ -8,6 +8,7 @@
   python tools/fetch_assets.py episodes/<ep> --go --rows 1-40    # only these sentence numbers
   python tools/fetch_assets.py episodes/<ep> --go --limit 10     # at most 10 shots this run
   python tools/fetch_assets.py review episodes/<ep>              # contact sheet: assets/review.html
+  python tools/fetch_assets.py prune episodes/<ep>               # drop files no shot uses (after edits)
 
 Licences allowed, sources per visual_type and image width live in config/assets.yaml.
 Every download is logged to assets/manifest.csv (licence, source URL, credit). Unknown licence = skipped.
@@ -56,6 +57,10 @@ def main(argv=None) -> int:
         sys.stdout.reconfigure(encoding="utf-8")
     argv = list(sys.argv[1:] if argv is None else argv)
     cfg = ep_mod.load_config()
+    if argv and argv[0] == "prune":
+        gone = ep_mod.prune(Path(argv[1]))
+        print(f"removed {len(gone)} unused assets: {' '.join(gone)}")
+        return 0
     if argv and argv[0] == "review":
         from pipeline.assets import review
         out = review.build(Path(argv[1]), tuple(cfg.get("skip_visual_types", [])))
