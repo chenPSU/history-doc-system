@@ -10,6 +10,7 @@ episodes/*/render/*
 !episodes/*/render/.gitkeep
 episodes/*/assets/*
 !episodes/*/assets/manifest.csv
+!episodes/*/assets/ai_prompts.yaml
 *.mp4
 *.mov
 *.wav
