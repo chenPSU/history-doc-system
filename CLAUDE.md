@@ -95,6 +95,7 @@ python tools/fetch_assets.py review episodes/<ep>   # contact sheet assets/revie
 python tools/map.py data/maps/constantinople.yaml overview_10s --out episodes/<ep>/render/maps/x.mp4   # animated map (Remotion, video/)
 python tools/images.py episodes/<ep>                 # AI illustrations: dry run (count, cost); --go only with owner yes
 python tools/timeline.py episodes/<ep>               # edit decision list -> render/edl.json (+ pacing stats)
+python tools/assemble.py episodes/<ep> --1080 --from 0 --to 60   # preview render; no flags = full 4K (hours)
 python tools/upload.py episodes/<ep>                 # dry run: shows the YouTube request
 python tools/upload.py --queue --go                  # what the owner's cron job runs
 pytest -q
