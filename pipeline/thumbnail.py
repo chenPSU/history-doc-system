@@ -41,16 +41,17 @@ def check_text(text: str, title: str) -> list[str]:
     return out
 
 
-def frame(im: Image.Image, focus, zoom: float) -> Image.Image:
-    """Cover-crop to 16:9 around the focus point, then zoom in by `zoom`."""
+def frame(im: Image.Image, focus, zoom: float, size: tuple[int, int] = (W, H)) -> Image.Image:
+    """Cover-crop to `size` (default 1280x720) around the focus point, then zoom in by `zoom`."""
     im = im.convert("RGB")
     sw, sh = im.size
-    cw = min(sw, sh * W / H) / zoom
-    ch = cw * H / W
+    tw, th = size
+    cw = min(sw, sh * tw / th) / zoom
+    ch = cw * th / tw
     fx, fy = focus
     left = min(max(0, fx * sw - cw / 2), sw - cw)
     top = min(max(0, fy * sh - ch / 2), sh - ch)
-    return im.crop((round(left), round(top), round(left + cw), round(top + ch))).resize((W, H), Image.LANCZOS)
+    return im.crop((round(left), round(top), round(left + cw), round(top + ch))).resize((tw, th), Image.LANCZOS)
 
 
 def sepia(im: Image.Image) -> Image.Image:
@@ -103,6 +104,20 @@ def make(ep: Path, spec: dict, title: str) -> tuple[Path, list[str]]:
         raise ThumbError(f"{spec['asset']} not in the manifest")
     with Image.open(ep / man[spec["asset"]]["file"]) as src:
         im = frame(src, spec.get("focus", [0.5, 0.5]), float(spec.get("zoom", 1.0)))
+    if spec.get("asset2"):            # two pictures that tell the story together: left panel fades into the right one
+        if spec["asset2"] not in man:
+            raise ThumbError(f"{spec['asset2']} not in the manifest")
+        split = float(spec.get("split", 0.45))
+        lw = int(W * (split + 0.1))
+        with Image.open(ep / man[spec["asset"]]["file"]) as src:
+            left = frame(src, spec.get("focus", [0.5, 0.5]), float(spec.get("zoom", 1.0)), (lw, H))
+        with Image.open(ep / man[spec["asset2"]]["file"]) as src2:
+            im = frame(src2, spec.get("focus2", [0.5, 0.5]), float(spec.get("zoom2", 1.0)))
+        fade = int(W * 0.12)
+        mask = Image.new("L", (lw, H), 255)
+        for x in range(lw - fade, lw):
+            mask.paste(int(255 * (lw - x) / fade), (x, 0, x + 1, H))
+        im.paste(left, (0, 0), mask)
     im = vignette(sepia(im))
     im = text_block(im, spec["text"], spec.get("accent", "red"), spec.get("side", "left"))
     out = ep / spec["file"]

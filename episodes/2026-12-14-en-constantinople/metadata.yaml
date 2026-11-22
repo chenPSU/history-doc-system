@@ -101,18 +101,24 @@ thumbnails:
 - file: render/thumbnail.jpg
   asset: wm-147845
   focus:
+  - 0.4
+  - 0.36
+  zoom: 1.55
+  asset2: ai-170
+  focus2:
   - 0.62
-  - 0.38
-  zoom: 1.15
-  text: HE WAS 21
+  - 0.5
+  zoom2: 1.1
+  split: 0.42
+  text: 21 VS 1,000 YEARS
   accent: red
   side: right
 - file: render/thumbnail_b.jpg
-  asset: ai-222
+  asset: ai-164
   focus:
-  - 0.48
-  - 0.42
-  zoom: 1.25
-  text: SHIPS OVER A HILL
+  - 0.45
+  - 0.45
+  zoom: 1.2
+  text: 1,000 YEARS
   accent: gold
-  side: left
+  side: right
