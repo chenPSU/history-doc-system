@@ -8,7 +8,9 @@ Script format:
   [CUE: ...]           production cues (not narrated)
   VOICE (who): "..."   first-person voice read by a second voice (narrated)
   plain lines          narrator text
-Usage: score.py file.md [--rounds 1,2,3] [--json]
+  CAST: / PLACES:      (Thai scripts) names of people / places, comma-separated
+Thai scripts are detected and scored by tools/score_th.py (P1.5).
+Usage: score.py file.md [--rounds 1,2,3] [--json] [--lang en|th]
 """
 import re, sys, json, statistics as st
 
@@ -21,7 +23,7 @@ def parse(path):
         line = raw.rstrip("\n")
         if not line.strip():
             continue
-        m = re.match(r"^(TITLE|THUMB|SIGNOFF):\s*(.*)", line)
+        m = re.match(r"^(TITLE|THUMB|SIGNOFF|CAST|PLACES):\s*(.*)", line)
         if m:
             meta[m.group(1).lower()] = m.group(2); continue
         if line.startswith("## "):
@@ -395,7 +397,14 @@ def r5_template(meta, S):
     return f"{len(have)}/{len(need)}", len(have) / len(need)
 
 # ---------- runner ----------
-def run(path, rounds):
+def run(path, rounds, lang=None):
+    """English rules by default; Thai scripts (detected, or lang='th') go to tools/score_th.py."""
+    if lang is None:
+        import score_th
+        lang = "th" if score_th.is_thai(open(path, encoding="utf-8").read()) else "en"
+    if lang == "th":
+        import score_th
+        return score_th.run(path, rounds)
     meta, S = parse(path)
     all_txt = " ".join(spoken(s) for s in S)
     nw = len(words(all_txt))
@@ -416,8 +425,9 @@ if __name__ == "__main__":
     rounds = [1]
     if "--rounds" in args:
         rounds = [int(x) for x in args[args.index("--rounds") + 1].split(",")]
+    lang = args[args.index("--lang") + 1] if "--lang" in args else None
     files = [a for a in args if a.endswith(".md")]
-    out = [run(f, rounds) for f in files]
+    out = [run(f, rounds, lang) for f in files]
     if "--json" in args:
         print(json.dumps(out, ensure_ascii=False, indent=1))
     else:

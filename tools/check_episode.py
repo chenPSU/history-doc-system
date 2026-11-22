@@ -5,7 +5,7 @@
 
 Gate: every round >= 85, mean >= 90, no metric at 0 unless waived.
 Waivers: keep a "waivers" list in an existing score.json: [{"metric": "...", "reason": "..."}].
-English only for now (Thai scorer: TASKS P1.5).
+Thai scripts are detected and scored by tools/score_th.py with the same gate (TASKS P1.5).
 """
 import json
 import sys

@@ -56,6 +56,7 @@ Start from `templates/episode/`. `python tools/new_episode.py` creates the folde
 TITLE: ...
 THUMB: ...
 SIGNOFF: Until next time, keep looking back.
+CAST: ... / PLACES: ...   (Thai scripts) names, comma-separated
 ## HOOK            sections: HOOK, PROMISE, CONTEXT, CHAPTER n, TURNING POINT, CLOSE
 [CUE: ...]         production cues, not narrated: MUSIC, SFX, VISUAL, PAUSE n, J-CUT, L-CUT, SOUND BRIDGE, MIX,
                    TONE: epic | intimate (narration tone until the next TONE cue or section; see config/voice.yaml)
@@ -75,7 +76,7 @@ plain lines        narration
 
 - No topics touching the Thai monarchy (Section 112 risk).
 - Tell neighbour-country history (Cambodia, Myanmar, Laos, Vietnam) neutrally. No inflammatory wording. Skip Khmer topics in Thai until someone checks the tone.
-- `score.py` sentence-length and Flesch metrics are English-only. Use the Thai scorer (TASKS P1.5) for Thai scripts.
+- `score.py` detects a Thai script and scores it with `tools/score_th.py` (same 5 rounds, same gate). Thai scripts put one sentence per line, a space where the narrator breathes, and name people and places in `CAST:` and `PLACES:` header lines (the scorer cannot see Thai names otherwise).
 
 ## Lessons from the QURIO channel (a Thai channel that grew slowly)
 
