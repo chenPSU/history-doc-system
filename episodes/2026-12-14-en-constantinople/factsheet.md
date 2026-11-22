@@ -117,7 +117,7 @@ Covers the full script (P1.3, 20 Nov 2026, about 23 min). Rows 1-40 came from th
 | 82 | Captured Ottoman officers reveal every tunnel | 23 May | C pp. 168–171 | R | web | No |
 | 83 | Mehmed's offer: leave the city, rule the Peloponnese; Constantine refuses, offers tribute, "decided to die" | 21 May | WK (FoC, note 9) | R | web | No |
 | 84 | Prophecy: the city would fall under a waning moon | — | R | C | book | No |
-| 85 | Partial lunar eclipse | 22 May 1453 | WK (FoC) | NASA Five Millennium Catalog of Lunar Eclipses | web (WK only) | **Check NASA table**; some books say 24 May. |
+| 85 | Partial lunar eclipse | 22 May 1453 | WK (FoC) | NASA Five Millennium Catalog of Lunar Eclipses, no. 08328: 1453 May 22 (Julian), partial, umbral magnitude 0.74, greatest 17:20 TD, around moonrise in Constantinople: https://eclipse.gsfc.nasa.gov/LEcat5/LE1401-1500.html | web | No. Checked 22 Nov 2026; matches "the full moon rose... part of it stayed dark". Some books give 24 May (another omen); the eclipse is 22 May. |
 | 86 | Thick fog; strange light around the dome of Hagia Sophia | a few days after 22 May | K p. 59 (via WK) | R | web | No |
 | 87 | Rumours of a Christian relief army | — | R | C | book | No |
 | 88 | Council: Halil urges peace, Zaganos urges attack; Mehmed chooses attack | late May | WK | R | web | No (day varies) |
@@ -135,7 +135,7 @@ Covers the full script (P1.3, 20 Nov 2026, about 23 min). Rows 1-40 came from th
 | 100 | Mehmed said to have wept at the ruined city | — | R p. 152 | K | book | Reported |
 | 101 | Some Venetian and Genoese ships escaped past the chain with refugees | — | R | C | book | No |
 | 102 | Hagia Sophia, a church about 900 years (537 → 1453), becomes a mosque | ~900 years | BJ ("Hagia Sophia") | R | book | No |
-| 103 | 29 May 1453 was a Tuesday; Greek "unlucky Tuesday" tradition | Tuesday | WK (FoC: "Tuesday 29 May") | Greek Reporter / WK "Tuesday" | web (weekday) | **Weak:** the tradition is folklore; find a stronger second source or cut the line. |
+| 103 | 29 May 1453 was a Tuesday; Greek "unlucky Tuesday" tradition | Tuesday | To Vima, "Why Greeks consider Tuesday the 13th an unlucky day" (cites folklorist Nikolaos Politis; links it to the Tuesday fall of 1453): https://www.tovima.com/society/why-greeks-consider-tuesday-the-13th-an-unlucky-day/ | Greek Reporter, "What do Greeks have against Tuesday the 13th?": https://greekreporter.com/2026/01/13/greeks-tuesday-13th/ ; weekday: WK (FoC) | web | Partly: the belief is folklore with several claimed origins (Mars, "third" day, 1204, 1453). The script only says the city fell on a Tuesday and that many Greeks call Tuesday unlucky; both hold. Runciman (R) reports the same belief (book, page to add). |
 | 104 | Giustiniani dies of his wound at Chios | 1 June 1453 | WK "Giustiniani" | R | web | No |
 | 105 | Halil dismissed and imprisoned 1 June; executed 10 July (about 6 weeks) | 6 weeks | TDV İslâm Ansiklopedisi "Çandarlı Halil Paşa" (via WK) | R | web | No |
 | 106 | Orban said to have died when a cannon burst | 1453 | WK "Orbán" | D | web | **Yes:** uncertain; script says "one story says". |
@@ -170,6 +170,6 @@ None in the full script. Reported speech (Orban's "walls of Babylon", the turban
 
 ## Still to do before the fact gate is final
 
+Rows 85 and 103 were resolved on 22 Nov 2026 (NASA catalogue; To Vima + Greek Reporter). Open items that block upload are marked `open` in the Checked column; `tools/preflight.py` fails on them.
+
 - Page numbers for the `book` rows (Runciman 1965 and Crowley 2005 cover nearly all of them). Needs a library or ebook copy.
-- Row 85: check the eclipse date in the NASA lunar eclipse catalogue.
-- Row 103: find a stronger second source for the "unlucky Tuesday" tradition, or cut that line.

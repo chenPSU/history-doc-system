@@ -102,6 +102,7 @@ python tools/captions.py episodes/<ep>               # render/captions.srt from 
 python tools/metadata.py episodes/<ep>               # chapters, sources, credits -> metadata.yaml (+ limits check)
 python tools/thumbnail.py episodes/<ep>              # thumbnails from `thumbnails:` in metadata.yaml
 python tools/shorts.py episodes/<ep>                 # vertical Shorts from `shorts:` in metadata.yaml
+python tools/preflight.py episodes/<ep>              # pre-upload checklist -> preflight.json (passed, failed, manual)
 python tools/upload.py episodes/<ep>                 # dry run: shows the YouTube request
 python tools/upload.py --queue --go                  # what the owner's cron job runs
 pytest -q

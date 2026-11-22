@@ -1,0 +1,149 @@
+{
+ "passed": true,
+ "episode": "2026-12-14-en-constantinople",
+ "checked_at": "2026-11-22T10:02:36Z",
+ "failed": [],
+ "warnings": [
+  {
+   "id": "facts.todo",
+   "detail": "1 open note(s) in 'Still to do': Page numbers for the `book` rows (Runciman 1965 and Crowley 2005 cover nearly all of them)"
+  },
+  {
+   "id": "picture.pace",
+   "detail": "7 shot(s) over 3s in the first 30s: s001.1, s002.1, s002.2, s003.1, s004.1, s005.1, s006.1"
+  }
+ ],
+ "manual": [
+  "Add the end screen in YouTube Studio (the API cannot): subscribe + the next episode in the series, over the music tail.",
+  "47 fact rows are checked against the cited books' standard account only (`book`), not opened in print: add page numbers when a copy is at hand.",
+  "10 map clips draw hand-made regional borders (`approximate: true`): spot-check them against an atlas.",
+  "Watch the final render once, start to end (picture, sound, captions)."
+ ],
+ "checks": [
+  {
+   "id": "score",
+   "status": "pass",
+   "detail": "mean 97.4, rounds {'1': 93.0, '2': 95.6, '3': 98.2, '4': 100.0, '5': 100.0}"
+  },
+  {
+   "id": "facts.two_sources",
+   "status": "pass",
+   "detail": "112 facts, each with 2 sources"
+  },
+  {
+   "id": "facts.open",
+   "status": "pass",
+   "detail": "no fact marked open"
+  },
+  {
+   "id": "facts.numbers",
+   "status": "pass",
+   "detail": "every number in the narration appears in the fact sheet"
+  },
+  {
+   "id": "facts.todo",
+   "status": "warn",
+   "detail": "1 open note(s) in 'Still to do': Page numbers for the `book` rows (Runciman 1965 and Crowley 2005 cover nearly all of them)"
+  },
+  {
+   "id": "quotes",
+   "status": "pass",
+   "detail": "no VOICE lines"
+  },
+  {
+   "id": "rights.logged",
+   "status": "pass",
+   "detail": "all 364 assets in the video and mix are in the manifest"
+  },
+  {
+   "id": "rights.fields",
+   "status": "pass",
+   "detail": "every used asset has licence, source and credit"
+  },
+  {
+   "id": "rights.licence",
+   "status": "pass",
+   "detail": "every licence allows commercial use and editing"
+  },
+  {
+   "id": "rights.files",
+   "status": "pass",
+   "detail": "every used asset file is on disk"
+  },
+  {
+   "id": "ai.prompts",
+   "status": "pass",
+   "detail": "115 AI images, every prompt passed the guard (no real person, no portrait, print style)"
+  },
+  {
+   "id": "ai.label",
+   "status": "pass",
+   "detail": "every AI shot carries the 'Illustration' label"
+  },
+  {
+   "id": "ai.disclosure",
+   "status": "pass",
+   "detail": "disclosure off: AI images are old-print illustrations, labelled on screen"
+  },
+  {
+   "id": "picture.still",
+   "status": "pass",
+   "detail": "412 shots, longest 17.8s"
+  },
+  {
+   "id": "picture.pace",
+   "status": "warn",
+   "detail": "7 shot(s) over 3s in the first 30s: s001.1, s002.1, s002.2, s003.1, s004.1, s005.1, s006.1"
+  },
+  {
+   "id": "hook",
+   "status": "pass",
+   "detail": "opens with HOOK; first question at 18s: \"How did a young sultan break a thousand-year wall in just 53\""
+  },
+  {
+   "id": "metadata.limits",
+   "status": "pass",
+   "detail": "title 57 chars, description 4443 bytes, 15 tags"
+  },
+  {
+   "id": "metadata.chapters",
+   "status": "pass",
+   "detail": "9 chapters"
+  },
+  {
+   "id": "video.file",
+   "status": "pass",
+   "detail": "render/constantinople_v2_1080p.mp4: 1920x1080, 23.1 min"
+  },
+  {
+   "id": "end_tail",
+   "status": "pass",
+   "detail": "15.0s after the sign-off"
+  },
+  {
+   "id": "captions",
+   "status": "pass",
+   "detail": "433 cues"
+  },
+  {
+   "id": "thumbnail",
+   "status": "pass",
+   "detail": "render/thumbnail.jpg: 1280x720, 365 KB"
+  },
+  {
+   "id": "variety",
+   "status": "pass",
+   "detail": "first EN video on the channel: nothing to compare"
+  },
+  {
+   "id": "thai",
+   "status": "n/a",
+   "detail": "English channel"
+  },
+  {
+   "id": "shorts",
+   "status": "pass",
+   "detail": "4 Shorts, 15-60 s, 9:16"
+  }
+ ]
+}

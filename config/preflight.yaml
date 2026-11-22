@@ -1,0 +1,32 @@
+# Pre-upload checklist settings (TASKS P5.4, docs/style-guide.md "Checklist ก่อนอัปโหลด").
+# Read by pipeline/preflight.py. Edited by us; the owner's upload rules live in config/upload_policy.yaml.
+
+max_still_s: 10            # no picture held longer than this (style guide)
+hook_window_s: 30          # the hook, and its first question, must land inside this window
+end_tail_s: [10, 20]       # seconds after the sign-off: music tail where the YouTube end screen sits (style guide: 10-20 s)
+min_video_height: 1080     # channel export (D4)
+chapter_min_s: 10          # YouTube: at least 3 chapters, first at 0:00, each at least 10 s
+thumb_size: [1280, 720]
+thumb_max_bytes: 2097152
+thumb_min_distance: 12     # average-hash distance (0-64) a thumbnail needs from the previous 3 videos' thumbnails
+previous_videos: 3         # "thumbnail and title differ from the previous 3 videos"
+
+# Licences an asset may carry. Anything else (NC, ND, "unknown", empty) fails the rights check.
+licences_allowed:
+  - "public domain"
+  - "cc0"
+  - "cc by "              # CC BY x.y (trailing space so "cc by-nc" does not match)
+  - "cc by-sa"
+  - "attribution"         # Commons "Attribution" (credit only)
+  - "own work"
+  - "ai-generated for this channel"
+licences_refused: ["-nc", "-nd", "noncommercial", "no derivatives", "all rights reserved", "unknown"]
+
+# Thai channel (CLAUDE.md "Thai channel rules"). Matched in the script, title, description and tags.
+thai:
+  monarchy: ["พระมหากษัตริย์", "สถาบันกษัตริย์", "ในหลวง", "รัชกาลที่", "ราชวงศ์จักรี", "พระบรมราช", "พระราชินี",
+             "สมเด็จพระเจ้าอยู่หัว", "ม.112", "มาตรา 112", "lèse-majesté", "lese majeste"]
+  # Khmer / Cambodia topics wait until someone checks the tone: set `tone_checked: true` in brief.yaml after that.
+  khmer: ["เขมร", "กัมพูชา", "ขอม", "khmer", "cambodia", "angkor", "นครวัด", "ปราสาทพระวิหาร"]
+  # Inflammatory wording about neighbour countries.
+  inflammatory: ["ไอ้", "พวกมัน", "ทรยศ", "ศัตรูตลอดกาล", "ชั่วร้าย", "ป่าเถื่อน", "หนักแผ่นดิน", "ขายชาติ"]

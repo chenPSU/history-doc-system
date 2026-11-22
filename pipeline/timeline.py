@@ -31,7 +31,9 @@ from pipeline import voice
 from pipeline.assets.common import read_manifest
 
 FPS, WIDTH, HEIGHT = 30, 3840, 2160
-TAIL = 2.0                     # seconds of picture after the last word (sign-off), faded out
+TAIL = 15.0                    # end-screen tail: the last picture and the music run on after the sign-off
+                               # (style guide 10-20 s; YouTube end screens sit on the last 5-20 s)
+END_FADE = 3.0                 # the last picture fades to black over the final seconds
 FADE_BLACK, DISSOLVE = 1.0, 0.8
 PAUSE_FOR_DISSOLVE = 1.0       # a gap this long before a sentence (a [PAUSE]) gets a dissolve
 SOFT = 0.5                     # every ordinary shot change is a short dissolve
@@ -247,15 +249,16 @@ def build(ep: Path, probe=None) -> dict:
                 item["caption"] = str(framing["captions"][item["id"]])
             shots.append(item)
 
-    shots[-1]["fade_out_s"] = TAIL
+    shots[-1]["fade_out_s"] = END_FADE
     # pacing, on the real timeline (P4.2 AC)
     hook_long = [s["id"] for s in shots if s["start"] < HOOK_WINDOW and s["duration"] > HOOK_MAX]
     if hook_long:
         warnings.append(f"{len(hook_long)} shot(s) over {HOOK_MAX:.0f}s in the first 30s: {', '.join(hook_long)}")
-    too_long = [f"{s['id']} ({s['duration']:.1f}s)" for s in shots if s["duration"] > MAX_SHOT]
+    spoken = lambda s: min(s["end"], total + 1.0) - s["start"]    # the end-screen tail does not count as pace
+    too_long = [f"{s['id']} ({spoken(s):.1f}s)" for s in shots if spoken(s) > MAX_SHOT]
     if too_long:
         errors.append(f"shot(s) over {MAX_SHOT:.0f}s: {', '.join(too_long)}")
-    body = [s["duration"] for s in shots if s["start"] >= HOOK_WINDOW]
+    body = [spoken(s) for s in shots if s["start"] >= HOOK_WINDOW]
     mean = sum(body) / max(1, len(body))
     if body and not PACE_MEAN[0] - 0.25 <= mean <= PACE_MEAN[1] + 0.25:
         warnings.append(f"average shot after the first 30 s is {mean:.1f}s (aim {PACE_MEAN[0]:.0f}-{PACE_MEAN[1]:.0f}s)")

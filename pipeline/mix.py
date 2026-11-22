@@ -66,7 +66,7 @@ def build_graph(ep: Path, plan: dict, start: float, end: float, voice_lufs: floa
     """ffmpeg inputs + filter_complex for the window [start, end) of the episode timeline."""
     dur = end - start
     inputs = ["-ss", f"{start}", "-t", f"{dur}", "-i", str(Path(ep) / "audio" / "narration.wav")]
-    # pad the voice to the window: the picture runs ~2 s past the last word and the music tail must too
+    # pad the voice to the window: the picture runs on past the last word (end-screen tail) and the music must too
     cut = "" if voice_until is None else f",volume=0:enable='gte(t,{voice_until - start:.3f})'"   # Shorts: music-only tail
     chains = [f"[0:a]aresample={SR},aformat=channel_layouts=stereo,apad=whole_dur={dur:.3f}{cut},asplit=2[voice][key]"]
     music_labels, sfx_labels, n = [], [], 1
@@ -131,12 +131,15 @@ def mix(ep: Path, start: float = 0.0, end: float | None = None, out: Path | None
         raise MixError(f"assets not in the manifest or missing on disk: {missing}")
     files = {a: ep / man[a]["file"] for a in assets}
     narration = ep / "audio" / "narration.wav"
+    full = start == 0 and end is None
     if end is None:
-        end = float(json.loads((ep / "audio" / "narration_timing.json").read_text(encoding="utf-8"))["total_seconds"]) + 2.0
+        edl = ep / "render" / "edl.json"      # the picture's length, end-screen tail included
+        end = (float(json.loads(edl.read_text(encoding="utf-8"))["duration"]) if edl.exists() else
+               float(json.loads((ep / "audio" / "narration_timing.json").read_text(encoding="utf-8"))["total_seconds"]) + 15.0)
     voice = loudness(narration)["integrated_lufs"]
     levels = {a: loudness(f)["integrated_lufs"] for a, f in files.items()}
     inputs, graph = build_graph(ep, plan, start, end, voice, files, levels, voice_until)
-    out = Path(out or ep / "audio" / ("final_mix.wav" if start == 0 and end is None else f"mix_{int(start)}-{int(end)}.wav"))
+    out = Path(out or ep / "audio" / ("final_mix.wav" if full else f"mix_{int(start)}-{int(end)}.wav"))
     raw = out.with_suffix(".raw.wav")
     run = lambda args: subprocess.run([_ffmpeg(), "-hide_banner", "-loglevel", "error", "-y", *args], check=True)
     run([*inputs, "-filter_complex", graph, "-map", "[mix]", "-ar", str(SR), str(raw)])

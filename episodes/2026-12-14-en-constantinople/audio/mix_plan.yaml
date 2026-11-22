@@ -14,7 +14,7 @@ music:
   - {asset: wm-8093020,  from: 973.4,  to: 1038.8, fade_in: 2.0, fade_out: 2.0}                         # TURNING POINT: Interloper, tense
   - {asset: wm-64735439, from: 1037.8, to: 1095.7, fade_in: 1.0, fade_out: 0.8, level_db: 1}           # the assault: Drums of the Deep; out at the shot
   - {asset: wm-64733014, from: 1147.0, to: 1223.8, fade_in: 4.0, fade_out: 3.0, level_db: -1}          # the fall: Heavy Heart
-  - {asset: wm-64741168, from: 1221.8, to: 1373.1, offset: 30.0, fade_in: 3.0, fade_out: 4.0}           # CLOSE: Lightless Dawn returns (callback), long tail
+  - {asset: wm-64741168, from: 1221.8, to: 1384.1, offset: 30.0, fade_in: 3.0, fade_out: 6.0}           # CLOSE: Lightless Dawn returns (callback), 15 s end-screen tail
 sfx:
   # HOOK (as in the approved v2 test)
   - {asset: wm-16918997, at: 0.0, dur: 37.5, level_db: -24, fade_in: 1.5, fade_out: 3.0}               # night wind on the walls

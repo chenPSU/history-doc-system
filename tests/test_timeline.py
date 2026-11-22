@@ -79,7 +79,7 @@ def test_shots_cover_the_narration_end_to_end_and_split_sentences_evenly(tmp_pat
     assert sh[0]["start"] == 0 and sh[-1]["end"] == 44.0 + T.TAIL == e["duration"]
     assert all(abs(a["end"] - b["start"]) < 1e-9 for a, b in zip(sh, sh[1:]))
     assert [s["id"] for s in sh[1:3]] == ["s002.1", "s002.2"] and sh[1]["duration"] == 1.75   # 2.0 -> 5.5 halved
-    assert sh[-1]["fade_out_s"] == T.TAIL and not e["errors"]
+    assert sh[-1]["fade_out_s"] == T.END_FADE and not e["errors"]
 
 
 def test_fit_motion_cards_labels_video_and_placeholders(tmp_path):
@@ -144,8 +144,8 @@ def test_card_kinds():
 def test_average_pace_after_the_hook_is_checked(tmp_path):
     e = T.build(make_ep(tmp_path), probe)
     a = e["stats"]["after_30s"]
-    assert a["shots"] == 2 and a["mean"] == pytest.approx((40 - 33.8 + 6.0) / 2, abs=0.01)
-    assert any("average shot after the first 30 s" in w for w in e["warnings"])     # 6.1 s: slower than 3-4 s
+    assert a["shots"] == 2 and a["mean"] == pytest.approx((40 - 33.8 + 5.0) / 2, abs=0.01)   # tail counted to 1 s after the last word
+    assert any("average shot after the first 30 s" in w for w in e["warnings"])     # 5.6 s: slower than 3-4 s
 
 
 def test_inline_map_assets_become_map_shots(tmp_path):
