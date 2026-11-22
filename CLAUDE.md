@@ -101,6 +101,7 @@ python tools/assemble.py episodes/<ep> --from 0 --to 60   # preview a range; no 
 python tools/captions.py episodes/<ep>               # render/captions.srt from the narration timing
 python tools/metadata.py episodes/<ep>               # chapters, sources, credits -> metadata.yaml (+ limits check)
 python tools/thumbnail.py episodes/<ep>              # thumbnails from `thumbnails:` in metadata.yaml
+python tools/shorts.py episodes/<ep>                 # vertical Shorts from `shorts:` in metadata.yaml
 python tools/upload.py episodes/<ep>                 # dry run: shows the YouTube request
 python tools/upload.py --queue --go                  # what the owner's cron job runs
 pytest -q
