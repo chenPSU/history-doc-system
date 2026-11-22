@@ -98,6 +98,7 @@ python tools/map.py data/maps/<lib>.yaml --sheet x.png        # every map clip o
 python tools/map.py data/maps/<lib>.yaml --bind episodes/<ep>  # map clips with `shot:` become those shots' assets
 python tools/timeline.py episodes/<ep>               # edit decision list -> render/edl.json (+ pacing stats)
 python tools/assemble.py episodes/<ep> --from 0 --to 60   # preview a range; no range = the full episode at 1080p (~50 min)
+python tools/captions.py episodes/<ep>               # render/captions.srt from the narration timing
 python tools/upload.py episodes/<ep>                 # dry run: shows the YouTube request
 python tools/upload.py --queue --go                  # what the owner's cron job runs
 pytest -q
