@@ -74,7 +74,8 @@ Work top to bottom. Each task has acceptance criteria (AC). Tick the box when th
 
 ## P5 · Packaging (target: 12 Dec)
 
-- [ ] **P5.1 Metadata:** title (rotate the 7 formulas; must differ from the last 3 videos), description with chapters from the timing, sources and footage credits from the manifest, tags. Written to `metadata.yaml`.
+- [x] **P5.1 Metadata:** title (rotate the 7 formulas; must differ from the last 3 videos), description with chapters from the timing, sources and footage credits from the manifest, tags. Written to `metadata.yaml`.
+  Done 22 Nov: `pipeline/metadata.py` + `tools/metadata.py`: chapters from the EDL (card titles or `chapter_titles`, short sections folded), sources from the fact sheet, credits grouped by licence (CC BY/BY-SA authors, OSM, one Kevin MacLeod line, CC sounds, AI note); title/description/tags are hand-written and kept. Constantinople: 9 chapters, description 4,443 bytes (limit 5,000). Title chosen from the brief's options; the owner may swap (`title_options` in metadata.yaml).
 - [ ] **P5.2 Thumbnail:** one strong image + ≤ 4 words or one number; sepia/B&W + one accent colour (deep red or gold). 1280×720. Two variants for YouTube Test & Compare.
 - [ ] **P5.3 Shorts:** 3–5 cuts, 30–60 s, 9:16, big captions, last line points to the long video.
 - [ ] **P5.4 Pre-upload checklist** (style guide) as `tools/preflight.py`, writing `preflight.json` with `passed` and the failed items.

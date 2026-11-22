@@ -1,12 +1,99 @@
-title: ""                 # <= 100 characters
-description: |
-  
-chapters: []              # [{time: "0:00", title: "..."}]  first must be 0:00, at least 3, each >= 10 s
-tags: []                  # total <= 500 characters
-sources: []               # from factsheet.md
-footage_credits: []       # from assets/manifest.csv
-altered_or_synthetic_disclosure: false   # true if any realistic AI imagery or voice -> status.containsSyntheticMedia
+# Episode metadata (tools/metadata.py fills chapters, sources, footage_credits; title, description,
+# tags and chapter_titles are edited by hand and kept). The uploader builds the description from
+# description + chapters + sources + footage_credits (pipeline/youtube_upload.py).
+title: 'The Fall of Constantinople: The Last 53 Days of Byzantium'
+description: 'For a thousand years, no army broke through the land walls of Constantinople. In the spring of 1453, a sultan
+  who was not yet twenty-two did it in 53 days, with a cannon nobody else would pay for and a fleet dragged over a hill.
+
+
+  This is the story of the last siege of Byzantium, from Mehmed''s fortress on the Bosphorus to the final assault on 29 May
+  1453.'
+chapters:
+- time: 0:00
+  title: The last night, 29 May 1453
+- time: 0:38
+  title: A cannon and a fleet
+- time: 0:48
+  title: Constantinople, 330 AD
+- time: '3:27'
+  title: The Bosphorus, 1452
+- time: '6:18'
+  title: Adrianople, 1452
+- time: '10:24'
+  title: The Golden Horn, April 1453
+- time: '13:25'
+  title: Under the land walls, May 1453
+- time: '16:14'
+  title: The Ottoman camp, Late May 1453
+- time: '20:22'
+  title: How a thousand-year wall fell
+tags:
+- fall of constantinople
+- constantinople 1453
+- siege of constantinople
+- byzantine empire
+- byzantium
+- ottoman empire
+- mehmed ii
+- mehmed the conqueror
+- constantine xi
+- theodosian walls
+- '1453'
+- history documentary
+- medieval history
+- ottoman history
+- istanbul history
+sources:
+- Steven Runciman, The Fall of Constantinople 1453, Cambridge University Press, 1965
+- 'Roger Crowley, 1453: The Holy War for Constantinople and the Clash of Islam and the West, Hyperion, 2005 (UK: Constantinople:
+  The Last Great Siege)'
+- 'David Nicolle, Constantinople 1453: The End of Byzantium, Osprey Campaign 78, 2000'
+- Marios Philippides & Walter K. Hanak, The Siege and the Fall of Constantinople in 1453, Ashgate, 2011
+- Stephen Turnbull, The Walls of Constantinople AD 324–1453, Osprey Fortress 25, 2004
+- 'Donald M. Nicol, The Immortal Emperor: The Life and Legend of Constantine Palaiologos, Cambridge University Press, 1992'
+- 'Encyclopaedia Britannica, "Siege of Constantinople" (6 April – 29 May 1453): https://www.britannica.com/event/Siege-of-Constantinople'
+- 'Encyclopaedia Britannica, "Mehmed II": https://www.britannica.com/biography/Mehmed-II-Ottoman-sultan (dates confirmed via
+  Wikipedia "Mehmed II")'
+- 'Encyclopaedia Britannica, "Fall of Constantinople": https://www.britannica.com/event/Fall-of-Constantinople-1453'
+- 'World History Encyclopedia, "Theodosian Walls": https://www.worldhistory.org/Theodosian_Walls/ and "1453: The Fall of Constantinople":
+  https://www.worldhistory.org/article/1180/1453-the-fall-of-constantinople/'
+- 'George Sphrantzes, Chronicon minus (trans. M. Philippides, The Fall of the Byzantine Empire, 1980); census extract: https://www.deremilitari.org/RESOURCES/SOURCES/constantinople2.htm'
+- Doukas, Decline and Fall of Byzantium to the Ottoman Turks (trans. H. Magoulias, 1975)
+- Nicolò Barbaro, Diary of the Siege of Constantinople 1453 (trans. J. R. Jones, 1969)
+- Kritoboulos, History of Mehmed the Conqueror (trans. C. T. Riggs, Princeton, 1954)
+- Encyclopaedia Britannica, "Janissary"; "Hagia Sophia"; "Constantine XI Palaeologus"; "Murad II"; "Middle Ages"
+- 'UNESCO World Heritage List, "Historic Areas of Istanbul" (1985), includes the land walls: https://whc.unesco.org/en/list/356/'
+footage_credits:
+- 'CC BY 2.0 (via Wikimedia Commons): Alexandru Panoiu from Bucharest, Romania; Birmingham Museums Trust, Teresa Gilmore;
+  BPL; Guilhem Vellut from Paris, France; Ivan Mlinaric; Jorge Franganillo; Jorge Láscar from Australia; Sonse; The Portable
+  Antiquities Scheme, Lucy Shipley; Tim Sheerman-Chase'
+- 'CC BY 3.0 (via Wikimedia Commons): ---=XEON=---; Cüneyt Türksen; Eusebius; Thomas Bresson'
+- 'CC BY 4.0 (via Wikimedia Commons): ECetc Church Photos; George Chernilevsky; Gregfixer'
+- 'CC BY-SA 2.0 (via Wikimedia Commons): Alastair Rae from London, United Kingdom; Carole Raddato from FRANKFURT, Germany;
+  Flickr user Simon Cope'
+- 'CC BY-SA 3.0 (via Wikimedia Commons): Arild Vågen; JBradyK; Katsiaryna Naliuka; Nevit Dilmen; Sailko; User:Ggia; Winstonza'
+- 'CC BY-SA 4.0 (via Wikimedia Commons): AgrisR; Antoloji; Chris06; Dosseman; Geni; Isabeau; Martin Falbisoner; Mustafa-trit20;
+  Peter Christian Riemann; Raakvlak; Yair Haklai'
+- Map data © OpenStreetMap contributors (ODbL); maps drawn for this channel, with Natural Earth data.
+- 'Other pictures: public domain or CC0, via Wikimedia Commons.'
+- 'Music: "Desert City", "Distant Tension", "Drums of the Deep", "Epic Unease", "Heavy Heart", "Hidden Past", "Interloper",
+  "Lightless Dawn", "Night Cave", "Ominous", "Ritual" by Kevin MacLeod (incompetech.com), licensed under Creative Commons
+  CC BY 3.0 (creativecommons.org/licenses/by/3.0)'
+- 'Sound: Bells ringing in Tower of Přibyslav: Bazi, edited by Blahma, CC BY-SA 3.0, via Wikimedia Commons'
+- 'Sound: Oceanwavescrushing: Luftrum, CC BY 3.0, via Wikimedia Commons'
+- 'Sound: Samariter Church Bell II (g): Pete w. View, CC BY-SA 4.0, via Wikimedia Commons'
+- 'Sound: Sword Clash (Gravity Sound): Gravity Sound, CC BY 4.0, via Wikimedia Commons'
+- Scenes marked "Illustration" are AI-generated in an old-print style, for moments no real picture shows.
+altered_or_synthetic_disclosure: false
 made_for_kids: false
-video_file: render/final.mp4
+video_file: render/constantinople_v2_1080p.mp4
 thumbnail_file: render/thumbnail.jpg
 captions_file: render/captions.srt
+title_options:
+- 'The Fall of Constantinople: The Last 53 Days of Byzantium'
+- How 53 Days Broke a Thousand-Year Wall
+- 53 Days to Break a Thousand-Year Wall | The Fall of Constantinople, 1453
+chapter_titles:
+  HOOK: The last night, 29 May 1453
+  PROMISE: A cannon and a fleet
+  CLOSE: How a thousand-year wall fell
