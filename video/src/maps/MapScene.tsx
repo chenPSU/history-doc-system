@@ -71,7 +71,7 @@ export const MapScene: React.FC<MapProps> = (props) => {
   const pal = getPalette(props.palette);
   const uid = props.uid ?? 'map'; // unique per scene: two maps can be on screen during a dissolve
   const u = height / 1080; // size unit: 1 px at 1080p
-  const base = useMemo(() => fitProjection(props.view, width, height), [props.view, width, height]);
+  const base = useMemo(() => fitProjection(props.view, width, height, props.fit ?? 'cover'), [props.view, width, height, props.fit]);
 
   const cam = cameraAt(props.camera, t);
   const c = cam.center ? base(cam.center) : [width / 2, height / 2];

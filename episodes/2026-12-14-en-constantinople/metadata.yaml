@@ -122,3 +122,24 @@ thumbnails:
   text: 1,000 YEARS
   accent: gold
   side: right
+shorts:
+- slug: ships-over-the-hill
+  from: 213
+  to: 225
+  title: They dragged 70 warships over a hill
+  end: 'The full story: The Fall of Constantinople, on our channel'
+- slug: the-cannon-no-one-would-buy
+  from: 115
+  to: 131
+  title: The cannon no emperor would pay for
+  end: 'The full story: The Fall of Constantinople, on our channel'
+- slug: war-under-the-walls
+  from: 251
+  to: 262
+  title: The war fought under the walls
+  end: 'The full story: The Fall of Constantinople, on our channel'
+- slug: the-throat-cutter
+  from: 72
+  to: 86
+  title: The castle they called Throat-Cutter
+  end: 'The full story: The Fall of Constantinople, on our channel'

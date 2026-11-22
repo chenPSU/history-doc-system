@@ -62,12 +62,13 @@ def load_plan(ep: Path) -> dict:
 
 
 def build_graph(ep: Path, plan: dict, start: float, end: float, voice_lufs: float, files: dict[str, Path],
-                music_lufs: dict[str, float]) -> tuple[list[str], str]:
+                music_lufs: dict[str, float], voice_until: float | None = None) -> tuple[list[str], str]:
     """ffmpeg inputs + filter_complex for the window [start, end) of the episode timeline."""
     dur = end - start
     inputs = ["-ss", f"{start}", "-t", f"{dur}", "-i", str(Path(ep) / "audio" / "narration.wav")]
     # pad the voice to the window: the picture runs ~2 s past the last word and the music tail must too
-    chains = [f"[0:a]aresample={SR},aformat=channel_layouts=stereo,apad=whole_dur={dur:.3f},asplit=2[voice][key]"]
+    cut = "" if voice_until is None else f",volume=0:enable='gte(t,{voice_until - start:.3f})'"   # Shorts: music-only tail
+    chains = [f"[0:a]aresample={SR},aformat=channel_layouts=stereo,apad=whole_dur={dur:.3f}{cut},asplit=2[voice][key]"]
     music_labels, sfx_labels, n = [], [], 1
     for k, m in enumerate(plan.get("music") or []):
         a, b = max(start, float(m["from"])), min(end, float(m["to"]))
@@ -119,7 +120,8 @@ def build_graph(ep: Path, plan: dict, start: float, end: float, voice_lufs: floa
     return inputs, ";".join(chains)
 
 
-def mix(ep: Path, start: float = 0.0, end: float | None = None, out: Path | None = None, log=print) -> dict:
+def mix(ep: Path, start: float = 0.0, end: float | None = None, out: Path | None = None, log=print,
+        voice_until: float | None = None, write_report: bool = True) -> dict:
     ep = Path(ep)
     plan = load_plan(ep)
     man = {m["asset_id"]: m for m in read_manifest(ep / "assets" / "manifest.csv")}
@@ -133,7 +135,7 @@ def mix(ep: Path, start: float = 0.0, end: float | None = None, out: Path | None
         end = float(json.loads((ep / "audio" / "narration_timing.json").read_text(encoding="utf-8"))["total_seconds"]) + 2.0
     voice = loudness(narration)["integrated_lufs"]
     levels = {a: loudness(f)["integrated_lufs"] for a, f in files.items()}
-    inputs, graph = build_graph(ep, plan, start, end, voice, files, levels)
+    inputs, graph = build_graph(ep, plan, start, end, voice, files, levels, voice_until)
     out = Path(out or ep / "audio" / ("final_mix.wav" if start == 0 and end is None else f"mix_{int(start)}-{int(end)}.wav"))
     raw = out.with_suffix(".raw.wav")
     run = lambda args: subprocess.run([_ffmpeg(), "-hide_banner", "-loglevel", "error", "-y", *args], check=True)
@@ -152,7 +154,8 @@ def mix(ep: Path, start: float = 0.0, end: float | None = None, out: Path | None
     report = {"file": out.relative_to(ep).as_posix(), "window": [start, end], "narration_lufs": voice,
               "asset_lufs": levels, "music_bed_db_vs_voice": MUSIC_BED_DB, "target": {"lufs": TARGET_LUFS, "true_peak": TARGET_TP},
               "measured": final, "passed": abs(final["integrated_lufs"] - TARGET_LUFS) <= 1.0 and final["true_peak_dbtp"] <= TARGET_TP + 0.2}
-    (ep / "audio" / "mix_report.json").write_text(json.dumps(report, indent=1), encoding="utf-8")
+    if write_report:                  # the episode's report (AC of P2.3); Shorts mixes do not overwrite it
+        (ep / "audio" / "mix_report.json").write_text(json.dumps(report, indent=1), encoding="utf-8")
     log(f"{out}: {final}")
     return report
 

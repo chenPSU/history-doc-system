@@ -72,4 +72,5 @@ export type MapProps = {
   title?: {text: string; sub?: string; appear?: number; position?: 'bl' | 'br' | 'tl' | 'tr'};
   credit?: string;
   uid?: string; // prefix for SVG ids when several maps share a page (episode render)
+  fit?: 'cover' | 'contain'; // contain for vertical Shorts: the whole view shows
 };

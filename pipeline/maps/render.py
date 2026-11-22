@@ -63,6 +63,7 @@ def land_for_view(land_name: str, view, margin: float = 0.4) -> tuple[dict, str]
 
 def build_props(library: dict, clip: str, width: int = 1920, height: int = 1080, fps: int = 30,
                 palette: str = "parchment") -> dict:
+    """A frame taller than wide (Shorts) shows the whole view (`fit: contain`) with land cut wide enough to fill it."""
     clips = library.get("clips", {})
     if clip not in clips:
         raise MapError(f"no clip {clip!r}; have: {', '.join(clips)}")
@@ -80,9 +81,12 @@ def build_props(library: dict, clip: str, width: int = 1920, height: int = 1080,
                 raise MapError(f"clip {clip}: {name}: {k} must be [start, end] with start < end")
         layers.append(layer)
     view = c["view"]
-    land, credit = land_for_view(c.get("land", library["land"]), view)   # a clip may use other geography
+    tall = height > width
+    land, credit = land_for_view(c.get("land", library["land"]), view, margin=1.4 if tall else 0.4)   # a clip may use other geography
     props = {"width": width, "height": height, "fps": fps, "durationSec": float(c["duration"]),
              "palette": c.get("palette", palette), "view": view, "land": land, "layers": layers}
+    if tall:
+        props["fit"] = "contain"
     if c.get("camera"):
         props["camera"] = c["camera"]
     if c.get("title"):

@@ -5,13 +5,14 @@ const mercY = (lat: number) => Math.log(Math.tan(Math.PI / 4 + (lat * Math.PI) /
 
 export type Projector = (p: LonLat) => [number, number];
 
-export function fitProjection(view: [number, number, number, number], width: number, height: number): Projector {
+// cover: the view fills the frame (16:9 episodes); contain: the whole view shows, more land/sea around it (9:16 Shorts)
+export function fitProjection(view: [number, number, number, number], width: number, height: number, mode: 'cover' | 'contain' = 'cover'): Projector {
   const [w, s, e, n] = view;
   const x0 = (w * Math.PI) / 180;
   const x1 = (e * Math.PI) / 180;
   const y0 = mercY(n);
   const y1 = mercY(s);
-  const scale = Math.max(width / (x1 - x0), height / (y0 - y1));
+  const scale = (mode === 'contain' ? Math.min : Math.max)(width / (x1 - x0), height / (y0 - y1));
   const cx = (x0 + x1) / 2;
   const cy = (y0 + y1) / 2;
   return ([lon, lat]) => [width / 2 + ((lon * Math.PI) / 180 - cx) * scale, height / 2 - (mercY(lat) - cy) * scale];

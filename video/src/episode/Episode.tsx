@@ -39,6 +39,8 @@ export type EpisodeProps = {
   audio: string;
   grain: string;
   shots: Shot[];
+  words?: {from: number; dur: number; text: string}[]; // Shorts: big captions, a few words at a time
+  endNote?: {from: number; text: string};             // Shorts: points to the long video over the music tail
 };
 
 const INK = '#efe6d2';
@@ -198,7 +200,39 @@ const Grain: React.FC<{src: string}> = ({src}) => {
   );
 };
 
-export const Episode: React.FC<EpisodeProps> = ({shots, audio, grain, width, height}) => (
+// Shorts: one big caption at a time, low in the frame, gold underline for the line being spoken.
+const Words: React.FC<{words: NonNullable<EpisodeProps['words']>; w: number}> = ({words, w}) => {
+  const frame = useCurrentFrame();
+  const cur = words.find((x) => frame >= x.from && frame < x.from + x.dur);
+  if (!cur) return null;
+  const k = frame - cur.from;
+  const pop = interpolate(k, [0, 4], [0.92, 1], {extrapolateRight: 'clamp'});
+  return (
+    <div style={{position: 'absolute', left: w * 0.06, right: w * 0.06, top: '66%', textAlign: 'center', transform: `scale(${pop})`}}>
+      <span style={{fontFamily: SERIF, fontWeight: 700, fontSize: w * 0.085, lineHeight: 1.12, color: INK,
+        textShadow: '0 0 18px rgba(0,0,0,0.95), 0 0 4px rgba(0,0,0,1)', borderBottom: `${Math.max(3, w * 0.006)}px solid ${GOLD}`}}>
+        {cur.text}
+      </span>
+    </div>
+  );
+};
+
+const EndNote: React.FC<{note: NonNullable<EpisodeProps['endNote']>; w: number; h: number}> = ({note, w, h}) => {
+  const frame = useCurrentFrame();
+  const k = frame - note.from;
+  if (k < 0 || !note.text) return null;
+  const show = interpolate(k, [0, 12], [0, 1], {extrapolateRight: 'clamp'});
+  return (
+    <AbsoluteFill style={{background: `rgba(20,17,13,${0.55 * show})`, alignItems: 'center', justifyContent: 'center'}}>
+      <div style={{opacity: show, fontFamily: SERIF, color: INK, textAlign: 'center', padding: `0 ${w * 0.1}px`}}>
+        <div style={{width: h * 0.05, height: Math.max(3, h * 0.003), background: GOLD, margin: `0 auto ${h * 0.02}px`}} />
+        <div style={{fontSize: w * 0.065, lineHeight: 1.2}}>{note.text}</div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+export const Episode: React.FC<EpisodeProps> = ({shots, audio, grain, width, height, words, endNote}) => (
   <AbsoluteFill style={{background: '#000'}}>
     {shots.map((s) => (
       <Sequence key={s.id} from={s.from} durationInFrames={Math.max(1, s.dur)} layout="none">
@@ -207,6 +241,8 @@ export const Episode: React.FC<EpisodeProps> = ({shots, audio, grain, width, hei
     ))}
     <Img src={staticFile(grain)} style={{display: 'none'}} />
     <Grain src={grain} />
+    {words ? <Words words={words} w={width} /> : null}
+    {endNote ? <EndNote note={endNote} w={width} h={height} /> : null}
     <Audio src={staticFile(audio)} />
   </AbsoluteFill>
 );
