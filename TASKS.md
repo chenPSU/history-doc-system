@@ -76,7 +76,8 @@ Work top to bottom. Each task has acceptance criteria (AC). Tick the box when th
 
 - [x] **P5.1 Metadata:** title (rotate the 7 formulas; must differ from the last 3 videos), description with chapters from the timing, sources and footage credits from the manifest, tags. Written to `metadata.yaml`.
   Done 22 Nov: `pipeline/metadata.py` + `tools/metadata.py`: chapters from the EDL (card titles or `chapter_titles`, short sections folded), sources from the fact sheet, credits grouped by licence (CC BY/BY-SA authors, OSM, one Kevin MacLeod line, CC sounds, AI note); title/description/tags are hand-written and kept. Constantinople: 9 chapters, description 4,443 bytes (limit 5,000). Title chosen from the brief's options; the owner may swap (`title_options` in metadata.yaml).
-- [ ] **P5.2 Thumbnail:** one strong image + ≤ 4 words or one number; sepia/B&W + one accent colour (deep red or gold). 1280×720. Two variants for YouTube Test & Compare.
+- [x] **P5.2 Thumbnail:** one strong image + ≤ 4 words or one number; sepia/B&W + one accent colour (deep red or gold). 1280×720. Two variants for YouTube Test & Compare.
+  Done 22 Nov: `pipeline/thumbnail.py` + `tools/thumbnail.py` from `thumbnails:` in metadata.yaml (asset, focus, zoom, ≤ 4 words, accent, side): cover-crop on the focus, sepia, vignette, Georgia Bold with an accent rule; checks word count, repeats of the title, size, 2 MB. Constantinople: A = Bellini's Mehmed II + "HE WAS 21" (red, `render/thumbnail.jpg`, the upload default), B = ships over the hill + "SHIPS OVER A HILL" (gold, `render/thumbnail_b.jpg`) for Test & Compare. The script's THUMB "53 DAYS" was not used: the kept title already says 53 Days.
 - [ ] **P5.3 Shorts:** 3–5 cuts, 30–60 s, 9:16, big captions, last line points to the long video.
 - [ ] **P5.4 Pre-upload checklist** (style guide) as `tools/preflight.py`, writing `preflight.json` with `passed` and the failed items.
   AC: preflight passes on Constantinople.
