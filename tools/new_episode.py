@@ -17,6 +17,8 @@ ROOT = Path(__file__).resolve().parent.parent
 TEMPLATE = ROOT / "templates" / "episode"
 EPISODES = ROOT / "episodes"
 FILLED = {"brief.yaml", "factsheet.md", "script.md"}
+EN_SIGNOFF = "Until next time, keep looking back."
+TH_SIGNOFF = "จนกว่าจะพบกันใหม่ อย่าลืมมองย้อนกลับไป"     # owner's choice, 22 Nov 2026
 
 
 def yaml_str(s: str) -> str:
@@ -37,6 +39,8 @@ def create(date, lang, slug, title, cluster="0", th_only="false", hook="", key_v
         text = p.read_text(encoding="utf-8")
         for k, v in values.items():
             text = text.replace("{" + k + "}", str(v))
+        if lang == "th":
+            text = text.replace(EN_SIGNOFF, TH_SIGNOFF)
         p.write_text(text, encoding="utf-8")
     return dest, True
 

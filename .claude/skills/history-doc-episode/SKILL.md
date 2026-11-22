@@ -48,6 +48,17 @@ Produce one episode package in the channel's fixed style: a calm, credible docum
 ## Shorts
 3-5 per long video, 30-60 s, 9:16, cut from the strongest anecdote, big captions, ending with a line pointing to the long video.
 
+## Thai adaptation (a Thai episode from an English one)
+Start with `python tools/adapt_th.py episodes/<en-ep> --date <week> --title "<Thai title>" --thumb "<Thai thumb>"`. It copies the brief and fact sheet, fills `CAST:`/`PLACES:` from `data/th_names.yaml`, and keeps the English sections and cues. Then write the narration:
+- Not a translation. Keep the hook, the structure, every cue and visual (the Thai episode reuses the English pictures, maps and music), and every fact exactly. Rewrite each beat the way a Thai storyteller would say it aloud.
+- One sentence per line. Put a space where the narrator takes a breath: short breath groups (about 4–12 syllables) are what the Thai scorer rewards. Split an English line with two sentences into two lines.
+- Link beats with แต่ / เพราะอย่างนั้น / ดังนั้น / ถึงอย่างนั้น / ตอนนี้ / ทว่า. Never start a sentence with แล้วก็ / จากนั้น / ต่อมา / หลังจากนั้น. Avoid ซึ่ง clauses and ถูก/โดน passives. Speak to the listener as คุณ in the key scenes.
+- Thai anchors: give the Buddhist-era year once (ปีนั้นตรงกับ พ.ศ. ...) and a Thai time anchor without naming a Thai king (ราวสมัยอยุธยาตอนต้น); convert miles and feet to metric; say where a place is today (อิสตันบูล เมืองใหญ่ที่สุดของตุรกี). Every such fact goes into `## Thai additions` of the fact sheet with 2 sources.
+- Names: spell them as in `data/th_names.yaml`; add new names there first. Write regnal numbers in words (คอนสแตนตินที่สิบเอ็ด), plain register for foreign rulers (เขา), no Thai-monarchy vocabulary.
+- Title: the proper name and the year (e.g. "53 วันสุดท้ายของคอนสแตนติโนเปิล: ... (ค.ศ. 1453)"); vary the formula from the Thai episode the same week.
+- Sign-off: `จนกว่าจะพบกันใหม่ อย่าลืมมองย้อนกลับไป` (owner, 22 Nov 2026).
+- Gate: `python tools/check_episode.py episodes/<th-ep>` uses the Thai scorer automatically.
+
 ## Pre-upload checklist
 - Every date, name, and number checked against 2 sources
 - Footage rights logged per asset

@@ -115,9 +115,9 @@ def fact_rows(md: str) -> list[dict]:
     rows, on = [], False
     for line in md.splitlines():
         if line.startswith("## "):
-            on = line.strip().lower() == "## facts"
+            on = line.strip().lower() in ("## facts", "## thai additions")   # Thai episodes add their own rows
             continue
-        if on and re.match(r"^\|\s*\d+\s*\|", line):
+        if on and re.match(r"^\|\s*T?\d+\s*\|", line):
             c = [x.strip() for x in line.strip().strip("|").split("|")]
             c += [""] * (7 - len(c))
             rows.append(dict(zip(["no", "fact", "value", "src1", "src2", "checked", "disputed"], c[:7])))

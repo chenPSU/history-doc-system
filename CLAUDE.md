@@ -90,6 +90,7 @@ pip install -r requirements.txt
 python tools/score.py episodes/<ep>/script.md --rounds 1,2,3,4,5
 python tools/score.py a.md b.md --rounds 1,2,3,4,5 --json      # compare versions
 python tools/new_episode.py --date 2026-12-07 --lang en --slug korea --title "..."
+python tools/adapt_th.py episodes/<en-ep> --date 2026-12-14 --title "..."   # Thai episode from an English one (skeleton + names)
 python tools/check_episode.py episodes/<ep>          # score gate -> score.json
 python tools/fetch_assets.py episodes/<ep> --go     # licence-checked images -> assets/, manifest, shot asset_id
 python tools/fetch_assets.py review episodes/<ep>   # contact sheet assets/review.html

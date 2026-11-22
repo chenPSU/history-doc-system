@@ -64,7 +64,7 @@ Nov 17, 2026 · @Chen
 | --- | --- | --- | --- |
 | 7 ธ.ค. | The Entire History of Korea: From Three Kingdoms to Two Nations | ประวัติศาสตร์เกาหลีฉบับสมบูรณ์: จากสามก๊กสู่สองประเทศ | 3 / 3 |
 | 7 ธ.ค. | Stalingrad: 200 Days That Broke Hitler's Army | ★ สงครามอินโดจีน 2483: ศึกไทย–ฝรั่งเศสที่คนไทยลืม | 1 / 11 |
-| 14 ธ.ค. | What Life Was Like for a Roman Soldier | ชีวิตทหารโรมัน: กิน นอน รบอย่างไร | 8 / 8 |
+| 14 ธ.ค. | What Life Was Like for a Roman Soldier | 53 วันสุดท้ายของคอนสแตนติโนเปิล: กำแพงพันปีแตกได้อย่างไร (ค.ศ. 1453) | 8 / 9 |
 | 14 ธ.ค. | The Fall of Constantinople: The Last 53 Days of Byzantium | ★ อวสานพุกาม: อาณาจักรพม่ายุคแรกล่มสลายอย่างไร | 9 / 11 |
 | 21 ธ.ค. | The Death Railway: The Human Cost of the Burma–Thailand Line | ทางรถไฟสายมรณะ: ความจริงเบื้องหลังสะพานข้ามแม่น้ำแคว | 1 / 1 |
 | 21 ธ.ค. | The Mongol Empire: How a Nomad Army Took Half of Asia | จักรวรรดิมองโกล: จากทุ่งหญ้าสู่ครึ่งเอเชีย | 9 / 9 |
@@ -78,6 +78,8 @@ Nov 17, 2026 · @Chen
 | 18 ม.ค. | The Samurai: 700 Years of Japan's Warrior Class | ซามูไร: 700 ปีนักรบญี่ปุ่น | 9 / 9 |
 | 25 ม.ค. | The Cuban Missile Crisis: 13 Days on the Brink | ★ ล้านช้าง: จากเจ้าฟ้างุ้มถึงวันแตกเป็นสามอาณาจักร | 10 / 11 |
 | 25 ม.ค. | The Lost Colony of Roanoke: America's Oldest Mystery | ★ เวียงหนองหล่ม: ตำนานเมืองล่มแห่งเชียงแสน | 10 / 12 |
+
+22 พ.ย. 2026: เจ้าของช่องให้ตอนคอนสแตนติโนเปิลฉบับไทยลงแทน "ชีวิตทหารโรมัน" ในสัปดาห์ 14 ธ.ค. เพราะภาพ แผนที่ เพลง และภาพปกทำเสร็จแล้วจากฉบับอังกฤษ ส่วนทหารโรมันฉบับไทยย้ายไปเฟส 2 (โฟลเดอร์ `episodes/2027-02-01-th-roman-soldier`)
 
 ช่องไทยเล่าเรื่องศรีวิชัยแทนนครวัด เพราะประเด็นไทย–กัมพูชายังร้อนอยู่ ถ้าจะทำเรื่องเขมรในภาษาไทย ควรรอให้มีคนตรวจน้ำเสียงก่อนเผยแพร่
 

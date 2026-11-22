@@ -1,0 +1,39 @@
+# Thai spellings of names, shared by every Thai episode (TASKS P1.6), so one person or place is spelled the same
+# way across the channel. Follows common Thai usage (Thai Wikipedia / Royal Institute style) where one exists.
+# tools/adapt_th.py fills the CAST:/PLACES: lines of a new Thai script from the names its English script uses.
+# `en` is matched as a whole word in the English script; `th` is what the Thai script writes.
+people:
+  - {en: Mehmed, th: เมห์เหม็ด}
+  - {en: Constantine, th: คอนสแตนติน}
+  - {en: Orban, th: อูร์บาน}
+  - {en: Giustiniani, th: จุสตินีอานี}
+  - {en: Halil, th: ฮาลิล}
+  - {en: Zaganos, th: ซากานอส}
+  - {en: Sphrantzes, th: สฟรานต์เซส}
+  - {en: Doukas, th: ดูคาส}
+  - {en: Grant, th: แกรนต์}
+places:
+  - {en: Constantinople, th: คอนสแตนติโนเปิล}
+  - {en: Byzantine, th: ไบแซนไทน์}
+  - {en: Ottoman, th: ออตโตมัน}
+  - {en: Golden Horn, th: โกลเดนฮอร์น}
+  - {en: Galata, th: กาลาตา}
+  - {en: Bosphorus, th: บอสพอรัส}
+  - {en: Marmara, th: มาร์มะรา}
+  - {en: Anatolia, th: อานาโตเลีย}
+  - {en: Balkans, th: บอลข่าน}
+  - {en: Hagia Sophia, th: ฮาเกียโซเฟีย}
+  - {en: Venice, th: เวนิส}
+  - {en: Venetian, th: เวนิส}
+  - {en: Genoa, th: เจนัว}
+  - {en: Genoese, th: เจนัว}
+  - {en: Istanbul, th: อิสตันบูล}
+  - {en: Italy, th: อิตาลี}
+  - {en: Serbia, th: เซอร์เบีย}
+  - {en: Chios, th: ไคออส}
+  - {en: Black Sea, th: ทะเลดำ}
+  - {en: Rome, th: โรม}
+  - {en: Babylon, th: บาบิโลน}
+  - {en: Adrianople, th: เอเดรียโนเปิล}
+  - {en: Boghazkesen, th: โบอาซเคเซน}
+  - {en: Saint Romanus, th: เซนต์โรมานุส}

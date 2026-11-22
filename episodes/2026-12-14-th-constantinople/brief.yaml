@@ -1,0 +1,17 @@
+# Thai episode adapted from the English one (tools/adapt_th.py, TASKS P1.6).
+date: '2026-12-14'
+language: th
+slug: constantinople
+working_title: '53 วันสุดท้ายของคอนสแตนติโนเปิล: กำแพงพันปีแตกได้อย่างไร (ค.ศ. 1453)'
+cluster: 9
+th_only: false
+target_minutes: 25
+hook_paradox: กำแพงที่กันศัตรูได้ราวพันปี ถูกเจาะได้ใน 53 วัน
+key_visual: แผนที่กำแพงเมืองแบบ 2.5D + ภาพวาดการลากเรือข้ามเขา
+title_formula: countdown
+title_options: []
+signoff: จนกว่าจะพบกันใหม่ อย่าลืมมองย้อนกลับไป
+series: ''
+next_episode_tease: เมห์เหม็ดเปลี่ยนเมืองที่แตกพัง ให้เป็นเมืองหลวงของจักรวรรดิได้อย่างไร?
+status: scored               # Thai script passes the Thai scorer (mean 98.2), 22 Nov 2026. Next: Thai narration (P2), shot list from the EN visuals
+source_episode: 2026-12-14-en-constantinople

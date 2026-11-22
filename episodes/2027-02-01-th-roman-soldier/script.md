@@ -1,6 +1,6 @@
 TITLE: ชีวิตทหารโรมัน: กิน นอน รบอย่างไร
 THUMB:
-SIGNOFF: Until next time, keep looking back.
+SIGNOFF: จนกว่าจะพบกันใหม่ อย่าลืมมองย้อนกลับไป
 
 ## HOOK
 [MIX: voice leads; music -20 dB under voice, auto-duck; whole mix -14 LUFS, true peak -1 dBTP]
@@ -15,4 +15,4 @@ SIGNOFF: Until next time, keep looking back.
 ## TURNING POINT
 
 ## CLOSE
-Until next time, keep looking back.
+จนกว่าจะพบกันใหม่ อย่าลืมมองย้อนกลับไป
