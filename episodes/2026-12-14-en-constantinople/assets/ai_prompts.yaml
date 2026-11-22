@@ -119,8 +119,9 @@ shots:
       and no mosques anywhere. Medieval Mediterranean ships.'
   15:
     sentence: It lasted another thousand years.
-    subject: A grand imperial procession through a wide city street, crowds and banners, a great domed church rising
-      behind
+    subject: A grand imperial procession with banners and incense moving along a colonnaded street of a medieval
+      Greek city, low red-tiled houses and small domed chapels on either side, crowds watching from balconies There
+      are no thin towers of any kind anywhere in the picture.
     context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
       no mosques anywhere. People in 15th-century Greek dress.'
   18:
@@ -551,9 +552,11 @@ shots:
       no mosques anywhere. People in 15th-century Greek dress.'
   313:
     sentence: Will any of you see another sunset?
-    subject: A red sunset over a great dome and the city walls, seen from the harbour
-    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
-      galleys, sea walls along the shore.'
+    subject: 'A red sunset seen from a boat in the harbour: the sea walls of the city and its low domed church roofs
+      black against the glowing sky, the sun sinking behind them There are no thin towers of any kind anywhere in
+      the picture.'
+    context: 'Inside Byzantine Constantinople before 1453: stone houses, Christian domed churches; no minarets and
+      no mosques anywhere. People in 15th-century Greek dress.'
   324:
     sentence: A great cannon blasted a hole in the stockade, and they rushed in.
     subject: A cannon blast tearing a hole in a wooden stockade, soldiers rushing through the smoke
@@ -626,9 +629,9 @@ shots:
       bronze.'
   398:
     sentence: It never came.
-    subject: An empty sea seen from a harbour wall, no ships anywhere on the horizon
-    context: 'The Golden Horn harbour and the sea off Constantinople in 1453: 15th-century sailing ships and oared
-      galleys, sea walls along the shore.'
+    subject: 'A completely empty sea under a wide sky, seen from the top of a stone harbour wall: calm water all
+      the way to the horizon, not a single ship or boat on it, only a few gulls'
+    context: The sea off Constantinople in 1453, seen from the city's sea wall. The sea is empty.
   150:
     sentence: Behind the walls stood about seven thousand defenders.
     reuse: ai-002-1
